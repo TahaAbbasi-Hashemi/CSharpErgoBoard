@@ -16,20 +16,21 @@ namespace CSharpErgoBoard
     class IOConnect
     {
         // Constants
-        const int m_maxBufferSize = 255;
+        private const int m_maxBufferSize = 255;
 
-        SerialPort m_serialPort;
-        Boolean m_initalized = false;
-        int m_baudRate = 9600;
-        int m_dataBits = 8;
-        Handshake m_handshake = Handshake.None; // This can cause issues on Arduino devices if enabled
-        Parity m_pairty = Parity.None;
-        StopBits m_stopBits = StopBits.One;
-        int m_timeout = 500;
-        Queue m_output;
-        Queue m_input;
-        Mutex m_outputLock = new Mutex();
-        Mutex m_inputLock = new Mutex();
+        private static SerialPort m_serialConnection = new SerialPort();
+        private static Boolean m_initalized = false;
+        private int m_baudRate = 9600;
+        private int m_dataBits = 8;
+        private Handshake m_handshake = Handshake.None; // This can cause issues on Arduino devices if enabled
+        private Parity m_pairty = Parity.None;
+        private StopBits m_stopBits = StopBits.One;
+        private int m_timeout = 500;
+        private static Queue<String> m_output = new Queue<String>();
+        private static Queue<String> m_input = new Queue<String>();
+        private static Mutex m_outputLock = new Mutex();
+        private static Mutex m_inputLock = new Mutex();
+        private Thread m_thread = new Thread(DataStream);
 
         /// <summary>
         /// Starts a serial port instance. 
@@ -38,45 +39,46 @@ namespace CSharpErgoBoard
         /// <returns>True once the port was setup.</returns>
         public Boolean Setup(String comPort)
         {
-            //m_serialPort.StopBits;
-            m_serialPort.PortName = comPort;
-            m_serialPort.BaudRate = m_baudRate;
-            m_serialPort.Parity = m_pairty;
-            m_serialPort.DataBits = m_dataBits;
-            m_serialPort.StopBits = m_stopBits;
-            m_serialPort.Handshake = m_handshake;
+            //m_serialConnection.StopBits;
+            m_serialConnection.PortName = comPort;
+            m_serialConnection.BaudRate = m_baudRate;
+            m_serialConnection.Parity = m_pairty;
+            m_serialConnection.DataBits = m_dataBits;
+            m_serialConnection.StopBits = m_stopBits;
+            m_serialConnection.Handshake = m_handshake;
 
-            m_serialPort.ReadTimeout = m_timeout;
-            m_serialPort.WriteTimeout = m_timeout;
+            m_serialConnection.ReadTimeout = m_timeout;
+            m_serialConnection.WriteTimeout = m_timeout;
 
-            m_serialPort.Open();
-            m_initalized = m_serialPort.IsOpen;
-            Thread m_thread = new Thread(DataStream);
+            m_serialConnection.Open();
+            m_initalized = m_serialConnection.IsOpen;
+            m_initalized = true;
+            m_thread.Start();
 
 
             return m_initalized;
         }
 
-        public void DataStream()
+        public static void DataStream()
         {
             while (m_initalized)
             {
                 try
                 {
-                    String readMessage = m_serialPort.ReadLine();
-                    if (readMessage.Count() > 0)
+                    //String readMessage = m_serialConnection.ReadLine();
+                    //if (readMessage.Count() > 0)
+                    //{
+                    //    m_inputLock.WaitOne();
+                    //    m_input.Enqueue(readMessage);
+                    //    m_inputLock.ReleaseMutex();
+                    //}
+
+                    if (m_output.Count() > 0)
                     {
-                        m_inputLock.WaitOne();
-                        m_input.Enqueue(readMessage);
-                        m_inputLock.ReleaseMutex();
-                    }
-                    
-                    m_outputLock.WaitOne();
-                    String writeMessage = m_output.Dequeue().ToString();
-                    m_outputLock.ReleaseMutex();
-                    if (writeMessage.Count() > 0)
-                    {
-                        m_serialPort.WriteLine(writeMessage);
+                        m_outputLock.WaitOne();
+                        String writeMessage = m_output.Dequeue();
+                        m_outputLock.ReleaseMutex();
+                        m_serialConnection.WriteLine(writeMessage);
                     }
                 }
                 catch (TimeoutException)
@@ -111,25 +113,10 @@ namespace CSharpErgoBoard
             return true;
         }
 
-        /// <summary>
-        /// Finds the COM ports and the friendly description of the serial port
-        /// </summary>
-        /// <returns> A list of the serial ports and their friendly description in a single string format. </returns>
-        public List<String> GetPorts()
+        public void End()
         {
-            List<String> names = new List<string>();
-            ManagementObjectSearcher searcher =
-                   new ManagementObjectSearcher("root\\CIMV2",
-                   "SELECT * FROM Win32_SerialPort");
-
-            foreach (ManagementObject queryObj in searcher.Get())
-            {
-                names.Add(queryObj["Name"].ToString());
-            }
-
-            return names;
+            m_initalized = false;
+            m_thread.Join();
         }
-
-
     }
 }

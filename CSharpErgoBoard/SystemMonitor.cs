@@ -3,217 +3,229 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using OpenHardwareMonitor.Hardware;
 
-public class SystemMonitor
+
+namespace CSharpErgoBoard
 {
-    private static Computer computer = new Computer();
-    private static bool opened = false;
+    public class SystemMonitor
+    {
+        private static bool m_instance = false;
+        private Thread m_thread = new Thread(UpdateValues);
+        private static Computer m_computer = new Computer();
 
-    public void OpenComputer()
-    {
-        opened = true;
-        computer.Open();
-    }
-    public bool CloseComputer()
-    {
-        if (opened)
-        {
-            opened = false;
-            computer.Close();
-            return true;
-        }
-        return false;
-    }
+        private static bool m_AMD = false;
+        private static int m_cpuCores = 0;  // This is expected to be greater than or equal to 1. 
+        private static List<float> m_cpuClock = new List<float>();
+        private static List<float> m_cpuLoad = new List<float>();
+        private static List<float> m_cpuTemp = new List<float>();
+        private static List<float> m_gpuClock = new List<float>();
+        private static List<float> m_gpuLoad = new List<float>();
+        private static List<float> m_gpuTemp = new List<float>();
+        private static List<float> m_ramLoad = new List<float>();
+        private static List<float> m_hddLoad = new List<float>();
 
-    // CPU
-    // If you have a 4 core cpu then core#5 would be the package.
-    public int GetCpuCores()
-    {
-        if (!opened)
+        /// <summary>
+        /// Gets the total amount of CPU cores found in a system. 
+        /// </summary>
+        public static int CpuCores { get => m_cpuCores; }
+        /// <summary>
+        /// Get the Clock speed of each CPU core in a list
+        /// </summary>
+        public static List<float> CpuClock { get => m_cpuClock; }
+        /// <summary>
+        /// Get the load of each CPU core in a list
+        /// </summary>
+        public static List<float> CpuLoad { get => m_cpuLoad; }
+        /// <summary>
+        /// Get the temperture of each CPU core in a list
+        /// </summary>
+        public static List<float> CpuTemp { get => m_cpuTemp; }
+        /// <summary>
+        /// Get the clock speed of the graphic cards
+        /// </summary>
+        public static List<float> GpuClock { get => m_gpuClock; }
+        /// <summary>
+        /// Get the load of the graphics card
+        /// </summary>
+        public static List<float> GpuLoad { get => m_gpuLoad; }
+        /// <summary>
+        /// Get the temperture of the graphics card
+        /// </summary>
+        public static List<float> GpuTemp { get => m_gpuTemp; }
+
+        ///// <summary>
+        ///// Get the load of the ram
+        ///// </summary>
+        //public static List<float> RamLoad { get => m_ramLoad; }
+        ///// <summary>
+        ///// Get the load of the hard disk drive
+        ///// </summary>
+        //public static List<float> HddLoad { get => m_hddLoad; }
+
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="SystemMonitor"/> computer is using a AMD GPU
+        /// </summary>
+        /// <value>
+        ///   <c>true</c> if we are usign a AMD GPU; if we are using a Nvidea GPU, <c>false</c>.
+        /// </value>
+        public static bool AMD { get => m_AMD; set => m_AMD = value; }
+
+
+        public SystemMonitor()
         {
-            return 0;
+            m_instance = true;
+            m_computer.Open();
+            m_thread.Start();
         }
-        int cores = 0;
-        computer.CPUEnabled = true;
-        for (int i = 0; i < computer.Hardware.Length; i++)
+        /// <summary>
+        /// Ends the monitoring process
+        /// </summary>
+        public void End()
         {
-            // Pick CPU hardware
-            if (computer.Hardware[i].HardwareType != HardwareType.CPU)
+            m_instance = false;
+            m_computer.Close();
+            m_thread.Join();
+        }
+
+        /// <summary>
+        /// Updates the computer hardware values stored on our end. 
+        /// </summary>
+        private static void UpdateValues()
+        {
+            m_computer.CPUEnabled = true;
+            // Gets the total amount of CPU cores. 
+            for (int i = 0; i < m_computer.Hardware.Length; i++)
             {
-                continue;
-            }
-            for (int j = 0; j < computer.Hardware[i].Sensors.Length; j++)
-            {
-                // Pick random CPU sensor. All cores should have a temp. 
-                if (computer.Hardware[i].Sensors[j].SensorType != SensorType.Temperature)
+                // Pick CPU hardware
+                if (m_computer.Hardware[i].HardwareType != HardwareType.CPU)
                 {
                     continue;
                 }
-                cores += 1;
-            }
-        }
-        computer.CPUEnabled = false;
-
-        return cores;
-    }
-    private float GetCPUInfo(int core, SensorType sensor)
-    {
-        // Making sure we are open
-        if (!opened)
-        {
-            return 0;
-        }
-
-        // Making sure we have a legit value
-        // Plus 1 to represent package. 
-        int totalCore = GetCpuCores();
-        //if (core > (totalCore + 1))
-        //{
-        //    return 0;
-        //}
-
-        // Wrong type of sensor
-        if ((sensor != SensorType.Temperature) && (sensor != SensorType.Load) && (sensor != SensorType.Clock))
-        {
-            return 0;
-        }
-
-        float value = 100;
-        computer.CPUEnabled = true;
-        for (int i = 0; core > 0; i++)
-        {
-            // Find the right hardware
-            if (computer.Hardware[i].HardwareType != HardwareType.CPU)
-            {
-                continue;
-            }
-            for (int j = 0; j < computer.Hardware[i].Sensors.Length; j++)
-            {
-                // Find right sensor. 
-                if (computer.Hardware[i].Sensors[j].SensorType != sensor)
+                for (int j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
                 {
-                    continue;
-                }
-                value = (float)(computer.Hardware[i].Sensors[j].Value);
-
-                core -= 1;
-                if (core == 0)
-                {
-                    // Returning here
-                    computer.CPUEnabled = false;
-                    return (value);
+                    // Pick random CPU sensor. All cores should have a temp. 
+                    if (m_computer.Hardware[i].Sensors[j].SensorType != SensorType.Temperature)
+                    {
+                        continue;
+                    }
+                    m_cpuCores += 1;
                 }
             }
-        }
-        computer.CPUEnabled = false;
 
-        return 0;
-    }
-    public float GetCpuClock(int core)
-    {
-        if (!opened)
-        {
-            return 0;
-        }
-        return (GetCPUInfo(core, SensorType.Clock));
-    }
-    public float GetCpuLoad(int core)
-    {
-        if (!opened)
-        {
-            return 0;
-        }
-        return (GetCPUInfo(core, SensorType.Load));
-    }
-    public float GetCpuTemp(int core)
-    {
-        if (!opened)
-        {
-            return 0;
-        }
-        return (GetCPUInfo(core, SensorType.Temperature));
-    }
 
-    // GPU
-    // For clock 1 means core, 2 means memory, 3 means shader
-    // For Load 4 means memory and 1 means core.
-    private float GetGpuInfo(int core, SensorType sensor)
-    {
-        // Making sure we are open
-        if (!opened)
-        {
-            return 0;
-        }
-        // Making sure we don't get a bad number
-        if (sensor == SensorType.Clock)
-        {
-            if (core > 3)
-            {
-                return 0;
-            }
-        }
-        if (sensor == SensorType.Load)
-        {
-            if (core > 4)
-            {
-                return 0;
-            }
-        }
+            m_computer.GPUEnabled = true;
+            m_computer.HDDEnabled = true;
+            m_computer.RAMEnabled = true;
 
-        float value = 0;
-        computer.GPUEnabled = true;
-        for (int i = 0; core > 0; i++)
-        {
-            // Find the right hardware
-            if ((computer.Hardware[i].HardwareType != HardwareType.GpuNvidia) && (computer.Hardware[i].HardwareType != HardwareType.GpuAti))
+            while (m_instance)
             {
-                continue;
-            }
-            for (int j = 0; j < computer.Hardware[i].Sensors.Length; j++)
-            {
-                // Find right sensor. 
-                if (computer.Hardware[i].Sensors[j].SensorType != sensor)
+                Thread.Sleep(1000); // Sleep for a whole second. We want information updates once a second. 
+
+                for (int i = 0; i < m_computer.Hardware.Length; i++)
                 {
-                    continue;
+                    // CPU
+                    if (m_computer.Hardware[i].HardwareType == HardwareType.CPU)
+                    {
+                        m_cpuClock.Clear();
+                        m_cpuLoad.Clear();
+                        m_cpuTemp.Clear();
+                        for (int j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
+                        {
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
+                            {
+                                m_cpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                m_cpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
+                            {
+                                m_cpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                        }
+                    }
+                    // AMD Gpu
+                    else if ((m_computer.Hardware[i].HardwareType == HardwareType.GpuAti) && m_AMD)
+                    {
+                        m_gpuClock.Clear();
+                        m_gpuLoad.Clear();
+                        m_gpuTemp.Clear();
+                        for (int j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
+                        {
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
+                            {
+                                m_gpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                m_gpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
+                            {
+                                m_gpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                        }
+
+                    }
+                    else if ((m_computer.Hardware[i].HardwareType == HardwareType.GpuNvidia) && m_AMD)
+                    {
+                        m_gpuClock.Clear();
+                        m_gpuLoad.Clear();
+                        m_gpuTemp.Clear();
+                        for (int j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
+                        {
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
+                            {
+                                m_gpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                m_gpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
+                            {
+                                m_gpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                        }
+                    }
+                    else if (m_computer.Hardware[i].HardwareType == HardwareType.RAM)
+                    {
+                        m_ramLoad.Clear();
+                        for (int j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
+                        {
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                //m_ramLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+
+                        }
+
+                    }
+                    else if (m_computer.Hardware[i].HardwareType == HardwareType.HDD)
+                    {
+                        m_hddLoad.Clear();
+                        for (int j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
+                        {
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                //m_hddLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+
+                        }
+
+                    }
                 }
 
-                value = (float)(computer.Hardware[i].Sensors[j].Value);
-                core -= 1;
-                if (core == 0)
-                {
-                    // Returning here
-                    computer.GPUEnabled = false;
-                    return (value);
-                }
             }
-        }
-        computer.GPUEnabled = false;
 
-        return 0;
-    }
-    public float GetGpuTemp()
-    {
-        if (!opened)
-        {
-            return 0;
+            m_computer.CPUEnabled = false;
+            m_computer.GPUEnabled = false;
+            m_computer.HDDEnabled = false;
+            m_computer.RAMEnabled = false;
+
         }
-        return (GetGpuInfo(1, SensorType.Temperature));
-    }
-    public float GetGpuClock(int core)
-    {
-        if (!opened)
-        {
-            return 0;
-        }
-        return (GetGpuInfo(core, SensorType.Clock));
-    }
-    public float GetGpuLoad(int core)
-    {
-        if (!opened)
-        {
-            return 0;
-        }
-        return (GetGpuInfo(core, SensorType.Load));
     }
 }

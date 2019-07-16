@@ -14,7 +14,7 @@ namespace CSharpErgoBoard
     /// <summary>
     /// Holds logs stored in the queue.
     /// </summary>
-    class LogData
+    public class LogData
     {
         public LogData() { }
         private String message;
@@ -90,13 +90,15 @@ namespace CSharpErgoBoard
         /// </summary>
         private static void LoggingThreadFunction()
         {
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Taha Abbasi-Hashemi\source\repos\CSharpErgoBoard\CSharpErgoBoard\Logs.log");
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\mieuser\Source\Repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log");
 
             while (m_instance)
             {
                 // No members found.
                 if (m_output.Count() == 0)
                 {
+                    // Sleep the thread for 1ms as to not use more than nesscary system resources. 
+                    Thread.Sleep(1);
                     continue;
                 }
                 LogData writeLog = m_output.Dequeue();
