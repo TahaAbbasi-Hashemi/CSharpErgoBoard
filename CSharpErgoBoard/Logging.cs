@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Management;
@@ -14,7 +14,7 @@ namespace CSharpErgoBoard
     /// <summary>
     /// Holds logs stored in the queue.
     /// </summary>
-    class LogData
+    public class LogData
     {
         public LogData() { }
         private String message;
@@ -25,13 +25,13 @@ namespace CSharpErgoBoard
         private String fileName;
         private String lineNumber;
 
-        public string Message { get => message; set => message = value; }
-        public string Date { get => date; set => date = value; }
-        public string ThreadName { get => threadName; set => threadName = value; }
-        public string FileName { get => fileName; set => fileName = value; }
-        public string LineNumber { get => lineNumber; set => lineNumber = value; }
-        public string Time { get => time; set => time = value; }
-        public string MemberName { get => memberName; set => memberName = value; }
+        public String Message { get => message; set => message = value; }
+        public String Date { get => date; set => date = value; }
+        public String ThreadName { get => threadName; set => threadName = value; }
+        public String FileName { get => fileName; set => fileName = value; }
+        public String LineNumber { get => lineNumber; set => lineNumber = value; }
+        public String Time { get => time; set => time = value; }
+        public String MemberName { get => memberName; set => memberName = value; }
     }
 
     /// <summary>
@@ -46,8 +46,8 @@ namespace CSharpErgoBoard
         private static Boolean m_instance = false;
         private static String m_directory = "Logs.log";
 
-        public static string Directory { get => m_directory; set => m_directory = value; }
-        public static string LogFormat { get => m_logFormat; set => m_logFormat = value; }
+        public static String Directory { get => m_directory; set => m_directory = value; }
+        public static String LogFormat { get => m_logFormat; set => m_logFormat = value; }
 
         /// <summary>
         /// Default Constructor. Starts the threading process and creates out instance. 
@@ -90,13 +90,15 @@ namespace CSharpErgoBoard
         /// </summary>
         private static void LoggingThreadFunction()
         {
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Taha Abbasi-Hashemi\source\repos\CSharpErgoBoard\CSharpErgoBoard\Logs.log");
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\mieuser\Source\Repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log");
 
             while (m_instance)
             {
                 // No members found.
                 if (m_output.Count() == 0)
                 {
+                    // Sleep the thread for 1ms as to not use more than nesscary system resources. 
+                    Thread.Sleep(1);
                     continue;
                 }
                 LogData writeLog = m_output.Dequeue();
