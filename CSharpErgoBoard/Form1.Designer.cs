@@ -93,64 +93,63 @@
             this.button85 = new System.Windows.Forms.Button();
             this.button86 = new System.Windows.Forms.Button();
             this.button87 = new System.Windows.Forms.Button();
-            this.button37 = new System.Windows.Forms.Button();
-            this.button30 = new System.Windows.Forms.Button();
-            this.button29 = new System.Windows.Forms.Button();
-            this.button28 = new System.Windows.Forms.Button();
-            this.button27 = new System.Windows.Forms.Button();
-            this.button26 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR6C8 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR5C8 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR4C8 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR3C8 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR6C7 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR6C6 = new System.Windows.Forms.Button();
             this.id_buttonLeftLedR6C1 = new System.Windows.Forms.Button();
-            this.button40 = new System.Windows.Forms.Button();
-            this.button41 = new System.Windows.Forms.Button();
-            this.button42 = new System.Windows.Forms.Button();
-            this.button43 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR6C5 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR6C4 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR6C3 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR6C2 = new System.Windows.Forms.Button();
             this.id_buttonLeftLedR5C1 = new System.Windows.Forms.Button();
-            this.button31 = new System.Windows.Forms.Button();
-            this.button32 = new System.Windows.Forms.Button();
-            this.button33 = new System.Windows.Forms.Button();
-            this.button34 = new System.Windows.Forms.Button();
-            this.button35 = new System.Windows.Forms.Button();
-            this.button36 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR5C7 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR5C6 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR5C5 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR5C4 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR5C3 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR5C2 = new System.Windows.Forms.Button();
             this.id_buttonLeftLedR4C1 = new System.Windows.Forms.Button();
             this.id_buttonLeftLedR3C1 = new System.Windows.Forms.Button();
             this.id_buttonLeftLedR2C1 = new System.Windows.Forms.Button();
             this.id_buttonLeftLedR1C1 = new System.Windows.Forms.Button();
-            this.button20 = new System.Windows.Forms.Button();
-            this.button21 = new System.Windows.Forms.Button();
-            this.button22 = new System.Windows.Forms.Button();
-            this.button23 = new System.Windows.Forms.Button();
-            this.button24 = new System.Windows.Forms.Button();
-            this.button25 = new System.Windows.Forms.Button();
-            this.button14 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
-            this.button16 = new System.Windows.Forms.Button();
-            this.button17 = new System.Windows.Forms.Button();
-            this.button18 = new System.Windows.Forms.Button();
-            this.button19 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR4C7 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR4C6 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR4C5 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR4C4 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR4C3 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR4C2 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR3C7 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR3C6 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR3C5 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR3C4 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR3C3 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR3C2 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR2C7 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR2C6 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR2C5 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR2C4 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR2C3 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR2C2 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR1C7 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR1C6 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR1C5 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR1C4 = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR1C3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.listBox2 = new System.Windows.Forms.ListBox();
-            this.id_buttonLED = new System.Windows.Forms.Button();
+            this.id_buttonLeftLedR1C2 = new System.Windows.Forms.Button();
             this.id_labelRightSelectedButton = new System.Windows.Forms.Label();
             this.id_labelLeftSelectedButton = new System.Windows.Forms.Label();
             this.id_buttonRightUpdateKey = new System.Windows.Forms.Button();
             this.id_buttonLeftUpdateKey = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.id_buttonRightLayerUpdate = new System.Windows.Forms.Button();
+            this.id_textboxLeftKeyValue = new System.Windows.Forms.TextBox();
+            this.id_textboxRightKeyValue = new System.Windows.Forms.TextBox();
             this.id_listboxRightKeyLayer = new System.Windows.Forms.ListBox();
             this.id_buttonRightKeyConnectComPort = new System.Windows.Forms.Button();
             this.id_progressRightBar = new System.Windows.Forms.ProgressBar();
@@ -247,11 +246,13 @@
             this.id_buttonLeftR1C4 = new System.Windows.Forms.Button();
             this.id_buttonLeftR1C3 = new System.Windows.Forms.Button();
             this.id_buttonLeftR1C1 = new System.Windows.Forms.Button();
-            this.id_buttonLeftLayerUpdate = new System.Windows.Forms.Button();
             this.id_listboxLeftKeyLayer = new System.Windows.Forms.ListBox();
             this.id_buttonLeftKeyConnectComPort = new System.Windows.Forms.Button();
             this.id_progressLeftBar = new System.Windows.Forms.ProgressBar();
             this.id_listboxLeftKeyComPort = new System.Windows.Forms.ListBox();
+            this.listBox5 = new System.Windows.Forms.ListBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.listBox6 = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.id_panelMain.SuspendLayout();
             this.SuspendLayout();
@@ -353,6 +354,8 @@
             // id_panelMain
             // 
             this.id_panelMain.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_panelMain.Controls.Add(this.listBox6);
+            this.id_panelMain.Controls.Add(this.listBox5);
             this.id_panelMain.Controls.Add(this.button44);
             this.id_panelMain.Controls.Add(this.button45);
             this.id_panelMain.Controls.Add(this.button46);
@@ -404,64 +407,63 @@
             this.id_panelMain.Controls.Add(this.button85);
             this.id_panelMain.Controls.Add(this.button86);
             this.id_panelMain.Controls.Add(this.button87);
-            this.id_panelMain.Controls.Add(this.button37);
-            this.id_panelMain.Controls.Add(this.button30);
-            this.id_panelMain.Controls.Add(this.button29);
-            this.id_panelMain.Controls.Add(this.button28);
-            this.id_panelMain.Controls.Add(this.button27);
-            this.id_panelMain.Controls.Add(this.button26);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR6C8);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR5C8);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR4C8);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR3C8);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR6C7);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR6C6);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR6C1);
-            this.id_panelMain.Controls.Add(this.button40);
-            this.id_panelMain.Controls.Add(this.button41);
-            this.id_panelMain.Controls.Add(this.button42);
-            this.id_panelMain.Controls.Add(this.button43);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR6C5);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR6C4);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR6C3);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR6C2);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR5C1);
-            this.id_panelMain.Controls.Add(this.button31);
-            this.id_panelMain.Controls.Add(this.button32);
-            this.id_panelMain.Controls.Add(this.button33);
-            this.id_panelMain.Controls.Add(this.button34);
-            this.id_panelMain.Controls.Add(this.button35);
-            this.id_panelMain.Controls.Add(this.button36);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR5C7);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR5C6);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR5C5);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR5C4);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR5C3);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR5C2);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR4C1);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR3C1);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR2C1);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C1);
-            this.id_panelMain.Controls.Add(this.button20);
-            this.id_panelMain.Controls.Add(this.button21);
-            this.id_panelMain.Controls.Add(this.button22);
-            this.id_panelMain.Controls.Add(this.button23);
-            this.id_panelMain.Controls.Add(this.button24);
-            this.id_panelMain.Controls.Add(this.button25);
-            this.id_panelMain.Controls.Add(this.button14);
-            this.id_panelMain.Controls.Add(this.button15);
-            this.id_panelMain.Controls.Add(this.button16);
-            this.id_panelMain.Controls.Add(this.button17);
-            this.id_panelMain.Controls.Add(this.button18);
-            this.id_panelMain.Controls.Add(this.button19);
-            this.id_panelMain.Controls.Add(this.button8);
-            this.id_panelMain.Controls.Add(this.button9);
-            this.id_panelMain.Controls.Add(this.button10);
-            this.id_panelMain.Controls.Add(this.button11);
-            this.id_panelMain.Controls.Add(this.button12);
-            this.id_panelMain.Controls.Add(this.button13);
-            this.id_panelMain.Controls.Add(this.button7);
-            this.id_panelMain.Controls.Add(this.button6);
-            this.id_panelMain.Controls.Add(this.button5);
-            this.id_panelMain.Controls.Add(this.button4);
-            this.id_panelMain.Controls.Add(this.button3);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR4C7);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR4C6);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR4C5);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR4C4);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR4C3);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR4C2);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR3C7);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR3C6);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR3C5);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR3C4);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR3C3);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR3C2);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR2C7);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR2C6);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR2C5);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR2C4);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR2C3);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR2C2);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C7);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C6);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C5);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C4);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C3);
             this.id_panelMain.Controls.Add(this.button1);
             this.id_panelMain.Controls.Add(this.listBox1);
             this.id_panelMain.Controls.Add(this.button2);
             this.id_panelMain.Controls.Add(this.progressBar1);
             this.id_panelMain.Controls.Add(this.listBox2);
-            this.id_panelMain.Controls.Add(this.id_buttonLED);
+            this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C2);
             this.id_panelMain.Controls.Add(this.id_labelRightSelectedButton);
             this.id_panelMain.Controls.Add(this.id_labelLeftSelectedButton);
             this.id_panelMain.Controls.Add(this.id_buttonRightUpdateKey);
             this.id_panelMain.Controls.Add(this.id_buttonLeftUpdateKey);
-            this.id_panelMain.Controls.Add(this.textBox1);
-            this.id_panelMain.Controls.Add(this.textBox2);
-            this.id_panelMain.Controls.Add(this.id_buttonRightLayerUpdate);
+            this.id_panelMain.Controls.Add(this.id_textboxLeftKeyValue);
+            this.id_panelMain.Controls.Add(this.id_textboxRightKeyValue);
             this.id_panelMain.Controls.Add(this.id_listboxRightKeyLayer);
             this.id_panelMain.Controls.Add(this.id_buttonRightKeyConnectComPort);
             this.id_panelMain.Controls.Add(this.id_progressRightBar);
@@ -558,7 +560,6 @@
             this.id_panelMain.Controls.Add(this.id_buttonLeftR1C4);
             this.id_panelMain.Controls.Add(this.id_buttonLeftR1C3);
             this.id_panelMain.Controls.Add(this.id_buttonLeftR1C1);
-            this.id_panelMain.Controls.Add(this.id_buttonLeftLayerUpdate);
             this.id_panelMain.Controls.Add(this.id_listboxLeftKeyLayer);
             this.id_panelMain.Controls.Add(this.id_buttonLeftKeyConnectComPort);
             this.id_panelMain.Controls.Add(this.id_progressLeftBar);
@@ -574,7 +575,7 @@
             this.button44.FlatAppearance.BorderSize = 0;
             this.button44.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button44.Image = ((System.Drawing.Image)(resources.GetObject("button44.Image")));
-            this.button44.Location = new System.Drawing.Point(733, 879);
+            this.button44.Location = new System.Drawing.Point(734, 879);
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(55, 55);
             this.button44.TabIndex = 336;
@@ -587,7 +588,7 @@
             this.button45.FlatAppearance.BorderSize = 0;
             this.button45.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button45.Image = ((System.Drawing.Image)(resources.GetObject("button45.Image")));
-            this.button45.Location = new System.Drawing.Point(733, 757);
+            this.button45.Location = new System.Drawing.Point(734, 757);
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(55, 55);
             this.button45.TabIndex = 335;
@@ -600,7 +601,7 @@
             this.button46.FlatAppearance.BorderSize = 0;
             this.button46.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button46.Image = ((System.Drawing.Image)(resources.GetObject("button46.Image")));
-            this.button46.Location = new System.Drawing.Point(794, 757);
+            this.button46.Location = new System.Drawing.Point(795, 757);
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(55, 55);
             this.button46.TabIndex = 334;
@@ -613,7 +614,7 @@
             this.button47.FlatAppearance.BorderSize = 0;
             this.button47.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button47.Image = ((System.Drawing.Image)(resources.GetObject("button47.Image")));
-            this.button47.Location = new System.Drawing.Point(733, 818);
+            this.button47.Location = new System.Drawing.Point(734, 818);
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(55, 55);
             this.button47.TabIndex = 333;
@@ -626,7 +627,7 @@
             this.button88.FlatAppearance.BorderSize = 0;
             this.button88.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button88.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
-            this.button88.Location = new System.Drawing.Point(855, 818);
+            this.button88.Location = new System.Drawing.Point(856, 818);
             this.button88.Name = "button88";
             this.button88.Size = new System.Drawing.Size(55, 109);
             this.button88.TabIndex = 332;
@@ -639,7 +640,7 @@
             this.button89.FlatAppearance.BorderSize = 0;
             this.button89.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button89.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
-            this.button89.Location = new System.Drawing.Point(794, 818);
+            this.button89.Location = new System.Drawing.Point(795, 818);
             this.button89.Name = "button89";
             this.button89.Size = new System.Drawing.Size(55, 109);
             this.button89.TabIndex = 331;
@@ -650,7 +651,7 @@
             // 
             this.button38.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button38.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button38.Location = new System.Drawing.Point(1228, 510);
+            this.button38.Location = new System.Drawing.Point(734, 707);
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(135, 32);
             this.button38.TabIndex = 330;
@@ -667,16 +668,16 @@
             "Layer 3",
             "Layer 4",
             "Layer 5"});
-            this.listBox3.Location = new System.Drawing.Point(1073, 527);
+            this.listBox3.Location = new System.Drawing.Point(734, 684);
             this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(132, 17);
+            this.listBox3.Size = new System.Drawing.Size(135, 17);
             this.listBox3.TabIndex = 329;
             // 
             // button39
             // 
             this.button39.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button39.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button39.Location = new System.Drawing.Point(933, 510);
+            this.button39.Location = new System.Drawing.Point(734, 511);
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(121, 33);
             this.button39.TabIndex = 328;
@@ -685,18 +686,18 @@
             // 
             // progressBar2
             // 
-            this.progressBar2.Location = new System.Drawing.Point(770, 549);
+            this.progressBar2.Location = new System.Drawing.Point(734, 549);
             this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(594, 19);
+            this.progressBar2.Size = new System.Drawing.Size(630, 19);
             this.progressBar2.TabIndex = 327;
             // 
             // listBox4
             // 
             this.listBox4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(770, 526);
+            this.listBox4.Location = new System.Drawing.Point(734, 661);
             this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(136, 17);
+            this.listBox4.Size = new System.Drawing.Size(135, 17);
             this.listBox4.TabIndex = 326;
             // 
             // button48
@@ -1219,83 +1220,83 @@
             this.button87.Text = "F1";
             this.button87.UseVisualStyleBackColor = false;
             // 
-            // button37
+            // id_buttonLeftLedR6C8
             // 
-            this.button37.BackColor = System.Drawing.Color.Transparent;
-            this.button37.FlatAppearance.BorderSize = 0;
-            this.button37.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button37.Image = ((System.Drawing.Image)(resources.GetObject("button37.Image")));
-            this.button37.Location = new System.Drawing.Point(594, 879);
-            this.button37.Name = "button37";
-            this.button37.Size = new System.Drawing.Size(55, 55);
-            this.button37.TabIndex = 285;
-            this.button37.Text = "F1";
-            this.button37.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR6C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C8.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR6C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR6C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C8.Image")));
+            this.id_buttonLeftLedR6C8.Location = new System.Drawing.Point(589, 879);
+            this.id_buttonLeftLedR6C8.Name = "id_buttonLeftLedR6C8";
+            this.id_buttonLeftLedR6C8.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR6C8.TabIndex = 285;
+            this.id_buttonLeftLedR6C8.Text = "F1";
+            this.id_buttonLeftLedR6C8.UseVisualStyleBackColor = false;
             // 
-            // button30
+            // id_buttonLeftLedR5C8
             // 
-            this.button30.BackColor = System.Drawing.Color.Transparent;
-            this.button30.FlatAppearance.BorderSize = 0;
-            this.button30.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button30.Image = ((System.Drawing.Image)(resources.GetObject("button30.Image")));
-            this.button30.Location = new System.Drawing.Point(594, 818);
-            this.button30.Name = "button30";
-            this.button30.Size = new System.Drawing.Size(55, 55);
-            this.button30.TabIndex = 284;
-            this.button30.Text = "F1";
-            this.button30.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR5C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C8.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR5C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR5C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C8.Image")));
+            this.id_buttonLeftLedR5C8.Location = new System.Drawing.Point(589, 818);
+            this.id_buttonLeftLedR5C8.Name = "id_buttonLeftLedR5C8";
+            this.id_buttonLeftLedR5C8.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR5C8.TabIndex = 284;
+            this.id_buttonLeftLedR5C8.Text = "F1";
+            this.id_buttonLeftLedR5C8.UseVisualStyleBackColor = false;
             // 
-            // button29
+            // id_buttonLeftLedR4C8
             // 
-            this.button29.BackColor = System.Drawing.Color.Transparent;
-            this.button29.FlatAppearance.BorderSize = 0;
-            this.button29.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button29.Image = ((System.Drawing.Image)(resources.GetObject("button29.Image")));
-            this.button29.Location = new System.Drawing.Point(594, 757);
-            this.button29.Name = "button29";
-            this.button29.Size = new System.Drawing.Size(55, 55);
-            this.button29.TabIndex = 283;
-            this.button29.Text = "F1";
-            this.button29.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR4C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C8.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR4C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR4C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C8.Image")));
+            this.id_buttonLeftLedR4C8.Location = new System.Drawing.Point(589, 757);
+            this.id_buttonLeftLedR4C8.Name = "id_buttonLeftLedR4C8";
+            this.id_buttonLeftLedR4C8.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR4C8.TabIndex = 283;
+            this.id_buttonLeftLedR4C8.Text = "F1";
+            this.id_buttonLeftLedR4C8.UseVisualStyleBackColor = false;
             // 
-            // button28
+            // id_buttonLeftLedR3C8
             // 
-            this.button28.BackColor = System.Drawing.Color.Transparent;
-            this.button28.FlatAppearance.BorderSize = 0;
-            this.button28.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button28.Image = ((System.Drawing.Image)(resources.GetObject("button28.Image")));
-            this.button28.Location = new System.Drawing.Point(533, 757);
-            this.button28.Name = "button28";
-            this.button28.Size = new System.Drawing.Size(55, 55);
-            this.button28.TabIndex = 282;
-            this.button28.Text = "F1";
-            this.button28.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR3C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C8.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR3C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR3C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C8.Image")));
+            this.id_buttonLeftLedR3C8.Location = new System.Drawing.Point(528, 757);
+            this.id_buttonLeftLedR3C8.Name = "id_buttonLeftLedR3C8";
+            this.id_buttonLeftLedR3C8.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR3C8.TabIndex = 282;
+            this.id_buttonLeftLedR3C8.Text = "F1";
+            this.id_buttonLeftLedR3C8.UseVisualStyleBackColor = false;
             // 
-            // button27
+            // id_buttonLeftLedR6C7
             // 
-            this.button27.BackColor = System.Drawing.Color.Transparent;
-            this.button27.FlatAppearance.BorderSize = 0;
-            this.button27.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button27.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
-            this.button27.Location = new System.Drawing.Point(533, 818);
-            this.button27.Name = "button27";
-            this.button27.Size = new System.Drawing.Size(55, 109);
-            this.button27.TabIndex = 281;
-            this.button27.Text = "F1";
-            this.button27.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR6C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C7.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
+            this.id_buttonLeftLedR6C7.Location = new System.Drawing.Point(528, 818);
+            this.id_buttonLeftLedR6C7.Name = "id_buttonLeftLedR6C7";
+            this.id_buttonLeftLedR6C7.Size = new System.Drawing.Size(55, 109);
+            this.id_buttonLeftLedR6C7.TabIndex = 281;
+            this.id_buttonLeftLedR6C7.Text = "F1";
+            this.id_buttonLeftLedR6C7.UseVisualStyleBackColor = false;
             // 
-            // button26
+            // id_buttonLeftLedR6C6
             // 
-            this.button26.BackColor = System.Drawing.Color.Transparent;
-            this.button26.FlatAppearance.BorderSize = 0;
-            this.button26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button26.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
-            this.button26.Location = new System.Drawing.Point(472, 818);
-            this.button26.Name = "button26";
-            this.button26.Size = new System.Drawing.Size(55, 109);
-            this.button26.TabIndex = 280;
-            this.button26.Text = "F1";
-            this.button26.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR6C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C6.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
+            this.id_buttonLeftLedR6C6.Location = new System.Drawing.Point(467, 818);
+            this.id_buttonLeftLedR6C6.Name = "id_buttonLeftLedR6C6";
+            this.id_buttonLeftLedR6C6.Size = new System.Drawing.Size(55, 109);
+            this.id_buttonLeftLedR6C6.TabIndex = 280;
+            this.id_buttonLeftLedR6C6.Text = "F1";
+            this.id_buttonLeftLedR6C6.UseVisualStyleBackColor = false;
             // 
             // id_buttonLeftLedR6C1
             // 
@@ -1310,57 +1311,57 @@
             this.id_buttonLeftLedR6C1.Text = "ESC";
             this.id_buttonLeftLedR6C1.UseVisualStyleBackColor = false;
             // 
-            // button40
+            // id_buttonLeftLedR6C5
             // 
-            this.button40.BackColor = System.Drawing.Color.Transparent;
-            this.button40.FlatAppearance.BorderSize = 0;
-            this.button40.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button40.Image = ((System.Drawing.Image)(resources.GetObject("button40.Image")));
-            this.button40.Location = new System.Drawing.Point(284, 879);
-            this.button40.Name = "button40";
-            this.button40.Size = new System.Drawing.Size(55, 55);
-            this.button40.TabIndex = 276;
-            this.button40.Text = "F1";
-            this.button40.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR6C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C5.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR6C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR6C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C5.Image")));
+            this.id_buttonLeftLedR6C5.Location = new System.Drawing.Point(284, 879);
+            this.id_buttonLeftLedR6C5.Name = "id_buttonLeftLedR6C5";
+            this.id_buttonLeftLedR6C5.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR6C5.TabIndex = 276;
+            this.id_buttonLeftLedR6C5.Text = "F1";
+            this.id_buttonLeftLedR6C5.UseVisualStyleBackColor = false;
             // 
-            // button41
+            // id_buttonLeftLedR6C4
             // 
-            this.button41.BackColor = System.Drawing.Color.Transparent;
-            this.button41.FlatAppearance.BorderSize = 0;
-            this.button41.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button41.Image = ((System.Drawing.Image)(resources.GetObject("button41.Image")));
-            this.button41.Location = new System.Drawing.Point(223, 879);
-            this.button41.Name = "button41";
-            this.button41.Size = new System.Drawing.Size(55, 55);
-            this.button41.TabIndex = 275;
-            this.button41.Text = "F1";
-            this.button41.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR6C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C4.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR6C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR6C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C4.Image")));
+            this.id_buttonLeftLedR6C4.Location = new System.Drawing.Point(223, 879);
+            this.id_buttonLeftLedR6C4.Name = "id_buttonLeftLedR6C4";
+            this.id_buttonLeftLedR6C4.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR6C4.TabIndex = 275;
+            this.id_buttonLeftLedR6C4.Text = "F1";
+            this.id_buttonLeftLedR6C4.UseVisualStyleBackColor = false;
             // 
-            // button42
+            // id_buttonLeftLedR6C3
             // 
-            this.button42.BackColor = System.Drawing.Color.Transparent;
-            this.button42.FlatAppearance.BorderSize = 0;
-            this.button42.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button42.Image = ((System.Drawing.Image)(resources.GetObject("button42.Image")));
-            this.button42.Location = new System.Drawing.Point(162, 879);
-            this.button42.Name = "button42";
-            this.button42.Size = new System.Drawing.Size(55, 55);
-            this.button42.TabIndex = 274;
-            this.button42.Text = "F1";
-            this.button42.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR6C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C3.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR6C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR6C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C3.Image")));
+            this.id_buttonLeftLedR6C3.Location = new System.Drawing.Point(162, 879);
+            this.id_buttonLeftLedR6C3.Name = "id_buttonLeftLedR6C3";
+            this.id_buttonLeftLedR6C3.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR6C3.TabIndex = 274;
+            this.id_buttonLeftLedR6C3.Text = "F1";
+            this.id_buttonLeftLedR6C3.UseVisualStyleBackColor = false;
             // 
-            // button43
+            // id_buttonLeftLedR6C2
             // 
-            this.button43.BackColor = System.Drawing.Color.Transparent;
-            this.button43.FlatAppearance.BorderSize = 0;
-            this.button43.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button43.Image = ((System.Drawing.Image)(resources.GetObject("button43.Image")));
-            this.button43.Location = new System.Drawing.Point(101, 879);
-            this.button43.Name = "button43";
-            this.button43.Size = new System.Drawing.Size(55, 55);
-            this.button43.TabIndex = 273;
-            this.button43.Text = "F1";
-            this.button43.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR6C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C2.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR6C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR6C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C2.Image")));
+            this.id_buttonLeftLedR6C2.Location = new System.Drawing.Point(101, 879);
+            this.id_buttonLeftLedR6C2.Name = "id_buttonLeftLedR6C2";
+            this.id_buttonLeftLedR6C2.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR6C2.TabIndex = 273;
+            this.id_buttonLeftLedR6C2.Text = "F1";
+            this.id_buttonLeftLedR6C2.UseVisualStyleBackColor = false;
             // 
             // id_buttonLeftLedR5C1
             // 
@@ -1375,83 +1376,83 @@
             this.id_buttonLeftLedR5C1.Text = "ESC";
             this.id_buttonLeftLedR5C1.UseVisualStyleBackColor = false;
             // 
-            // button31
+            // id_buttonLeftLedR5C7
             // 
-            this.button31.BackColor = System.Drawing.Color.Transparent;
-            this.button31.FlatAppearance.BorderSize = 0;
-            this.button31.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button31.Image = ((System.Drawing.Image)(resources.GetObject("button31.Image")));
-            this.button31.Location = new System.Drawing.Point(406, 818);
-            this.button31.Name = "button31";
-            this.button31.Size = new System.Drawing.Size(55, 55);
-            this.button31.TabIndex = 271;
-            this.button31.Text = "F1";
-            this.button31.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR5C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C7.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR5C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR5C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C7.Image")));
+            this.id_buttonLeftLedR5C7.Location = new System.Drawing.Point(406, 818);
+            this.id_buttonLeftLedR5C7.Name = "id_buttonLeftLedR5C7";
+            this.id_buttonLeftLedR5C7.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR5C7.TabIndex = 271;
+            this.id_buttonLeftLedR5C7.Text = "F1";
+            this.id_buttonLeftLedR5C7.UseVisualStyleBackColor = false;
             // 
-            // button32
+            // id_buttonLeftLedR5C6
             // 
-            this.button32.BackColor = System.Drawing.Color.Transparent;
-            this.button32.FlatAppearance.BorderSize = 0;
-            this.button32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button32.Image = ((System.Drawing.Image)(resources.GetObject("button32.Image")));
-            this.button32.Location = new System.Drawing.Point(345, 818);
-            this.button32.Name = "button32";
-            this.button32.Size = new System.Drawing.Size(55, 55);
-            this.button32.TabIndex = 270;
-            this.button32.Text = "F1";
-            this.button32.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR5C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C6.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR5C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR5C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C6.Image")));
+            this.id_buttonLeftLedR5C6.Location = new System.Drawing.Point(345, 818);
+            this.id_buttonLeftLedR5C6.Name = "id_buttonLeftLedR5C6";
+            this.id_buttonLeftLedR5C6.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR5C6.TabIndex = 270;
+            this.id_buttonLeftLedR5C6.Text = "F1";
+            this.id_buttonLeftLedR5C6.UseVisualStyleBackColor = false;
             // 
-            // button33
+            // id_buttonLeftLedR5C5
             // 
-            this.button33.BackColor = System.Drawing.Color.Transparent;
-            this.button33.FlatAppearance.BorderSize = 0;
-            this.button33.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button33.Image = ((System.Drawing.Image)(resources.GetObject("button33.Image")));
-            this.button33.Location = new System.Drawing.Point(284, 818);
-            this.button33.Name = "button33";
-            this.button33.Size = new System.Drawing.Size(55, 55);
-            this.button33.TabIndex = 269;
-            this.button33.Text = "F1";
-            this.button33.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR5C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C5.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR5C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR5C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C5.Image")));
+            this.id_buttonLeftLedR5C5.Location = new System.Drawing.Point(284, 818);
+            this.id_buttonLeftLedR5C5.Name = "id_buttonLeftLedR5C5";
+            this.id_buttonLeftLedR5C5.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR5C5.TabIndex = 269;
+            this.id_buttonLeftLedR5C5.Text = "F1";
+            this.id_buttonLeftLedR5C5.UseVisualStyleBackColor = false;
             // 
-            // button34
+            // id_buttonLeftLedR5C4
             // 
-            this.button34.BackColor = System.Drawing.Color.Transparent;
-            this.button34.FlatAppearance.BorderSize = 0;
-            this.button34.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button34.Image = ((System.Drawing.Image)(resources.GetObject("button34.Image")));
-            this.button34.Location = new System.Drawing.Point(223, 818);
-            this.button34.Name = "button34";
-            this.button34.Size = new System.Drawing.Size(55, 55);
-            this.button34.TabIndex = 268;
-            this.button34.Text = "F1";
-            this.button34.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR5C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C4.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR5C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR5C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C4.Image")));
+            this.id_buttonLeftLedR5C4.Location = new System.Drawing.Point(223, 818);
+            this.id_buttonLeftLedR5C4.Name = "id_buttonLeftLedR5C4";
+            this.id_buttonLeftLedR5C4.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR5C4.TabIndex = 268;
+            this.id_buttonLeftLedR5C4.Text = "F1";
+            this.id_buttonLeftLedR5C4.UseVisualStyleBackColor = false;
             // 
-            // button35
+            // id_buttonLeftLedR5C3
             // 
-            this.button35.BackColor = System.Drawing.Color.Transparent;
-            this.button35.FlatAppearance.BorderSize = 0;
-            this.button35.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button35.Image = ((System.Drawing.Image)(resources.GetObject("button35.Image")));
-            this.button35.Location = new System.Drawing.Point(162, 818);
-            this.button35.Name = "button35";
-            this.button35.Size = new System.Drawing.Size(55, 55);
-            this.button35.TabIndex = 267;
-            this.button35.Text = "F1";
-            this.button35.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR5C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C3.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR5C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR5C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C3.Image")));
+            this.id_buttonLeftLedR5C3.Location = new System.Drawing.Point(162, 818);
+            this.id_buttonLeftLedR5C3.Name = "id_buttonLeftLedR5C3";
+            this.id_buttonLeftLedR5C3.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR5C3.TabIndex = 267;
+            this.id_buttonLeftLedR5C3.Text = "F1";
+            this.id_buttonLeftLedR5C3.UseVisualStyleBackColor = false;
             // 
-            // button36
+            // id_buttonLeftLedR5C2
             // 
-            this.button36.BackColor = System.Drawing.Color.Transparent;
-            this.button36.FlatAppearance.BorderSize = 0;
-            this.button36.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button36.Image = ((System.Drawing.Image)(resources.GetObject("button36.Image")));
-            this.button36.Location = new System.Drawing.Point(101, 818);
-            this.button36.Name = "button36";
-            this.button36.Size = new System.Drawing.Size(55, 55);
-            this.button36.TabIndex = 266;
-            this.button36.Text = "F1";
-            this.button36.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR5C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C2.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR5C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR5C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C2.Image")));
+            this.id_buttonLeftLedR5C2.Location = new System.Drawing.Point(101, 818);
+            this.id_buttonLeftLedR5C2.Name = "id_buttonLeftLedR5C2";
+            this.id_buttonLeftLedR5C2.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR5C2.TabIndex = 266;
+            this.id_buttonLeftLedR5C2.Text = "F1";
+            this.id_buttonLeftLedR5C2.UseVisualStyleBackColor = false;
             // 
             // id_buttonLeftLedR4C1
             // 
@@ -1505,310 +1506,310 @@
             this.id_buttonLeftLedR1C1.Text = "ESC";
             this.id_buttonLeftLedR1C1.UseVisualStyleBackColor = false;
             // 
-            // button20
+            // id_buttonLeftLedR4C7
             // 
-            this.button20.BackColor = System.Drawing.Color.Transparent;
-            this.button20.FlatAppearance.BorderSize = 0;
-            this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Image = ((System.Drawing.Image)(resources.GetObject("button20.Image")));
-            this.button20.Location = new System.Drawing.Point(406, 757);
-            this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(55, 55);
-            this.button20.TabIndex = 261;
-            this.button20.Text = "F1";
-            this.button20.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR4C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C7.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR4C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR4C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C7.Image")));
+            this.id_buttonLeftLedR4C7.Location = new System.Drawing.Point(406, 757);
+            this.id_buttonLeftLedR4C7.Name = "id_buttonLeftLedR4C7";
+            this.id_buttonLeftLedR4C7.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR4C7.TabIndex = 261;
+            this.id_buttonLeftLedR4C7.Text = "F1";
+            this.id_buttonLeftLedR4C7.UseVisualStyleBackColor = false;
             // 
-            // button21
+            // id_buttonLeftLedR4C6
             // 
-            this.button21.BackColor = System.Drawing.Color.Transparent;
-            this.button21.FlatAppearance.BorderSize = 0;
-            this.button21.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button21.Image = ((System.Drawing.Image)(resources.GetObject("button21.Image")));
-            this.button21.Location = new System.Drawing.Point(345, 757);
-            this.button21.Name = "button21";
-            this.button21.Size = new System.Drawing.Size(55, 55);
-            this.button21.TabIndex = 260;
-            this.button21.Text = "F1";
-            this.button21.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR4C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C6.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR4C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR4C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C6.Image")));
+            this.id_buttonLeftLedR4C6.Location = new System.Drawing.Point(345, 757);
+            this.id_buttonLeftLedR4C6.Name = "id_buttonLeftLedR4C6";
+            this.id_buttonLeftLedR4C6.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR4C6.TabIndex = 260;
+            this.id_buttonLeftLedR4C6.Text = "F1";
+            this.id_buttonLeftLedR4C6.UseVisualStyleBackColor = false;
             // 
-            // button22
+            // id_buttonLeftLedR4C5
             // 
-            this.button22.BackColor = System.Drawing.Color.Transparent;
-            this.button22.FlatAppearance.BorderSize = 0;
-            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button22.Image = ((System.Drawing.Image)(resources.GetObject("button22.Image")));
-            this.button22.Location = new System.Drawing.Point(284, 757);
-            this.button22.Name = "button22";
-            this.button22.Size = new System.Drawing.Size(55, 55);
-            this.button22.TabIndex = 259;
-            this.button22.Text = "F1";
-            this.button22.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR4C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C5.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR4C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR4C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C5.Image")));
+            this.id_buttonLeftLedR4C5.Location = new System.Drawing.Point(284, 757);
+            this.id_buttonLeftLedR4C5.Name = "id_buttonLeftLedR4C5";
+            this.id_buttonLeftLedR4C5.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR4C5.TabIndex = 259;
+            this.id_buttonLeftLedR4C5.Text = "F1";
+            this.id_buttonLeftLedR4C5.UseVisualStyleBackColor = false;
             // 
-            // button23
+            // id_buttonLeftLedR4C4
             // 
-            this.button23.BackColor = System.Drawing.Color.Transparent;
-            this.button23.FlatAppearance.BorderSize = 0;
-            this.button23.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button23.Image = ((System.Drawing.Image)(resources.GetObject("button23.Image")));
-            this.button23.Location = new System.Drawing.Point(223, 757);
-            this.button23.Name = "button23";
-            this.button23.Size = new System.Drawing.Size(55, 55);
-            this.button23.TabIndex = 258;
-            this.button23.Text = "F1";
-            this.button23.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR4C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C4.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR4C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR4C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C4.Image")));
+            this.id_buttonLeftLedR4C4.Location = new System.Drawing.Point(223, 757);
+            this.id_buttonLeftLedR4C4.Name = "id_buttonLeftLedR4C4";
+            this.id_buttonLeftLedR4C4.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR4C4.TabIndex = 258;
+            this.id_buttonLeftLedR4C4.Text = "F1";
+            this.id_buttonLeftLedR4C4.UseVisualStyleBackColor = false;
             // 
-            // button24
+            // id_buttonLeftLedR4C3
             // 
-            this.button24.BackColor = System.Drawing.Color.Transparent;
-            this.button24.FlatAppearance.BorderSize = 0;
-            this.button24.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button24.Image = ((System.Drawing.Image)(resources.GetObject("button24.Image")));
-            this.button24.Location = new System.Drawing.Point(162, 757);
-            this.button24.Name = "button24";
-            this.button24.Size = new System.Drawing.Size(55, 55);
-            this.button24.TabIndex = 257;
-            this.button24.Text = "F1";
-            this.button24.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR4C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C3.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR4C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR4C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C3.Image")));
+            this.id_buttonLeftLedR4C3.Location = new System.Drawing.Point(162, 757);
+            this.id_buttonLeftLedR4C3.Name = "id_buttonLeftLedR4C3";
+            this.id_buttonLeftLedR4C3.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR4C3.TabIndex = 257;
+            this.id_buttonLeftLedR4C3.Text = "F1";
+            this.id_buttonLeftLedR4C3.UseVisualStyleBackColor = false;
             // 
-            // button25
+            // id_buttonLeftLedR4C2
             // 
-            this.button25.BackColor = System.Drawing.Color.Transparent;
-            this.button25.FlatAppearance.BorderSize = 0;
-            this.button25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button25.Image = ((System.Drawing.Image)(resources.GetObject("button25.Image")));
-            this.button25.Location = new System.Drawing.Point(101, 757);
-            this.button25.Name = "button25";
-            this.button25.Size = new System.Drawing.Size(55, 55);
-            this.button25.TabIndex = 256;
-            this.button25.Text = "F1";
-            this.button25.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR4C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C2.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR4C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR4C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C2.Image")));
+            this.id_buttonLeftLedR4C2.Location = new System.Drawing.Point(101, 757);
+            this.id_buttonLeftLedR4C2.Name = "id_buttonLeftLedR4C2";
+            this.id_buttonLeftLedR4C2.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR4C2.TabIndex = 256;
+            this.id_buttonLeftLedR4C2.Text = "F1";
+            this.id_buttonLeftLedR4C2.UseVisualStyleBackColor = false;
             // 
-            // button14
+            // id_buttonLeftLedR3C7
             // 
-            this.button14.BackColor = System.Drawing.Color.Transparent;
-            this.button14.FlatAppearance.BorderSize = 0;
-            this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Image = ((System.Drawing.Image)(resources.GetObject("button14.Image")));
-            this.button14.Location = new System.Drawing.Point(406, 696);
-            this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(55, 55);
-            this.button14.TabIndex = 255;
-            this.button14.Text = "F1";
-            this.button14.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR3C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C7.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR3C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR3C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C7.Image")));
+            this.id_buttonLeftLedR3C7.Location = new System.Drawing.Point(406, 696);
+            this.id_buttonLeftLedR3C7.Name = "id_buttonLeftLedR3C7";
+            this.id_buttonLeftLedR3C7.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR3C7.TabIndex = 255;
+            this.id_buttonLeftLedR3C7.Text = "F1";
+            this.id_buttonLeftLedR3C7.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // id_buttonLeftLedR3C6
             // 
-            this.button15.BackColor = System.Drawing.Color.Transparent;
-            this.button15.FlatAppearance.BorderSize = 0;
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Image = ((System.Drawing.Image)(resources.GetObject("button15.Image")));
-            this.button15.Location = new System.Drawing.Point(345, 696);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(55, 55);
-            this.button15.TabIndex = 254;
-            this.button15.Text = "F1";
-            this.button15.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR3C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C6.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR3C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR3C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C6.Image")));
+            this.id_buttonLeftLedR3C6.Location = new System.Drawing.Point(345, 696);
+            this.id_buttonLeftLedR3C6.Name = "id_buttonLeftLedR3C6";
+            this.id_buttonLeftLedR3C6.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR3C6.TabIndex = 254;
+            this.id_buttonLeftLedR3C6.Text = "F1";
+            this.id_buttonLeftLedR3C6.UseVisualStyleBackColor = false;
             // 
-            // button16
+            // id_buttonLeftLedR3C5
             // 
-            this.button16.BackColor = System.Drawing.Color.Transparent;
-            this.button16.FlatAppearance.BorderSize = 0;
-            this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Image = ((System.Drawing.Image)(resources.GetObject("button16.Image")));
-            this.button16.Location = new System.Drawing.Point(284, 696);
-            this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(55, 55);
-            this.button16.TabIndex = 253;
-            this.button16.Text = "F1";
-            this.button16.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR3C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C5.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR3C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR3C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C5.Image")));
+            this.id_buttonLeftLedR3C5.Location = new System.Drawing.Point(284, 696);
+            this.id_buttonLeftLedR3C5.Name = "id_buttonLeftLedR3C5";
+            this.id_buttonLeftLedR3C5.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR3C5.TabIndex = 253;
+            this.id_buttonLeftLedR3C5.Text = "F1";
+            this.id_buttonLeftLedR3C5.UseVisualStyleBackColor = false;
             // 
-            // button17
+            // id_buttonLeftLedR3C4
             // 
-            this.button17.BackColor = System.Drawing.Color.Transparent;
-            this.button17.FlatAppearance.BorderSize = 0;
-            this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Image = ((System.Drawing.Image)(resources.GetObject("button17.Image")));
-            this.button17.Location = new System.Drawing.Point(223, 696);
-            this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(55, 55);
-            this.button17.TabIndex = 252;
-            this.button17.Text = "F1";
-            this.button17.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR3C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C4.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR3C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR3C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C4.Image")));
+            this.id_buttonLeftLedR3C4.Location = new System.Drawing.Point(223, 696);
+            this.id_buttonLeftLedR3C4.Name = "id_buttonLeftLedR3C4";
+            this.id_buttonLeftLedR3C4.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR3C4.TabIndex = 252;
+            this.id_buttonLeftLedR3C4.Text = "F1";
+            this.id_buttonLeftLedR3C4.UseVisualStyleBackColor = false;
             // 
-            // button18
+            // id_buttonLeftLedR3C3
             // 
-            this.button18.BackColor = System.Drawing.Color.Transparent;
-            this.button18.FlatAppearance.BorderSize = 0;
-            this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Image = ((System.Drawing.Image)(resources.GetObject("button18.Image")));
-            this.button18.Location = new System.Drawing.Point(162, 696);
-            this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(55, 55);
-            this.button18.TabIndex = 251;
-            this.button18.Text = "F1";
-            this.button18.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR3C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C3.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR3C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR3C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C3.Image")));
+            this.id_buttonLeftLedR3C3.Location = new System.Drawing.Point(162, 696);
+            this.id_buttonLeftLedR3C3.Name = "id_buttonLeftLedR3C3";
+            this.id_buttonLeftLedR3C3.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR3C3.TabIndex = 251;
+            this.id_buttonLeftLedR3C3.Text = "F1";
+            this.id_buttonLeftLedR3C3.UseVisualStyleBackColor = false;
             // 
-            // button19
+            // id_buttonLeftLedR3C2
             // 
-            this.button19.BackColor = System.Drawing.Color.Transparent;
-            this.button19.FlatAppearance.BorderSize = 0;
-            this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Image = ((System.Drawing.Image)(resources.GetObject("button19.Image")));
-            this.button19.Location = new System.Drawing.Point(101, 696);
-            this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(55, 55);
-            this.button19.TabIndex = 250;
-            this.button19.Text = "F1";
-            this.button19.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR3C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C2.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR3C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR3C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C2.Image")));
+            this.id_buttonLeftLedR3C2.Location = new System.Drawing.Point(101, 696);
+            this.id_buttonLeftLedR3C2.Name = "id_buttonLeftLedR3C2";
+            this.id_buttonLeftLedR3C2.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR3C2.TabIndex = 250;
+            this.id_buttonLeftLedR3C2.Text = "F1";
+            this.id_buttonLeftLedR3C2.UseVisualStyleBackColor = false;
             // 
-            // button8
+            // id_buttonLeftLedR2C7
             // 
-            this.button8.BackColor = System.Drawing.Color.Transparent;
-            this.button8.FlatAppearance.BorderSize = 0;
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(406, 635);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(55, 55);
-            this.button8.TabIndex = 249;
-            this.button8.Text = "F1";
-            this.button8.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR2C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C7.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR2C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR2C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C7.Image")));
+            this.id_buttonLeftLedR2C7.Location = new System.Drawing.Point(406, 635);
+            this.id_buttonLeftLedR2C7.Name = "id_buttonLeftLedR2C7";
+            this.id_buttonLeftLedR2C7.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR2C7.TabIndex = 249;
+            this.id_buttonLeftLedR2C7.Text = "F1";
+            this.id_buttonLeftLedR2C7.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // id_buttonLeftLedR2C6
             // 
-            this.button9.BackColor = System.Drawing.Color.Transparent;
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(345, 635);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(55, 55);
-            this.button9.TabIndex = 248;
-            this.button9.Text = "F1";
-            this.button9.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR2C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C6.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR2C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR2C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C6.Image")));
+            this.id_buttonLeftLedR2C6.Location = new System.Drawing.Point(345, 635);
+            this.id_buttonLeftLedR2C6.Name = "id_buttonLeftLedR2C6";
+            this.id_buttonLeftLedR2C6.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR2C6.TabIndex = 248;
+            this.id_buttonLeftLedR2C6.Text = "F1";
+            this.id_buttonLeftLedR2C6.UseVisualStyleBackColor = false;
             // 
-            // button10
+            // id_buttonLeftLedR2C5
             // 
-            this.button10.BackColor = System.Drawing.Color.Transparent;
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(284, 635);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(55, 55);
-            this.button10.TabIndex = 247;
-            this.button10.Text = "F1";
-            this.button10.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR2C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C5.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR2C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR2C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C5.Image")));
+            this.id_buttonLeftLedR2C5.Location = new System.Drawing.Point(284, 635);
+            this.id_buttonLeftLedR2C5.Name = "id_buttonLeftLedR2C5";
+            this.id_buttonLeftLedR2C5.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR2C5.TabIndex = 247;
+            this.id_buttonLeftLedR2C5.Text = "F1";
+            this.id_buttonLeftLedR2C5.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // id_buttonLeftLedR2C4
             // 
-            this.button11.BackColor = System.Drawing.Color.Transparent;
-            this.button11.FlatAppearance.BorderSize = 0;
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Image = ((System.Drawing.Image)(resources.GetObject("button11.Image")));
-            this.button11.Location = new System.Drawing.Point(223, 635);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(55, 55);
-            this.button11.TabIndex = 246;
-            this.button11.Text = "F1";
-            this.button11.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR2C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C4.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR2C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR2C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C4.Image")));
+            this.id_buttonLeftLedR2C4.Location = new System.Drawing.Point(223, 635);
+            this.id_buttonLeftLedR2C4.Name = "id_buttonLeftLedR2C4";
+            this.id_buttonLeftLedR2C4.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR2C4.TabIndex = 246;
+            this.id_buttonLeftLedR2C4.Text = "F1";
+            this.id_buttonLeftLedR2C4.UseVisualStyleBackColor = false;
             // 
-            // button12
+            // id_buttonLeftLedR2C3
             // 
-            this.button12.BackColor = System.Drawing.Color.Transparent;
-            this.button12.FlatAppearance.BorderSize = 0;
-            this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Image = ((System.Drawing.Image)(resources.GetObject("button12.Image")));
-            this.button12.Location = new System.Drawing.Point(162, 635);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(55, 55);
-            this.button12.TabIndex = 245;
-            this.button12.Text = "F1";
-            this.button12.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR2C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C3.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR2C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR2C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C3.Image")));
+            this.id_buttonLeftLedR2C3.Location = new System.Drawing.Point(162, 635);
+            this.id_buttonLeftLedR2C3.Name = "id_buttonLeftLedR2C3";
+            this.id_buttonLeftLedR2C3.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR2C3.TabIndex = 245;
+            this.id_buttonLeftLedR2C3.Text = "F1";
+            this.id_buttonLeftLedR2C3.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // id_buttonLeftLedR2C2
             // 
-            this.button13.BackColor = System.Drawing.Color.Transparent;
-            this.button13.FlatAppearance.BorderSize = 0;
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Image = ((System.Drawing.Image)(resources.GetObject("button13.Image")));
-            this.button13.Location = new System.Drawing.Point(101, 635);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(55, 55);
-            this.button13.TabIndex = 244;
-            this.button13.Text = "F1";
-            this.button13.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR2C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C2.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR2C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR2C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C2.Image")));
+            this.id_buttonLeftLedR2C2.Location = new System.Drawing.Point(101, 635);
+            this.id_buttonLeftLedR2C2.Name = "id_buttonLeftLedR2C2";
+            this.id_buttonLeftLedR2C2.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR2C2.TabIndex = 244;
+            this.id_buttonLeftLedR2C2.Text = "F1";
+            this.id_buttonLeftLedR2C2.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // id_buttonLeftLedR1C7
             // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(406, 574);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(55, 55);
-            this.button7.TabIndex = 243;
-            this.button7.Text = "F1";
-            this.button7.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C7.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR1C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR1C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C7.Image")));
+            this.id_buttonLeftLedR1C7.Location = new System.Drawing.Point(406, 574);
+            this.id_buttonLeftLedR1C7.Name = "id_buttonLeftLedR1C7";
+            this.id_buttonLeftLedR1C7.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR1C7.TabIndex = 243;
+            this.id_buttonLeftLedR1C7.Text = "F1";
+            this.id_buttonLeftLedR1C7.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // id_buttonLeftLedR1C6
             // 
-            this.button6.BackColor = System.Drawing.Color.Transparent;
-            this.button6.FlatAppearance.BorderSize = 0;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(345, 574);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(55, 55);
-            this.button6.TabIndex = 242;
-            this.button6.Text = "F1";
-            this.button6.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C6.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR1C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR1C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C6.Image")));
+            this.id_buttonLeftLedR1C6.Location = new System.Drawing.Point(345, 574);
+            this.id_buttonLeftLedR1C6.Name = "id_buttonLeftLedR1C6";
+            this.id_buttonLeftLedR1C6.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR1C6.TabIndex = 242;
+            this.id_buttonLeftLedR1C6.Text = "F1";
+            this.id_buttonLeftLedR1C6.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // id_buttonLeftLedR1C5
             // 
-            this.button5.BackColor = System.Drawing.Color.Transparent;
-            this.button5.FlatAppearance.BorderSize = 0;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(284, 574);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(55, 55);
-            this.button5.TabIndex = 241;
-            this.button5.Text = "F1";
-            this.button5.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C5.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR1C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR1C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C5.Image")));
+            this.id_buttonLeftLedR1C5.Location = new System.Drawing.Point(284, 574);
+            this.id_buttonLeftLedR1C5.Name = "id_buttonLeftLedR1C5";
+            this.id_buttonLeftLedR1C5.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR1C5.TabIndex = 241;
+            this.id_buttonLeftLedR1C5.Text = "F1";
+            this.id_buttonLeftLedR1C5.UseVisualStyleBackColor = false;
             // 
-            // button4
+            // id_buttonLeftLedR1C4
             // 
-            this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(223, 574);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(55, 55);
-            this.button4.TabIndex = 240;
-            this.button4.Text = "F1";
-            this.button4.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C4.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR1C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR1C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C4.Image")));
+            this.id_buttonLeftLedR1C4.Location = new System.Drawing.Point(223, 574);
+            this.id_buttonLeftLedR1C4.Name = "id_buttonLeftLedR1C4";
+            this.id_buttonLeftLedR1C4.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR1C4.TabIndex = 240;
+            this.id_buttonLeftLedR1C4.Text = "F1";
+            this.id_buttonLeftLedR1C4.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // id_buttonLeftLedR1C3
             // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(162, 574);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(55, 55);
-            this.button3.TabIndex = 239;
-            this.button3.Text = "F1";
-            this.button3.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C3.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR1C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR1C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C3.Image")));
+            this.id_buttonLeftLedR1C3.Location = new System.Drawing.Point(162, 574);
+            this.id_buttonLeftLedR1C3.Name = "id_buttonLeftLedR1C3";
+            this.id_buttonLeftLedR1C3.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR1C3.TabIndex = 239;
+            this.id_buttonLeftLedR1C3.Text = "F1";
+            this.id_buttonLeftLedR1C3.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Location = new System.Drawing.Point(471, 510);
+            this.button1.Location = new System.Drawing.Point(509, 707);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(135, 32);
             this.button1.TabIndex = 238;
@@ -1825,18 +1826,18 @@
             "Layer 3",
             "Layer 4",
             "Layer 5"});
-            this.listBox1.Location = new System.Drawing.Point(316, 527);
+            this.listBox1.Location = new System.Drawing.Point(509, 684);
             this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(132, 17);
+            this.listBox1.Size = new System.Drawing.Size(135, 17);
             this.listBox1.TabIndex = 237;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Location = new System.Drawing.Point(176, 510);
+            this.button2.Location = new System.Drawing.Point(509, 510);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(121, 33);
+            this.button2.Size = new System.Drawing.Size(135, 33);
             this.button2.TabIndex = 236;
             this.button2.Text = "Connect";
             this.button2.UseVisualStyleBackColor = false;
@@ -1845,35 +1846,35 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(13, 549);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(594, 19);
+            this.progressBar1.Size = new System.Drawing.Size(631, 19);
             this.progressBar1.TabIndex = 235;
             // 
             // listBox2
             // 
             this.listBox2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(13, 526);
+            this.listBox2.Location = new System.Drawing.Point(368, 526);
             this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(136, 17);
+            this.listBox2.Size = new System.Drawing.Size(135, 17);
             this.listBox2.TabIndex = 234;
             // 
-            // id_buttonLED
+            // id_buttonLeftLedR1C2
             // 
-            this.id_buttonLED.BackColor = System.Drawing.Color.Transparent;
-            this.id_buttonLED.FlatAppearance.BorderSize = 0;
-            this.id_buttonLED.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLED.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLED.Image")));
-            this.id_buttonLED.Location = new System.Drawing.Point(101, 574);
-            this.id_buttonLED.Name = "id_buttonLED";
-            this.id_buttonLED.Size = new System.Drawing.Size(55, 55);
-            this.id_buttonLED.TabIndex = 233;
-            this.id_buttonLED.Text = "F1";
-            this.id_buttonLED.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C2.FlatAppearance.BorderSize = 0;
+            this.id_buttonLeftLedR1C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.id_buttonLeftLedR1C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C2.Image")));
+            this.id_buttonLeftLedR1C2.Location = new System.Drawing.Point(101, 574);
+            this.id_buttonLeftLedR1C2.Name = "id_buttonLeftLedR1C2";
+            this.id_buttonLeftLedR1C2.Size = new System.Drawing.Size(55, 55);
+            this.id_buttonLeftLedR1C2.TabIndex = 233;
+            this.id_buttonLeftLedR1C2.Text = "F1";
+            this.id_buttonLeftLedR1C2.UseVisualStyleBackColor = false;
             // 
             // id_labelRightSelectedButton
             // 
             this.id_labelRightSelectedButton.AutoSize = true;
-            this.id_labelRightSelectedButton.Location = new System.Drawing.Point(792, 149);
+            this.id_labelRightSelectedButton.Location = new System.Drawing.Point(767, 204);
             this.id_labelRightSelectedButton.Name = "id_labelRightSelectedButton";
             this.id_labelRightSelectedButton.Size = new System.Drawing.Size(83, 13);
             this.id_labelRightSelectedButton.TabIndex = 232;
@@ -1882,7 +1883,7 @@
             // id_labelLeftSelectedButton
             // 
             this.id_labelLeftSelectedButton.AutoSize = true;
-            this.id_labelLeftSelectedButton.Location = new System.Drawing.Point(500, 149);
+            this.id_labelLeftSelectedButton.Location = new System.Drawing.Point(535, 210);
             this.id_labelLeftSelectedButton.Name = "id_labelLeftSelectedButton";
             this.id_labelLeftSelectedButton.Size = new System.Drawing.Size(83, 13);
             this.id_labelLeftSelectedButton.TabIndex = 231;
@@ -1892,7 +1893,7 @@
             // 
             this.id_buttonRightUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_buttonRightUpdateKey.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonRightUpdateKey.Location = new System.Drawing.Point(771, 194);
+            this.id_buttonRightUpdateKey.Location = new System.Drawing.Point(734, 252);
             this.id_buttonRightUpdateKey.Name = "id_buttonRightUpdateKey";
             this.id_buttonRightUpdateKey.Size = new System.Drawing.Size(135, 32);
             this.id_buttonRightUpdateKey.TabIndex = 230;
@@ -1903,37 +1904,29 @@
             // 
             this.id_buttonLeftUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_buttonLeftUpdateKey.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonLeftUpdateKey.Location = new System.Drawing.Point(472, 194);
+            this.id_buttonLeftUpdateKey.Location = new System.Drawing.Point(509, 252);
             this.id_buttonLeftUpdateKey.Name = "id_buttonLeftUpdateKey";
             this.id_buttonLeftUpdateKey.Size = new System.Drawing.Size(135, 32);
             this.id_buttonLeftUpdateKey.TabIndex = 229;
             this.id_buttonLeftUpdateKey.Text = "Update";
             this.id_buttonLeftUpdateKey.UseVisualStyleBackColor = false;
             // 
-            // textBox1
+            // id_textboxLeftKeyValue
             // 
-            this.textBox1.Location = new System.Drawing.Point(471, 168);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 20);
-            this.textBox1.TabIndex = 228;
+            this.id_textboxLeftKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_textboxLeftKeyValue.Location = new System.Drawing.Point(509, 226);
+            this.id_textboxLeftKeyValue.Name = "id_textboxLeftKeyValue";
+            this.id_textboxLeftKeyValue.Size = new System.Drawing.Size(136, 20);
+            this.id_textboxLeftKeyValue.TabIndex = 228;
+            this.id_textboxLeftKeyValue.TextChanged += new System.EventHandler(this.id_textboxLeftKeyValue_TextChanged);
             // 
-            // textBox2
+            // id_textboxRightKeyValue
             // 
-            this.textBox2.Location = new System.Drawing.Point(771, 168);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 20);
-            this.textBox2.TabIndex = 226;
-            // 
-            // id_buttonRightLayerUpdate
-            // 
-            this.id_buttonRightLayerUpdate.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonRightLayerUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonRightLayerUpdate.Location = new System.Drawing.Point(1229, 29);
-            this.id_buttonRightLayerUpdate.Name = "id_buttonRightLayerUpdate";
-            this.id_buttonRightLayerUpdate.Size = new System.Drawing.Size(135, 32);
-            this.id_buttonRightLayerUpdate.TabIndex = 221;
-            this.id_buttonRightLayerUpdate.Text = "Update";
-            this.id_buttonRightLayerUpdate.UseVisualStyleBackColor = false;
+            this.id_textboxRightKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_textboxRightKeyValue.Location = new System.Drawing.Point(734, 226);
+            this.id_textboxRightKeyValue.Name = "id_textboxRightKeyValue";
+            this.id_textboxRightKeyValue.Size = new System.Drawing.Size(136, 20);
+            this.id_textboxRightKeyValue.TabIndex = 226;
             // 
             // id_listboxRightKeyLayer
             // 
@@ -1945,34 +1938,34 @@
             "Layer 3",
             "Layer 4",
             "Layer 5"});
-            this.id_listboxRightKeyLayer.Location = new System.Drawing.Point(1074, 46);
+            this.id_listboxRightKeyLayer.Location = new System.Drawing.Point(733, 93);
             this.id_listboxRightKeyLayer.Name = "id_listboxRightKeyLayer";
-            this.id_listboxRightKeyLayer.Size = new System.Drawing.Size(132, 17);
+            this.id_listboxRightKeyLayer.Size = new System.Drawing.Size(137, 17);
             this.id_listboxRightKeyLayer.TabIndex = 219;
             // 
             // id_buttonRightKeyConnectComPort
             // 
             this.id_buttonRightKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_buttonRightKeyConnectComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonRightKeyConnectComPort.Location = new System.Drawing.Point(934, 29);
+            this.id_buttonRightKeyConnectComPort.Location = new System.Drawing.Point(733, 29);
             this.id_buttonRightKeyConnectComPort.Name = "id_buttonRightKeyConnectComPort";
-            this.id_buttonRightKeyConnectComPort.Size = new System.Drawing.Size(121, 33);
+            this.id_buttonRightKeyConnectComPort.Size = new System.Drawing.Size(135, 33);
             this.id_buttonRightKeyConnectComPort.TabIndex = 218;
             this.id_buttonRightKeyConnectComPort.Text = "Connect";
             this.id_buttonRightKeyConnectComPort.UseVisualStyleBackColor = false;
             // 
             // id_progressRightBar
             // 
-            this.id_progressRightBar.Location = new System.Drawing.Point(771, 68);
+            this.id_progressRightBar.Location = new System.Drawing.Point(734, 68);
             this.id_progressRightBar.Name = "id_progressRightBar";
-            this.id_progressRightBar.Size = new System.Drawing.Size(594, 19);
+            this.id_progressRightBar.Size = new System.Drawing.Size(631, 19);
             this.id_progressRightBar.TabIndex = 217;
             // 
             // id_listboxRightKeyComPort
             // 
             this.id_listboxRightKeyComPort.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_listboxRightKeyComPort.FormattingEnabled = true;
-            this.id_listboxRightKeyComPort.Location = new System.Drawing.Point(771, 45);
+            this.id_listboxRightKeyComPort.Location = new System.Drawing.Point(874, 45);
             this.id_listboxRightKeyComPort.Name = "id_listboxRightKeyComPort";
             this.id_listboxRightKeyComPort.Size = new System.Drawing.Size(136, 17);
             this.id_listboxRightKeyComPort.TabIndex = 215;
@@ -3175,17 +3168,6 @@
             this.id_buttonLeftR1C1.Text = "ESC";
             this.id_buttonLeftR1C1.UseVisualStyleBackColor = false;
             // 
-            // id_buttonLeftLayerUpdate
-            // 
-            this.id_buttonLeftLayerUpdate.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonLeftLayerUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonLeftLayerUpdate.Location = new System.Drawing.Point(471, 29);
-            this.id_buttonLeftLayerUpdate.Name = "id_buttonLeftLayerUpdate";
-            this.id_buttonLeftLayerUpdate.Size = new System.Drawing.Size(135, 32);
-            this.id_buttonLeftLayerUpdate.TabIndex = 122;
-            this.id_buttonLeftLayerUpdate.Text = "Update";
-            this.id_buttonLeftLayerUpdate.UseVisualStyleBackColor = false;
-            // 
             // id_listboxLeftKeyLayer
             // 
             this.id_listboxLeftKeyLayer.BackColor = System.Drawing.Color.White;
@@ -3196,37 +3178,56 @@
             "Layer 3",
             "Layer 4",
             "Layer 5"});
-            this.id_listboxLeftKeyLayer.Location = new System.Drawing.Point(316, 46);
+            this.id_listboxLeftKeyLayer.Location = new System.Drawing.Point(510, 93);
             this.id_listboxLeftKeyLayer.Name = "id_listboxLeftKeyLayer";
-            this.id_listboxLeftKeyLayer.Size = new System.Drawing.Size(132, 17);
+            this.id_listboxLeftKeyLayer.Size = new System.Drawing.Size(135, 17);
             this.id_listboxLeftKeyLayer.TabIndex = 120;
             // 
             // id_buttonLeftKeyConnectComPort
             // 
             this.id_buttonLeftKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_buttonLeftKeyConnectComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonLeftKeyConnectComPort.Location = new System.Drawing.Point(176, 29);
+            this.id_buttonLeftKeyConnectComPort.Location = new System.Drawing.Point(510, 29);
             this.id_buttonLeftKeyConnectComPort.Name = "id_buttonLeftKeyConnectComPort";
-            this.id_buttonLeftKeyConnectComPort.Size = new System.Drawing.Size(121, 33);
+            this.id_buttonLeftKeyConnectComPort.Size = new System.Drawing.Size(135, 33);
             this.id_buttonLeftKeyConnectComPort.TabIndex = 119;
             this.id_buttonLeftKeyConnectComPort.Text = "Connect";
             this.id_buttonLeftKeyConnectComPort.UseVisualStyleBackColor = false;
             // 
             // id_progressLeftBar
             // 
+            this.id_progressLeftBar.ForeColor = System.Drawing.Color.DeepSkyBlue;
             this.id_progressLeftBar.Location = new System.Drawing.Point(13, 68);
             this.id_progressLeftBar.Name = "id_progressLeftBar";
-            this.id_progressLeftBar.Size = new System.Drawing.Size(594, 19);
+            this.id_progressLeftBar.Size = new System.Drawing.Size(631, 19);
             this.id_progressLeftBar.TabIndex = 118;
             // 
             // id_listboxLeftKeyComPort
             // 
             this.id_listboxLeftKeyComPort.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_listboxLeftKeyComPort.FormattingEnabled = true;
-            this.id_listboxLeftKeyComPort.Location = new System.Drawing.Point(13, 45);
+            this.id_listboxLeftKeyComPort.Location = new System.Drawing.Point(368, 45);
             this.id_listboxLeftKeyComPort.Name = "id_listboxLeftKeyComPort";
             this.id_listboxLeftKeyComPort.Size = new System.Drawing.Size(136, 17);
             this.id_listboxLeftKeyComPort.TabIndex = 116;
+            // 
+            // listBox5
+            // 
+            this.listBox5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBox5.FormattingEnabled = true;
+            this.listBox5.Location = new System.Drawing.Point(509, 661);
+            this.listBox5.Name = "listBox5";
+            this.listBox5.Size = new System.Drawing.Size(135, 17);
+            this.listBox5.TabIndex = 337;
+            // 
+            // listBox6
+            // 
+            this.listBox6.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.listBox6.FormattingEnabled = true;
+            this.listBox6.Location = new System.Drawing.Point(861, 526);
+            this.listBox6.Name = "listBox6";
+            this.listBox6.Size = new System.Drawing.Size(135, 17);
+            this.listBox6.TabIndex = 338;
             // 
             // id_main
             // 
@@ -3266,8 +3267,7 @@
         private System.Windows.Forms.ToolStripMenuItem id_menuDarkMode;
         private System.Windows.Forms.ToolStripMenuItem id_menuQuit;
         private System.Windows.Forms.Panel id_panelMain;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button id_buttonRightLayerUpdate;
+        private System.Windows.Forms.TextBox id_textboxRightKeyValue;
         private System.Windows.Forms.ListBox id_listboxRightKeyLayer;
         private System.Windows.Forms.Button id_buttonRightKeyConnectComPort;
         private System.Windows.Forms.ProgressBar id_progressRightBar;
@@ -3363,7 +3363,6 @@
         private System.Windows.Forms.Button id_buttonLeftR1C4;
         private System.Windows.Forms.Button id_buttonLeftR1C3;
         private System.Windows.Forms.Button id_buttonLeftR1C1;
-        private System.Windows.Forms.Button id_buttonLeftLayerUpdate;
         private System.Windows.Forms.ListBox id_listboxLeftKeyLayer;
         private System.Windows.Forms.Button id_buttonLeftKeyConnectComPort;
         private System.Windows.Forms.ProgressBar id_progressLeftBar;
@@ -3372,50 +3371,50 @@
         private System.Windows.Forms.Label id_labelLeftSelectedButton;
         private System.Windows.Forms.Button id_buttonRightUpdateKey;
         private System.Windows.Forms.Button id_buttonLeftUpdateKey;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button id_buttonLED;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox id_textboxLeftKeyValue;
+        private System.Windows.Forms.Button id_buttonLeftLedR1C2;
+        private System.Windows.Forms.Button id_buttonLeftLedR1C7;
+        private System.Windows.Forms.Button id_buttonLeftLedR1C6;
+        private System.Windows.Forms.Button id_buttonLeftLedR1C5;
+        private System.Windows.Forms.Button id_buttonLeftLedR1C4;
+        private System.Windows.Forms.Button id_buttonLeftLedR1C3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Button button20;
-        private System.Windows.Forms.Button button21;
-        private System.Windows.Forms.Button button22;
-        private System.Windows.Forms.Button button23;
-        private System.Windows.Forms.Button button24;
-        private System.Windows.Forms.Button button25;
-        private System.Windows.Forms.Button button14;
-        private System.Windows.Forms.Button button15;
-        private System.Windows.Forms.Button button16;
-        private System.Windows.Forms.Button button17;
-        private System.Windows.Forms.Button button18;
-        private System.Windows.Forms.Button button19;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button id_buttonLeftLedR4C7;
+        private System.Windows.Forms.Button id_buttonLeftLedR4C6;
+        private System.Windows.Forms.Button id_buttonLeftLedR4C5;
+        private System.Windows.Forms.Button id_buttonLeftLedR4C4;
+        private System.Windows.Forms.Button id_buttonLeftLedR4C3;
+        private System.Windows.Forms.Button id_buttonLeftLedR4C2;
+        private System.Windows.Forms.Button id_buttonLeftLedR3C7;
+        private System.Windows.Forms.Button id_buttonLeftLedR3C6;
+        private System.Windows.Forms.Button id_buttonLeftLedR3C5;
+        private System.Windows.Forms.Button id_buttonLeftLedR3C4;
+        private System.Windows.Forms.Button id_buttonLeftLedR3C3;
+        private System.Windows.Forms.Button id_buttonLeftLedR3C2;
+        private System.Windows.Forms.Button id_buttonLeftLedR2C7;
+        private System.Windows.Forms.Button id_buttonLeftLedR2C6;
+        private System.Windows.Forms.Button id_buttonLeftLedR2C5;
+        private System.Windows.Forms.Button id_buttonLeftLedR2C4;
+        private System.Windows.Forms.Button id_buttonLeftLedR2C3;
+        private System.Windows.Forms.Button id_buttonLeftLedR2C2;
         private System.Windows.Forms.Button id_buttonLeftLedR1C1;
         private System.Windows.Forms.Button id_buttonLeftR6C1;
         private System.Windows.Forms.Button id_buttonLeftLedR6C1;
-        private System.Windows.Forms.Button button40;
-        private System.Windows.Forms.Button button41;
-        private System.Windows.Forms.Button button42;
-        private System.Windows.Forms.Button button43;
+        private System.Windows.Forms.Button id_buttonLeftLedR6C5;
+        private System.Windows.Forms.Button id_buttonLeftLedR6C4;
+        private System.Windows.Forms.Button id_buttonLeftLedR6C3;
+        private System.Windows.Forms.Button id_buttonLeftLedR6C2;
         private System.Windows.Forms.Button id_buttonLeftLedR5C1;
-        private System.Windows.Forms.Button button31;
-        private System.Windows.Forms.Button button32;
-        private System.Windows.Forms.Button button33;
-        private System.Windows.Forms.Button button34;
-        private System.Windows.Forms.Button button35;
-        private System.Windows.Forms.Button button36;
+        private System.Windows.Forms.Button id_buttonLeftLedR5C7;
+        private System.Windows.Forms.Button id_buttonLeftLedR5C6;
+        private System.Windows.Forms.Button id_buttonLeftLedR5C5;
+        private System.Windows.Forms.Button id_buttonLeftLedR5C4;
+        private System.Windows.Forms.Button id_buttonLeftLedR5C3;
+        private System.Windows.Forms.Button id_buttonLeftLedR5C2;
         private System.Windows.Forms.Button id_buttonLeftLedR4C1;
         private System.Windows.Forms.Button id_buttonLeftLedR3C1;
         private System.Windows.Forms.Button id_buttonLeftLedR2C1;
@@ -3470,12 +3469,15 @@
         private System.Windows.Forms.Button button85;
         private System.Windows.Forms.Button button86;
         private System.Windows.Forms.Button button87;
-        private System.Windows.Forms.Button button37;
-        private System.Windows.Forms.Button button30;
-        private System.Windows.Forms.Button button29;
-        private System.Windows.Forms.Button button28;
-        private System.Windows.Forms.Button button27;
-        private System.Windows.Forms.Button button26;
+        private System.Windows.Forms.Button id_buttonLeftLedR6C8;
+        private System.Windows.Forms.Button id_buttonLeftLedR5C8;
+        private System.Windows.Forms.Button id_buttonLeftLedR4C8;
+        private System.Windows.Forms.Button id_buttonLeftLedR3C8;
+        private System.Windows.Forms.Button id_buttonLeftLedR6C7;
+        private System.Windows.Forms.Button id_buttonLeftLedR6C6;
+        private System.Windows.Forms.ListBox listBox6;
+        private System.Windows.Forms.ListBox listBox5;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
