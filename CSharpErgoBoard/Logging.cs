@@ -90,7 +90,7 @@ namespace CSharpErgoBoard
         /// </summary>
         private static void LoggingThreadFunction()
         {
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\mieuser\Source\Repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log");
+            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\Taha Abbasi-Hashemi\source\repos\CSharpErgoBoard\CSharpErgoBoard\Logs.log");
 
             while (m_instance)
             {

@@ -114,15 +114,12 @@ namespace CSharpErgoBoard
                 }
             }
 
-
             m_computer.GPUEnabled = true;
             m_computer.HDDEnabled = true;
             m_computer.RAMEnabled = true;
-
             while (m_instance)
             {
-                Thread.Sleep(1000); // Sleep for a whole second. We want information updates once a second. 
-
+                Thread.Sleep(1000); // Sleep for a whole second. We want information updates once a second.
                 for (int i = 0; i < m_computer.Hardware.Length; i++)
                 {
                     // CPU
@@ -168,9 +165,9 @@ namespace CSharpErgoBoard
                                 m_gpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
                             }
                         }
-
                     }
-                    else if ((m_computer.Hardware[i].HardwareType == HardwareType.GpuNvidia) && m_AMD)
+                    // Nvidia GPU
+                    else if ((m_computer.Hardware[i].HardwareType == HardwareType.GpuNvidia) && !m_AMD)
                     {
                         m_gpuClock.Clear();
                         m_gpuLoad.Clear();
@@ -191,6 +188,7 @@ namespace CSharpErgoBoard
                             }
                         }
                     }
+                    // Ram
                     else if (m_computer.Hardware[i].HardwareType == HardwareType.RAM)
                     {
                         m_ramLoad.Clear();
@@ -200,10 +198,9 @@ namespace CSharpErgoBoard
                             {
                                 //m_ramLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
                             }
-
                         }
-
                     }
+                    // Hard disk Drive
                     else if (m_computer.Hardware[i].HardwareType == HardwareType.HDD)
                     {
                         m_hddLoad.Clear();
@@ -213,12 +210,9 @@ namespace CSharpErgoBoard
                             {
                                 //m_hddLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
                             }
-
                         }
-
                     }
                 }
-
             }
 
             m_computer.CPUEnabled = false;
