@@ -25,13 +25,13 @@ namespace CSharpErgoBoard
         private String fileName;
         private String lineNumber;
 
-        public string Message { get => message; set => message = value; }
-        public string Date { get => date; set => date = value; }
-        public string ThreadName { get => threadName; set => threadName = value; }
-        public string FileName { get => fileName; set => fileName = value; }
-        public string LineNumber { get => lineNumber; set => lineNumber = value; }
-        public string Time { get => time; set => time = value; }
-        public string MemberName { get => memberName; set => memberName = value; }
+        public String Message { get => message; set => message = value; }
+        public String Date { get => date; set => date = value; }
+        public String ThreadName { get => threadName; set => threadName = value; }
+        public String FileName { get => fileName; set => fileName = value; }
+        public String LineNumber { get => lineNumber; set => lineNumber = value; }
+        public String Time { get => time; set => time = value; }
+        public String MemberName { get => memberName; set => memberName = value; }
     }
 
     /// <summary>
@@ -46,8 +46,8 @@ namespace CSharpErgoBoard
         private static Boolean m_instance = false;
         private static String m_directory = "Logs.log";
 
-        public static string Directory { get => m_directory; set => m_directory = value; }
-        public static string LogFormat { get => m_logFormat; set => m_logFormat = value; }
+        public static String Directory { get => m_directory; set => m_directory = value; }
+        public static String LogFormat { get => m_logFormat; set => m_logFormat = value; }
 
         /// <summary>
         /// Default Constructor. Starts the threading process and creates out instance. 

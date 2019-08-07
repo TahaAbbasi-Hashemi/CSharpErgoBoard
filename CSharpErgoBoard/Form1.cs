@@ -20,15 +20,18 @@ namespace CSharpErgoBoard
         private Logging m_logger = new Logging();
         private SystemMonitor m_monitor = new SystemMonitor();
 
+        // Configuration Variables. 
+        //TODO have this written to a text document and read it post shutdown. 
+
         // Operational variables 
         private SerialPort m_leftKeyboard = new SerialPort();
-        private Queue<String> m_leftKeyBoardQueue = new Queue<string>();
+        private Queue<String> m_leftKeyBoardQueue = new Queue<string>();    // Ouput Queue
         private SerialPort m_leftLeds = new SerialPort();
-        private Queue<String> m_leftLedsQueue = new Queue<string>();
+        private Queue<String> m_leftLedsQueue = new Queue<string>();    // Output Queue
         private SerialPort m_rightKeyboard = new SerialPort();
-        private Queue<String> m_rightKeyBoardQueue = new Queue<string>();
+        private Queue<String> m_rightKeyBoardQueue = new Queue<string>();   // Output Queue
         private SerialPort m_rightLeds = new SerialPort();
-        private Queue<String> m_rightLedsQueue = new Queue<string>();
+        private Queue<String> m_rightLedsQueue = new Queue<string>();   // Output Queue
 
         /// <summary>
         /// Default constructor.
