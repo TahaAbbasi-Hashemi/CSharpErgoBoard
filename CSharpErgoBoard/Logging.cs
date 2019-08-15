@@ -1,74 +1,164 @@
+// Using
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Management;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO.Ports;
 using System.Threading;
 
 
 namespace CSharpErgoBoard
 {
     /// <summary>
-    /// Holds logs stored in the queue.
+    /// A basic data class used to store all of the information that can be used in the logging process
     /// </summary>
     public class LogData
     {
+        /// <summary>
+        /// This is the default constructor. This only exists to ensure that the program can run as expected.
+        /// </summary>
         public LogData() { }
-        private String message;
-        private String time;
-        private String date;
-        private String threadName;
-        private String memberName;
-        private String fileName;
-        private String lineNumber;
+        // Private Encapsulated Variables
+        private String m_message = "Empty";
+        private String m_severity = "";
+        private String m_time = "";
+        private String m_date = "";
+        private String m_threadName = "";
+        private String m_memberName = "";
+        private String m_fileName = "";
+        private String m_lineNumber = "";
 
-        public String Message { get => message; set => message = value; }
-        public String Date { get => date; set => date = value; }
-        public String ThreadName { get => threadName; set => threadName = value; }
-        public String FileName { get => fileName; set => fileName = value; }
-        public String LineNumber { get => lineNumber; set => lineNumber = value; }
-        public String Time { get => time; set => time = value; }
-        public String MemberName { get => memberName; set => memberName = value; }
+        // Encapsulation Functions
+        /// <summary>
+        /// Each log must have a message, the message describes the purpose of the logs existance or importance
+        /// </summary>
+        public String Message { get => m_message; set => m_message = value; }
+        /// <summary>
+        /// The date is the date at which the log was made. 
+        /// </summary>
+        public String Date { get => m_date; set => m_date = value; }
+        /// <summary>
+        /// The thread name is the name of the thread that made the log, 
+        /// </summary>
+        public String ThreadName { get => m_threadName; set => m_threadName = value; }
+        /// <summary>
+        /// The name of the file that the log was made in. 
+        /// </summary>
+        public String FileName { get => m_fileName; set => m_fileName = value; }
+        /// <summary>
+        /// The exact line number that the log was made on. 
+        /// </summary>
+        public String LineNumber { get => m_lineNumber; set => m_lineNumber = value; }
+        /// <summary>
+        /// The exact time that the log was made
+        /// </summary>
+        public String Time { get => m_time; set => m_time = value; }
+        /// <summary>
+        /// The name of the member that made the log. 
+        /// </summary>
+        public String MemberName { get => m_memberName; set => m_memberName = value; }
+        /// <summary>
+        /// The severity/importance of the log.
+        /// </summary>
+        public string Severity { get => m_severity; set => m_severity = value; }
     }
 
     /// <summary>
-    /// A class used for creating logs and storing them in the correct files and folders. 
+    /// The logging class is used to record what happens during runtime of the program. 
     /// </summary>
+    /// <remarks>
+    /// This is a singleton class used to record actions done during runtime of the the program. 
+    /// Because the logging system is singleton based any class can call it as long as it is in the scope.
+    /// This allows for benifits of not having multiple logging sections in the program. 
+    /// The logging class is thread safe, and uses locks. 
+    /// </remarks>
     class Logging
     {
-        private static String m_logFormat = "%D (%T), \"%F\" <%L> : %M";
-        private static Queue<LogData> m_output = new Queue<LogData>();
-        private static Mutex m_outputLock = new Mutex();
-        private static Thread m_thread = new Thread(LoggingThreadFunction);
-        private static Boolean m_instance = false;
+        // Private Encapsulated Variables
+        private static String m_logFormat = "%D (%T), \"%F\" (%m) <%L> : %M";
         private static String m_directory = "Logs.log";
 
-        public static String Directory { get => m_directory; set => m_directory = value; }
-        public static String LogFormat { get => m_logFormat; set => m_logFormat = value; }
+        // Purely Private Variables
+        private static Boolean m_running = false;
+        private static Logging m_instance = null;
+        private static Boolean m_flush = false;
+
+        // Readonly Private Variables
+        private static readonly Queue<LogData> m_output = new Queue<LogData>();
+        private static readonly Mutex m_outputLock = new Mutex();
+        private static readonly Thread m_thread = new Thread(ThreadFunction);
+        private static readonly Object m_padlock = new Object();
+
+        // Encapsulation Functions
+        /// <summary>
+        /// This is the format that the log will be saved as. 
+        /// </summary>
+        /// <remarks>
+        /// The default method is "%D (%T), \"%F\" <%L> : %M" as it contains all the nessary criteria. 
+        /// If you wish to create your own format you can use these variables to indicate properties of the log. \n
+        /// %D would represent the date the log was made \n
+        /// %T would represent the time that the log was made. \n
+        /// %F would represent the file that the log was made in. \n
+        /// %L would represent the line that the log was written on. \n
+        /// %M would represent the message the log contains. \n
+        /// %m would represent the member of the class that called the log.
+        /// </remarks>
+        public static string LogFormat { get => m_logFormat; set => m_logFormat = value; }
+        /// <summary>
+        /// Logs must be saved in a file somewhere to be read, Directory is the name of the file where the logs are saved.
+        /// </summary>
+        public static string Directory { get => m_directory; set => m_directory = value; }
+        /// <summary>
+        /// This is the instance of the singleton class. Any commands must be called using this. 
+        /// </summary>
+        /// <remarks>
+        /// A singleton class has one or no instances. In order to use the instance this must be called. 
+        /// This also starts the threading and logging process of the class.
+        /// </remarks>
+        public static Logging Instance
+        {
+            get
+            {
+                if(m_instance == null)
+                {
+                    lock(m_padlock)
+                    {
+                        if(m_instance == null)
+                        {
+                            m_instance = new Logging();
+                            m_running = true;
+                            m_thread.Start();
+                        }
+                    }
+                }
+                return m_instance;
+            }
+        }
+
+        // Functions
+        /// <summary>
+        /// The default static constructor. This is neither public or private intentionally to allow for singleton class
+        /// </summary>
+        static Logging() {}
 
         /// <summary>
-        /// Default Constructor. Starts the threading process and creates out instance. 
+        /// Removes all previously made logs. 
         /// </summary>
-        public Logging()
+        public static void Flush()
         {
-            m_instance = true;
-            m_thread.Start();
+            m_flush = true;
         }
 
         /// <summary>
-        /// Adds a log to the log queue
+        /// This function creates a log to be saved.
         /// </summary>
-        /// <param name="message"> This is the message you want saved to log </param>
+        /// <param name="message"> This is the message you want saved to log. This is mandatory to have</param>
         /// <param name="memberName"> Using macros finds the member name that made the log</param>
         /// <param name="filePath"> Using macros finds the current file name that the log was made on</param>
         /// <param name="lineNumber"> Using macros finds the line number that the log was made on</param>
         public void Log(String message,
-        [System.Runtime.CompilerServices.CallerMemberName] String memberName = "",
-        [System.Runtime.CompilerServices.CallerMemberName] String filePath = "",
-        [System.Runtime.CompilerServices.CallerLineNumber] int lineNumber = 0)
+            String severity = "",
+            [System.Runtime.CompilerServices.CallerMemberName] String memberName = "",
+            [System.Runtime.CompilerServices.CallerFilePath] String filePath = "",
+            [System.Runtime.CompilerServices.CallerLineNumber] int lineNumber = 0)
         {
             LogData newLog = new LogData
             {
@@ -86,82 +176,94 @@ namespace CSharpErgoBoard
         }
 
         /// <summary>
-        /// A function used by a thread created from the constructor. The function would create logs messaged based on the log format and save them in the corresponding file. 
+        /// This is the function that saves all logging process
         /// </summary>
-        private static void LoggingThreadFunction()
+        private static void ThreadFunction()
         {
-            System.IO.StreamWriter file = new System.IO.StreamWriter(@"C:\Users\mieuser\Source\Repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log");
+            LogData writeLog;
+            String message;
+            Char messageParameter;
+            System.IO.StreamWriter file;
 
-            while (m_instance)
+            String path = @"C:\Users\mieuser\Source\Repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log";
+            file = new System.IO.StreamWriter(path);
+            while (m_running)
             {
-                // No members found.
+                // There are no logs to be saved
                 if (m_output.Count() == 0)
                 {
                     // Sleep the thread for 1ms as to not use more than nesscary system resources. 
                     Thread.Sleep(1);
                     continue;
                 }
-                LogData writeLog = m_output.Dequeue();
 
-                String message = "";
-                for (int i = 0; i < m_logFormat.Count(); i++)
+                // Flushing the file 
+                if (m_flush)
                 {
-                    if (m_logFormat.ElementAt(i) == '%')
+                    file.Close();
+                    file = new System.IO.StreamWriter(path);
+                    m_flush = false;
+                }
+                
+                // Formatting the log message
+                message = "";
+                writeLog = m_output.Dequeue();
+                for (int i = 0; i < LogFormat.Count(); i++)
+                {
+                    if (LogFormat.ElementAt(i) == '%')
                     {
-                        Char parameter = m_logFormat.ElementAt(i + 1);
-                        if (parameter == 'D')
+                        messageParameter = LogFormat.ElementAt(i + 1);
+                        if (messageParameter == 'D')
                         {
                             message += writeLog.Date;
                         }
-                        else if (parameter == 'T')
+                        else if (messageParameter == 'T')
                         {
                             message += writeLog.Time;
                         }
-                        else if (parameter == 't')
+                        else if (messageParameter == 't')
                         {
                             message += writeLog.ThreadName;
                         }
-                        else if (parameter == 'm')
+                        else if (messageParameter == 'm')
                         {
                             message += writeLog.MemberName;
                         }
-                        else if (parameter == 'F')
+                        else if (messageParameter == 'F')
                         {
                             message += writeLog.FileName;
                         }
-                        else if (parameter == 'L')
+                        else if (messageParameter == 'L')
                         {
                             message += writeLog.LineNumber;
                         }
-                        else if (parameter == 'M')
+                        else if (messageParameter == 'M')
                         {
                             message += writeLog.Message;
                         }
                         else
                         {
                             message += '%';
-                            message += parameter;
+                            message += messageParameter;
                         }
                         i++;
                     }
                     else
                     {
-                        message += m_logFormat.ElementAt(i);
+                        message += LogFormat.ElementAt(i);
                     }
                 }
-
-
                 file.WriteLine(message);
             }
             file.Close();
         }
 
         /// <summary>
-        /// Kills the entire logging process. 
+        /// This stops the logging process. If this isn't called somewhere then its possible for no logs to be saved.  
         /// </summary>
         public void End()
         {
-            m_instance = false;
+            m_running = false;
             m_thread.Join();
         }
     }

@@ -67,6 +67,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="class_c_sharp_ergo_board_1_1_logging-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -74,53 +75,42 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>A class used for creating logs and storing them in the correct files and folders.  
+<p>The logging class is used to record what happens during runtime of the program.  
  <a href="class_c_sharp_ergo_board_1_1_logging.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a41a066603fc938b77fcb51288ce28527"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html#a41a066603fc938b77fcb51288ce28527">Logging</a> ()</td></tr>
-<tr class="memdesc:a41a066603fc938b77fcb51288ce28527"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default Constructor. Starts the threading process and creates out instance.  <a href="#a41a066603fc938b77fcb51288ce28527">More...</a><br /></td></tr>
-<tr class="separator:a41a066603fc938b77fcb51288ce28527"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc3deffe5a595d3545d89c6e2a6a23c5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html#afc3deffe5a595d3545d89c6e2a6a23c5">Log</a> (String message, [System.Runtime.CompilerServices.CallerMemberName] String memberName=&quot;&quot;, [System.Runtime.CompilerServices.CallerMemberName] String filePath=&quot;&quot;, [System.Runtime.CompilerServices.CallerLineNumber] int lineNumber=0)</td></tr>
-<tr class="memdesc:afc3deffe5a595d3545d89c6e2a6a23c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a log to the log queue  <a href="#afc3deffe5a595d3545d89c6e2a6a23c5">More...</a><br /></td></tr>
-<tr class="separator:afc3deffe5a595d3545d89c6e2a6a23c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ada2de216c99e79deaf6df3cd703b99ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html#ada2de216c99e79deaf6df3cd703b99ae">Log</a> (String message, String severity=&quot;&quot;, [System.Runtime.CompilerServices.CallerMemberName] String memberName=&quot;&quot;, [System.Runtime.CompilerServices.CallerFilePath] String filePath=&quot;&quot;, [System.Runtime.CompilerServices.CallerLineNumber] int lineNumber=0)</td></tr>
+<tr class="memdesc:ada2de216c99e79deaf6df3cd703b99ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function creates a log to be saved.  <a href="#ada2de216c99e79deaf6df3cd703b99ae">More...</a><br /></td></tr>
+<tr class="separator:ada2de216c99e79deaf6df3cd703b99ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab09fb3b40f98685e62481827bb883276"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html#ab09fb3b40f98685e62481827bb883276">End</a> ()</td></tr>
-<tr class="memdesc:ab09fb3b40f98685e62481827bb883276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kills the entire logging process.  <a href="#ab09fb3b40f98685e62481827bb883276">More...</a><br /></td></tr>
+<tr class="memdesc:ab09fb3b40f98685e62481827bb883276"><td class="mdescLeft">&#160;</td><td class="mdescRight">This stops the logging process. If this isn't called somewhere then its possible for no logs to be saved.  <a href="#ab09fb3b40f98685e62481827bb883276">More...</a><br /></td></tr>
 <tr class="separator:ab09fb3b40f98685e62481827bb883276"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a8141fda0f8362685e846c8fe7b053538"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html#a8141fda0f8362685e846c8fe7b053538">Flush</a> ()</td></tr>
+<tr class="memdesc:a8141fda0f8362685e846c8fe7b053538"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes all previously made logs.  <a href="#a8141fda0f8362685e846c8fe7b053538">More...</a><br /></td></tr>
+<tr class="separator:a8141fda0f8362685e846c8fe7b053538"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a5078e84973549f4c55a5a2da89a2499b"><td class="memItemLeft" align="right" valign="top"><a id="a5078e84973549f4c55a5a2da89a2499b"></a>
-static string&#160;</td><td class="memItemRight" valign="bottom"><b>Directory</b><code> [get, set]</code></td></tr>
-<tr class="separator:a5078e84973549f4c55a5a2da89a2499b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7e50727ffabacfaa5b43445f7be8bac"><td class="memItemLeft" align="right" valign="top"><a id="af7e50727ffabacfaa5b43445f7be8bac"></a>
-static string&#160;</td><td class="memItemRight" valign="bottom"><b>LogFormat</b><code> [get, set]</code></td></tr>
+<tr class="memitem:af7e50727ffabacfaa5b43445f7be8bac"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html#af7e50727ffabacfaa5b43445f7be8bac">LogFormat</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:af7e50727ffabacfaa5b43445f7be8bac"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the format that the log will be saved as.  <a href="#af7e50727ffabacfaa5b43445f7be8bac">More...</a><br /></td></tr>
 <tr class="separator:af7e50727ffabacfaa5b43445f7be8bac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5078e84973549f4c55a5a2da89a2499b"><td class="memItemLeft" align="right" valign="top">static string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html#a5078e84973549f4c55a5a2da89a2499b">Directory</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:a5078e84973549f4c55a5a2da89a2499b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs must be saved in a file somewhere to be read, Directory is the name of the file where the logs are saved.  <a href="#a5078e84973549f4c55a5a2da89a2499b">More...</a><br /></td></tr>
+<tr class="separator:a5078e84973549f4c55a5a2da89a2499b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea9d47882583ee0ef0a3f0ad21852e05"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_c_sharp_ergo_board_1_1_logging.html">Logging</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html#aea9d47882583ee0ef0a3f0ad21852e05">Instance</a><code> [get]</code></td></tr>
+<tr class="memdesc:aea9d47882583ee0ef0a3f0ad21852e05"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the instance of the singleton class. Any commands must be called using this.  <a href="#aea9d47882583ee0ef0a3f0ad21852e05">More...</a><br /></td></tr>
+<tr class="separator:aea9d47882583ee0ef0a3f0ad21852e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A class used for creating logs and storing them in the correct files and folders. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a41a066603fc938b77fcb51288ce28527"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a41a066603fc938b77fcb51288ce28527">&#9670;&nbsp;</a></span>Logging()</h2>
+<div class="textblock"><p>The logging class is used to record what happens during runtime of the program. </p>
+<p>This is a singleton class used to record actions done during runtime of the the program. Because the logging system is singleton based any class can call it as long as it is in the scope. This allows for benifits of not having multiple logging sections in the program. The logging class is thread safe, and uses locks. </p>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CSharpErgoBoard.Logging.Logging </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Default Constructor. Starts the threading process and creates out instance. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+<p class="definition">Definition at line <a class="el" href="_logging_8cs_source.html#l00073">73</a> of file <a class="el" href="_logging_8cs_source.html">Logging.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab09fb3b40f98685e62481827bb883276"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab09fb3b40f98685e62481827bb883276">&#9670;&nbsp;</a></span>End()</h2>
 
@@ -136,12 +126,43 @@ static string&#160;</td><td class="memItemRight" valign="bottom"><b>LogFormat</b
       </table>
 </div><div class="memdoc">
 
-<p>Kills the entire logging process. </p>
+<p>This stops the logging process. If this isn't called somewhere then its possible for no logs to be saved. </p>
+
+<p class="definition">Definition at line <a class="el" href="_logging_8cs_source.html#l00267">267</a> of file <a class="el" href="_logging_8cs_source.html">Logging.cs</a>.</p>
 
 </div>
 </div>
-<a id="afc3deffe5a595d3545d89c6e2a6a23c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc3deffe5a595d3545d89c6e2a6a23c5">&#9670;&nbsp;</a></span>Log()</h2>
+<a id="a8141fda0f8362685e846c8fe7b053538"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8141fda0f8362685e846c8fe7b053538">&#9670;&nbsp;</a></span>Flush()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CSharpErgoBoard.Logging.Flush </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Removes all previously made logs. </p>
+
+<p class="definition">Definition at line <a class="el" href="_logging_8cs_source.html#l00145">145</a> of file <a class="el" href="_logging_8cs_source.html">Logging.cs</a>.</p>
+
+</div>
+</div>
+<a id="ada2de216c99e79deaf6df3cd703b99ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ada2de216c99e79deaf6df3cd703b99ae">&#9670;&nbsp;</a></span>Log()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,13 +176,19 @@ static string&#160;</td><td class="memItemRight" valign="bottom"><b>LogFormat</b
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>severity</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">[System.Runtime.CompilerServices.CallerMemberName] String&#160;</td>
           <td class="paramname"><em>memberName</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">[System.Runtime.CompilerServices.CallerMemberName] String&#160;</td>
+          <td class="paramtype">[System.Runtime.CompilerServices.CallerFilePath] String&#160;</td>
           <td class="paramname"><em>filePath</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
@@ -178,10 +205,10 @@ static string&#160;</td><td class="memItemRight" valign="bottom"><b>LogFormat</b
       </table>
 </div><div class="memdoc">
 
-<p>Adds a log to the log queue </p>
+<p>This function creates a log to be saved. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">message</td><td>This is the message you want saved to log </td></tr>
+    <tr><td class="paramname">message</td><td>This is the message you want saved to log. This is mandatory to have</td></tr>
     <tr><td class="paramname">memberName</td><td>Using macros finds the member name that made the log</td></tr>
     <tr><td class="paramname">filePath</td><td>Using macros finds the current file name that the log was made on</td></tr>
     <tr><td class="paramname">lineNumber</td><td>Using macros finds the line number that the log was made on</td></tr>
@@ -189,10 +216,99 @@ static string&#160;</td><td class="memItemRight" valign="bottom"><b>LogFormat</b
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="_logging_8cs_source.html#l00157">157</a> of file <a class="el" href="_logging_8cs_source.html">Logging.cs</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Property Documentation</h2>
+<a id="a5078e84973549f4c55a5a2da89a2499b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5078e84973549f4c55a5a2da89a2499b">&#9670;&nbsp;</a></span>Directory</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CSharpErgoBoard.Logging.Directory</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Logs must be saved in a file somewhere to be read, Directory is the name of the file where the logs are saved. </p>
+
+<p class="definition">Definition at line <a class="el" href="_logging_8cs_source.html#l00108">108</a> of file <a class="el" href="_logging_8cs_source.html">Logging.cs</a>.</p>
+
+</div>
+</div>
+<a id="aea9d47882583ee0ef0a3f0ad21852e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea9d47882583ee0ef0a3f0ad21852e05">&#9670;&nbsp;</a></span>Instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_c_sharp_ergo_board_1_1_logging.html">Logging</a> CSharpErgoBoard.Logging.Instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the instance of the singleton class. Any commands must be called using this. </p>
+<p>A singleton class has one or no instances. In order to use the instance this must be called. This also starts the threading and logging process of the class. </p>
+
+<p class="definition">Definition at line <a class="el" href="_logging_8cs_source.html#l00117">117</a> of file <a class="el" href="_logging_8cs_source.html">Logging.cs</a>.</p>
+
+</div>
+</div>
+<a id="af7e50727ffabacfaa5b43445f7be8bac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e50727ffabacfaa5b43445f7be8bac">&#9670;&nbsp;</a></span>LogFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string CSharpErgoBoard.Logging.LogFormat</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">get</span><span class="mlabel">set</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the format that the log will be saved as. </p>
+<p>The default method is "%D (%T), \"F" &lt;L&gt; : M" as it contains all the nessary criteria. If you wish to create your own format you can use these variables to indicate properties of the log. <br />
+D would represent the date the log was made <br />
+T would represent the time that the log was made. <br />
+F would represent the file that the log was made in. <br />
+L would represent the line that the log was written on. <br />
+M would represent the message the log contains. <br />
+m would represent the member of the class that called the log. </p>
+
+<p class="definition">Definition at line <a class="el" href="_logging_8cs_source.html#l00104">104</a> of file <a class="el" href="_logging_8cs_source.html">Logging.cs</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Logging.cs</li>
+<li>C:/Users/mieuser/Source/Repos/CSharpErgoBoard/CSharpErgoBoard/<a class="el" href="_logging_8cs_source.html">Logging.cs</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

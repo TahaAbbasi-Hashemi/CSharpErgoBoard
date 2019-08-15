@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getports',['GetPorts',['../class_c_sharp_ergo_board_1_1id__main.html#a4a1257625e12005bfd7f176365606654',1,'CSharpErgoBoard.id_main.GetPorts()'],['../class_c_sharp_ergo_board_1_1_i_o_connect.html#ac1754f68ef826a252eee5ad0b13e6439',1,'CSharpErgoBoard.IOConnect.GetPorts()']]]
+  ['end',['End',['../class_c_sharp_ergo_board_1_1_logging.html#ab09fb3b40f98685e62481827bb883276',1,'CSharpErgoBoard.Logging.End()'],['../class_c_sharp_ergo_board_1_1_system_monitor.html#a2668ce092d8923b999c7eaf04bc4d2d2',1,'CSharpErgoBoard.SystemMonitor.End()']]]
 ];

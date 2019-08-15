@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['id_5fmain',['id_main',['../class_c_sharp_ergo_board_1_1id__main.html',1,'CSharpErgoBoard.id_main'],['../class_c_sharp_ergo_board_1_1id__main.html#a7d45c1d8fa7b625eb4ff849db81b9bba',1,'CSharpErgoBoard.id_main.id_main()']]],
-  ['ioconnect',['IOConnect',['../class_c_sharp_ergo_board_1_1_i_o_connect.html',1,'CSharpErgoBoard']]]
+  ['filename',['FileName',['../class_c_sharp_ergo_board_1_1_log_data.html#a0d6363b6c0ec30380f9d3da55bc9f9db',1,'CSharpErgoBoard::LogData']]],
+  ['flush',['Flush',['../class_c_sharp_ergo_board_1_1_logging.html#a8141fda0f8362685e846c8fe7b053538',1,'CSharpErgoBoard::Logging']]]
 ];

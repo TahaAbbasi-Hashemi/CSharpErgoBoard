@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['setup',['Setup',['../class_c_sharp_ergo_board_1_1_i_o_connect.html#a8c348c07f10c436c1480354ee2378e87',1,'CSharpErgoBoard::IOConnect']]]
+  ['log',['Log',['../class_c_sharp_ergo_board_1_1_logging.html#ada2de216c99e79deaf6df3cd703b99ae',1,'CSharpErgoBoard::Logging']]],
+  ['logdata',['LogData',['../class_c_sharp_ergo_board_1_1_log_data.html#ad4711364bc6cfab2cd15bdce66741e4b',1,'CSharpErgoBoard::LogData']]]
 ];

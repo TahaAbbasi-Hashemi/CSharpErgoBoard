@@ -16,7 +16,7 @@ namespace CSharpErgoBoard
     {
 
         private String m_selectedKey = "NONE";
-        Logging m_logger = new Logging();
+        //Logging m_logger = new Logging();
 
         /// <summary>
         /// Finds a list of serial ports and their friendly descriptions and returns it. 
@@ -32,7 +32,7 @@ namespace CSharpErgoBoard
             foreach (ManagementObject queryObj in searcher.Get())
             {
                 names.Add(queryObj["Name"].ToString());
-                m_logger.Log(queryObj["Name"].ToString());
+                Logging.Instance.Log(queryObj["Name"].ToString());
             }
 
             return names;
@@ -44,11 +44,11 @@ namespace CSharpErgoBoard
         public id_main()
         {
             //id_listboxLeftKeyComPort.Items() = sbyte;
-            IOConnect leftKeyboard = new IOConnect();
-            IOConnect rightKeyboard = new IOConnect();
+            //IOConnect leftKeyboard = new IOConnect();
+            //IOConnect rightKeyboard = new IOConnect();
             GetPorts();
             InitializeComponent();
-            m_logger.Log("Program Has started");
+            Logging.Instance.Log("Program Has started");
             SelectLightMode();
         }
 
@@ -57,7 +57,7 @@ namespace CSharpErgoBoard
         /// </summary>
         private void SelectDarkMode()
         {
-            m_logger.Log("Selected Dark Mode");
+            Logging.Instance.Log("Selected Dark Mode");
 
             Color kindofBlack = new Color();
             Color backgroundBlack = new Color();
@@ -68,22 +68,40 @@ namespace CSharpErgoBoard
 
             // Main Window
             this.id_panelMain.BackColor = backgroundBlack;
-            this.id_panelMain.ForeColor = System.Drawing.Color.White;
+            this.id_panelMain.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
-            this.menuStrip1.ForeColor = System.Drawing.Color.White;
-            this.id_progressLeftBar.BackColor = kindofBlack;
-            this.id_progressLeftBar.ForeColor = darkBlue;
-            this.id_textboxLeftKeyValue.BackColor = kindofBlack;
-            this.id_textboxLeftKeyValue.ForeColor = System.Drawing.Color.White;
-            this.id_textboxRightKeyValue.BackColor = kindofBlack;
-            this.id_textboxRightKeyValue.ForeColor = System.Drawing.Color.White;
+            this.menuStrip1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.BackColor = backgroundBlack;
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.WhiteSmoke;
 
-            this.id_buttonLeftKeyConnectComPort.BackColor = kindofBlack;
-            this.id_buttonRightKeyConnectComPort.BackColor = kindofBlack;
+            //Left Hand Side
+            this.id_listboxLeftKeyLayer.BackColor = kindofBlack;
+            this.id_listboxLeftKeyLayer.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.id_listboxLeftKeyComPort.BackColor = kindofBlack;
+            this.id_listboxLeftKeyComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.id_textboxLeftKeyValue.BackColor = kindofBlack;
+            this.id_textboxLeftKeyValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.id_buttonLeftUpdateKey.BackColor = kindofBlack;
+            this.id_buttonLeftKeyConnectComPort.BackColor = kindofBlack;
+
+            this.id_listboxLeftLedComPort.BackColor = kindofBlack;
+            this.id_listboxLeftLedComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonLeftLedConnectComPort.BackColor = kindofBlack;
+            this.id_buttonLeftLedConnectComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.id_listboxLeftLedStyle.BackColor = kindofBlack;
+            this.id_listboxLeftLedStyle.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonLeftUpdateLed.BackColor = kindofBlack;
+            this.id_buttonLeftUpdateLed.ForeColor = System.Drawing.Color.WhiteSmoke;
+
+            //Right Hand Side
+            this.id_listboxRightKeyLayer.BackColor = kindofBlack;
+            this.id_listboxRightKeyLayer.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.id_listboxRightKeyComPort.BackColor = kindofBlack;
+            this.id_listboxRightKeyComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.id_textboxRightKeyValue.BackColor = kindofBlack;
+            this.id_textboxRightKeyValue.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.id_buttonRightUpdateKey.BackColor = kindofBlack;
+            this.id_buttonRightKeyConnectComPort.BackColor = kindofBlack;
 
             // Left Hand side
             // Keyboard Keys
@@ -324,15 +342,21 @@ namespace CSharpErgoBoard
         /// </summary>
         private void SelectLightMode()
         {
-            m_logger.Log("Selected Light Mode");
+            Logging.Instance.Log("Selected Light Mode");
 
             // Main Window 
             this.id_panelMain.BackColor = System.Drawing.Color.White;
             this.id_panelMain.ForeColor = System.Drawing.Color.Black;
             this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
             this.menuStrip1.ForeColor = System.Drawing.Color.Black;
+
+            this.id_listboxLeftKeyLayer.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_listboxLeftKeyLayer.ForeColor = System.Drawing.Color.Black;
             this.id_textboxLeftKeyValue.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_textboxLeftKeyValue.ForeColor = System.Drawing.Color.Black;
+            this.id_buttonLeftUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonLeftKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
+
             this.id_textboxRightKeyValue.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_textboxRightKeyValue.ForeColor = System.Drawing.Color.Black;
 
@@ -340,9 +364,7 @@ namespace CSharpErgoBoard
             this.BackColor = System.Drawing.Color.WhiteSmoke;
 
 
-            this.id_buttonLeftKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_buttonRightKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonLeftUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
             this.id_buttonRightUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
 
             // Left hand side
@@ -601,7 +623,7 @@ namespace CSharpErgoBoard
         /// <param name="e"></param>
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            m_logger.End();
+            Logging.Instance.End();
         }
 
         /// <summary>
@@ -635,6 +657,26 @@ namespace CSharpErgoBoard
         }
 
         private void id_textboxLeftKeyValue_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Id_buttonLeftLedConnectComPort_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Id_buttonRightLedConnectComPort_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Id_buttonLeftUpdateKey_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Id_buttonRightUpdateKey_Click(object sender, EventArgs e)
         {
 
         }

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['log',['Log',['../class_c_sharp_ergo_board_1_1_logging.html#afc3deffe5a595d3545d89c6e2a6a23c5',1,'CSharpErgoBoard::Logging']]],
-  ['logdata',['LogData',['../class_c_sharp_ergo_board_1_1_log_data.html',1,'CSharpErgoBoard']]],
-  ['logging',['Logging',['../class_c_sharp_ergo_board_1_1_logging.html',1,'CSharpErgoBoard.Logging'],['../class_c_sharp_ergo_board_1_1_logging.html#a41a066603fc938b77fcb51288ce28527',1,'CSharpErgoBoard.Logging.Logging()']]]
+  ['getports',['GetPorts',['../class_c_sharp_ergo_board_1_1id__main.html#a4a1257625e12005bfd7f176365606654',1,'CSharpErgoBoard::id_main']]],
+  ['gpuclock',['GpuClock',['../class_c_sharp_ergo_board_1_1_system_monitor.html#a959c885cfc734b24d8e8fbd0363548a4',1,'CSharpErgoBoard::SystemMonitor']]],
+  ['gpuload',['GpuLoad',['../class_c_sharp_ergo_board_1_1_system_monitor.html#afe3410f7b4b21d928594a94580fcb948',1,'CSharpErgoBoard::SystemMonitor']]],
+  ['gputemp',['GpuTemp',['../class_c_sharp_ergo_board_1_1_system_monitor.html#ab490d172fc3fcb298eb8508a440d57c7',1,'CSharpErgoBoard::SystemMonitor']]]
 ];

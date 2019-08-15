@@ -1,37 +1,42 @@
-﻿using System;
+﻿// Using
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Threading;
 using OpenHardwareMonitor.Hardware;
 
 
 namespace CSharpErgoBoard
 {
+    /// <summary>
+    /// A class which runs and records the properties of the PC. 
+    /// </summary>
+    /// <remarks>
+    /// The class is a singleton class, this allows for it to exist only once and be universal in its use. 
+    /// </remarks>
     public class SystemMonitor
     {
-        private static bool m_instance = false;
-        private Thread m_thread = new Thread(UpdateValues);
-        private static Computer m_computer = new Computer();
-
+        // Private Encapsulated Variables
         private static bool m_AMD = false;
         private static int m_cpuCores = 0;  // This is expected to be greater than or equal to 1. 
-        private static List<float> m_cpuClock = new List<float>();
-        private static List<float> m_cpuLoad = new List<float>();
-        private static List<float> m_cpuTemp = new List<float>();
-        private static List<float> m_gpuClock = new List<float>();
-        private static List<float> m_gpuLoad = new List<float>();
-        private static List<float> m_gpuTemp = new List<float>();
-        private static List<float> m_ramLoad = new List<float>();
-        private static List<float> m_hddLoad = new List<float>();
+        private static readonly List<float> m_cpuClock = new List<float>();
+        private static readonly List<float> m_cpuLoad = new List<float>();
+        private static readonly List<float> m_cpuTemp = new List<float>();
+        private static readonly List<float> m_gpuClock = new List<float>();
+        private static readonly List<float> m_gpuLoad = new List<float>();
+        private static readonly List<float> m_gpuTemp = new List<float>();
+        private static readonly List<float> m_ramLoad = new List<float>();
+        private static readonly List<float> m_hddLoad = new List<float>();
+
+        // Purely Private Variables
+        private static bool m_running = false;
+        private readonly Thread m_thread = new Thread(UpdateValues);
+        private static readonly Computer m_computer = new Computer();
 
         /// <summary>
         /// Gets the total amount of CPU cores found in a system. 
         /// </summary>
         public static int CpuCores { get => m_cpuCores; }
         /// <summary>
-        /// Get the Clock speed of each CPU core in a list
+        /// Get the Clock speed of each CPU core in a list, with the first value in the list being the total CPU clock speed
         /// </summary>
         public static List<float> CpuClock { get => m_cpuClock; }
         /// <summary>
@@ -54,37 +59,37 @@ namespace CSharpErgoBoard
         /// Get the temperture of the graphics card
         /// </summary>
         public static List<float> GpuTemp { get => m_gpuTemp; }
-
-        ///// <summary>
-        ///// Get the load of the ram
-        ///// </summary>
-        //public static List<float> RamLoad { get => m_ramLoad; }
-        ///// <summary>
-        ///// Get the load of the hard disk drive
-        ///// </summary>
-        //public static List<float> HddLoad { get => m_hddLoad; }
+        /// <summary>
+        /// Get the load of the ram
+        /// </summary>
+        public static List<float> RamLoad { get => m_ramLoad; }
+        /// <summary>
+        /// Get the load of the hard disk drive
+        /// </summary>
+        public static List<float> HddLoad { get => m_hddLoad; }
 
         /// <summary>
-        /// Gets or sets a value indicating whether this <see cref="SystemMonitor"/> computer is using a AMD GPU
+        /// Controls if the program uses a Nvidea or AMD gpu. 
         /// </summary>
         /// <value>
-        ///   <c>true</c> if we are usign a AMD GPU; if we are using a Nvidea GPU, <c>false</c>.
+        ///     <c>true</c> if we are using a AMD GPU; <c>false</c> if we are using a Nvidea GPU.
         /// </value>
         public static bool AMD { get => m_AMD; set => m_AMD = value; }
 
 
         public SystemMonitor()
         {
-            m_instance = true;
+            m_running = true;
             m_computer.Open();
             m_thread.Start();
         }
+
         /// <summary>
-        /// Ends the monitoring process
+        /// Ends the monitoring process, This must be called or the program will not close.
         /// </summary>
         public void End()
         {
-            m_instance = false;
+            m_running = false;
             m_computer.Close();
             m_thread.Join();
         }
@@ -119,7 +124,7 @@ namespace CSharpErgoBoard
             m_computer.HDDEnabled = true;
             m_computer.RAMEnabled = true;
 
-            while (m_instance)
+            while (m_running)
             {
                 Thread.Sleep(1000); // Sleep for a whole second. We want information updates once a second. 
 
@@ -225,6 +230,11 @@ namespace CSharpErgoBoard
             m_computer.GPUEnabled = false;
             m_computer.HDDEnabled = false;
             m_computer.RAMEnabled = false;
+
+        }
+
+        private static void ThreadFunction()
+        {
 
         }
     }
