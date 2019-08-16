@@ -104,6 +104,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Singleton.cs" />
     <Compile Include="Logging.cs" />
     <Compile Include="SystemMonitor.cs" />
     <Compile Include="IOConnect.cs" />

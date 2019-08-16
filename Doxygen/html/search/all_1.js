@@ -1,9 +1,9 @@
 var searchData=
 [
-  ['cpuclock',['CpuClock',['../class_c_sharp_ergo_board_1_1_system_monitor.html#a1d2ef9dd48013cdf3b8e29f894ab895e',1,'CSharpErgoBoard::SystemMonitor']]],
-  ['cpucores',['CpuCores',['../class_c_sharp_ergo_board_1_1_system_monitor.html#a50935ad31361fab5da1c470cf5b130fa',1,'CSharpErgoBoard::SystemMonitor']]],
-  ['cpuload',['CpuLoad',['../class_c_sharp_ergo_board_1_1_system_monitor.html#a2e578620dd030d17d2586077ff9055d7',1,'CSharpErgoBoard::SystemMonitor']]],
-  ['cputemp',['CpuTemp',['../class_c_sharp_ergo_board_1_1_system_monitor.html#ac4327d56222bd7bb8f1feb4f70779131',1,'CSharpErgoBoard::SystemMonitor']]],
+  ['cpuclock',['CpuClock',['../class_c_sharp_ergo_board_1_1_system_monitor.html#aebe4fd878adcbc155a89148b292fdb4b',1,'CSharpErgoBoard::SystemMonitor']]],
+  ['cpucores',['CpuCores',['../class_c_sharp_ergo_board_1_1_system_monitor.html#a258e31994df01fd8318da65429a08151',1,'CSharpErgoBoard::SystemMonitor']]],
+  ['cpuload',['CpuLoad',['../class_c_sharp_ergo_board_1_1_system_monitor.html#aae7a55044d1f792d2c63bf7eaba32137',1,'CSharpErgoBoard::SystemMonitor']]],
+  ['cputemp',['CpuTemp',['../class_c_sharp_ergo_board_1_1_system_monitor.html#afcb02a8bb514f2e95362b6f17c9cf2b6',1,'CSharpErgoBoard::SystemMonitor']]],
   ['csharpergoboard',['CSharpErgoBoard',['../namespace_c_sharp_ergo_board.html',1,'']]],
   ['properties',['Properties',['../namespace_c_sharp_ergo_board_1_1_properties.html',1,'CSharpErgoBoard']]]
 ];

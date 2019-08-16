@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['gpuclock',['GpuClock',['../class_c_sharp_ergo_board_1_1_system_monitor.html#a959c885cfc734b24d8e8fbd0363548a4',1,'CSharpErgoBoard::SystemMonitor']]],
-  ['gpuload',['GpuLoad',['../class_c_sharp_ergo_board_1_1_system_monitor.html#afe3410f7b4b21d928594a94580fcb948',1,'CSharpErgoBoard::SystemMonitor']]],
-  ['gputemp',['GpuTemp',['../class_c_sharp_ergo_board_1_1_system_monitor.html#ab490d172fc3fcb298eb8508a440d57c7',1,'CSharpErgoBoard::SystemMonitor']]]
+  ['gpuclock',['GpuClock',['../class_c_sharp_ergo_board_1_1_system_monitor.html#ad722785240668a6221f5affb82342b73',1,'CSharpErgoBoard::SystemMonitor']]],
+  ['gpuload',['GpuLoad',['../class_c_sharp_ergo_board_1_1_system_monitor.html#a9cd1cdd9def7cced11a276c6a8e9c02c',1,'CSharpErgoBoard::SystemMonitor']]],
+  ['gputemp',['GpuTemp',['../class_c_sharp_ergo_board_1_1_system_monitor.html#af26aaba2176a60665eab6126c64df3c9',1,'CSharpErgoBoard::SystemMonitor']]]
 ];

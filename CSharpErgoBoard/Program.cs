@@ -16,7 +16,7 @@ namespace CSharpErgoBoard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new id_main());
+            Application.Run(new Id_main());
         }
     }
 }

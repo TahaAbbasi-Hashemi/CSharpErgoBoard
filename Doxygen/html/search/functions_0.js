@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dispose',['Dispose',['../class_c_sharp_ergo_board_1_1id__main.html#a8f5c0c999511ddb3916d5e20c754fb2f',1,'CSharpErgoBoard::id_main']]]
+  ['dispose',['Dispose',['../class_c_sharp_ergo_board_1_1_id__main.html#a57ebeb55f908327cd53fa40039803ceb',1,'CSharpErgoBoard::Id_main']]]
 ];

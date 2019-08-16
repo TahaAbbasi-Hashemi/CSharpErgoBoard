@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-
 namespace CSharpErgoBoard
 {
     /// <summary>
@@ -12,6 +11,19 @@ namespace CSharpErgoBoard
     /// </summary>
     public class LogData
     {
+        // Class Atributes
+        /// <summary>
+        /// The name of the class
+        /// </summary>
+        public String Name { get; } = "LogData";
+        /// <summary>
+        /// The purpose of the class
+        /// </summary>
+        public String Purpose { get; } = "Used to alllow for ease of storing multiple values of a log";
+        /// <summary>
+        /// To convert the class to a string.
+        /// </summary>
+        public new String ToString { get; } = "A Data class used to store a single log";
         /// <summary>
         /// This is the default constructor. This only exists to ensure that the program can run as expected.
         /// </summary>
@@ -69,23 +81,56 @@ namespace CSharpErgoBoard
     /// Because the logging system is singleton based any class can call it as long as it is in the scope.
     /// This allows for benifits of not having multiple logging sections in the program. 
     /// The logging class is thread safe, and uses locks. 
+    /// \n \n
+    /// For more information regarding singleton please see Singleton class.
     /// </remarks>
-    class Logging
+    class Logging : Singleton
     {
+        // Class Atributes
+        /// <summary>
+        /// The name of the class
+        /// </summary>
+        public new String Name { get; } = "Logging";
+        /// <summary>
+        /// The purpose of the class
+        /// </summary>
+        public new String Purpose { get; } = "To record what happens during the lifespan of the program";
+        /// <summary>
+        /// To convert the class to a string.
+        /// </summary>
+        public new String ToString { get; } = "A Singleton Logging Class";
+
         // Private Encapsulated Variables
         private static String m_logFormat = "%D (%T), \"%F\" (%m) <%L> : %M";
         private static String m_directory = "Logs.log";
 
         // Purely Private Variables
-        private static Boolean m_running = false;
-        private static Logging m_instance = null;
+        /// <summary>
+        /// The instance of the singelton
+        /// </summary>
+        protected new static Logging m_instance = null;
+        /// <summary>
+        /// A boolean value being used if we want to flush the system
+        /// </summary>
         private static Boolean m_flush = false;
 
         // Readonly Private Variables
+        /// <summary>
+        /// The data queue of logs being saved
+        /// </summary>
         private static readonly Queue<LogData> m_output = new Queue<LogData>();
+        /// <summary>
+        /// This is used to ensure that our queue is thread safe
+        /// </summary>
         private static readonly Mutex m_outputLock = new Mutex();
-        private static readonly Thread m_thread = new Thread(ThreadFunction);
-        private static readonly Object m_padlock = new Object();
+        /// <summary>
+        /// The thread run by the singleton
+        /// </summary>
+        protected new static readonly Thread m_thread = new Thread(ThreadFunction);
+        /// <summary>
+        /// To ensure that our singleton is thread safe
+        /// </summary>
+        protected new static readonly Object m_padlock = new Object();
 
         // Encapsulation Functions
         /// <summary>
@@ -101,27 +146,27 @@ namespace CSharpErgoBoard
         /// %M would represent the message the log contains. \n
         /// %m would represent the member of the class that called the log.
         /// </remarks>
-        public static string LogFormat { get => m_logFormat; set => m_logFormat = value; }
+        public static String LogFormat { get => m_logFormat; set => m_logFormat = value; }
         /// <summary>
         /// Logs must be saved in a file somewhere to be read, Directory is the name of the file where the logs are saved.
         /// </summary>
-        public static string Directory { get => m_directory; set => m_directory = value; }
+        public static String Directory { get => m_directory; set => m_directory = value; }
         /// <summary>
-        /// This is the instance of the singleton class. Any commands must be called using this. 
+        /// This is the instance of the singleton class. Any commands must be called using  
         /// </summary>
         /// <remarks>
         /// A singleton class has one or no instances. In order to use the instance this must be called. 
         /// This also starts the threading and logging process of the class.
         /// </remarks>
-        public static Logging Instance
+        public new static Logging Instance
         {
             get
             {
-                if(m_instance == null)
+                if (m_instance == null)
                 {
-                    lock(m_padlock)
+                    lock (m_padlock)
                     {
-                        if(m_instance == null)
+                        if (m_instance == null)
                         {
                             m_instance = new Logging();
                             m_running = true;
@@ -133,11 +178,12 @@ namespace CSharpErgoBoard
             }
         }
 
+
         // Functions
         /// <summary>
         /// The default static constructor. This is neither public or private intentionally to allow for singleton class
         /// </summary>
-        static Logging() {}
+        static Logging() { }
 
         /// <summary>
         /// Removes all previously made logs. 
@@ -151,19 +197,21 @@ namespace CSharpErgoBoard
         /// This function creates a log to be saved.
         /// </summary>
         /// <param name="message"> This is the message you want saved to log. This is mandatory to have</param>
+        /// <param name="severity"> This is the severity of the message, current TBA</param>
         /// <param name="memberName"> Using macros finds the member name that made the log</param>
         /// <param name="filePath"> Using macros finds the current file name that the log was made on</param>
         /// <param name="lineNumber"> Using macros finds the line number that the log was made on</param>
         public void Log(String message,
-            String severity = "",
-            [System.Runtime.CompilerServices.CallerMemberName] String memberName = "",
-            [System.Runtime.CompilerServices.CallerFilePath] String filePath = "",
-            [System.Runtime.CompilerServices.CallerLineNumber] Int32 lineNumber = 0)
+                        String severity = "",
+                        [System.Runtime.CompilerServices.CallerMemberName] String memberName = "",
+                        [System.Runtime.CompilerServices.CallerFilePath] String filePath = "",
+                        [System.Runtime.CompilerServices.CallerLineNumber] Int32 lineNumber = 0)
         {
             LogData newLog = new LogData
             {
                 Message = message,
                 Date = DateTime.Today.ToShortDateString(),
+                Severity = severity,
                 //ThreadName = Thread.Get,
                 FileName = filePath,
                 LineNumber = lineNumber.ToString(),
@@ -176,9 +224,12 @@ namespace CSharpErgoBoard
         }
 
         /// <summary>
-        /// This is the function that saves all logging process
+        /// This function is run by the thread. 
         /// </summary>
-        private static void ThreadFunction()
+        /// <remarks>
+        /// This is used to save the logging process.
+        /// </remarks>
+        protected new static void ThreadFunction()
         {
             LogData writeLog;
             String message;
@@ -204,7 +255,7 @@ namespace CSharpErgoBoard
                     file = new System.IO.StreamWriter(path);
                     m_flush = false;
                 }
-                
+
                 // Formatting the log message
                 message = "";
                 m_outputLock.WaitOne();
@@ -261,12 +312,13 @@ namespace CSharpErgoBoard
         }
 
         /// <summary>
-        /// This stops the logging process. If this isn't called somewhere then its possible for no logs to be saved, The program would also not close  
+        /// This stops the threading process, if this function is not called, then the program can not close.
         /// </summary>
-        public void End()
+        public override void End()
         {
             m_running = false;
             m_thread.Join();
+
         }
     }
 

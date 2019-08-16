@@ -6,16 +6,16 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace CSharpErgoBoard
 {
-    public partial class id_main : Form
+    public partial class Id_main : Form
     {
 
-        private String m_selectedKey = "NONE";
+        //private String m_selectedKey = "NONE";
         //Logging m_logger = new Logging();
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace CSharpErgoBoard
         /// <summary>
         /// Default constructor.
         /// </summary>
-        public id_main()
+        public Id_main()
         {
             //id_listboxLeftKeyComPort.Items() = sbyte;
             //IOConnect leftKeyboard = new IOConnect();
@@ -49,6 +49,7 @@ namespace CSharpErgoBoard
             GetPorts();
             InitializeComponent();
             Logging.Instance.Log("Program Has started");
+            SystemMonitor.Instance.Existance();
             SelectLightMode();
         }
 
@@ -59,164 +60,161 @@ namespace CSharpErgoBoard
         {
             Logging.Instance.Log("Selected Dark Mode");
 
-            Color kindofBlack = new Color();
-            Color backgroundBlack = new Color();
-            Color darkBlue = new Color();
-            kindofBlack = Color.FromArgb(255, 50, 50, 50);
-            backgroundBlack = Color.FromArgb(255, 20, 20, 20);
-            darkBlue = Color.FromArgb(255, 0, 0, 50);
+            Color kindofBlack = Color.FromArgb(255, 50, 50, 50);
+            Color backgroundBlack = Color.FromArgb(255, 20, 20, 20);
+            //Color darkBlue = Color.FromArgb(255, 0, 0, 50);
 
             // Main Window
-            this.id_panelMain.BackColor = backgroundBlack;
-            this.id_panelMain.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.menuStrip1.BackColor = System.Drawing.Color.DimGray;
-            this.menuStrip1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.BackColor = backgroundBlack;
-            this.ForeColor = System.Drawing.Color.WhiteSmoke;
+            id_panelMain.BackColor = backgroundBlack;
+            id_panelMain.ForeColor = Color.WhiteSmoke;
+            menuStrip1.BackColor = Color.DimGray;
+            menuStrip1.ForeColor = Color.WhiteSmoke;
+            BackColor = backgroundBlack;
+            ForeColor = Color.WhiteSmoke;
 
             //Left Hand Side
-            this.id_listboxLeftKeyLayer.BackColor = kindofBlack;
-            this.id_listboxLeftKeyLayer.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_listboxLeftKeyComPort.BackColor = kindofBlack;
-            this.id_listboxLeftKeyComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_textboxLeftKeyValue.BackColor = kindofBlack;
-            this.id_textboxLeftKeyValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonLeftUpdateKey.BackColor = kindofBlack;
-            this.id_buttonLeftKeyConnectComPort.BackColor = kindofBlack;
+            id_listboxLeftKeyLayer.BackColor = kindofBlack;
+            id_listboxLeftKeyLayer.ForeColor = Color.WhiteSmoke;
+            id_listboxLeftKeyComPort.BackColor = kindofBlack;
+            id_listboxLeftKeyComPort.ForeColor = Color.WhiteSmoke;
+            id_textboxLeftKeyValue.BackColor = kindofBlack;
+            id_textboxLeftKeyValue.ForeColor = Color.WhiteSmoke;
+            id_buttonLeftUpdateKey.BackColor = kindofBlack;
+            id_buttonLeftKeyConnectComPort.BackColor = kindofBlack;
 
-            this.id_listboxLeftLedComPort.BackColor = kindofBlack;
-            this.id_listboxLeftLedComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonLeftLedConnectComPort.BackColor = kindofBlack;
-            this.id_buttonLeftLedConnectComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_listboxLeftLedStyle.BackColor = kindofBlack;
-            this.id_listboxLeftLedStyle.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonLeftUpdateLed.BackColor = kindofBlack;
-            this.id_buttonLeftUpdateLed.ForeColor = System.Drawing.Color.WhiteSmoke;
+            id_listboxLeftLedComPort.BackColor = kindofBlack;
+            id_listboxLeftLedComPort.ForeColor = Color.WhiteSmoke;
+            id_buttonLeftLedConnectComPort.BackColor = kindofBlack;
+            id_buttonLeftLedConnectComPort.ForeColor = Color.WhiteSmoke;
+            id_listboxLeftLedStyle.BackColor = kindofBlack;
+            id_listboxLeftLedStyle.ForeColor = Color.WhiteSmoke;
+            id_buttonLeftUpdateLed.BackColor = kindofBlack;
+            id_buttonLeftUpdateLed.ForeColor = Color.WhiteSmoke;
 
             //Right Hand Side
-            this.id_listboxRightKeyLayer.BackColor = kindofBlack;
-            this.id_listboxRightKeyLayer.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_listboxRightKeyComPort.BackColor = kindofBlack;
-            this.id_listboxRightKeyComPort.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_textboxRightKeyValue.BackColor = kindofBlack;
-            this.id_textboxRightKeyValue.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonRightUpdateKey.BackColor = kindofBlack;
-            this.id_buttonRightKeyConnectComPort.BackColor = kindofBlack;
+            id_listboxRightKeyLayer.BackColor = kindofBlack;
+            id_listboxRightKeyLayer.ForeColor = Color.WhiteSmoke;
+            id_listboxRightKeyComPort.BackColor = kindofBlack;
+            id_listboxRightKeyComPort.ForeColor = Color.WhiteSmoke;
+            id_textboxRightKeyValue.BackColor = kindofBlack;
+            id_textboxRightKeyValue.ForeColor = System.Drawing.Color.WhiteSmoke;
+            id_buttonRightUpdateKey.BackColor = kindofBlack;
+            id_buttonRightKeyConnectComPort.BackColor = kindofBlack;
 
             // Left Hand side
             // Keyboard Keys
             {
                 // Column 1
-                this.id_buttonLeftR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonLeftR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonLeftR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonLeftR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonLeftR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonLeftR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
+                id_buttonLeftR1C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonLeftR2C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonLeftR3C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonLeftR4C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonLeftR5C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonLeftR6C1.Image = Properties.Resources.WideKeyDark;
                 // Column 2
-                this.id_buttonLeftR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonLeftR1C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR2C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR3C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR4C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR5C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR6C2.Image = Properties.Resources.SingleKeyDark;
                 // Column 3
-                this.id_buttonLeftR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonLeftR1C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR2C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR3C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR4C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR5C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR6C3.Image = Properties.Resources.SingleKeyDark;
                 // Column 4
-                this.id_buttonLeftR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonLeftR1C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR2C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR3C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR4C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR5C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR6C4.Image = Properties.Resources.SingleKeyDark;
                 // Column 5
-                this.id_buttonLeftR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonLeftR1C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR2C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR3C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR4C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR5C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR6C5.Image = Properties.Resources.SingleKeyDark;
                 // Column 6
-                this.id_buttonLeftR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyDark;
+                id_buttonLeftR1C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR2C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR3C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR4C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR5C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR6C6.Image = Properties.Resources.TallKeyDark;
                 // Column 7
-                this.id_buttonLeftR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyDark;
+                id_buttonLeftR1C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR2C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR3C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR4C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR5C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR6C7.Image = Properties.Resources.TallKeyDark;
                 // Column 8
-                this.id_buttonLeftR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonLeftR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonLeftR3C8.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR4C8.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR5C8.Image = Properties.Resources.SingleKeyDark;
+                id_buttonLeftR6C8.Image = Properties.Resources.SingleKeyDark;
             }
             //LEDS
             {
                 // Column 1
-                this.id_buttonLeftLedR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonLeftLedR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonLeftLedR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonLeftLedR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonLeftLedR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonLeftLedR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
+                id_buttonLeftLedR1C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonLeftLedR2C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonLeftLedR3C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonLeftLedR4C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonLeftLedR5C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonLeftLedR6C1.Image = Properties.Resources.WideKeyDarkLED;
                 // Column 2
-                this.id_buttonLeftLedR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR1C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR2C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR3C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR4C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR5C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR6C2.Image = Properties.Resources.SingleKeyDarkLED;
                 // Column 3
-                this.id_buttonLeftLedR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR1C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR2C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR3C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR4C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR5C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR6C3.Image = Properties.Resources.SingleKeyDarkLED;
                 // Column 4
-                this.id_buttonLeftLedR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR1C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR2C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR3C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR4C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR5C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR6C4.Image = Properties.Resources.SingleKeyDarkLED;
                 // Column 5
-                this.id_buttonLeftLedR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR1C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR2C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR3C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR4C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR5C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR6C5.Image = Properties.Resources.SingleKeyDarkLED;
                 // Column 6
-                this.id_buttonLeftLedR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyDarkLED;
+                id_buttonLeftLedR1C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR2C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR3C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR4C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR5C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR6C6.Image = Properties.Resources.TallKeyDarkLED;
                 // Column 7
-                this.id_buttonLeftLedR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyDarkLED;
+                id_buttonLeftLedR1C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR2C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR3C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR4C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR5C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR6C7.Image = Properties.Resources.TallKeyDarkLED;
                 // Column 8
-                this.id_buttonLeftLedR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonLeftLedR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR3C8.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR4C8.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR5C8.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonLeftLedR6C8.Image = Properties.Resources.SingleKeyDarkLED;
             }
 
 
@@ -224,116 +222,116 @@ namespace CSharpErgoBoard
             // Keyboard Keys
             {
                 // Column 1
-                this.id_buttonRightR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonRightR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonRightR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonRightR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonRightR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
-                this.id_buttonRightR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDark;
+                id_buttonRightR1C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonRightR2C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonRightR3C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonRightR4C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonRightR5C1.Image = Properties.Resources.WideKeyDark;
+                id_buttonRightR6C1.Image = Properties.Resources.WideKeyDark;
                 // Column 2
-                this.id_buttonRightR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonRightR1C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR2C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR3C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR4C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR5C2.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR6C2.Image = Properties.Resources.SingleKeyDark;
                 // Column 3
-                this.id_buttonRightR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonRightR1C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR2C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR3C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR4C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR5C3.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR6C3.Image = Properties.Resources.SingleKeyDark;
                 // Column 4
-                this.id_buttonRightR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonRightR1C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR2C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR3C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR4C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR5C4.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR6C4.Image = Properties.Resources.SingleKeyDark;
                 // Column 5
-                this.id_buttonRightR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonRightR1C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR2C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR3C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR4C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR5C5.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR6C5.Image = Properties.Resources.SingleKeyDark;
                 // Column 6
-                this.id_buttonRightR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyDark;
+                id_buttonRightR1C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR2C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR3C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR4C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR5C6.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR6C6.Image = Properties.Resources.TallKeyDark;
                 // Column 7
-                this.id_buttonRightR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyDark;
+                id_buttonRightR1C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR2C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR3C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR4C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR5C7.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR6C7.Image = Properties.Resources.TallKeyDark;
                 // Column 8
-                this.id_buttonRightR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
-                this.id_buttonRightR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDark;
+                id_buttonRightR3C8.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR4C8.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR5C8.Image = Properties.Resources.SingleKeyDark;
+                id_buttonRightR6C8.Image = Properties.Resources.SingleKeyDark;
             }
             // LEDS
             {
                 // Column 1
-                this.id_buttonRightLedR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonRightLedR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonRightLedR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonRightLedR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonRightLedR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
-                this.id_buttonRightLedR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyDarkLED;
+                id_buttonRightLedR1C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonRightLedR2C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonRightLedR3C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonRightLedR4C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonRightLedR5C1.Image = Properties.Resources.WideKeyDarkLED;
+                id_buttonRightLedR6C1.Image = Properties.Resources.WideKeyDarkLED;
                 // Column 2
-                this.id_buttonRightLedR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR1C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR2C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR3C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR4C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR5C2.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR6C2.Image = Properties.Resources.SingleKeyDarkLED;
                 // Column 3
-                this.id_buttonRightLedR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR1C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR2C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR3C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR4C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR5C3.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR6C3.Image = Properties.Resources.SingleKeyDarkLED;
                 // Column 4
-                this.id_buttonRightLedR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR1C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR2C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR3C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR4C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR5C4.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR6C4.Image = Properties.Resources.SingleKeyDarkLED;
                 // Column 5
-                this.id_buttonRightLedR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR1C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR2C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR3C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR4C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR5C5.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR6C5.Image = Properties.Resources.SingleKeyDarkLED;
                 // Column 6
-                this.id_buttonRightLedR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyDarkLED;
+                id_buttonRightLedR1C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR2C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR3C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR4C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR5C6.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR6C6.Image = Properties.Resources.TallKeyDarkLED;
                 // Column 7
-                this.id_buttonRightLedR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyDarkLED;
+                id_buttonRightLedR1C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR2C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR3C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR4C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR5C7.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR6C7.Image = Properties.Resources.TallKeyDarkLED;
                 // Column 8
-                this.id_buttonRightLedR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
-                this.id_buttonRightLedR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR3C8.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR4C8.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR5C8.Image = Properties.Resources.SingleKeyDarkLED;
+                id_buttonRightLedR6C8.Image = Properties.Resources.SingleKeyDarkLED;
             }
         }
 
@@ -345,276 +343,270 @@ namespace CSharpErgoBoard
             Logging.Instance.Log("Selected Light Mode");
 
             // Main Window 
-            this.id_panelMain.BackColor = System.Drawing.Color.White;
-            this.id_panelMain.ForeColor = System.Drawing.Color.Black;
-            this.menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
-            this.menuStrip1.ForeColor = System.Drawing.Color.Black;
+            id_panelMain.BackColor = System.Drawing.Color.White;
+            id_panelMain.ForeColor = System.Drawing.Color.Black;
+            menuStrip1.BackColor = System.Drawing.Color.Gainsboro;
+            menuStrip1.ForeColor = System.Drawing.Color.Black;
 
-            this.id_listboxLeftKeyLayer.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_listboxLeftKeyLayer.ForeColor = System.Drawing.Color.Black;
-            this.id_textboxLeftKeyValue.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_textboxLeftKeyValue.ForeColor = System.Drawing.Color.Black;
-            this.id_buttonLeftUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonLeftKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
+            id_listboxLeftKeyLayer.BackColor = System.Drawing.Color.WhiteSmoke;
+            id_listboxLeftKeyLayer.ForeColor = System.Drawing.Color.Black;
+            id_textboxLeftKeyValue.BackColor = System.Drawing.Color.WhiteSmoke;
+            id_textboxLeftKeyValue.ForeColor = System.Drawing.Color.Black;
+            id_buttonLeftUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
+            id_buttonLeftKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
 
-            this.id_textboxRightKeyValue.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_textboxRightKeyValue.ForeColor = System.Drawing.Color.Black;
+            id_textboxRightKeyValue.BackColor = System.Drawing.Color.WhiteSmoke;
+            id_textboxRightKeyValue.ForeColor = System.Drawing.Color.Black;
 
-            this.ForeColor = System.Drawing.Color.Black;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            ForeColor = System.Drawing.Color.Black;
+            BackColor = System.Drawing.Color.WhiteSmoke;
 
 
-            this.id_buttonRightKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonRightUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
+            id_buttonRightKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
+            id_buttonRightUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
 
             // Left hand side
             // Keyboard Keys
             {
                 // Column 1
-                this.id_buttonLeftR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonLeftR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonLeftR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonLeftR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonLeftR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonLeftR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
+                id_buttonLeftR1C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonLeftR2C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonLeftR3C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonLeftR4C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonLeftR5C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonLeftR6C1.Image = Properties.Resources.WideKeyLight;
                 // Column 2
-                this.id_buttonLeftR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonLeftR1C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR2C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR3C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR4C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR5C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR6C2.Image = Properties.Resources.SingleKeyLight;
                 // Column 3
-                this.id_buttonLeftR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonLeftR1C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR2C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR3C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR4C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR5C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR6C3.Image = Properties.Resources.SingleKeyLight;
                 // Column 4
-                this.id_buttonLeftR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonLeftR1C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR2C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR3C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR4C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR5C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR6C4.Image = Properties.Resources.SingleKeyLight;
                 // Column 5
-                this.id_buttonLeftR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonLeftR1C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR2C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR3C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR4C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR5C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR6C5.Image = Properties.Resources.SingleKeyLight;
                 // Column 6
-                this.id_buttonLeftR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
+                id_buttonLeftR1C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR2C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR3C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR4C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR5C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR6C6.Image = Properties.Resources.TallKeyLight;
                 // Column 7
-                this.id_buttonLeftR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
+                id_buttonLeftR1C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR2C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR3C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR4C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR5C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR6C7.Image = Properties.Resources.TallKeyLight;
                 // Column 8
-                this.id_buttonLeftR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonLeftR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonLeftR3C8.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR4C8.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR5C8.Image = Properties.Resources.SingleKeyLight;
+                id_buttonLeftR6C8.Image = Properties.Resources.SingleKeyLight;
             }
             //LEDS
             {
                 // Column 1
-                this.id_buttonLeftLedR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonLeftLedR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonLeftLedR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonLeftLedR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonLeftLedR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonLeftLedR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
+                id_buttonLeftLedR1C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonLeftLedR2C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonLeftLedR3C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonLeftLedR4C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonLeftLedR5C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonLeftLedR6C1.Image = Properties.Resources.WideKeyLightLED;
                 // Column 2
-                this.id_buttonLeftLedR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR1C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR2C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR3C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR4C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR5C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR6C2.Image = Properties.Resources.SingleKeyLightLED;
                 // Column 3
-                this.id_buttonLeftLedR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR1C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR2C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR3C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR4C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR5C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR6C3.Image = Properties.Resources.SingleKeyLightLED;
                 // Column 4
-                this.id_buttonLeftLedR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR1C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR2C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR3C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR4C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR5C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR6C4.Image = Properties.Resources.SingleKeyLightLED;
                 // Column 5
-                this.id_buttonLeftLedR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR1C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR2C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR3C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR4C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR5C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR6C5.Image = Properties.Resources.SingleKeyLightLED;
                 // Column 6
-                this.id_buttonLeftLedR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
+                id_buttonLeftLedR1C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR2C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR3C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR4C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR5C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR6C6.Image = Properties.Resources.TallKeyLightLED;
                 // Column 7
-                this.id_buttonLeftLedR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
+                id_buttonLeftLedR1C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR2C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR3C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR4C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR5C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR6C7.Image = Properties.Resources.TallKeyLightLED;
                 // Column 8
-                this.id_buttonLeftLedR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonLeftLedR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR3C8.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR4C8.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR5C8.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonLeftLedR6C8.Image = Properties.Resources.SingleKeyLightLED;
             }
 
             // Right Hand side
             // Keyboard Keys
             {
                 // Column 1
-                this.id_buttonRightR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonRightR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonRightR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonRightR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonRightR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
-                this.id_buttonRightR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
+                id_buttonRightR1C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonRightR2C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonRightR3C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonRightR4C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonRightR5C1.Image = Properties.Resources.WideKeyLight;
+                id_buttonRightR6C1.Image = Properties.Resources.WideKeyLight;
                 // Column 2
-                this.id_buttonRightR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonRightR1C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR2C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR3C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR4C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR5C2.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR6C2.Image = Properties.Resources.SingleKeyLight;
                 // Column 3
-                this.id_buttonRightR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonRightR1C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR2C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR3C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR4C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR5C3.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR6C3.Image = Properties.Resources.SingleKeyLight;
                 // Column 4
-                this.id_buttonRightR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonRightR1C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR2C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR3C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR4C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR5C4.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR6C4.Image = Properties.Resources.SingleKeyLight;
                 // Column 5
-                this.id_buttonRightR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonRightR1C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR2C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR3C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR4C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR5C5.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR6C5.Image = Properties.Resources.SingleKeyLight;
                 // Column 6
-                this.id_buttonRightR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
+                id_buttonRightR1C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR2C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR3C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR4C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR5C6.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR6C6.Image = Properties.Resources.TallKeyLight;
                 // Column 7
-                this.id_buttonRightR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
+                id_buttonRightR1C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR2C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR3C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR4C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR5C7.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR6C7.Image = Properties.Resources.TallKeyLight;
                 // Column 8
-                this.id_buttonRightR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
-                this.id_buttonRightR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
+                id_buttonRightR3C8.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR4C8.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR5C8.Image = Properties.Resources.SingleKeyLight;
+                id_buttonRightR6C8.Image = Properties.Resources.SingleKeyLight;
             }
             //LEDS
             {
                 // Column 1
-                this.id_buttonRightLedR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonRightLedR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonRightLedR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonRightLedR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonRightLedR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
-                this.id_buttonRightLedR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
+                id_buttonRightLedR1C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonRightLedR2C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonRightLedR3C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonRightLedR4C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonRightLedR5C1.Image = Properties.Resources.WideKeyLightLED;
+                id_buttonRightLedR6C1.Image = Properties.Resources.WideKeyLightLED;
                 // Column 2
-                this.id_buttonRightLedR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR1C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR2C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR3C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR4C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR5C2.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR6C2.Image = Properties.Resources.SingleKeyLightLED;
                 // Column 3
-                this.id_buttonRightLedR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR1C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR2C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR3C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR4C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR5C3.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR6C3.Image = Properties.Resources.SingleKeyLightLED;
                 // Column 4
-                this.id_buttonRightLedR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR1C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR2C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR3C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR4C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR5C4.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR6C4.Image = Properties.Resources.SingleKeyLightLED;
                 // Column 5
-                this.id_buttonRightLedR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR1C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR2C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR3C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR4C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR5C5.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR6C5.Image = Properties.Resources.SingleKeyLightLED;
                 // Column 6
-                this.id_buttonRightLedR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
+                id_buttonRightLedR1C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR2C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR3C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR4C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR5C6.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR6C6.Image = Properties.Resources.TallKeyLightLED;
                 // Column 7
-                this.id_buttonRightLedR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
+                id_buttonRightLedR1C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR2C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR3C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR4C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR5C7.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR6C7.Image = Properties.Resources.TallKeyLightLED;
                 // Column 8
-                this.id_buttonRightLedR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
-                this.id_buttonRightLedR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR3C8.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR4C8.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR5C8.Image = Properties.Resources.SingleKeyLightLED;
+                id_buttonRightLedR6C8.Image = Properties.Resources.SingleKeyLightLED;
 
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            this.FormClosing += Form1_FormClosing;
-        }
+        private void Form1_Load(object sender, EventArgs e) => FormClosing += Form1_FormClosing;
 
         /// <summary>
         /// Quits the program using the menu button.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void id_menuQuit_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void Id_menuQuit_Click(object sender, EventArgs e) => Close();
 
         /// <summary>
         /// Acts as a deafult destructor. Closes any open threads and does closing actions. 
@@ -623,7 +615,10 @@ namespace CSharpErgoBoard
         /// <param name="e"></param>
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Logging.Instance.Log("The program will be closing in 1 second");
+            Thread.Sleep(1000);
             Logging.Instance.End();
+            SystemMonitor.Instance.End();
         }
 
         /// <summary>
@@ -631,7 +626,7 @@ namespace CSharpErgoBoard
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void id_menuDarkMode_Click(object sender, EventArgs e)
+        private void Id_menuDarkMode_Click(object sender, EventArgs e)
         {
             SelectDarkMode();
         }
@@ -641,22 +636,22 @@ namespace CSharpErgoBoard
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void id_menuLightMode_Click(object sender, EventArgs e)
+        private void Id_menuLightMode_Click(object sender, EventArgs e)
         {
             SelectLightMode();
         }
 
-        private void id_buttonLeftR1C1_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR1C1_Click(object sender, EventArgs e)
         {
-            m_selectedKey = "LeftR1C1";
+            //m_selectedKey = "LeftR1C1";
         }
 
-        private void id_buttonLeftR1C2_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR1C2_Click(object sender, EventArgs e)
         {
-            m_selectedKey = "LeftR1C1";
+           // m_selectedKey = "LeftR1C1";
         }
 
-        private void id_textboxLeftKeyValue_TextChanged(object sender, EventArgs e)
+        private void Id_textboxLeftKeyValue_TextChanged(object sender, EventArgs e)
         {
 
         }

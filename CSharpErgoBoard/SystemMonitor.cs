@@ -12,9 +12,24 @@ namespace CSharpErgoBoard
     /// </summary>
     /// <remarks>
     /// The class is a singleton class, this allows for it to exist only once and be universal in its use. 
+    /// This class calls on the logging class to updates.
     /// </remarks>
-    public class SystemMonitor
+    class SystemMonitor : Singleton
     {
+        // Class Atributes
+        /// <summary>
+        /// The name of the class
+        /// </summary>
+        public new String Name { get; } = "System Monitor";
+        /// <summary>
+        /// The purpose of the class
+        /// </summary>
+        public new String Purpose { get; } = "To store the propertes of the hardware";
+        /// <summary>
+        /// To convert the class to a string.
+        /// </summary>
+        public new String ToString { get; } = "A System Monitoring Class";
+
         // Private Encapsulated Variables
         private static Boolean m_AMD = false;
         private static Int16 m_cpuCores = 0;  // This is expected to be greater than or equal to 1. 
@@ -28,15 +43,28 @@ namespace CSharpErgoBoard
         private static readonly List<Double> m_hddLoad = new List<Double>();
 
         // Purely Private Variables
-        private static Boolean m_running = false;
-        private static SystemMonitor m_instance = null;
+        /// <summary>
+        /// The instance of the singleton
+        /// </summary>
+        protected new static SystemMonitor m_instance = null;
 
         // Readonly Private Variables
+        /// <summary>
+        /// The thread for the singleton
+        /// </summary>
+        protected new static readonly Thread m_thread = new Thread(ThreadFunction);
+        /// <summary>
+        /// To ensure that the singleton is thread safe
+        /// </summary>
+        protected new static readonly Object m_padlock = new Object();
+        /// <summary>
+        /// The computer being used for finding hardware values
+        /// </summary>
         private static readonly Computer m_computer = new Computer();
-        private static readonly Int16 m_delay = 5000;
+        /// <summary>
+        /// The thread safe lock for updating.
+        /// </summary>
         private static readonly Mutex m_updateLock = new Mutex();
-        private static readonly Thread m_thread = new Thread(ThreadFunction);
-        private static readonly Object m_padlock = new Object();
 
         // Encapulation Functions
         /// <summary>
@@ -181,13 +209,13 @@ namespace CSharpErgoBoard
             }
         }
         /// <summary>
-        /// This is the instance of the singleton class. Any commands must be called using this. 
+        /// This is the instance of the singleton class. Any commands must be called using  
         /// </summary>
         /// <remarks>
         /// A singleton class has one or no instances. In order to use the instance this must be called. 
         /// This also starts the threading and monitoring process of the class.
         /// </remarks>
-        public static SystemMonitor Instance
+        public new static SystemMonitor Instance
         {
             get
             {
@@ -209,15 +237,15 @@ namespace CSharpErgoBoard
         }
 
         // Functions
-        static SystemMonitor()
-        {
-        }
+        static SystemMonitor() { }
 
         /// <summary>
         /// Updates the computer hardware values stored on our end. 
         /// </summary>
-        private static void UpdateValues()
+        public static void UpdateValues()
         {
+            Logging.Instance.Log("A update was run");
+
             m_computer.CPUEnabled = true;
             m_computer.GPUEnabled = true;
             m_computer.HDDEnabled = true;
@@ -327,7 +355,7 @@ namespace CSharpErgoBoard
         /// <summary>
         /// This is the function that does the monitoring process.
         /// </summary>
-        private static void ThreadFunction()
+        protected new static void ThreadFunction()
         {
             m_computer.CPUEnabled = true;
 
@@ -358,19 +386,33 @@ namespace CSharpErgoBoard
                 m_updateLock.WaitOne();
                 UpdateValues();
                 m_updateLock.ReleaseMutex();
-
-                Thread.Sleep(m_delay);
+                
+                // Every 100ms check to make sure we aren't shut down. 
+                // Every 5s update the values.
+                for (UInt16 i = 0; i < 50; i ++)
+                {
+                    if (!m_running)
+                    {
+                        break;
+                    }
+                    Thread.Sleep(100);
+                }
             }
         }
 
         /// <summary>
         /// Ends the monitoring process, This must be called or the program will not close.
         /// </summary>
-        public void End()
+        public override void End()
         {
             m_running = false;
             m_computer.Close();
             m_thread.Join();
         }
+
+        /// <summary>
+        /// To ensure that the system monitoring process has started.
+        /// </summary>
+        public void Existance() { }
     }
 }
