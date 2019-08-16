@@ -158,7 +158,7 @@ namespace CSharpErgoBoard
             String severity = "",
             [System.Runtime.CompilerServices.CallerMemberName] String memberName = "",
             [System.Runtime.CompilerServices.CallerFilePath] String filePath = "",
-            [System.Runtime.CompilerServices.CallerLineNumber] int lineNumber = 0)
+            [System.Runtime.CompilerServices.CallerLineNumber] Int32 lineNumber = 0)
         {
             LogData newLog = new LogData
             {
@@ -207,8 +207,10 @@ namespace CSharpErgoBoard
                 
                 // Formatting the log message
                 message = "";
+                m_outputLock.WaitOne();
                 writeLog = m_output.Dequeue();
-                for (int i = 0; i < LogFormat.Count(); i++)
+                m_outputLock.ReleaseMutex();
+                for (Int16 i = 0; i < LogFormat.Count(); i++)
                 {
                     if (LogFormat.ElementAt(i) == '%')
                     {
@@ -259,7 +261,7 @@ namespace CSharpErgoBoard
         }
 
         /// <summary>
-        /// This stops the logging process. If this isn't called somewhere then its possible for no logs to be saved.  
+        /// This stops the logging process. If this isn't called somewhere then its possible for no logs to be saved, The program would also not close  
         /// </summary>
         public void End()
         {
