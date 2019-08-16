@@ -185,7 +185,7 @@ namespace CSharpErgoBoard
             Char messageParameter;
             System.IO.StreamWriter file;
 
-            String path = @"C:\Users\mieuser\Source\Repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log";
+            String path = @"C:\Users\Taha Abbasi-Hashemi\source\repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log";
             file = new System.IO.StreamWriter(path);
             while (m_running)
             {
