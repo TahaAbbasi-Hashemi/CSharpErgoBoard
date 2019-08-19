@@ -1,7 +1,20 @@
 var searchData=
 [
-  ['settings',['Settings',['../class_c_sharp_ergo_board_1_1_properties_1_1_settings.html',1,'CSharpErgoBoard::Properties']]],
-  ['severity',['Severity',['../class_c_sharp_ergo_board_1_1_log_data.html#aa134af4e2015c761f7ba9c91b293c54d',1,'CSharpErgoBoard::LogData']]],
-  ['singleton',['Singleton',['../class_c_sharp_ergo_board_1_1_singleton.html',1,'CSharpErgoBoard']]],
-  ['systemmonitor',['SystemMonitor',['../class_c_sharp_ergo_board_1_1_system_monitor.html',1,'CSharpErgoBoard']]]
+  ['selectdarkmode',['SelectDarkMode',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a2d7bbe53e77e008ad84d36c4795380d8',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['selecteddarkmode',['SelectedDarkMode',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a6b2c49c63e314ac8bec985ed1746223a',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['selectedkey',['SelectedKey',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a5fe3ebc5db4533ce7e71a8f19fad365c',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['selectlightmode',['SelectLightMode',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a3a7fdf855b65afcad17028f5328aae5e',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['settings',['Settings',['../dc/dab/class_c_sharp_ergo_board_1_1_properties_1_1_settings.html',1,'CSharpErgoBoard::Properties']]],
+  ['settings_2edesigner_2ecs',['Settings.Designer.cs',['../d1/d1c/_settings_8_designer_8cs.html',1,'']]],
+  ['severity',['Severity',['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html#aa134af4e2015c761f7ba9c91b293c54d',1,'CSharpErgoBoard::LogData']]],
+  ['singlekeydark',['SingleKeyDark',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#ae12014714095950875b3f8fb8ac4194a',1,'CSharpErgoBoard::Properties::Resources']]],
+  ['singlekeydarkled',['SingleKeyDarkLED',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#a423db982e2f4ed045b085a32b62f1801',1,'CSharpErgoBoard::Properties::Resources']]],
+  ['singlekeydarkselected',['SingleKeyDarkSelected',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#ac5864c7503702008a44e909906f772ad',1,'CSharpErgoBoard::Properties::Resources']]],
+  ['singlekeylight',['SingleKeyLight',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#a47f73d85fe664ff8c9a8a11251540146',1,'CSharpErgoBoard::Properties::Resources']]],
+  ['singlekeylightled',['SingleKeyLightLED',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#a866a26513d911f5a0577d400cc399de2',1,'CSharpErgoBoard::Properties::Resources']]],
+  ['singlekeylightselected',['SingleKeyLightSelected',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#ac4fe231799848ce7a529e402c5a77024',1,'CSharpErgoBoard::Properties::Resources']]],
+  ['singleton',['Singleton',['../d8/d08/class_c_sharp_ergo_board_1_1_singleton.html',1,'CSharpErgoBoard.Singleton'],['../d8/d08/class_c_sharp_ergo_board_1_1_singleton.html#a23c3b0eab2f830b1662598915fa30bee',1,'CSharpErgoBoard.Singleton.Singleton()']]],
+  ['singleton_2ecs',['Singleton.cs',['../db/d00/_singleton_8cs.html',1,'']]],
+  ['systemmonitor',['SystemMonitor',['../d3/df3/class_c_sharp_ergo_board_1_1_system_monitor.html',1,'CSharpErgoBoard.SystemMonitor'],['../d3/df3/class_c_sharp_ergo_board_1_1_system_monitor.html#aea9cd0c80a99a14d5d166f4b040d21bd',1,'CSharpErgoBoard.SystemMonitor.SystemMonitor()']]],
+  ['systemmonitor_2ecs',['SystemMonitor.cs',['../de/d3c/_system_monitor_8cs.html',1,'']]]
 ];

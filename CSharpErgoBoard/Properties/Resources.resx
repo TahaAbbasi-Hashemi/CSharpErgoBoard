@@ -118,23 +118,41 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="WideKeyDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WideKeyDark.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TallKeyLightSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TallKeyLightSelected.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TallKeyLightLED" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TallKeyLightLED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TallKeyDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TallKeyDark.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SingleKeyDarkSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SingleKeyDarkSelected.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SingleKeyLightSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SingleKeyLightSelected.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="TallKeyLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TallKeyLight.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SingleKeyLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\SingleKeyLight.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WideKeyDarkSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WideKeyDarkSelected.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WideKeyDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WideKeyDark.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="WideKeyLightSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WideKeyLightSelected.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WideKeyLightLED" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\WideKeyLightLED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WideKeyLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WideKeyLight.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SingleKeyDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SingleKeyDark.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="TallKeyDark" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TallKeyDark.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SingleKeyDarkLED" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SingleKeyDarkLED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,13 +163,13 @@
   <data name="TallKeyDarkLED" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\TallKeyDarkLED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="TallKeyLightLED" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\TallKeyLightLED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SingleKeyLight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\SingleKeyLight.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="WideKeyDarkLED" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\WideKeyDarkLED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="WideKeyLightLED" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\WideKeyLightLED.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="TallKeyDarkSelected" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TallKeyDarkSelected.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

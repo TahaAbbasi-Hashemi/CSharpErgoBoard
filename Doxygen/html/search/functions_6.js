@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['threadfunction',['ThreadFunction',['../class_c_sharp_ergo_board_1_1_logging.html#adf5015d9cff391c45d2fd2bac61d1716',1,'CSharpErgoBoard.Logging.ThreadFunction()'],['../class_c_sharp_ergo_board_1_1_singleton.html#a180a16c4dc967333c0a6b3e41bfaf8d9',1,'CSharpErgoBoard.Singleton.ThreadFunction()'],['../class_c_sharp_ergo_board_1_1_system_monitor.html#a635473e951af7a44c886cfc3448c40b2',1,'CSharpErgoBoard.SystemMonitor.ThreadFunction()']]]
+  ['log',['Log',['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html#afa39e9878a11dd0288f92e055f1dab5e',1,'CSharpErgoBoard::Logging']]],
+  ['logdata',['LogData',['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html#ad4711364bc6cfab2cd15bdce66741e4b',1,'CSharpErgoBoard::LogData']]],
+  ['logging',['Logging',['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html#a01f8b779817e6d3dae75a02185836b16',1,'CSharpErgoBoard::Logging']]]
 ];

@@ -148,16 +148,22 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\SingleKeyDark.bmp" />
+    <None Include="Resources\WideKeyLightSelected.bmp" />
     <None Include="Resources\WideKeyLightLED.png" />
     <None Include="Resources\SingleKeyDarkLED.png" />
+    <None Include="Resources\SingleKeyDarkSelected.bmp" />
     <Content Include="Resources\SingleKeyLight.bmp" />
     <None Include="Resources\SingleKeyLightLED.png" />
+    <None Include="Resources\SingleKeyLightSelected.bmp" />
     <Content Include="Resources\TallKeyDark.bmp" />
     <None Include="Resources\TallKeyDarkLED.png" />
+    <None Include="Resources\TallKeyDarkSelected.bmp" />
     <Content Include="Resources\TallKeyLight.bmp" />
     <None Include="Resources\TallKeyLightLED.png" />
+    <None Include="Resources\TallKeyLightSelected.bmp" />
     <Content Include="Resources\WideKeyDark.bmp" />
     <None Include="Resources\WideKeyDarkLED.png" />
+    <None Include="Resources\WideKeyDarkSelected.bmp" />
     <Content Include="Resources\WideKeyLight.bmp" />
   </ItemGroup>
   <ItemGroup>

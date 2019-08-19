@@ -101,7 +101,7 @@ namespace CSharpErgoBoard
         public new String ToString { get; } = "A Singleton Logging Class";
 
         // Private Encapsulated Variables
-        private static String m_logFormat = "%D (%T), \"%F\" (%m) <%L> : %M";
+        private static String m_logFormat = "%D (%T), (%m) <%L> : %M";
         private static String m_directory = "Logs.log";
 
         // Purely Private Variables

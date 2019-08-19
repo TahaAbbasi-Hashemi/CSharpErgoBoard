@@ -1,5 +1,22 @@
 var searchData=
 [
-  ['log',['Log',['../class_c_sharp_ergo_board_1_1_logging.html#afa39e9878a11dd0288f92e055f1dab5e',1,'CSharpErgoBoard::Logging']]],
-  ['logdata',['LogData',['../class_c_sharp_ergo_board_1_1_log_data.html#ad4711364bc6cfab2cd15bdce66741e4b',1,'CSharpErgoBoard::LogData']]]
+  ['id_5fbuttonleftkeyconnectcomport_5fclick',['Id_buttonLeftKeyConnectComPort_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a752a75d290ae9c6b508a1d55d352157b',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr1c1_5fclick',['Id_buttonLeftR1C1_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a843b4042bb17723537c8ea186ba648be',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr1c2_5fclick',['Id_buttonLeftR1C2_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#aadc6b70a218e8b8cf0fa466269399d2c',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr1c3_5fclick',['Id_buttonLeftR1C3_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a14fecf593e431de78ad9c28c72a36661',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr1c4_5fclick',['Id_buttonLeftR1C4_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a35c56c341f89ac5dd03adf51f678aade',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr1c5_5fclick',['Id_buttonLeftR1C5_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a4e00b115d94130d8de50108b92aa02d3',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr1c6_5fclick',['Id_buttonLeftR1C6_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#ac4a1a706855a2e868ec30aad72caa2c5',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr1c7_5fclick',['Id_buttonLeftR1C7_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a5324fa1f3622175985cc60a7299dc97f',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr2c1_5fclick',['Id_buttonLeftR2C1_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a41c1e954ce8e0b57a4561baf51f2f2db',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr2c2_5fclick',['Id_buttonLeftR2C2_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#ac7c3688e3c5d3cb3993b8a7e4dcc9328',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr2c3_5fclick',['Id_buttonLeftR2C3_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#afaa07e1ebb52051a55768c94a7fb0356',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr2c4_5fclick',['Id_buttonLeftR2C4_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a54cc3a1bcaf894a01fc09ef88e08cc96',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr2c5_5fclick',['Id_buttonLeftR2C5_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#ac898c52a21ee4ea3552b13ca1f0efa41',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr2c6_5fclick',['Id_buttonLeftR2C6_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#afec307673ed8c3911f865cf96c53cf9e',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fbuttonleftr2c7_5fclick',['Id_buttonLeftR2C7_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#aff8a30536c96359b83521cb6b0d052b2',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5flistboxleftkeycomport_5fselectedindexchanged',['Id_listboxLeftKeyComPort_SelectedIndexChanged',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a648611b5ea2fba53202b546db06df508',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fmenudarkmode_5fclick',['Id_menuDarkMode_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a1d0244c618d93e845de8d5301b189f32',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['id_5fmenulightmode_5fclick',['Id_menuLightMode_Click',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a4f2fc5a9ae73519519fafbc4ec497b6c',1,'CSharpErgoBoard::ErgoBoard']]],
+  ['initializecomponent',['InitializeComponent',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#ae81613b072a07410421e3eafee1dd61b',1,'CSharpErgoBoard::ErgoBoard']]]
 ];
