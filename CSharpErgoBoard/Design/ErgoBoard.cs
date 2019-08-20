@@ -1023,10 +1023,41 @@ namespace CSharpErgoBoard
                 return;
             }
 
+            String message;
+
+            message = m_leftSelectedKey;
+            // Layer Selection
+            switch (id_comboboxLeftKeyLayer.SelectedIndex)
+            {
+                case 0:
+                    message += "L1";
+                    break;
+                case 1:
+                    message += "L2";
+                    break;
+                case 2:
+                    message += "L3";
+                    break;
+                case 3:
+                    message += "L4";
+                    break;
+                case 4:
+                    message += "L5";
+                    break;
+                default:
+                    break;
+            }
+            message += "'";// TODO
+            m_selectedKeyButton.Text = (String) id_comboboxLeftKeyValue.SelectedItem;
+            
+            // If everything is as intended.
+            //m_selectedKeyButton.
+
             //Popup something = new Popup("Text", "Caption", true);
             //something.Show(this); // if you need non-modal window
             //m_leftKeyConnection.WriteLine("R1C1L1'ESC'");
 
         }
+       
     }
 }
