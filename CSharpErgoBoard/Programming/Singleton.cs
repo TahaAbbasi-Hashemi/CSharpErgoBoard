@@ -73,6 +73,10 @@ namespace CSharpErgoBoard
                 return m_instance;
             }
         }
+
+        /// <summary>
+        /// Static Constructor
+        /// </summary>
         static Singleton() { }
 
         /// <summary>

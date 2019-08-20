@@ -13,6 +13,12 @@ using System.IO.Ports;
 
 namespace CSharpErgoBoard
 {
+    /// <summary>
+    /// The graphical interface class
+    /// </summary>
+    /// <remarks>
+    /// This holds all the information regarding what the interface does and what the buttons on the interface do.
+    /// </remarks>
     public partial class ErgoBoard : Form
     {
         // Class Atributes
@@ -26,14 +32,16 @@ namespace CSharpErgoBoard
         public new String ToString { get; } = "A Ergoboard Class to do GUI procesing";
 
         // Encapsulated Private Variables
-        private String m_selectedKey = "NONE";
+        private String m_leftSelectedKey = null;
+        private Button m_selectedKeyButton = null;
+        private String m_selectedLayer = null;
         private Boolean m_selectedDarkMode = false;
 
         //Private Variables
-        private SerialPort m_leftKeyConnection = new SerialPort();
-        private SerialPort m_rightKeyConnection = new SerialPort();
-        private SerialPort m_leftLEDConnection = new SerialPort();
-        private SerialPort m_rightLEDConnection = new SerialPort();
+        private readonly SerialPort m_leftKeyConnection = new SerialPort();
+        private readonly SerialPort m_rightKeyConnection = new SerialPort();
+        private readonly SerialPort m_leftLEDConnection = new SerialPort();
+        private readonly SerialPort m_rightLEDConnection = new SerialPort();
 
 
         // Encapsulation Funtions
@@ -47,7 +55,7 @@ namespace CSharpErgoBoard
         /// <remarks>
         /// It should be noted that this is only to be used for editing the keyboard configuration and detecting key presses.
         /// </remarks>
-        public String SelectedKey { get => m_selectedKey; }
+        public String SelectedKey { get => m_leftSelectedKey; }
 
         // Functions
         /// <summary>
@@ -62,7 +70,6 @@ namespace CSharpErgoBoard
             {
                 id_comboboxRightKeyComPort.Items.Add(port);
                 id_comboboxLeftKeyComPort.Items.Add(port);
-                Logging.Instance.Log("Added " + port + "To the selection list");
             }
 
             SelectLightMode();
@@ -641,34 +648,38 @@ namespace CSharpErgoBoard
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e) => FormClosing += Form1_FormClosing;
+        private void ErgoboardLoad(object sender, EventArgs reason) => FormClosing += Ergoboard_Closing;
 
         /// <summary>
         /// Quits the program using the menu button.
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Id_menuQuit_Click(object sender, EventArgs e) => Close();
+        /// <param name="reason"></param>
+        private void Id_menuQuit_Click(object sender, EventArgs reason) => Close();
 
         /// <summary>
         /// Acts as a deafult destructor. Closes any open threads and does closing actions. 
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        /// <param name="reason"></param>
+        private void Ergoboard_Closing(object sender, FormClosingEventArgs reason)
         {
             Logging.Instance.Log("The program will be closing in 1 second");
             Thread.Sleep(1000);
             Logging.Instance.End();
             SystemMonitor.Instance.End();
+            if (m_leftKeyConnection.IsOpen)
+            {
+                m_leftKeyConnection.Close();
+            }
         }
 
         /// <summary>
         /// When the user of the application chooses to enter dark mode. 
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Id_menuDarkMode_Click(object sender, EventArgs e)
+        /// <param name="reason"></param>
+        private void Id_menuDarkMode_Click(object sender, EventArgs reason)
         {
             SelectDarkMode();
         }
@@ -677,8 +688,8 @@ namespace CSharpErgoBoard
         /// When the user of the application chooses to enter light mode. 
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Id_menuLightMode_Click(object sender, EventArgs e)
+        /// <param name="reason"></param>
+        private void Id_menuLightMode_Click(object sender, EventArgs reason)
         {
             SelectLightMode();
         }
@@ -688,13 +699,15 @@ namespace CSharpErgoBoard
         /// This is when the key on row 1 coloum 1 was clicked by the mouse
         /// </summary>
         /// <param name="sender"></param> The object that called this function
-        /// <param name="e"></param> What event caused the object to call this function
-        private void Id_buttonLeftR1C1_Click(object sender, EventArgs e)
+        /// <param name="reason"></param> What event caused the object to call this function
+        private void Id_buttonLeftR1C1_Click(object sender, EventArgs reason)
         {
-            Logging.Instance.Log($"Left keyboard R1 C1 key was selected by \" {sender.ToString()} \" selected by \" {e.ToString()} \" ",
+            Logging.Instance.Log($"Left keyboard R1 C1 key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                  "Information");
-            m_selectedKey = "R1C1";
+            m_leftSelectedKey = "R1C1";
+            m_selectedKeyButton = id_buttonLeftR1C1;
             id_textboxLeftKeyValue.Text = "Row 1, Col 1";
+
             if (m_selectedDarkMode)
             {
                 SelectDarkMode();
@@ -711,13 +724,15 @@ namespace CSharpErgoBoard
         /// This is when the key on row 1 coloum 2 was clicked by the mouse
         /// </summary>
         /// <param name="sender"></param> The object that called this function
-        /// <param name="e"></param> What event caused the object to call this function
-        private void Id_buttonLeftR1C2_Click(object sender, EventArgs e)
+        /// <param name="reason"></param> What event caused the object to call this function
+        private void Id_buttonLeftR1C2_Click(object sender, EventArgs reason)
         {
-            Logging.Instance.Log($"Left keyboard R1 C2 key was selected by \" {sender.ToString()} \" selected by \" {e.ToString()} \" ",
+            Logging.Instance.Log($"Left keyboard R1 C2 key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                  "Information");
-            m_selectedKey = "R1C2";
+            m_leftSelectedKey = "R1C2";
+            m_selectedKeyButton = id_buttonLeftR1C2;
             id_textboxLeftKeyValue.Text = "Row 1, Col 2";
+
             if (m_selectedDarkMode)
             {
                 SelectDarkMode();
@@ -733,13 +748,15 @@ namespace CSharpErgoBoard
         /// This is when the key on row 1 coloum 3 was clicked by the mouse
         /// </summary>
         /// <param name="sender"></param> The object that called this function
-        /// <param name="e"></param> What event caused the object to call this function
-        private void Id_buttonLeftR1C3_Click(object sender, EventArgs e)
+        /// <param name="reason"></param> What event caused the object to call this function
+        private void Id_buttonLeftR1C3_Click(object sender, EventArgs reason)
         {
-            Logging.Instance.Log($"Left keyboard R1 C3 key was selected by \" {sender.ToString()} \" selected by \" {e.ToString()} \" ",
+            Logging.Instance.Log($"Left keyboard R1 C3 key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                  "Information");
-            m_selectedKey = "R1C3";
+            m_leftSelectedKey = "R1C3";
+            m_selectedKeyButton = id_buttonLeftR1C3;
             id_textboxLeftKeyValue.Text = "Row 1, Col 3";
+
             if (m_selectedDarkMode)
             {
                 SelectDarkMode();
@@ -752,12 +769,14 @@ namespace CSharpErgoBoard
             }
         }
 
-        private void Id_buttonLeftR1C4_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR1C4_Click(object sender, EventArgs reason)
         {
-            Logging.Instance.Log($"Left keyboard R1 C4 key was selected by \" {sender.ToString()} \" selected by \" {e.ToString()} \" ",
+            Logging.Instance.Log($"Left keyboard R1 C4 key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                      "Information");
-            m_selectedKey = "R1C4";
+            m_leftSelectedKey = "R1C4";
+            m_selectedKeyButton = id_buttonLeftR1C4;
             id_textboxLeftKeyValue.Text = "Row 1, Col 4";
+
             if (m_selectedDarkMode)
             {
                 SelectDarkMode();
@@ -770,12 +789,14 @@ namespace CSharpErgoBoard
             }
         }
 
-        private void Id_buttonLeftR1C5_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR1C5_Click(object sender, EventArgs reason)
         {
-            Logging.Instance.Log($"Left keyboard R1 C5 key was selected by \" {sender.ToString()} \" selected by \" {e.ToString()} \" ",
+            Logging.Instance.Log($"Left keyboard R1 C5 key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                  "Information");
-            m_selectedKey = "R1C5";
+            m_leftSelectedKey = "R1C5";
+            m_selectedKeyButton = id_buttonLeftR1C5;
             id_textboxLeftKeyValue.Text = "Row 1, Col 5";
+
             if (m_selectedDarkMode)
             {
                 SelectDarkMode();
@@ -787,12 +808,14 @@ namespace CSharpErgoBoard
                 id_buttonLeftR1C5.Image = Properties.Resources.SingleKeyLightSelected;
             }
         }
-        private void Id_buttonLeftR1C6_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR1C6_Click(object sender, EventArgs reason)
         {
-            Logging.Instance.Log($"Left keyboard R1 C6 key was selected by \" {sender.ToString()} \" selected by \" {e.ToString()} \" ",
+            Logging.Instance.Log($"Left keyboard R1 C6 key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                  "Information");
-            m_selectedKey = "R1C6";
+            m_leftSelectedKey = "R1C6";
+            m_selectedKeyButton = id_buttonLeftR1C6;
             id_textboxLeftKeyValue.Text = "Row 1, Col 6";
+
             if (m_selectedDarkMode)
             {
                 SelectDarkMode();
@@ -805,11 +828,12 @@ namespace CSharpErgoBoard
             }
         }
 
-        private void Id_buttonLeftR1C7_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR1C7_Click(object sender, EventArgs reason)
         {
-            Logging.Instance.Log($"Left keyboard R1 C7 key was selected by \" {sender.ToString()} \" selected by \" {e.ToString()} \" ",
+            Logging.Instance.Log($"Left keyboard R1 C7 key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
              "Information");
-            m_selectedKey = "R1C7";
+            m_leftSelectedKey = "R1C7";
+            m_selectedKeyButton = id_buttonLeftR1C7;
             id_textboxLeftKeyValue.Text = "Row 1, Col 7";
             if (m_selectedDarkMode)
             {
@@ -823,72 +847,186 @@ namespace CSharpErgoBoard
             }
         }
 
-        private void Id_buttonLeftR2C1_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR2C1_Click(object sender, EventArgs reason)
         {
 
         }
 
-        private void Id_buttonLeftR2C2_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR2C2_Click(object sender, EventArgs reason)
         {
 
         }
 
-        private void Id_buttonLeftR2C3_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR2C3_Click(object sender, EventArgs reason)
         {
 
         }
 
-        private void Id_buttonLeftR2C4_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR2C4_Click(object sender, EventArgs reason)
         {
 
         }
 
-        private void Id_buttonLeftR2C5_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR2C5_Click(object sender, EventArgs reason)
         {
 
         }
 
-        private void Id_buttonLeftR2C6_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR2C6_Click(object sender, EventArgs reason)
         {
 
         }
 
-        private void Id_buttonLeftR2C7_Click(object sender, EventArgs e)
+        private void Id_buttonLeftR2C7_Click(object sender, EventArgs reason)
         {
 
         }
 
-        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox1_SelectedIndexChanged(object sender, EventArgs reason)
         {
 
         }
 
-        private void Id_listboxLeftKeyComPort_SelectedIndexChanged(object sender, EventArgs e)
+        private void Id_listboxLeftKeyComPort_SelectedIndexChanged(object sender, EventArgs reason)
         {
 
         }
 
         /// <summary>
-        /// This is when you select to 
+        /// This function correspond to the left keyboard connect button
         /// </summary>
-        /// <param name="sender"> </param> 
-        /// <param name="e"></param>
+        /// <remarks>
+        /// When this button is pressed it will try to connect to the corresponding serial port.
+        /// If it can not find that serial port it will output a popup telling you that you have an error.
+        /// </remarks>
+        /// <param name="sender"> The object that called this function</param>
+        /// <param name="reason"> What event caused the object to call this function</param>
         private void Id_buttonLeftKeyConnectComPort_Click(object sender, EventArgs reason)
         {
             Logging.Instance.Log($"Left Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
-                     "Information");
+                                 "Information");
             String currentPort = FullPortToJustCom((String)id_comboboxLeftKeyComPort.SelectedItem);
-            Logging.Instance.Log(currentPort);
+            Logging.Instance.Log(currentPort, "Information");
+
+            String response;
+            String writeup;
+            Boolean connected;
 
             m_leftKeyConnection.PortName = currentPort;
+            m_leftKeyConnection.ReadTimeout = 1000;
+            m_leftKeyConnection.BaudRate = 9600;
+            m_leftKeyConnection.Parity = Parity.None;
+            m_leftKeyConnection.DataBits = 8;
+            m_leftKeyConnection.StopBits = StopBits.One;
+            m_leftKeyConnection.Handshake = Handshake.None;
             m_leftKeyConnection.Open();
-            m_leftKeyConnection.WriteLine("Testing");
-            m_leftKeyConnection.Close();
+
+            connected = false;  // This is false unless made true
+            response = "default";
+            if (m_leftKeyConnection.IsOpen)
+            {
+                // Send a command and wait for a response
+                m_leftKeyConnection.WriteLine("Name");
+
+                // If we fail to get a response indicate it.
+                try
+                {
+                    response = m_leftKeyConnection.ReadLine();
+                }
+                catch(TimeoutException)
+                {
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    MessageBox.Show(response, "Error during serial connection", buttons);
+                    response = "NA";
+                }
+
+                // Checking what our response was
+                if (response == "NA")
+                {
+                    writeup = "Failed to get a response from the device, please try again.";
+                    Logging.Instance.Log(writeup, "Error");
+                }
+                else if (response.StartsWith("LED"))
+                {
+                    writeup = "This is a LED controller not a keyboard controller, please change port.";
+                    Logging.Instance.Log(writeup, "Error");
+                }
+                else if (response.StartsWith("Key"))
+                {
+                    writeup = "Left keyboard connection was properly setup.";
+                    Logging.Instance.Log(writeup, "Success");
+                    connected = true;
+                }
+                else
+                {
+                    writeup = "Incorrect information was gotten, please try again";
+                    Logging.Instance.Log(writeup, "Error");
+                }
+
+            }
+            else
+            {
+                writeup = "Failed to make connection with selected port";
+                Logging.Instance.Log(writeup, "Error");
+            }
+
+            // If we failed to find a keyboard controller
+            if (!connected)
+            {
+                Popup noKeyError = new Popup(writeup, "Updating Keyboard Error", m_selectedDarkMode);
+                noKeyError.Show(this);
+            }
+
         }
 
         private String FullPortToJustCom(String fullPortName)
         {
-            return "COM2";
+            //TODO remove hard coding here. 
+            return "COM3";
+        }
+
+        private void Id_buttonLeftUpdateKey_Click(object sender, EventArgs reason)
+        {
+            Logging.Instance.Log($"Left Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
+            "Information");
+
+            // If no key value was selected
+            if (id_comboboxLeftKeyValue.SelectedIndex == -1)
+            {
+                Logging.Instance.Log("A keyboard value was not selected", "Error");
+                Popup noKeyError = new Popup("You need to enter a key value to continue", "Updating Keyboard Error", m_selectedDarkMode);
+                noKeyError.Show(this);
+                return;
+            }
+            // If no layer was selected
+            if (id_comboboxLeftKeyLayer.SelectedIndex == -1)
+            {
+                Logging.Instance.Log("A layer was not selected.", "Error");
+                Popup noKeyError = new Popup("You need to enter a layer to continue", "Updating Keyboard Error", m_selectedDarkMode);
+                noKeyError.Show(this);
+                return;
+            }
+            // If no button was selected
+            if (m_leftSelectedKey == null)
+            {
+                Logging.Instance.Log("No key was selected", "Error");
+                Popup noKeyError = new Popup("You need to enter a key to continue", "Updating Keyboard Error", m_selectedDarkMode);
+                noKeyError.Show(this);
+                return;
+            }
+            // Not connected to the keybaord.
+            if (!m_leftKeyConnection.IsOpen)
+            {
+                Logging.Instance.Log("Not connected to a serial connection", "Error");
+                Popup noKeyError = new Popup("Makesure you are connected to the keyboard befor continuing", "Updating Keyboard Error", m_selectedDarkMode);
+                noKeyError.Show(this);
+                return;
+            }
+
+            //Popup something = new Popup("Text", "Caption", true);
+            //something.Show(this); // if you need non-modal window
+            //m_leftKeyConnection.WriteLine("R1C1L1'ESC'");
+
         }
     }
 }

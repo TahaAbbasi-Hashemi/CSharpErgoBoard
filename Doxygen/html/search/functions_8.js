@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resources',['Resources',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#aba07f3040159442ecb4ec90b8f7e74df',1,'CSharpErgoBoard::Properties::Resources']]]
+  ['popup',['Popup',['../de/d4e/class_c_sharp_ergo_board_1_1_popup.html#a673eca47bf96cc41b1a4bae51de57f75',1,'CSharpErgoBoard::Popup']]]
 ];

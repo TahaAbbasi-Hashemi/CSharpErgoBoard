@@ -2127,6 +2127,7 @@
             this.id_buttonLeftUpdateKey.TabIndex = 229;
             this.id_buttonLeftUpdateKey.Text = "Update";
             this.id_buttonLeftUpdateKey.UseVisualStyleBackColor = false;
+            this.id_buttonLeftUpdateKey.Click += new System.EventHandler(this.Id_buttonLeftUpdateKey_Click);
             // 
             // id_textboxLeftKeyValue
             // 
@@ -3397,7 +3398,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ErgoBoard";
             this.Text = "ErgoBoard";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.ErgoboardLoad);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.id_panelMain.ResumeLayout(false);

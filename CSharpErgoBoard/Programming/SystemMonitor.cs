@@ -246,110 +246,116 @@ namespace CSharpErgoBoard
         {
             Logging.Instance.Log("A update was run");
 
-            m_computer.CPUEnabled = true;
-            m_computer.GPUEnabled = true;
-            m_computer.HDDEnabled = true;
-            m_computer.RAMEnabled = true;
-
-            for (Int32 i = 0; i < m_computer.Hardware.Length; i++)
+            try
             {
-                // CPU
-                if (m_computer.Hardware[i].HardwareType == HardwareType.CPU)
+                m_computer.CPUEnabled = true;
+                m_computer.GPUEnabled = true;
+                m_computer.HDDEnabled = true;
+                m_computer.RAMEnabled = true;
+
+                for (Int32 i = 0; i < m_computer.Hardware.Length; i++)
                 {
-                    m_cpuClock.Clear();
-                    m_cpuLoad.Clear();
-                    m_cpuTemp.Clear();
-                    for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
+                    // CPU
+                    if (m_computer.Hardware[i].HardwareType == HardwareType.CPU)
                     {
-                        if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
+                        m_cpuClock.Clear();
+                        m_cpuLoad.Clear();
+                        m_cpuTemp.Clear();
+                        for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
                         {
-                            m_cpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
+                            {
+                                m_cpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                m_cpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
+                            {
+                                m_cpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
                         }
-                        else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                    }
+                    // AMD GPU
+                    else if ((m_computer.Hardware[i].HardwareType == HardwareType.GpuAti) && m_AMD)
+                    {
+                        m_gpuClock.Clear();
+                        m_gpuLoad.Clear();
+                        m_gpuTemp.Clear();
+                        for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
                         {
-                            m_cpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
+                            {
+                                m_gpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                m_gpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
+                            {
+                                m_gpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
                         }
-                        else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
+                    }
+                    // Nvidea GPU
+                    else if ((m_computer.Hardware[i].HardwareType == HardwareType.GpuNvidia) && m_AMD)
+                    {
+                        m_gpuClock.Clear();
+                        m_gpuLoad.Clear();
+                        m_gpuTemp.Clear();
+                        for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
                         {
-                            m_cpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
+                            {
+                                m_gpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                m_gpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                            else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
+                            {
+                                m_gpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                        }
+                    }
+                    // RAM
+                    else if (m_computer.Hardware[i].HardwareType == HardwareType.RAM)
+                    {
+                        m_ramLoad.Clear();
+                        for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
+                        {
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                //m_ramLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
+                        }
+                    }
+                    // HDD
+                    else if (m_computer.Hardware[i].HardwareType == HardwareType.HDD)
+                    {
+                        m_hddLoad.Clear();
+                        for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
+                        {
+                            if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
+                            {
+                                //m_hddLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
+                            }
                         }
                     }
                 }
-                // AMD GPU
-                else if ((m_computer.Hardware[i].HardwareType == HardwareType.GpuAti) && m_AMD)
-                {
-                    m_gpuClock.Clear();
-                    m_gpuLoad.Clear();
-                    m_gpuTemp.Clear();
-                    for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
-                    {
-                        if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
-                        {
-                            m_gpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
-                        }
-                        else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
-                        {
-                            m_gpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
-                        }
-                        else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
-                        {
-                            m_gpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
-                        }
-                    }
-                }
-                // Nvidea GPU
-                else if ((m_computer.Hardware[i].HardwareType == HardwareType.GpuNvidia) && m_AMD)
-                {
-                    m_gpuClock.Clear();
-                    m_gpuLoad.Clear();
-                    m_gpuTemp.Clear();
-                    for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
-                    {
-                        if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Clock)
-                        {
-                            m_gpuClock.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
-                        }
-                        else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
-                        {
-                            m_gpuLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
-                        }
-                        else if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Temperature)
-                        {
-                            m_gpuTemp.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
-                        }
-                    }
-                }
-                // RAM
-                else if (m_computer.Hardware[i].HardwareType == HardwareType.RAM)
-                {
-                    m_ramLoad.Clear();
-                    for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
-                    {
-                        if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
-                        {
-                            //m_ramLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
-                        }
-                    }
-                }
-                // HDD
-                else if (m_computer.Hardware[i].HardwareType == HardwareType.HDD)
-                {
-                    m_hddLoad.Clear();
-                    for (Int32 j = 0; j < m_computer.Hardware[i].Sensors.Length; j++)
-                    {
-                        if (m_computer.Hardware[i].Sensors[j].SensorType == SensorType.Load)
-                        {
-                            //m_hddLoad.Add((float)(m_computer.Hardware[i].Sensors[j].Value));
-                        }
-                    }
-                }
+
+                m_computer.CPUEnabled = false;
+                m_computer.GPUEnabled = false;
+                m_computer.HDDEnabled = false;
+                m_computer.RAMEnabled = false;
             }
-
-            m_computer.CPUEnabled = false;
-            m_computer.GPUEnabled = false;
-            m_computer.HDDEnabled = false;
-            m_computer.RAMEnabled = false;
-
+            catch (NullReferenceException)
+            {
+                ;
+            }
         }
 
         /// <summary>

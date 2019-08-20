@@ -137,7 +137,7 @@ namespace CSharpErgoBoard
         /// This is the format that the log will be saved as. 
         /// </summary>
         /// <remarks>
-        /// The default method is "%D (%T), \"%F\" <%L> : %M" as it contains all the nessary criteria. 
+        /// The default method is "%D (%T), \"%F\" %L : %M" as it contains all the nessary criteria. 
         /// If you wish to create your own format you can use these variables to indicate properties of the log. \n
         /// %D would represent the date the log was made \n
         /// %T would represent the time that the log was made. \n
@@ -236,7 +236,7 @@ namespace CSharpErgoBoard
             Char messageParameter;
             System.IO.StreamWriter file;
 
-            String path = @"C:\Users\Taha Abbasi-Hashemi\source\repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log";
+            String path = @"C:\Users\mieuser\Source\Repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log";
             file = new System.IO.StreamWriter(path);
             while (m_running)
             {
