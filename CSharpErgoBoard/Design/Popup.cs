@@ -1,5 +1,6 @@
 ﻿// Using
 using System;
+using System.Media;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -11,6 +12,7 @@ namespace CSharpErgoBoard
     /// <remarks>
     /// As regular message boxes are unable to change apperence this is made to allow for appearance changes in the message box. 
     /// This is generally created to let the user know that they have made a error somewhere and need to edit or change something.
+    /// The popup also produces a windows based noise for error popups. 
     /// </remarks>
     public partial class Popup : Form
     {
@@ -22,6 +24,7 @@ namespace CSharpErgoBoard
         /// <param name="darkMode"> If darkmode is selected at the time of the popups creation. <value>true</value> for darkmode.</param>
         public Popup(String text, String caption, Boolean darkMode)
         {
+            SystemSounds.Exclamation.Play();
             Logging.Instance.Log("A popup window was made.", "Information");
             InitializeComponent();
             id_labelText.Text = text;

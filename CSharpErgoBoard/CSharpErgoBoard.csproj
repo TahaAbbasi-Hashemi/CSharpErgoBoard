@@ -107,11 +107,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Design\MyButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Design\Popup.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Design\Popup.Designer.cs">
       <DependentUpon>Popup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Design\MyComboBox.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Programming\Singleton.cs" />
     <Compile Include="Programming\Logging.cs" />
