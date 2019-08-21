@@ -15,12 +15,26 @@ namespace CSharpErgoBoard
         private String m_type = "Single";
 
         /// <summary>
+        /// The default Constructor. 
+        /// </summary>
+        /// <remarks>
+        /// This only exists to solve a small bug where buttons are randomly selected when the program starts
+        /// </remarks>
+        public MyButton()
+        {
+        }
+
+        /// <summary>
         /// Allows conversion between light or dark mode.
         /// </summary>
+        /// <BugFix> 
+        /// Added Select() to prevent a bug where buttons are considered selected when they should not be.
+        /// </BugFix>
         /// <param name="darkModeTrue"> <value>true</value> if you are using dark mode, <value>false</value> if you are using light mode</param>
         public void ModeChange(Boolean darkModeTrue)
         {
             m_selectDarkMode = darkModeTrue;
+            Select();   // This is to get rid of a bug where buttons are randomly selected when the program starts.
 
             // If dark Mode Selected
             if (darkModeTrue)
