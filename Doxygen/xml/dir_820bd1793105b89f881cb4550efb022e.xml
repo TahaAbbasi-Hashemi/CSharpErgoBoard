@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_820bd1793105b89f881cb4550efb022e" kind="dir">
+    <compoundname>C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard</compoundname>
+    <innerdir refid="dir_e0b7824761e7a23ac1d0c9465be885fc">C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design</innerdir>
+    <innerdir refid="dir_d5c88b87d423e4c1f79b98e666861a9a">C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/obj</innerdir>
+    <innerdir refid="dir_a0f4979d2e626902bcc902612fd46263">C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming</innerdir>
+    <innerdir refid="dir_009e37cd76ef2c591cd6d56b887d9752">C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties</innerdir>
+    <innerfile refid="_class1_8cs">Class1.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/"/>
+  </compounddef>
+</doxygen>

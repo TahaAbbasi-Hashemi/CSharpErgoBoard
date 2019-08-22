@@ -41,6 +41,7 @@
     <DocumentationFile>bin\Debug\CSharpErgoBoard.xml</DocumentationFile>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
     <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,6 +51,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>7.2</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
@@ -119,20 +121,24 @@
     <Compile Include="Design\MyComboBox.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Programming\FreeErgonomicsBrain.cs" />
+    <Compile Include="Design\MySerialPort.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Programming\Singleton.cs" />
     <Compile Include="Programming\Logging.cs" />
     <Compile Include="Programming\SystemMonitor.cs" />
     <Compile Include="Programming\IOConnect.cs" />
-    <Compile Include="Design\ErgoBoard.cs">
+    <Compile Include="Design\FreeErgonomics.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Design\ErgoBoard.Designer.cs">
-      <DependentUpon>ErgoBoard.cs</DependentUpon>
+    <Compile Include="Design\FreeErgonomics.Designer.cs">
+      <DependentUpon>FreeErgonomics.cs</DependentUpon>
     </Compile>
     <Compile Include="Programming\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Design\ErgoBoard.resx">
-      <DependentUpon>ErgoBoard.cs</DependentUpon>
+    <EmbeddedResource Include="Design\FreeErgonomics.resx">
+      <DependentUpon>FreeErgonomics.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Design\Popup.resx">
@@ -149,6 +155,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
+    <None Include="Arduino Code\KeyboardController.ino" />
     <None Include="CSharpErgoBoard_TemporaryKey.pfx" />
     <None Include="Logs\Logs.log" />
     <None Include="Properties\Settings.settings">

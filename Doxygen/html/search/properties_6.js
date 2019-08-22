@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['instance',['Instance',['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html#a0f659a702aa5d11154517659ef485b90',1,'CSharpErgoBoard.Logging.Instance()'],['../d8/d08/class_c_sharp_ergo_board_1_1_singleton.html#ae3bfd6c4db18d9f519dfb8ba533158cb',1,'CSharpErgoBoard.Singleton.Instance()'],['../d3/df3/class_c_sharp_ergo_board_1_1_system_monitor.html#a115682384f008d72b012b681e2a77588',1,'CSharpErgoBoard.SystemMonitor.Instance()']]]
+  ['instance',['Instance',['../class_c_sharp_ergo_board_1_1_programming_1_1_logging.html#a7ada93e9c9e9e815fbb7627e08292513',1,'CSharpErgoBoard.Programming.Logging.Instance()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_singleton.html#a49c38892ae8241bdb15b668575f1f09e',1,'CSharpErgoBoard.Programming.Singleton.Instance()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#a5f31bb7d14f66b187cb92702328dabf0',1,'CSharpErgoBoard.Programming.SystemMonitor.Instance()']]],
+  ['isflushed',['IsFlushed',['../class_c_sharp_ergo_board_1_1_programming_1_1_logging.html#a07e3b5e49dda9af9593fc4f0d00d64af',1,'CSharpErgoBoard::Programming::Logging']]],
+  ['isselected',['IsSelected',['../class_c_sharp_ergo_board_1_1_design_1_1_my_button.html#a07c8abf091248dfcbf603be86395f603',1,'CSharpErgoBoard::Design::MyButton']]]
 ];

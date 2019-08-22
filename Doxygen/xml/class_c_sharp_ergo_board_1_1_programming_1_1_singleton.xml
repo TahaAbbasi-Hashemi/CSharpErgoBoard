@@ -1,0 +1,232 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton" kind="class" language="C#" prot="public">
+    <compoundname>CSharpErgoBoard::Programming::Singleton</compoundname>
+    <derivedcompoundref refid="class_c_sharp_ergo_board_1_1_programming_1_1_logging" prot="public" virt="non-virtual">CSharpErgoBoard.Programming.Logging</derivedcompoundref>
+    <derivedcompoundref refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor" prot="public" virt="non-virtual">CSharpErgoBoard.Programming.SystemMonitor</derivedcompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a6c8fb495b2f7f178f8346e6fd1ecd3ed" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Programming.Singleton.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <initializer>= &quot;Singleton&quot;</initializer>
+        <briefdescription>
+<para>The name of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="19" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a4244a838f6896fd5e2d379d8854c2e25" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Programming.Singleton.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <initializer>= &quot;To act as a architectural base for singleton classes&quot;</initializer>
+        <briefdescription>
+<para>The purpose of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="23" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ae2d2b36dbef6b6d098f93b3d9bcd496a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Programming.Singleton.ToString</definition>
+        <argsstring></argsstring>
+        <name>ToString</name>
+        <initializer>= &quot;A <ref refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton" kindref="compound">Singleton</ref> Class&quot;</initializer>
+        <briefdescription>
+<para>To convert the class to a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="27" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a49c38892ae8241bdb15b668575f1f09e" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton" kindref="compound">Singleton</ref></type>
+        <definition>Singleton CSharpErgoBoard.Programming.Singleton.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+<para>This is the instance of the singleton class. Any commands must be called using </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A singleton class has one or no instances. In order to use the instance this must be called. This also starts the threading and logging process of the class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="57" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="58" bodyend="75"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a12e232eb75e1c1b71b91fd20fbfe81b7" prot="protected" static="yes" mutable="no">
+        <type><ref refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton" kindref="compound">Singleton</ref></type>
+        <definition>Singleton CSharpErgoBoard.Programming.Singleton.m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>The instance of the singleton </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="33" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ab721e618aad538a1fff8aa386401aebc" prot="protected" static="yes" mutable="no">
+        <type>Boolean</type>
+        <definition>Boolean CSharpErgoBoard.Programming.Singleton.m_running</definition>
+        <argsstring></argsstring>
+        <name>m_running</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>The variable inside the while loop of ThreadFunction </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="37" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a1d527f7270f08c6f0a762946d30a8491" prot="protected" static="yes" mutable="no">
+        <type>readonly Thread</type>
+        <definition>readonly Thread CSharpErgoBoard.Programming.Singleton.m_thread</definition>
+        <argsstring></argsstring>
+        <name>m_thread</name>
+        <initializer>= new Thread(<ref refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1acb65d5e88f7becd6e318bb6ff2ab5156" kindref="member">ThreadFunction</ref>)</initializer>
+        <briefdescription>
+<para>The Thread designed for the signleton </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="43" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a91511d7d1e40a2cfa530a5a6d22fff96" prot="protected" static="yes" mutable="no">
+        <type>readonly Object</type>
+        <definition>readonly Object CSharpErgoBoard.Programming.Singleton.m_padlock</definition>
+        <argsstring></argsstring>
+        <name>m_padlock</name>
+        <initializer>= new Object()</initializer>
+        <briefdescription>
+<para>A Thread Safe lockused for instance development </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="47" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a3de15a8072eee90d81c2dc9c3283aece" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static CSharpErgoBoard.Programming.Singleton.Singleton</definition>
+        <argsstring>()</argsstring>
+        <name>Singleton</name>
+        <briefdescription>
+<para>Static Constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="80" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="80" bodyend="80"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1acb65d5e88f7becd6e318bb6ff2ab5156" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CSharpErgoBoard.Programming.Singleton.ThreadFunction</definition>
+        <argsstring>()</argsstring>
+        <name>ThreadFunction</name>
+        <briefdescription>
+<para>This function is run by the thread. This is intended to be over written by another function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="85" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="85" bodyend="91"/>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ab721e618aad538a1fff8aa386401aebc" compoundref="_singleton_8cs" startline="37">CSharpErgoBoard.Programming.Singleton.m_running</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a7bc21df69ac9302a5ebb17dce769560a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void CSharpErgoBoard.Programming.Singleton.End</definition>
+        <argsstring>()</argsstring>
+        <name>End</name>
+        <reimplementedby refid="class_c_sharp_ergo_board_1_1_programming_1_1_logging_1a49a09843bb0704dcc91c36efdad7766f">End</reimplementedby>
+        <reimplementedby refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a93879c90cadd645fc63f9a817ed867cb">End</reimplementedby>
+        <briefdescription>
+<para>This stops the threading process, if this function is not called, then the program can not close. This is intended to be over written by another function. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="96" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="96" bodyend="100"/>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ab721e618aad538a1fff8aa386401aebc" compoundref="_singleton_8cs" startline="37">CSharpErgoBoard.Programming.Singleton.m_running</references>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a1d527f7270f08c6f0a762946d30a8491" compoundref="_singleton_8cs" startline="43">CSharpErgoBoard.Programming.Singleton.m_thread</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A Basic <ref refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton" kindref="compound">Singleton</ref> Class used for helping other singleton classes be made </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The Class is thread safe and uses locks to ensure double existance does not happen. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="35">
+        <label>CSharpErgoBoard.Programming.Singleton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton"/>
+      </node>
+      <node id="36">
+        <label>CSharpErgoBoard.Programming.Logging</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_logging"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="37">
+        <label>CSharpErgoBoard.Programming.SystemMonitor</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor"/>
+        <childnode refid="35" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="38">
+        <label>CSharpErgoBoard.Programming.Singleton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton"/>
+        <childnode refid="38" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" line="14" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Singleton.cs" bodystart="13" bodyend="101"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a7bc21df69ac9302a5ebb17dce769560a" prot="public" virt="virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>End</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a49c38892ae8241bdb15b668575f1f09e" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>Instance</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a12e232eb75e1c1b71b91fd20fbfe81b7" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>m_instance</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a91511d7d1e40a2cfa530a5a6d22fff96" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>m_padlock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ab721e618aad538a1fff8aa386401aebc" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>m_running</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a1d527f7270f08c6f0a762946d30a8491" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>m_thread</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a6c8fb495b2f7f178f8346e6fd1ecd3ed" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>Name</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a4244a838f6896fd5e2d379d8854c2e25" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>Purpose</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a3de15a8072eee90d81c2dc9c3283aece" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>Singleton</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1acb65d5e88f7becd6e318bb6ff2ab5156" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>ThreadFunction</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ae2d2b36dbef6b6d098f93b3d9bcd496a" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::Singleton</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

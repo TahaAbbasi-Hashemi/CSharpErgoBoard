@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['membername',['MemberName',['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html#a0e3729cca9165035c10df66da6e47b0c',1,'CSharpErgoBoard::LogData']]],
-  ['message',['Message',['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html#ac3d96aa202b683043b5cabaffa2f0703',1,'CSharpErgoBoard::LogData']]]
+  ['name',['Name',['../class_c_sharp_ergo_board_1_1_programming_1_1_logging.html#a9d40de21b76bbc7bcc2ced1c7dbc25e4',1,'CSharpErgoBoard.Programming.Logging.Name()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_singleton.html#a6c8fb495b2f7f178f8346e6fd1ecd3ed',1,'CSharpErgoBoard.Programming.Singleton.Name()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#a13cfb45b0ba7299aa03268131e57ce9f',1,'CSharpErgoBoard.Programming.SystemMonitor.Name()']]]
 ];

@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-namespace CSharpErgoBoard
+namespace CSharpErgoBoard.Programming
 {
     /// <summary>
     /// A Basic Singleton Class used for helping other singleton classes be made
@@ -26,7 +26,7 @@ namespace CSharpErgoBoard
         /// </summary>
         public new String ToString { get; } = "A Singleton Class";
 
-        // Private Variabels 
+        // Protected Variabels 
         /// <summary>
         /// The instance of the singleton
         /// </summary>
@@ -36,7 +36,7 @@ namespace CSharpErgoBoard
         /// </summary>
         protected static Boolean m_running = false;
 
-        // Readonly Private Variables 
+        // Readonly Protected Variables 
         /// <summary>
         /// The Thread designed for the signleton 
         /// </summary>

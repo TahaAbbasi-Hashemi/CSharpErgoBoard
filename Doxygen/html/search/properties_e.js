@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['widekeydark',['WideKeyDark',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#aa32124ce43d9d635136cde13138b4800',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['widekeydarkled',['WideKeyDarkLED',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#ab62b585c72e35c2ec4deb8337348f69d',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['widekeydarkselected',['WideKeyDarkSelected',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#a7632812a1d50d8403d5ddc5da7322e0d',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['widekeylight',['WideKeyLight',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#acac59b54a195c6af5cf8013eb1d32a60',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['widekeylightled',['WideKeyLightLED',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#a42ad6097bdbe8431056335b2643f8fef',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['widekeylightselected',['WideKeyLightSelected',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#a2768a1fbef794ca809c47d70d5409056',1,'CSharpErgoBoard::Properties::Resources']]]
+  ['threadname',['ThreadName',['../class_c_sharp_ergo_board_1_1_log_data.html#aede3853a8da020fece07e26b8debc3cb',1,'CSharpErgoBoard::LogData']]],
+  ['time',['Time',['../class_c_sharp_ergo_board_1_1_log_data.html#a4a0155e0180566395b9282e745153c80',1,'CSharpErgoBoard::LogData']]],
+  ['tostring',['ToString',['../class_c_sharp_ergo_board_1_1_ergo_board.html#a4ef90452a71a19a6470ea5d6acd148c6',1,'CSharpErgoBoard.ErgoBoard.ToString()'],['../class_c_sharp_ergo_board_1_1_my_button.html#a5317529734285a70eb330fb877f86e4a',1,'CSharpErgoBoard.MyButton.ToString()'],['../class_c_sharp_ergo_board_1_1_my_combo_box.html#aa845b15be5527f90b1a9273f86abb301',1,'CSharpErgoBoard.MyComboBox.ToString()'],['../class_c_sharp_ergo_board_1_1_popup.html#a020d7ef9bed3bcd4a5a276a1f343cc1a',1,'CSharpErgoBoard.Popup.ToString()'],['../class_c_sharp_ergo_board_1_1_log_data.html#a975d11fa8efd80adac2e89e75b869d1a',1,'CSharpErgoBoard.LogData.ToString()'],['../class_c_sharp_ergo_board_1_1_logging.html#a2fac53460363072312292b773d5b8dae',1,'CSharpErgoBoard.Logging.ToString()'],['../class_c_sharp_ergo_board_1_1_singleton.html#ae791511e5cc13d93665744f080914060',1,'CSharpErgoBoard.Singleton.ToString()'],['../class_c_sharp_ergo_board_1_1_system_monitor.html#a5803fb2ae592e3a14a1c45612fb9a95a',1,'CSharpErgoBoard.SystemMonitor.ToString()']]]
 ];

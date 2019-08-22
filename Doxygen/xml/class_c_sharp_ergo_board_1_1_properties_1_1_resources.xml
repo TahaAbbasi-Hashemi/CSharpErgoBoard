@@ -1,0 +1,362 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_properties_1_1_resources" kind="class" language="C#" prot="public">
+    <compoundname>CSharpErgoBoard::Properties::Resources</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a74e6939e3402f8b414530f761dfbe01e" prot="private" static="yes" mutable="no">
+        <type>global::System.Resources.ResourceManager</type>
+        <definition>global::System.Resources.ResourceManager CSharpErgoBoard.Properties.Resources.resourceMan</definition>
+        <argsstring></argsstring>
+        <name>resourceMan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="27" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ad83b2523cf92b2aec251eb86e224bad3" prot="private" static="yes" mutable="no">
+        <type>global::System.Globalization.CultureInfo</type>
+        <definition>global::System.Globalization.CultureInfo CSharpErgoBoard.Properties.Resources.resourceCulture</definition>
+        <argsstring></argsstring>
+        <name>resourceCulture</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="29" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ad52da0d5960aca6ab61bb2b2be24c0b4" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal global::System.Resources.ResourceManager</type>
+        <definition>internal global::System.Resources.ResourceManager CSharpErgoBoard.Properties.Resources.ResourceManager</definition>
+        <argsstring></argsstring>
+        <name>ResourceManager</name>
+        <briefdescription>
+<para>Returns the cached ResourceManager instance used by this class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="39" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="39" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ad43fff14976ef48e831ccacc5f5c0268" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>internal global::System.Globalization.CultureInfo</type>
+        <definition>internal global::System.Globalization.CultureInfo CSharpErgoBoard.Properties.Resources.Culture</definition>
+        <argsstring></argsstring>
+        <name>Culture</name>
+        <briefdescription>
+<para>Overrides the current thread&apos;s CurrentUICulture property for all resource lookups using this strongly typed resource class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="54" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="54" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ae12014714095950875b3f8fb8ac4194a" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.SingleKeyDark</definition>
+        <argsstring></argsstring>
+        <name>SingleKeyDark</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="66" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="66" bodyend="71"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a423db982e2f4ed045b085a32b62f1801" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.SingleKeyDarkLED</definition>
+        <argsstring></argsstring>
+        <name>SingleKeyDarkLED</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="76" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="76" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ac5864c7503702008a44e909906f772ad" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.SingleKeyDarkSelected</definition>
+        <argsstring></argsstring>
+        <name>SingleKeyDarkSelected</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="86" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="86" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a47f73d85fe664ff8c9a8a11251540146" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.SingleKeyLight</definition>
+        <argsstring></argsstring>
+        <name>SingleKeyLight</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="96" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="96" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a866a26513d911f5a0577d400cc399de2" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.SingleKeyLightLED</definition>
+        <argsstring></argsstring>
+        <name>SingleKeyLightLED</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="106" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="106" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ac4fe231799848ce7a529e402c5a77024" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.SingleKeyLightSelected</definition>
+        <argsstring></argsstring>
+        <name>SingleKeyLightSelected</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="116" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="116" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a0f75fb11be6cd8f599ecd47051a25c7a" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.TallKeyDark</definition>
+        <argsstring></argsstring>
+        <name>TallKeyDark</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="126" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="126" bodyend="131"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a89b6ae1e64cbbc4288eedc3f6dac2a93" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.TallKeyDarkLED</definition>
+        <argsstring></argsstring>
+        <name>TallKeyDarkLED</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="136" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="136" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a137efa867dcc766589029a9fe1f096ef" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.TallKeyDarkSelected</definition>
+        <argsstring></argsstring>
+        <name>TallKeyDarkSelected</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="146" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="146" bodyend="151"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a7f5250f4e189d1fca8c9b16a2b4819cb" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.TallKeyLight</definition>
+        <argsstring></argsstring>
+        <name>TallKeyLight</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="156" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="156" bodyend="161"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ab4a24e99b5ff5c33fb648b62bc180249" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.TallKeyLightLED</definition>
+        <argsstring></argsstring>
+        <name>TallKeyLightLED</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="166" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="166" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a697c6fd91a763338b8e2a44c80771e15" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.TallKeyLightSelected</definition>
+        <argsstring></argsstring>
+        <name>TallKeyLightSelected</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="176" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="176" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1aa32124ce43d9d635136cde13138b4800" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.WideKeyDark</definition>
+        <argsstring></argsstring>
+        <name>WideKeyDark</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="186" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="186" bodyend="191"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ab62b585c72e35c2ec4deb8337348f69d" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.WideKeyDarkLED</definition>
+        <argsstring></argsstring>
+        <name>WideKeyDarkLED</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="196" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="196" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a7632812a1d50d8403d5ddc5da7322e0d" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.WideKeyDarkSelected</definition>
+        <argsstring></argsstring>
+        <name>WideKeyDarkSelected</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="206" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="206" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1acac59b54a195c6af5cf8013eb1d32a60" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.WideKeyLight</definition>
+        <argsstring></argsstring>
+        <name>WideKeyLight</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="216" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="216" bodyend="221"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a42ad6097bdbe8431056335b2643f8fef" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.WideKeyLightLED</definition>
+        <argsstring></argsstring>
+        <name>WideKeyLightLED</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="226" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="226" bodyend="231"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a2768a1fbef794ca809c47d70d5409056" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>internal System.Drawing.Bitmap</type>
+        <definition>internal System.Drawing.Bitmap CSharpErgoBoard.Properties.Resources.WideKeyLightSelected</definition>
+        <argsstring></argsstring>
+        <name>WideKeyLightSelected</name>
+        <briefdescription>
+<para>Looks up a localized resource of type System.Drawing.Bitmap. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="236" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="236" bodyend="241"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1aba07f3040159442ecb4ec90b8f7e74df" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>internal</type>
+        <definition>internal CSharpErgoBoard.Properties.Resources.Resources</definition>
+        <argsstring>()</argsstring>
+        <name>Resources</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="32" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="32" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A strongly-typed resource class, for looking up localized strings, etc. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" line="25" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Properties/Resources.Designer.cs" bodystart="25" bodyend="242"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ad43fff14976ef48e831ccacc5f5c0268" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>Culture</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ad83b2523cf92b2aec251eb86e224bad3" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>resourceCulture</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a74e6939e3402f8b414530f761dfbe01e" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>resourceMan</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ad52da0d5960aca6ab61bb2b2be24c0b4" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>ResourceManager</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1aba07f3040159442ecb4ec90b8f7e74df" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>Resources</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ae12014714095950875b3f8fb8ac4194a" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>SingleKeyDark</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a423db982e2f4ed045b085a32b62f1801" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>SingleKeyDarkLED</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ac5864c7503702008a44e909906f772ad" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>SingleKeyDarkSelected</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a47f73d85fe664ff8c9a8a11251540146" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>SingleKeyLight</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a866a26513d911f5a0577d400cc399de2" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>SingleKeyLightLED</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ac4fe231799848ce7a529e402c5a77024" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>SingleKeyLightSelected</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a0f75fb11be6cd8f599ecd47051a25c7a" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>TallKeyDark</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a89b6ae1e64cbbc4288eedc3f6dac2a93" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>TallKeyDarkLED</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a137efa867dcc766589029a9fe1f096ef" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>TallKeyDarkSelected</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a7f5250f4e189d1fca8c9b16a2b4819cb" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>TallKeyLight</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ab4a24e99b5ff5c33fb648b62bc180249" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>TallKeyLightLED</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a697c6fd91a763338b8e2a44c80771e15" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>TallKeyLightSelected</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1aa32124ce43d9d635136cde13138b4800" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>WideKeyDark</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1ab62b585c72e35c2ec4deb8337348f69d" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>WideKeyDarkLED</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a7632812a1d50d8403d5ddc5da7322e0d" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>WideKeyDarkSelected</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1acac59b54a195c6af5cf8013eb1d32a60" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>WideKeyLight</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a42ad6097bdbe8431056335b2643f8fef" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>WideKeyLightLED</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_properties_1_1_resources_1a2768a1fbef794ca809c47d70d5409056" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Properties::Resources</scope><name>WideKeyLightSelected</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,592 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor" kind="class" language="C#" prot="public">
+    <compoundname>CSharpErgoBoard::Programming::SystemMonitor</compoundname>
+    <basecompoundref refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton" prot="public" virt="non-virtual">CSharpErgoBoard.Programming.Singleton</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a13cfb45b0ba7299aa03268131e57ce9f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Programming.SystemMonitor.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <initializer>= &quot;System Monitor&quot;</initializer>
+        <briefdescription>
+<para>The name of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="23" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1aea7dbc5e6d03e038b385f86d792e9246" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Programming.SystemMonitor.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <initializer>= &quot;To store the propertes of the hardware&quot;</initializer>
+        <briefdescription>
+<para>The purpose of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="27" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a426cb14b8fbdb7007125b3e4f2272c3f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Programming.SystemMonitor.ToString</definition>
+        <argsstring></argsstring>
+        <name>ToString</name>
+        <initializer>= &quot;A System Monitoring Class&quot;</initializer>
+        <briefdescription>
+<para>To convert the class to a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="31" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ac642e67fd5dd91616e78c6e19009baa4" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>Int16</type>
+        <definition>Int16 CSharpErgoBoard.Programming.SystemMonitor.CpuCores</definition>
+        <argsstring></argsstring>
+        <name>CpuCores</name>
+        <briefdescription>
+<para>Gets the total amount of CPU cores found in a system. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="73" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1acdcee908185aaed4261484dbfe986f02" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.CpuClock</definition>
+        <argsstring></argsstring>
+        <name>CpuClock</name>
+        <briefdescription>
+<para>Get the Clock speed of each CPU core in a list, with the first value in the list being the total CPU clock speed </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="77" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="78" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a3ff8dac2d92b1c98e102c8a5b5f1a9b0" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.CpuLoad</definition>
+        <argsstring></argsstring>
+        <name>CpuLoad</name>
+        <briefdescription>
+<para>Get the load of each CPU core in a list </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="91" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="92" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a665d0736c2f7ef8ecbee45d917512ad0" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.CpuTemp</definition>
+        <argsstring></argsstring>
+        <name>CpuTemp</name>
+        <briefdescription>
+<para>Get the temperture of each CPU core in a list </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="105" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="106" bodyend="115"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a1a0ad7037ddf3bd0bdbcd6a4bd02dec2" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.GpuClock</definition>
+        <argsstring></argsstring>
+        <name>GpuClock</name>
+        <briefdescription>
+<para>Get the clock speed of the graphic cards </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="119" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="120" bodyend="129"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a1f4ec6e875c014621d416bde2c1c609f" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.GpuLoad</definition>
+        <argsstring></argsstring>
+        <name>GpuLoad</name>
+        <briefdescription>
+<para>Get the load of the graphics card </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="133" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="134" bodyend="143"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a57c3a57773a50bea691987807e16803b" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.GpuTemp</definition>
+        <argsstring></argsstring>
+        <name>GpuTemp</name>
+        <briefdescription>
+<para>Get the temperture of the graphics card </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="147" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="148" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a522a8bb799e427aa2f1531d0142b406e" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.RamLoad</definition>
+        <argsstring></argsstring>
+        <name>RamLoad</name>
+        <briefdescription>
+<para>Get the load of the ram </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="161" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="162" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a8de324164966d8bf49e67b6a5d8c719a" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>List&lt; Double &gt;</type>
+        <definition>List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.HddLoad</definition>
+        <argsstring></argsstring>
+        <name>HddLoad</name>
+        <briefdescription>
+<para>Get the load of the hard disk drive </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="175" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="176" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a59c4197226dcf3a87de3a36d986c2cf5" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Boolean</type>
+        <definition>Boolean CSharpErgoBoard.Programming.SystemMonitor.AMD</definition>
+        <argsstring></argsstring>
+        <name>AMD</name>
+        <briefdescription>
+<para>Controls if the program uses a Nvidea or AMD gpu. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><computeroutput>true</computeroutput> if we are using a AMD GPU; <computeroutput>false</computeroutput> if we are using a Nvidea GPU. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="192" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="193" bodyend="210"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a5f31bb7d14f66b187cb92702328dabf0" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new <ref refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor" kindref="compound">SystemMonitor</ref></type>
+        <definition>new SystemMonitor CSharpErgoBoard.Programming.SystemMonitor.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+<para>This is the instance of the singleton class. Any commands must be called using </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A singleton class has one or no instances. In order to use the instance this must be called. This also starts the threading and monitoring process of the class. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="218" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="219" bodyend="237"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ab2493949449289558ab61e5b2f40be33" prot="private" static="yes" mutable="no">
+        <type>Boolean</type>
+        <definition>Boolean CSharpErgoBoard.Programming.SystemMonitor.m_AMD</definition>
+        <argsstring></argsstring>
+        <name>m_AMD</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="34" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ae808f43dc4192327b0beffdb6944a863" prot="private" static="yes" mutable="no">
+        <type>Int16</type>
+        <definition>Int16 CSharpErgoBoard.Programming.SystemMonitor.m_cpuCores</definition>
+        <argsstring></argsstring>
+        <name>m_cpuCores</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="35" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a87f868fcf063f7c9a6a17b9c9f650f03" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; Double &gt;</type>
+        <definition>readonly List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.m_cpuClock</definition>
+        <argsstring></argsstring>
+        <name>m_cpuClock</name>
+        <initializer>= new List&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="36" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a394583bc92bd41400d648de2cc2b3aa3" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; Double &gt;</type>
+        <definition>readonly List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.m_cpuLoad</definition>
+        <argsstring></argsstring>
+        <name>m_cpuLoad</name>
+        <initializer>= new List&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="37" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1acc001c3af0a0ab650983309c7dcece51" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; Double &gt;</type>
+        <definition>readonly List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.m_cpuTemp</definition>
+        <argsstring></argsstring>
+        <name>m_cpuTemp</name>
+        <initializer>= new List&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="38" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a1cee621b1ce4e05014d359c23ade2f12" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; Double &gt;</type>
+        <definition>readonly List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.m_gpuClock</definition>
+        <argsstring></argsstring>
+        <name>m_gpuClock</name>
+        <initializer>= new List&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="39" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a49d5bd47bfb9e4778d2dd2e393f83b59" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; Double &gt;</type>
+        <definition>readonly List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.m_gpuLoad</definition>
+        <argsstring></argsstring>
+        <name>m_gpuLoad</name>
+        <initializer>= new List&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="40" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a6a6998ae2f96d92fe10e1ca446d0646d" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; Double &gt;</type>
+        <definition>readonly List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.m_gpuTemp</definition>
+        <argsstring></argsstring>
+        <name>m_gpuTemp</name>
+        <initializer>= new List&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="41" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a213b2e77b4d8f1c4496a334caa8a59e7" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; Double &gt;</type>
+        <definition>readonly List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.m_ramLoad</definition>
+        <argsstring></argsstring>
+        <name>m_ramLoad</name>
+        <initializer>= new List&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="42" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ae340bec1999bf70f1dd37486fde507f5" prot="private" static="yes" mutable="no">
+        <type>readonly List&lt; Double &gt;</type>
+        <definition>readonly List&lt;Double&gt; CSharpErgoBoard.Programming.SystemMonitor.m_hddLoad</definition>
+        <argsstring></argsstring>
+        <name>m_hddLoad</name>
+        <initializer>= new List&lt;Double&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="43" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a23ce12fe6a0304ec5156b3a377be792f" prot="private" static="yes" mutable="no">
+        <type>readonly Computer</type>
+        <definition>readonly Computer CSharpErgoBoard.Programming.SystemMonitor.m_computer</definition>
+        <argsstring></argsstring>
+        <name>m_computer</name>
+        <initializer>= new Computer()</initializer>
+        <briefdescription>
+<para>The computer being used for finding hardware values </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="63" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a36c4f5130a100afe1884d9afb1b2ed6c" prot="private" static="yes" mutable="no">
+        <type>readonly Mutex</type>
+        <definition>readonly Mutex CSharpErgoBoard.Programming.SystemMonitor.m_updateLock</definition>
+        <argsstring></argsstring>
+        <name>m_updateLock</name>
+        <initializer>= new Mutex()</initializer>
+        <briefdescription>
+<para>The thread safe lock for updating. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="67" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a7839595e278404e3706f04a90d8a6d04" prot="protected" static="yes" mutable="no">
+        <type>new <ref refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor" kindref="compound">SystemMonitor</ref></type>
+        <definition>new SystemMonitor CSharpErgoBoard.Programming.SystemMonitor.m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>The instance of the singleton </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="49" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="49" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1adcae251118c88a63f79a54f4e7149b52" prot="protected" static="yes" mutable="no">
+        <type>new readonly Thread</type>
+        <definition>new readonly Thread CSharpErgoBoard.Programming.SystemMonitor.m_thread</definition>
+        <argsstring></argsstring>
+        <name>m_thread</name>
+        <initializer>= new Thread(<ref refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ac3f3b59b89e58f48d96edbb0589b0b36" kindref="member">ThreadFunction</ref>)</initializer>
+        <briefdescription>
+<para>The thread for the singleton </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="55" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ab9f91822e36ae0bd99882628a0062112" prot="protected" static="yes" mutable="no">
+        <type>new readonly Object</type>
+        <definition>new readonly Object CSharpErgoBoard.Programming.SystemMonitor.m_padlock</definition>
+        <argsstring></argsstring>
+        <name>m_padlock</name>
+        <initializer>= new Object()</initializer>
+        <briefdescription>
+<para>To ensure that the singleton is thread safe </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="59" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a5c9612dc6f4ad6e0219be605eccde8f4" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static CSharpErgoBoard.Programming.SystemMonitor.SystemMonitor</definition>
+        <argsstring>()</argsstring>
+        <name>SystemMonitor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="240" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="240" bodyend="240"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a90211aba40a131de4c103858b4a3eb59" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CSharpErgoBoard.Programming.SystemMonitor.UpdateValues</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateValues</name>
+        <briefdescription>
+<para>Updates the computer hardware values stored on our end. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="245" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="245" bodyend="359"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ac3f3b59b89e58f48d96edbb0589b0b36" prot="protected" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>new void</type>
+        <definition>static new void CSharpErgoBoard.Programming.SystemMonitor.ThreadFunction</definition>
+        <argsstring>()</argsstring>
+        <name>ThreadFunction</name>
+        <briefdescription>
+<para>This is the function that does the monitoring process. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="364" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="364" bodyend="407"/>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ab721e618aad538a1fff8aa386401aebc" compoundref="_singleton_8cs" startline="37">CSharpErgoBoard.Programming.Singleton.m_running</references>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a90211aba40a131de4c103858b4a3eb59" compoundref="_system_monitor_8cs" startline="245" endline="359">CSharpErgoBoard.Programming.SystemMonitor.UpdateValues</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a93879c90cadd645fc63f9a817ed867cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void CSharpErgoBoard.Programming.SystemMonitor.End</definition>
+        <argsstring>()</argsstring>
+        <name>End</name>
+        <reimplements refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1a7bc21df69ac9302a5ebb17dce769560a">End</reimplements>
+        <briefdescription>
+<para>Ends the monitoring process, This must be called or the program will not close. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="412" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="412" bodyend="417"/>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ab721e618aad538a1fff8aa386401aebc" compoundref="_singleton_8cs" startline="37">CSharpErgoBoard.Programming.Singleton.m_running</references>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1adcae251118c88a63f79a54f4e7149b52" compoundref="_system_monitor_8cs" startline="55">CSharpErgoBoard.Programming.SystemMonitor.m_thread</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1af6c960ba417b70d69b4331ecfab418bc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.Programming.SystemMonitor.Existance</definition>
+        <argsstring>()</argsstring>
+        <name>Existance</name>
+        <briefdescription>
+<para>To ensure that the system monitoring process has started. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="422" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="422" bodyend="422"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A class which runs and records the properties of the PC. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>The class is a singleton class, this allows for it to exist only once and be universal in its use. This class calls on the logging class to updates. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="40">
+        <label>Singleton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton"/>
+      </node>
+      <node id="39">
+        <label>CSharpErgoBoard.Programming.SystemMonitor</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor"/>
+        <childnode refid="40" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="43">
+        <label>CSharpErgoBoard.Programming.Singleton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="42">
+        <label>Singleton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton"/>
+        <childnode refid="43" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="41">
+        <label>CSharpErgoBoard.Programming.SystemMonitor</label>
+        <link refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor"/>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+        <childnode refid="41" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" line="18" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/SystemMonitor.cs" bodystart="17" bodyend="423"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a59c4197226dcf3a87de3a36d986c2cf5" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>AMD</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1acdcee908185aaed4261484dbfe986f02" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>CpuClock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ac642e67fd5dd91616e78c6e19009baa4" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>CpuCores</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a3ff8dac2d92b1c98e102c8a5b5f1a9b0" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>CpuLoad</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a665d0736c2f7ef8ecbee45d917512ad0" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>CpuTemp</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a93879c90cadd645fc63f9a817ed867cb" prot="public" virt="virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>End</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1af6c960ba417b70d69b4331ecfab418bc" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>Existance</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a1a0ad7037ddf3bd0bdbcd6a4bd02dec2" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>GpuClock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a1f4ec6e875c014621d416bde2c1c609f" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>GpuLoad</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a57c3a57773a50bea691987807e16803b" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>GpuTemp</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a8de324164966d8bf49e67b6a5d8c719a" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>HddLoad</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a5f31bb7d14f66b187cb92702328dabf0" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>Instance</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ab2493949449289558ab61e5b2f40be33" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_AMD</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a23ce12fe6a0304ec5156b3a377be792f" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_computer</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a87f868fcf063f7c9a6a17b9c9f650f03" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_cpuClock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ae808f43dc4192327b0beffdb6944a863" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_cpuCores</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a394583bc92bd41400d648de2cc2b3aa3" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_cpuLoad</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1acc001c3af0a0ab650983309c7dcece51" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_cpuTemp</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a1cee621b1ce4e05014d359c23ade2f12" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_gpuClock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a49d5bd47bfb9e4778d2dd2e393f83b59" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_gpuLoad</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a6a6998ae2f96d92fe10e1ca446d0646d" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_gpuTemp</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ae340bec1999bf70f1dd37486fde507f5" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_hddLoad</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a7839595e278404e3706f04a90d8a6d04" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_instance</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ab9f91822e36ae0bd99882628a0062112" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_padlock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a213b2e77b4d8f1c4496a334caa8a59e7" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_ramLoad</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton_1ab721e618aad538a1fff8aa386401aebc" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_running</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1adcae251118c88a63f79a54f4e7149b52" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_thread</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a36c4f5130a100afe1884d9afb1b2ed6c" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>m_updateLock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a13cfb45b0ba7299aa03268131e57ce9f" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>Name</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1aea7dbc5e6d03e038b385f86d792e9246" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>Purpose</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a522a8bb799e427aa2f1531d0142b406e" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>RamLoad</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a5c9612dc6f4ad6e0219be605eccde8f4" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>SystemMonitor</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1ac3f3b59b89e58f48d96edbb0589b0b36" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>ThreadFunction</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a426cb14b8fbdb7007125b3e4f2272c3f" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>ToString</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor_1a90211aba40a131de4c103858b4a3eb59" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Programming::SystemMonitor</scope><name>UpdateValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

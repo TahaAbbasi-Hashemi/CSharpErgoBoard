@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getports',['GetPorts',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a3c5dd62a8acc4837ae01b484a3a537bc',1,'CSharpErgoBoard::ErgoBoard']]]
+  ['log',['Log',['../class_c_sharp_ergo_board_1_1_programming_1_1_logging.html#a9615e81de1ad9899a60cb6c9b949e4c8',1,'CSharpErgoBoard::Programming::Logging']]]
 ];

@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error" kind="class" language="C#" prot="private">
+    <compoundname>CSharpErgoBoard::Design::MyButton::MyButtonError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Exception</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a4200bcb031766530edda08720b97a6b3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Design.MyButton.MyButtonError.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <initializer>= &quot;To allow for exceptions to be throw dedicated to <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button" kindref="compound">Design.MyButton</ref>&quot;</initializer>
+        <briefdescription>
+<para>The purpose of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="41" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a3e5aa23428234f030507e9a4176af8d8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Design.MyButton.MyButtonError.ToString</definition>
+        <argsstring></argsstring>
+        <name>ToString</name>
+        <initializer>= &quot;MyButtonError child of Exception&quot;</initializer>
+        <briefdescription>
+<para>To convert the class to a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="45" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a0a4e1183df4dc0f925742d638185b261" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CSharpErgoBoard.Design.MyButton.MyButtonError.MyButtonError</definition>
+        <argsstring>()</argsstring>
+        <name>MyButtonError</name>
+        <briefdescription>
+<para>Default constructor </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="51" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1ac4f1ceb29f196642895a62e975de6f91" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CSharpErgoBoard.Design.MyButton.MyButtonError.MyButtonError</definition>
+        <argsstring>(string message)</argsstring>
+        <name>MyButtonError</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+<para>Constructor with a message. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message being reported to the user.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="56" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a9c27bbc0ba02413dfa97354178514dfc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CSharpErgoBoard.Design.MyButton.MyButtonError.MyButtonError</definition>
+        <argsstring>(string message, System.Exception inner)</argsstring>
+        <name>MyButtonError</name>
+        <param>
+          <type>string</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>System.Exception</type>
+          <declname>inner</declname>
+        </param>
+        <briefdescription>
+<para>A Constructor with a inner error </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message being reported.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>inner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The error that progogated this error.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="62" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="62" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a03dbc5ee38dc090c7a3c110353e36d7e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CSharpErgoBoard.Design.MyButton.MyButtonError.MyButtonError</definition>
+        <argsstring>(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</argsstring>
+        <name>MyButtonError</name>
+        <param>
+          <type>System.Runtime.Serialization.SerializationInfo</type>
+          <declname>info</declname>
+        </param>
+        <param>
+          <type>System.Runtime.Serialization.StreamingContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for steralization errors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A constructor is needed for serialization when an exception propagates from a remoting server to the client. </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>info</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>context</parametername>
+</parameternamelist>
+<parameterdescription>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="73" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="73" bodyend="74"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para><ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button" kindref="compound">Design.MyButton</ref> Class error. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>CSharpErgoBoard.Design.MyButton.MyButtonError</label>
+        <childnode refid="16" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17">
+        <label>CSharpErgoBoard.Design.MyButton.MyButtonError</label>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="36" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="35" bodyend="75"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a0a4e1183df4dc0f925742d638185b261" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton::MyButtonError</scope><name>MyButtonError</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1ac4f1ceb29f196642895a62e975de6f91" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton::MyButtonError</scope><name>MyButtonError</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a9c27bbc0ba02413dfa97354178514dfc" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton::MyButtonError</scope><name>MyButtonError</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a03dbc5ee38dc090c7a3c110353e36d7e" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton::MyButtonError</scope><name>MyButtonError</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a4200bcb031766530edda08720b97a6b3" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton::MyButtonError</scope><name>Purpose</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error_1a3e5aa23428234f030507e9a4176af8d8" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton::MyButtonError</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

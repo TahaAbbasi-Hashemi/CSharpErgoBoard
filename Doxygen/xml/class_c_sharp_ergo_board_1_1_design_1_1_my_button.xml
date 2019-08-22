@@ -1,0 +1,384 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_design_1_1_my_button" kind="class" language="C#" prot="public">
+    <compoundname>CSharpErgoBoard::Design::MyButton</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Button</basecompoundref>
+    <innerclass refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1_1_my_button_error" prot="private">CSharpErgoBoard::Design::MyButton::MyButtonError</innerclass>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a29edb2ba92a8e3ca65e6f3b66a1a317d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Design.MyButton.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <initializer>= &quot;To allow for ease of when buttons are converted to and from dark mode along side with entering selection mode for keyboard buttons.&quot;</initializer>
+        <briefdescription>
+<para>The purpose of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="24" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a3a82adc6e4b038db58ec3df1e91dd6d3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Design.MyButton.ToString</definition>
+        <argsstring></argsstring>
+        <name>ToString</name>
+        <initializer>= &quot;Design.MyButton child of Button&quot;</initializer>
+        <briefdescription>
+<para>To convert the class to a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="28" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a03f90c77e7be548901fdb2d00d178a00" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool CSharpErgoBoard.Design.MyButton.DarkMode</definition>
+        <argsstring></argsstring>
+        <name>DarkMode</name>
+        <briefdescription>
+<para>Used to indicate if darkmode is selected or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>. by default this is false. <itemizedlist>
+<listitem>
+<para>true <linebreak/>
+ If the button is on dark mode. </para>
+</listitem>
+<listitem>
+<para>false <linebreak/>
+ If the button is on light mode. </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="99" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="99" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a07c8abf091248dfcbf603be86395f603" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool CSharpErgoBoard.Design.MyButton.IsSelected</definition>
+        <argsstring></argsstring>
+        <name>IsSelected</name>
+        <briefdescription>
+<para>Used to indicate if we are currently selected or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is intended to only be used by the image buttons. By default this is false.</para>
+<para><itemizedlist>
+<listitem>
+<para>true <linebreak/>
+ If the user has currently selected this button. </para>
+</listitem>
+<listitem>
+<para>false <linebreak/>
+ If the user has not currently selected this button </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="112" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="112" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1aef8a3221a7c392a39f38869b89a4bd10" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string CSharpErgoBoard.Design.MyButton.ButtonType</definition>
+        <argsstring></argsstring>
+        <name>ButtonType</name>
+        <briefdescription>
+<para>A string indicating the type of button is being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Only keyboard buttons use this feature. By default this is null.</para>
+<para><itemizedlist>
+<listitem>
+<para>Tall <linebreak/>
+ This is intended for vertical 2U key caps. </para>
+</listitem>
+<listitem>
+<para>TallLED <linebreak/>
+ This is for the led version of Tall. </para>
+</listitem>
+<listitem>
+<para>Wide <linebreak/>
+ This is intended for horizontal 1.5U key caps. </para>
+</listitem>
+<listitem>
+<para>WideLED <linebreak/>
+ This is for the LED version of Wide. </para>
+</listitem>
+<listitem>
+<para>Single <linebreak/>
+ This is intended for 1U key caps.  </para>
+</listitem>
+<listitem>
+<para>SingleLED <linebreak/>
+ This is for the LED version of Single. </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="129" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="129" bodyend="129"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a93c0378eac7ec939b15a612d21921ae2" prot="private" static="no" mutable="no">
+        <type>Boolean</type>
+        <definition>Boolean CSharpErgoBoard.Design.MyButton.m_selectDarkMode</definition>
+        <argsstring></argsstring>
+        <name>m_selectDarkMode</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="78" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a1815ad2effdd0ca0aebb005783eb5733" prot="private" static="no" mutable="no">
+        <type>Boolean</type>
+        <definition>Boolean CSharpErgoBoard.Design.MyButton.m_selected</definition>
+        <argsstring></argsstring>
+        <name>m_selected</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="79" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a2781200fb542380abda699a8f35e5c49" prot="private" static="no" mutable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Design.MyButton.m_type</definition>
+        <argsstring></argsstring>
+        <name>m_type</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="80" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a514e8e4c6f9d43626425f7eb715d607c" prot="private" static="no" mutable="no">
+        <type>readonly Color</type>
+        <definition>readonly Color CSharpErgoBoard.Design.MyButton.m_kindofBlack</definition>
+        <argsstring></argsstring>
+        <name>m_kindofBlack</name>
+        <initializer>= Color.FromArgb(255, 50, 50, 50)</initializer>
+        <briefdescription>
+<para>This is a dark black that has less strain on the average persons eye. This is is more of a very dark gray. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="86" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a3328d1a2286f7b42092966e92aaabb9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.Design.MyButton.ModeChange</definition>
+        <argsstring>(in Boolean darkModeTrue)</argsstring>
+        <name>ModeChange</name>
+        <param>
+          <type>in Boolean</type>
+          <declname>darkModeTrue</declname>
+        </param>
+        <briefdescription>
+<para>This is used for mode conversion between light and dark mode for basic button types. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>&lt;BugFix&gt; Added Select() to prevent a bug where buttons are considered selected when they should not be. &lt;/BugFix&gt; <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>darkModeTrue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if darkmode is selected. See <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a03f90c77e7be548901fdb2d00d178a00" kindref="member">DarkMode</ref> for more information.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="139" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="139" bodyend="156"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a10fac5db8b78c89d9e523c6bb9a14e29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.Design.MyButton.ModeChange</definition>
+        <argsstring>(in Boolean darkModeTrue, in String type)</argsstring>
+        <name>ModeChange</name>
+        <param>
+          <type>in Boolean</type>
+          <declname>darkModeTrue</declname>
+        </param>
+        <param>
+          <type>in String</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>This is for mode conversion between light and dark for image type buttons. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>darkModeTrue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if darkmode is selected. See <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a03f90c77e7be548901fdb2d00d178a00" kindref="member">DarkMode</ref> for more information.</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of button that is undergoing the mode change. See <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1aef8a3221a7c392a39f38869b89a4bd10" kindref="member">ButtonType</ref> for button types.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>MyButtonError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When a unusable type is selected.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="163" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="163" bodyend="288"/>
+        <references refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a3328d1a2286f7b42092966e92aaabb9c" compoundref="_my_button_8cs" startline="139" endline="156">CSharpErgoBoard.Design.MyButton.ModeChange</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a1b2c7a0ff9d3ef3d48114170d33fff56" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.Design.MyButton.Selected</definition>
+        <argsstring>(in String type)</argsstring>
+        <name>Selected</name>
+        <param>
+          <type>in String</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>If one of the image buttons is selected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a07c8abf091248dfcbf603be86395f603" kindref="member">IsSelected</ref> for more information on what selection means.<linebreak/>
+See <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1ab4aec85aa9939e6db5a74516b9312fb7" kindref="member">UnSelected</ref> for more information in regards to unselecting a button. </para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of button that is selected. See <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1aef8a3221a7c392a39f38869b89a4bd10" kindref="member">ButtonType</ref> for button types.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>MyButtonError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When a unusable type is selected.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="298" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="298" bodyend="303"/>
+        <references refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a3328d1a2286f7b42092966e92aaabb9c" compoundref="_my_button_8cs" startline="139" endline="156">CSharpErgoBoard.Design.MyButton.ModeChange</references>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1ab4aec85aa9939e6db5a74516b9312fb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.Design.MyButton.UnSelected</definition>
+        <argsstring>()</argsstring>
+        <name>UnSelected</name>
+        <briefdescription>
+<para>If one of the image buttons is unselected. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>See <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a07c8abf091248dfcbf603be86395f603" kindref="member">IsSelected</ref> for more information on what selection means.<linebreak/>
+See <ref refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a1b2c7a0ff9d3ef3d48114170d33fff56" kindref="member">Selected</ref> for more information in regards to selecting a button. </para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>MyButtonError</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>When Unselected occurs before selection a selection was made.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="312" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="312" bodyend="320"/>
+        <references refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a3328d1a2286f7b42092966e92aaabb9c" compoundref="_my_button_8cs" startline="139" endline="156">CSharpErgoBoard.Design.MyButton.ModeChange</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is intended to be a extension of the button class provided by windows forms. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class is built with the intention of allowing for a ease of converting buttons to dark mode. This also supports the keyboard buttons which use images.</para>
+<para>In order to unselect a function a selection must first be made. This is because you can only select a button knowing what the button is, but you do not have to know what the button is to unselect it to select something else. If you were to select another button you must first unselect the currently selected button. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="12">
+        <label>Button</label>
+      </node>
+      <node id="11">
+        <label>CSharpErgoBoard.Design.MyButton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button"/>
+        <childnode refid="12" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="14">
+        <label>Button</label>
+      </node>
+      <node id="13">
+        <label>CSharpErgoBoard.Design.MyButton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button"/>
+        <childnode refid="14" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" line="19" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyButton.cs" bodystart="18" bodyend="321"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1aef8a3221a7c392a39f38869b89a4bd10" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>ButtonType</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a03f90c77e7be548901fdb2d00d178a00" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>DarkMode</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a07c8abf091248dfcbf603be86395f603" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>IsSelected</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a514e8e4c6f9d43626425f7eb715d607c" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>m_kindofBlack</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a93c0378eac7ec939b15a612d21921ae2" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>m_selectDarkMode</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a1815ad2effdd0ca0aebb005783eb5733" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>m_selected</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a2781200fb542380abda699a8f35e5c49" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>m_type</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a3328d1a2286f7b42092966e92aaabb9c" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>ModeChange</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a10fac5db8b78c89d9e523c6bb9a14e29" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>ModeChange</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a29edb2ba92a8e3ca65e6f3b66a1a317d" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>Purpose</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a1b2c7a0ff9d3ef3d48114170d33fff56" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>Selected</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1a3a82adc6e4b038db58ec3df1e91dd6d3" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>ToString</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_design_1_1_my_button_1ab4aec85aa9939e6db5a74516b9312fb7" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Design::MyButton</scope><name>UnSelected</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
