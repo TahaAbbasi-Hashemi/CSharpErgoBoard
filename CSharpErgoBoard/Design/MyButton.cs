@@ -27,7 +27,6 @@ namespace CSharpErgoBoard.Design
         /// </summary>
         public new String ToString { get; } = "Design.MyButton child of Button";
 
-
         /// <summary>
         /// Design.MyButton Class error.
         /// </summary>
@@ -105,6 +104,14 @@ namespace CSharpErgoBoard.Design
         /// </list>
         /// </remarks>
         public string ButtonType { get => m_type; }
+        /// <summary>
+        /// The row that the Image button is on relative to the keyboard. This can only be used by image buttons.
+        /// </summary>
+        public int Row { get; set; } = 0;
+        /// <summary>
+        /// The colum that the image button is on relative to the keyboard. This can only be used by image buttons.
+        /// </summary>
+        public int Col { get; set; } = 0;
 
         // Functions
         /// <summary>
@@ -295,6 +302,15 @@ namespace CSharpErgoBoard.Design
             }
             m_selected = false;
             ModeChange(m_selectDarkMode, m_type);
+        }
+
+        public String MakeKeyName()
+        {
+            return "R" + Row.ToString() + "C" + Col.ToString();
+        }
+        public String MakeKeyNameValue()
+        {
+            return "Row " + Row.ToString() + ", Column " + Col.ToString();
         }
     }
 }

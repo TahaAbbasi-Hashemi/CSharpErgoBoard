@@ -48,8 +48,6 @@
             this.id_comboboxLeftKeyComPort = new CSharpErgoBoard.Design.MyComboBox();
             this.id_comboboxLeftKeyLayer = new CSharpErgoBoard.Design.MyComboBox();
             this.id_comboboxLeftKeyValue = new CSharpErgoBoard.Design.MyComboBox();
-            this.id_listboxRightLedComPort = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
             this.id_buttonRightLedR6C8 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR4C8 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR3C8 = new CSharpErgoBoard.Design.MyButton();
@@ -59,7 +57,6 @@
             this.id_buttonRightUpdateLed = new CSharpErgoBoard.Design.MyButton();
             this.id_listboxRightLedStyle = new System.Windows.Forms.ListBox();
             this.id_buttonRightLedConnectComPort = new CSharpErgoBoard.Design.MyButton();
-            this.listBox4 = new System.Windows.Forms.ListBox();
             this.id_buttonRightLedR6C1 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR6C4 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR6C5 = new CSharpErgoBoard.Design.MyButton();
@@ -146,9 +143,7 @@
             this.id_buttonLeftLedR1C4 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftLedR1C3 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftUpdateLed = new CSharpErgoBoard.Design.MyButton();
-            this.id_listboxLeftLedStyle = new System.Windows.Forms.ListBox();
             this.id_buttonLeftLedConnectComPort = new CSharpErgoBoard.Design.MyButton();
-            this.id_listboxLeftLedComPort = new System.Windows.Forms.ListBox();
             this.id_buttonLeftLedR1C2 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightUpdateKey = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftUpdateKey = new CSharpErgoBoard.Design.MyButton();
@@ -249,6 +244,8 @@
             this.id_buttonLeftR1C1 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftKeyConnectComPort = new CSharpErgoBoard.Design.MyButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.id_comboboxLeftLedComPort = new CSharpErgoBoard.Design.MyComboBox();
+            this.id_comboboxRightLedComPort = new CSharpErgoBoard.Design.MyComboBox();
             this.menuStrip1.SuspendLayout();
             this.id_panelMain.SuspendLayout();
             this.SuspendLayout();
@@ -352,14 +349,14 @@
             this.id_panelMain.AutoScroll = true;
             this.id_panelMain.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.id_panelMain.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_panelMain.Controls.Add(this.id_comboboxRightLedComPort);
+            this.id_panelMain.Controls.Add(this.id_comboboxLeftLedComPort);
             this.id_panelMain.Controls.Add(this.id_comboboxRightKeyValue);
             this.id_panelMain.Controls.Add(this.id_comboboxRightKeyLayer);
             this.id_panelMain.Controls.Add(this.id_comboboxRightKeyComPort);
             this.id_panelMain.Controls.Add(this.id_comboboxLeftKeyComPort);
             this.id_panelMain.Controls.Add(this.id_comboboxLeftKeyLayer);
             this.id_panelMain.Controls.Add(this.id_comboboxLeftKeyValue);
-            this.id_panelMain.Controls.Add(this.id_listboxRightLedComPort);
-            this.id_panelMain.Controls.Add(this.listBox5);
             this.id_panelMain.Controls.Add(this.id_buttonRightLedR6C8);
             this.id_panelMain.Controls.Add(this.id_buttonRightLedR4C8);
             this.id_panelMain.Controls.Add(this.id_buttonRightLedR3C8);
@@ -369,7 +366,6 @@
             this.id_panelMain.Controls.Add(this.id_buttonRightUpdateLed);
             this.id_panelMain.Controls.Add(this.id_listboxRightLedStyle);
             this.id_panelMain.Controls.Add(this.id_buttonRightLedConnectComPort);
-            this.id_panelMain.Controls.Add(this.listBox4);
             this.id_panelMain.Controls.Add(this.id_buttonRightLedR6C1);
             this.id_panelMain.Controls.Add(this.id_buttonRightLedR6C4);
             this.id_panelMain.Controls.Add(this.id_buttonRightLedR6C5);
@@ -456,9 +452,7 @@
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C4);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C3);
             this.id_panelMain.Controls.Add(this.id_buttonLeftUpdateLed);
-            this.id_panelMain.Controls.Add(this.id_listboxLeftLedStyle);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedConnectComPort);
-            this.id_panelMain.Controls.Add(this.id_listboxLeftLedComPort);
             this.id_panelMain.Controls.Add(this.id_buttonLeftLedR1C2);
             this.id_panelMain.Controls.Add(this.id_buttonRightUpdateKey);
             this.id_panelMain.Controls.Add(this.id_buttonLeftUpdateKey);
@@ -682,7 +676,7 @@
             this.id_comboboxRightKeyComPort.BackColor = System.Drawing.Color.Silver;
             this.id_comboboxRightKeyComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.id_comboboxRightKeyComPort.FormattingEnabled = true;
-            this.id_comboboxRightKeyComPort.Location = new System.Drawing.Point(740, 39);
+            this.id_comboboxRightKeyComPort.Location = new System.Drawing.Point(739, 39);
             this.id_comboboxRightKeyComPort.Name = "id_comboboxRightKeyComPort";
             this.id_comboboxRightKeyComPort.Size = new System.Drawing.Size(177, 21);
             this.id_comboboxRightKeyComPort.TabIndex = 343;
@@ -813,36 +807,17 @@
             this.id_comboboxLeftKeyValue.Size = new System.Drawing.Size(171, 21);
             this.id_comboboxLeftKeyValue.TabIndex = 339;
             this.id_comboboxLeftKeyValue.Text = "Select Key Value";
-            this.id_comboboxLeftKeyValue.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
-            // 
-            // id_listboxRightLedComPort
-            // 
-            this.id_listboxRightLedComPort.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_listboxRightLedComPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_listboxRightLedComPort.FormattingEnabled = true;
-            this.id_listboxRightLedComPort.Location = new System.Drawing.Point(740, 453);
-            this.id_listboxRightLedComPort.Name = "id_listboxRightLedComPort";
-            this.id_listboxRightLedComPort.Size = new System.Drawing.Size(135, 15);
-            this.id_listboxRightLedComPort.TabIndex = 338;
-            // 
-            // listBox5
-            // 
-            this.listBox5.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.Location = new System.Drawing.Point(515, 514);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.Size = new System.Drawing.Size(135, 15);
-            this.listBox5.TabIndex = 337;
             // 
             // id_buttonRightLedR6C8
             // 
             this.id_buttonRightLedR6C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR6C8.Col = 0;
             this.id_buttonRightLedR6C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR6C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR6C8.Image")));
             this.id_buttonRightLedR6C8.Location = new System.Drawing.Point(740, 758);
             this.id_buttonRightLedR6C8.Name = "id_buttonRightLedR6C8";
+            this.id_buttonRightLedR6C8.Row = 0;
             this.id_buttonRightLedR6C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR6C8.TabIndex = 336;
             this.id_buttonRightLedR6C8.Text = "F1";
@@ -851,11 +826,13 @@
             // id_buttonRightLedR4C8
             // 
             this.id_buttonRightLedR4C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR4C8.Col = 0;
             this.id_buttonRightLedR4C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR4C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR4C8.Image")));
             this.id_buttonRightLedR4C8.Location = new System.Drawing.Point(740, 636);
             this.id_buttonRightLedR4C8.Name = "id_buttonRightLedR4C8";
+            this.id_buttonRightLedR4C8.Row = 0;
             this.id_buttonRightLedR4C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR4C8.TabIndex = 335;
             this.id_buttonRightLedR4C8.Text = "F1";
@@ -864,11 +841,13 @@
             // id_buttonRightLedR3C8
             // 
             this.id_buttonRightLedR3C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR3C8.Col = 0;
             this.id_buttonRightLedR3C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR3C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR3C8.Image")));
             this.id_buttonRightLedR3C8.Location = new System.Drawing.Point(801, 636);
             this.id_buttonRightLedR3C8.Name = "id_buttonRightLedR3C8";
+            this.id_buttonRightLedR3C8.Row = 0;
             this.id_buttonRightLedR3C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR3C8.TabIndex = 334;
             this.id_buttonRightLedR3C8.Text = "F1";
@@ -877,11 +856,13 @@
             // id_buttonRightLedR5C8
             // 
             this.id_buttonRightLedR5C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR5C8.Col = 0;
             this.id_buttonRightLedR5C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR5C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR5C8.Image")));
             this.id_buttonRightLedR5C8.Location = new System.Drawing.Point(740, 697);
             this.id_buttonRightLedR5C8.Name = "id_buttonRightLedR5C8";
+            this.id_buttonRightLedR5C8.Row = 0;
             this.id_buttonRightLedR5C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR5C8.TabIndex = 333;
             this.id_buttonRightLedR5C8.Text = "F1";
@@ -890,11 +871,13 @@
             // id_buttonRightLedR6C6
             // 
             this.id_buttonRightLedR6C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR6C6.Col = 0;
             this.id_buttonRightLedR6C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
             this.id_buttonRightLedR6C6.Location = new System.Drawing.Point(862, 697);
             this.id_buttonRightLedR6C6.Name = "id_buttonRightLedR6C6";
+            this.id_buttonRightLedR6C6.Row = 0;
             this.id_buttonRightLedR6C6.Size = new System.Drawing.Size(55, 109);
             this.id_buttonRightLedR6C6.TabIndex = 332;
             this.id_buttonRightLedR6C6.Text = "F1";
@@ -903,11 +886,13 @@
             // id_buttonRightLedR6C7
             // 
             this.id_buttonRightLedR6C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR6C7.Col = 0;
             this.id_buttonRightLedR6C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
             this.id_buttonRightLedR6C7.Location = new System.Drawing.Point(801, 697);
             this.id_buttonRightLedR6C7.Name = "id_buttonRightLedR6C7";
+            this.id_buttonRightLedR6C7.Row = 0;
             this.id_buttonRightLedR6C7.Size = new System.Drawing.Size(55, 109);
             this.id_buttonRightLedR6C7.TabIndex = 331;
             this.id_buttonRightLedR6C7.Text = "F1";
@@ -916,10 +901,12 @@
             // id_buttonRightUpdateLed
             // 
             this.id_buttonRightUpdateLed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonRightUpdateLed.Col = 0;
             this.id_buttonRightUpdateLed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonRightUpdateLed.Location = new System.Drawing.Point(740, 586);
+            this.id_buttonRightUpdateLed.Location = new System.Drawing.Point(739, 598);
             this.id_buttonRightUpdateLed.Name = "id_buttonRightUpdateLed";
-            this.id_buttonRightUpdateLed.Size = new System.Drawing.Size(135, 32);
+            this.id_buttonRightUpdateLed.Row = 0;
+            this.id_buttonRightUpdateLed.Size = new System.Drawing.Size(177, 32);
             this.id_buttonRightUpdateLed.TabIndex = 330;
             this.id_buttonRightUpdateLed.Text = "Update";
             this.id_buttonRightUpdateLed.UseVisualStyleBackColor = false;
@@ -933,7 +920,7 @@
             "Rainbow",
             "Breathing",
             "On Press"});
-            this.id_listboxRightLedStyle.Location = new System.Drawing.Point(740, 537);
+            this.id_listboxRightLedStyle.Location = new System.Drawing.Point(740, 551);
             this.id_listboxRightLedStyle.Name = "id_listboxRightLedStyle";
             this.id_listboxRightLedStyle.Size = new System.Drawing.Size(135, 41);
             this.id_listboxRightLedStyle.TabIndex = 329;
@@ -941,32 +928,26 @@
             // id_buttonRightLedConnectComPort
             // 
             this.id_buttonRightLedConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonRightLedConnectComPort.Col = 0;
             this.id_buttonRightLedConnectComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonRightLedConnectComPort.Location = new System.Drawing.Point(740, 475);
+            this.id_buttonRightLedConnectComPort.Location = new System.Drawing.Point(739, 477);
             this.id_buttonRightLedConnectComPort.Name = "id_buttonRightLedConnectComPort";
-            this.id_buttonRightLedConnectComPort.Size = new System.Drawing.Size(135, 33);
+            this.id_buttonRightLedConnectComPort.Row = 0;
+            this.id_buttonRightLedConnectComPort.Size = new System.Drawing.Size(177, 33);
             this.id_buttonRightLedConnectComPort.TabIndex = 328;
             this.id_buttonRightLedConnectComPort.Text = "Connect";
             this.id_buttonRightLedConnectComPort.UseVisualStyleBackColor = false;
             // 
-            // listBox4
-            // 
-            this.listBox4.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.listBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.Location = new System.Drawing.Point(740, 514);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.Size = new System.Drawing.Size(135, 15);
-            this.listBox4.TabIndex = 326;
-            // 
             // id_buttonRightLedR6C1
             // 
             this.id_buttonRightLedR6C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR6C1.Col = 0;
             this.id_buttonRightLedR6C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR6C1.Location = new System.Drawing.Point(1288, 758);
             this.id_buttonRightLedR6C1.Name = "id_buttonRightLedR6C1";
+            this.id_buttonRightLedR6C1.Row = 0;
             this.id_buttonRightLedR6C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightLedR6C1.TabIndex = 325;
             this.id_buttonRightLedR6C1.Text = "ESC";
@@ -975,11 +956,13 @@
             // id_buttonRightLedR6C4
             // 
             this.id_buttonRightLedR6C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR6C4.Col = 0;
             this.id_buttonRightLedR6C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR6C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR6C4.Image")));
             this.id_buttonRightLedR6C4.Location = new System.Drawing.Point(1105, 758);
             this.id_buttonRightLedR6C4.Name = "id_buttonRightLedR6C4";
+            this.id_buttonRightLedR6C4.Row = 0;
             this.id_buttonRightLedR6C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR6C4.TabIndex = 324;
             this.id_buttonRightLedR6C4.Text = "F1";
@@ -988,11 +971,13 @@
             // id_buttonRightLedR6C5
             // 
             this.id_buttonRightLedR6C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR6C5.Col = 0;
             this.id_buttonRightLedR6C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR6C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR6C5.Image")));
             this.id_buttonRightLedR6C5.Location = new System.Drawing.Point(1044, 758);
             this.id_buttonRightLedR6C5.Name = "id_buttonRightLedR6C5";
+            this.id_buttonRightLedR6C5.Row = 0;
             this.id_buttonRightLedR6C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR6C5.TabIndex = 323;
             this.id_buttonRightLedR6C5.Text = "F1";
@@ -1001,11 +986,13 @@
             // id_buttonRightLedR6C3
             // 
             this.id_buttonRightLedR6C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR6C3.Col = 0;
             this.id_buttonRightLedR6C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR6C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR6C3.Image")));
             this.id_buttonRightLedR6C3.Location = new System.Drawing.Point(1166, 758);
             this.id_buttonRightLedR6C3.Name = "id_buttonRightLedR6C3";
+            this.id_buttonRightLedR6C3.Row = 0;
             this.id_buttonRightLedR6C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR6C3.TabIndex = 322;
             this.id_buttonRightLedR6C3.Text = "F1";
@@ -1014,11 +1001,13 @@
             // id_buttonRightLedR6C2
             // 
             this.id_buttonRightLedR6C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR6C2.Col = 0;
             this.id_buttonRightLedR6C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR6C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR6C2.Image")));
             this.id_buttonRightLedR6C2.Location = new System.Drawing.Point(1227, 758);
             this.id_buttonRightLedR6C2.Name = "id_buttonRightLedR6C2";
+            this.id_buttonRightLedR6C2.Row = 0;
             this.id_buttonRightLedR6C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR6C2.TabIndex = 321;
             this.id_buttonRightLedR6C2.Text = "F1";
@@ -1027,11 +1016,13 @@
             // id_buttonRightLedR5C1
             // 
             this.id_buttonRightLedR5C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR5C1.Col = 0;
             this.id_buttonRightLedR5C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR5C1.Location = new System.Drawing.Point(1288, 697);
             this.id_buttonRightLedR5C1.Name = "id_buttonRightLedR5C1";
+            this.id_buttonRightLedR5C1.Row = 0;
             this.id_buttonRightLedR5C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightLedR5C1.TabIndex = 320;
             this.id_buttonRightLedR5C1.Text = "ESC";
@@ -1040,11 +1031,13 @@
             // id_buttonRightLedR5C2
             // 
             this.id_buttonRightLedR5C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR5C2.Col = 0;
             this.id_buttonRightLedR5C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR5C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR5C2.Image")));
             this.id_buttonRightLedR5C2.Location = new System.Drawing.Point(1227, 697);
             this.id_buttonRightLedR5C2.Name = "id_buttonRightLedR5C2";
+            this.id_buttonRightLedR5C2.Row = 0;
             this.id_buttonRightLedR5C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR5C2.TabIndex = 319;
             this.id_buttonRightLedR5C2.Text = "F1";
@@ -1053,11 +1046,13 @@
             // id_buttonRightLedR5C3
             // 
             this.id_buttonRightLedR5C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR5C3.Col = 0;
             this.id_buttonRightLedR5C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR5C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR5C3.Image")));
             this.id_buttonRightLedR5C3.Location = new System.Drawing.Point(1166, 697);
             this.id_buttonRightLedR5C3.Name = "id_buttonRightLedR5C3";
+            this.id_buttonRightLedR5C3.Row = 0;
             this.id_buttonRightLedR5C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR5C3.TabIndex = 318;
             this.id_buttonRightLedR5C3.Text = "F1";
@@ -1066,11 +1061,13 @@
             // id_buttonRightLedR5C4
             // 
             this.id_buttonRightLedR5C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR5C4.Col = 0;
             this.id_buttonRightLedR5C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR5C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR5C4.Image")));
             this.id_buttonRightLedR5C4.Location = new System.Drawing.Point(1105, 697);
             this.id_buttonRightLedR5C4.Name = "id_buttonRightLedR5C4";
+            this.id_buttonRightLedR5C4.Row = 0;
             this.id_buttonRightLedR5C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR5C4.TabIndex = 317;
             this.id_buttonRightLedR5C4.Text = "F1";
@@ -1079,11 +1076,13 @@
             // id_buttonRightLedR5C5
             // 
             this.id_buttonRightLedR5C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR5C5.Col = 0;
             this.id_buttonRightLedR5C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR5C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR5C5.Image")));
             this.id_buttonRightLedR5C5.Location = new System.Drawing.Point(1044, 697);
             this.id_buttonRightLedR5C5.Name = "id_buttonRightLedR5C5";
+            this.id_buttonRightLedR5C5.Row = 0;
             this.id_buttonRightLedR5C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR5C5.TabIndex = 316;
             this.id_buttonRightLedR5C5.Text = "F1";
@@ -1092,11 +1091,13 @@
             // id_buttonRightLedR5C6
             // 
             this.id_buttonRightLedR5C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR5C6.Col = 0;
             this.id_buttonRightLedR5C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR5C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR5C6.Image")));
             this.id_buttonRightLedR5C6.Location = new System.Drawing.Point(983, 697);
             this.id_buttonRightLedR5C6.Name = "id_buttonRightLedR5C6";
+            this.id_buttonRightLedR5C6.Row = 0;
             this.id_buttonRightLedR5C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR5C6.TabIndex = 315;
             this.id_buttonRightLedR5C6.Text = "F1";
@@ -1105,11 +1106,13 @@
             // id_buttonRightLedR5C7
             // 
             this.id_buttonRightLedR5C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR5C7.Col = 0;
             this.id_buttonRightLedR5C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR5C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR5C7.Image")));
             this.id_buttonRightLedR5C7.Location = new System.Drawing.Point(922, 697);
             this.id_buttonRightLedR5C7.Name = "id_buttonRightLedR5C7";
+            this.id_buttonRightLedR5C7.Row = 0;
             this.id_buttonRightLedR5C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR5C7.TabIndex = 314;
             this.id_buttonRightLedR5C7.Text = "F1";
@@ -1118,11 +1121,13 @@
             // id_buttonRightLedR4C1
             // 
             this.id_buttonRightLedR4C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR4C1.Col = 0;
             this.id_buttonRightLedR4C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR4C1.Location = new System.Drawing.Point(1288, 636);
             this.id_buttonRightLedR4C1.Name = "id_buttonRightLedR4C1";
+            this.id_buttonRightLedR4C1.Row = 0;
             this.id_buttonRightLedR4C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightLedR4C1.TabIndex = 313;
             this.id_buttonRightLedR4C1.Text = "ESC";
@@ -1131,11 +1136,13 @@
             // id_buttonRightLedR3C1
             // 
             this.id_buttonRightLedR3C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR3C1.Col = 0;
             this.id_buttonRightLedR3C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR3C1.Location = new System.Drawing.Point(1288, 575);
             this.id_buttonRightLedR3C1.Name = "id_buttonRightLedR3C1";
+            this.id_buttonRightLedR3C1.Row = 0;
             this.id_buttonRightLedR3C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightLedR3C1.TabIndex = 312;
             this.id_buttonRightLedR3C1.Text = "ESC";
@@ -1144,11 +1151,13 @@
             // id_buttonRightLedR2C1
             // 
             this.id_buttonRightLedR2C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR2C1.Col = 0;
             this.id_buttonRightLedR2C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR2C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR2C1.Location = new System.Drawing.Point(1288, 514);
             this.id_buttonRightLedR2C1.Name = "id_buttonRightLedR2C1";
+            this.id_buttonRightLedR2C1.Row = 0;
             this.id_buttonRightLedR2C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightLedR2C1.TabIndex = 311;
             this.id_buttonRightLedR2C1.Text = "ESC";
@@ -1157,11 +1166,13 @@
             // id_buttonRightLedR1C1
             // 
             this.id_buttonRightLedR1C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR1C1.Col = 0;
             this.id_buttonRightLedR1C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR1C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR1C1.Location = new System.Drawing.Point(1288, 453);
             this.id_buttonRightLedR1C1.Name = "id_buttonRightLedR1C1";
+            this.id_buttonRightLedR1C1.Row = 0;
             this.id_buttonRightLedR1C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightLedR1C1.TabIndex = 310;
             this.id_buttonRightLedR1C1.Text = "ESC";
@@ -1170,11 +1181,13 @@
             // id_buttonRightLedR4C2
             // 
             this.id_buttonRightLedR4C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR4C2.Col = 0;
             this.id_buttonRightLedR4C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR4C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR4C2.Image")));
             this.id_buttonRightLedR4C2.Location = new System.Drawing.Point(1227, 636);
             this.id_buttonRightLedR4C2.Name = "id_buttonRightLedR4C2";
+            this.id_buttonRightLedR4C2.Row = 0;
             this.id_buttonRightLedR4C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR4C2.TabIndex = 309;
             this.id_buttonRightLedR4C2.Text = "F1";
@@ -1183,11 +1196,13 @@
             // id_buttonRightLedR4C3
             // 
             this.id_buttonRightLedR4C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR4C3.Col = 0;
             this.id_buttonRightLedR4C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR4C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR4C3.Image")));
             this.id_buttonRightLedR4C3.Location = new System.Drawing.Point(1166, 636);
             this.id_buttonRightLedR4C3.Name = "id_buttonRightLedR4C3";
+            this.id_buttonRightLedR4C3.Row = 0;
             this.id_buttonRightLedR4C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR4C3.TabIndex = 308;
             this.id_buttonRightLedR4C3.Text = "F1";
@@ -1196,11 +1211,13 @@
             // id_buttonRightLedR4C4
             // 
             this.id_buttonRightLedR4C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR4C4.Col = 0;
             this.id_buttonRightLedR4C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR4C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR4C4.Image")));
             this.id_buttonRightLedR4C4.Location = new System.Drawing.Point(1105, 636);
             this.id_buttonRightLedR4C4.Name = "id_buttonRightLedR4C4";
+            this.id_buttonRightLedR4C4.Row = 0;
             this.id_buttonRightLedR4C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR4C4.TabIndex = 307;
             this.id_buttonRightLedR4C4.Text = "F1";
@@ -1209,11 +1226,13 @@
             // id_buttonRightLedR4C5
             // 
             this.id_buttonRightLedR4C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR4C5.Col = 0;
             this.id_buttonRightLedR4C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR4C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR4C5.Image")));
             this.id_buttonRightLedR4C5.Location = new System.Drawing.Point(1044, 636);
             this.id_buttonRightLedR4C5.Name = "id_buttonRightLedR4C5";
+            this.id_buttonRightLedR4C5.Row = 0;
             this.id_buttonRightLedR4C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR4C5.TabIndex = 306;
             this.id_buttonRightLedR4C5.Text = "F1";
@@ -1222,11 +1241,13 @@
             // id_buttonRightLedR4C6
             // 
             this.id_buttonRightLedR4C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR4C6.Col = 0;
             this.id_buttonRightLedR4C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR4C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR4C6.Image")));
             this.id_buttonRightLedR4C6.Location = new System.Drawing.Point(983, 636);
             this.id_buttonRightLedR4C6.Name = "id_buttonRightLedR4C6";
+            this.id_buttonRightLedR4C6.Row = 0;
             this.id_buttonRightLedR4C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR4C6.TabIndex = 305;
             this.id_buttonRightLedR4C6.Text = "F1";
@@ -1235,11 +1256,13 @@
             // id_buttonRightLedR4C7
             // 
             this.id_buttonRightLedR4C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR4C7.Col = 0;
             this.id_buttonRightLedR4C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR4C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR4C7.Image")));
             this.id_buttonRightLedR4C7.Location = new System.Drawing.Point(922, 636);
             this.id_buttonRightLedR4C7.Name = "id_buttonRightLedR4C7";
+            this.id_buttonRightLedR4C7.Row = 0;
             this.id_buttonRightLedR4C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR4C7.TabIndex = 304;
             this.id_buttonRightLedR4C7.Text = "F1";
@@ -1248,11 +1271,13 @@
             // id_buttonRightLedR3C2
             // 
             this.id_buttonRightLedR3C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR3C2.Col = 0;
             this.id_buttonRightLedR3C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR3C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR3C2.Image")));
             this.id_buttonRightLedR3C2.Location = new System.Drawing.Point(1227, 575);
             this.id_buttonRightLedR3C2.Name = "id_buttonRightLedR3C2";
+            this.id_buttonRightLedR3C2.Row = 0;
             this.id_buttonRightLedR3C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR3C2.TabIndex = 303;
             this.id_buttonRightLedR3C2.Text = "F1";
@@ -1261,11 +1286,13 @@
             // id_buttonRightLedR3C3
             // 
             this.id_buttonRightLedR3C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR3C3.Col = 0;
             this.id_buttonRightLedR3C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR3C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR3C3.Image")));
             this.id_buttonRightLedR3C3.Location = new System.Drawing.Point(1166, 575);
             this.id_buttonRightLedR3C3.Name = "id_buttonRightLedR3C3";
+            this.id_buttonRightLedR3C3.Row = 0;
             this.id_buttonRightLedR3C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR3C3.TabIndex = 302;
             this.id_buttonRightLedR3C3.Text = "F1";
@@ -1274,11 +1301,13 @@
             // id_buttonRightLedR3C4
             // 
             this.id_buttonRightLedR3C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR3C4.Col = 0;
             this.id_buttonRightLedR3C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR3C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR3C4.Image")));
             this.id_buttonRightLedR3C4.Location = new System.Drawing.Point(1105, 575);
             this.id_buttonRightLedR3C4.Name = "id_buttonRightLedR3C4";
+            this.id_buttonRightLedR3C4.Row = 0;
             this.id_buttonRightLedR3C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR3C4.TabIndex = 301;
             this.id_buttonRightLedR3C4.Text = "F1";
@@ -1287,11 +1316,13 @@
             // id_buttonRightLedR3C5
             // 
             this.id_buttonRightLedR3C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR3C5.Col = 0;
             this.id_buttonRightLedR3C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR3C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR3C5.Image")));
             this.id_buttonRightLedR3C5.Location = new System.Drawing.Point(1044, 575);
             this.id_buttonRightLedR3C5.Name = "id_buttonRightLedR3C5";
+            this.id_buttonRightLedR3C5.Row = 0;
             this.id_buttonRightLedR3C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR3C5.TabIndex = 300;
             this.id_buttonRightLedR3C5.Text = "F1";
@@ -1300,11 +1331,13 @@
             // id_buttonRightLedR3C6
             // 
             this.id_buttonRightLedR3C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR3C6.Col = 0;
             this.id_buttonRightLedR3C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR3C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR3C6.Image")));
             this.id_buttonRightLedR3C6.Location = new System.Drawing.Point(983, 575);
             this.id_buttonRightLedR3C6.Name = "id_buttonRightLedR3C6";
+            this.id_buttonRightLedR3C6.Row = 0;
             this.id_buttonRightLedR3C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR3C6.TabIndex = 299;
             this.id_buttonRightLedR3C6.Text = "F1";
@@ -1313,11 +1346,13 @@
             // id_buttonRightLedR3C7
             // 
             this.id_buttonRightLedR3C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR3C7.Col = 0;
             this.id_buttonRightLedR3C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR3C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR3C7.Image")));
             this.id_buttonRightLedR3C7.Location = new System.Drawing.Point(922, 575);
             this.id_buttonRightLedR3C7.Name = "id_buttonRightLedR3C7";
+            this.id_buttonRightLedR3C7.Row = 0;
             this.id_buttonRightLedR3C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR3C7.TabIndex = 298;
             this.id_buttonRightLedR3C7.Text = "F1";
@@ -1326,11 +1361,13 @@
             // id_buttonRightLedR2C2
             // 
             this.id_buttonRightLedR2C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR2C2.Col = 0;
             this.id_buttonRightLedR2C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR2C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR2C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR2C2.Image")));
             this.id_buttonRightLedR2C2.Location = new System.Drawing.Point(1227, 514);
             this.id_buttonRightLedR2C2.Name = "id_buttonRightLedR2C2";
+            this.id_buttonRightLedR2C2.Row = 0;
             this.id_buttonRightLedR2C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR2C2.TabIndex = 297;
             this.id_buttonRightLedR2C2.Text = "F1";
@@ -1339,11 +1376,13 @@
             // id_buttonRightLedR2C3
             // 
             this.id_buttonRightLedR2C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR2C3.Col = 0;
             this.id_buttonRightLedR2C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR2C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR2C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR2C3.Image")));
             this.id_buttonRightLedR2C3.Location = new System.Drawing.Point(1166, 514);
             this.id_buttonRightLedR2C3.Name = "id_buttonRightLedR2C3";
+            this.id_buttonRightLedR2C3.Row = 0;
             this.id_buttonRightLedR2C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR2C3.TabIndex = 296;
             this.id_buttonRightLedR2C3.Text = "F1";
@@ -1352,11 +1391,13 @@
             // id_buttonRightLedR2C4
             // 
             this.id_buttonRightLedR2C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR2C4.Col = 0;
             this.id_buttonRightLedR2C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR2C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR2C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR2C4.Image")));
             this.id_buttonRightLedR2C4.Location = new System.Drawing.Point(1105, 514);
             this.id_buttonRightLedR2C4.Name = "id_buttonRightLedR2C4";
+            this.id_buttonRightLedR2C4.Row = 0;
             this.id_buttonRightLedR2C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR2C4.TabIndex = 295;
             this.id_buttonRightLedR2C4.Text = "F1";
@@ -1365,11 +1406,13 @@
             // id_buttonRightLedR2C5
             // 
             this.id_buttonRightLedR2C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR2C5.Col = 0;
             this.id_buttonRightLedR2C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR2C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR2C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR2C5.Image")));
             this.id_buttonRightLedR2C5.Location = new System.Drawing.Point(1044, 514);
             this.id_buttonRightLedR2C5.Name = "id_buttonRightLedR2C5";
+            this.id_buttonRightLedR2C5.Row = 0;
             this.id_buttonRightLedR2C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR2C5.TabIndex = 294;
             this.id_buttonRightLedR2C5.Text = "F1";
@@ -1378,11 +1421,13 @@
             // id_buttonRightLedR2C6
             // 
             this.id_buttonRightLedR2C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR2C6.Col = 0;
             this.id_buttonRightLedR2C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR2C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR2C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR2C6.Image")));
             this.id_buttonRightLedR2C6.Location = new System.Drawing.Point(983, 514);
             this.id_buttonRightLedR2C6.Name = "id_buttonRightLedR2C6";
+            this.id_buttonRightLedR2C6.Row = 0;
             this.id_buttonRightLedR2C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR2C6.TabIndex = 293;
             this.id_buttonRightLedR2C6.Text = "F1";
@@ -1391,11 +1436,13 @@
             // id_buttonRightLedR2C7
             // 
             this.id_buttonRightLedR2C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR2C7.Col = 0;
             this.id_buttonRightLedR2C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR2C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR2C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR2C7.Image")));
             this.id_buttonRightLedR2C7.Location = new System.Drawing.Point(922, 514);
             this.id_buttonRightLedR2C7.Name = "id_buttonRightLedR2C7";
+            this.id_buttonRightLedR2C7.Row = 0;
             this.id_buttonRightLedR2C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR2C7.TabIndex = 292;
             this.id_buttonRightLedR2C7.Text = "F1";
@@ -1404,11 +1451,13 @@
             // id_buttonRightLedR1C2
             // 
             this.id_buttonRightLedR1C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR1C2.Col = 0;
             this.id_buttonRightLedR1C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR1C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR1C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR1C2.Image")));
             this.id_buttonRightLedR1C2.Location = new System.Drawing.Point(1227, 453);
             this.id_buttonRightLedR1C2.Name = "id_buttonRightLedR1C2";
+            this.id_buttonRightLedR1C2.Row = 0;
             this.id_buttonRightLedR1C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR1C2.TabIndex = 291;
             this.id_buttonRightLedR1C2.Text = "F1";
@@ -1417,11 +1466,13 @@
             // id_buttonRightLedR1C3
             // 
             this.id_buttonRightLedR1C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR1C3.Col = 0;
             this.id_buttonRightLedR1C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR1C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR1C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR1C3.Image")));
             this.id_buttonRightLedR1C3.Location = new System.Drawing.Point(1166, 453);
             this.id_buttonRightLedR1C3.Name = "id_buttonRightLedR1C3";
+            this.id_buttonRightLedR1C3.Row = 0;
             this.id_buttonRightLedR1C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR1C3.TabIndex = 290;
             this.id_buttonRightLedR1C3.Text = "F1";
@@ -1430,11 +1481,13 @@
             // id_buttonRightLedR1C4
             // 
             this.id_buttonRightLedR1C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR1C4.Col = 0;
             this.id_buttonRightLedR1C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR1C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR1C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR1C4.Image")));
             this.id_buttonRightLedR1C4.Location = new System.Drawing.Point(1105, 453);
             this.id_buttonRightLedR1C4.Name = "id_buttonRightLedR1C4";
+            this.id_buttonRightLedR1C4.Row = 0;
             this.id_buttonRightLedR1C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR1C4.TabIndex = 289;
             this.id_buttonRightLedR1C4.Text = "F1";
@@ -1443,11 +1496,13 @@
             // id_buttonRightLedR1C5
             // 
             this.id_buttonRightLedR1C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR1C5.Col = 0;
             this.id_buttonRightLedR1C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR1C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR1C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR1C5.Image")));
             this.id_buttonRightLedR1C5.Location = new System.Drawing.Point(1044, 453);
             this.id_buttonRightLedR1C5.Name = "id_buttonRightLedR1C5";
+            this.id_buttonRightLedR1C5.Row = 0;
             this.id_buttonRightLedR1C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR1C5.TabIndex = 288;
             this.id_buttonRightLedR1C5.Text = "F1";
@@ -1456,11 +1511,13 @@
             // id_buttonRightLedR1C6
             // 
             this.id_buttonRightLedR1C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR1C6.Col = 0;
             this.id_buttonRightLedR1C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR1C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR1C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR1C6.Image")));
             this.id_buttonRightLedR1C6.Location = new System.Drawing.Point(983, 453);
             this.id_buttonRightLedR1C6.Name = "id_buttonRightLedR1C6";
+            this.id_buttonRightLedR1C6.Row = 0;
             this.id_buttonRightLedR1C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR1C6.TabIndex = 287;
             this.id_buttonRightLedR1C6.Text = "F1";
@@ -1469,11 +1526,13 @@
             // id_buttonRightLedR1C7
             // 
             this.id_buttonRightLedR1C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonRightLedR1C7.Col = 0;
             this.id_buttonRightLedR1C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR1C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightLedR1C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonRightLedR1C7.Image")));
             this.id_buttonRightLedR1C7.Location = new System.Drawing.Point(922, 453);
             this.id_buttonRightLedR1C7.Name = "id_buttonRightLedR1C7";
+            this.id_buttonRightLedR1C7.Row = 0;
             this.id_buttonRightLedR1C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightLedR1C7.TabIndex = 286;
             this.id_buttonRightLedR1C7.Text = "F1";
@@ -1482,11 +1541,13 @@
             // id_buttonLeftLedR6C8
             // 
             this.id_buttonLeftLedR6C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C8.Col = 0;
             this.id_buttonLeftLedR6C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR6C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C8.Image")));
             this.id_buttonLeftLedR6C8.Location = new System.Drawing.Point(595, 758);
             this.id_buttonLeftLedR6C8.Name = "id_buttonLeftLedR6C8";
+            this.id_buttonLeftLedR6C8.Row = 0;
             this.id_buttonLeftLedR6C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR6C8.TabIndex = 285;
             this.id_buttonLeftLedR6C8.Text = "F1";
@@ -1495,11 +1556,13 @@
             // id_buttonLeftLedR5C8
             // 
             this.id_buttonLeftLedR5C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C8.Col = 0;
             this.id_buttonLeftLedR5C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR5C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C8.Image")));
             this.id_buttonLeftLedR5C8.Location = new System.Drawing.Point(595, 697);
             this.id_buttonLeftLedR5C8.Name = "id_buttonLeftLedR5C8";
+            this.id_buttonLeftLedR5C8.Row = 0;
             this.id_buttonLeftLedR5C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR5C8.TabIndex = 284;
             this.id_buttonLeftLedR5C8.Text = "F1";
@@ -1508,11 +1571,13 @@
             // id_buttonLeftLedR4C8
             // 
             this.id_buttonLeftLedR4C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C8.Col = 0;
             this.id_buttonLeftLedR4C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR4C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C8.Image")));
             this.id_buttonLeftLedR4C8.Location = new System.Drawing.Point(595, 636);
             this.id_buttonLeftLedR4C8.Name = "id_buttonLeftLedR4C8";
+            this.id_buttonLeftLedR4C8.Row = 0;
             this.id_buttonLeftLedR4C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR4C8.TabIndex = 283;
             this.id_buttonLeftLedR4C8.Text = "F1";
@@ -1521,11 +1586,13 @@
             // id_buttonLeftLedR3C8
             // 
             this.id_buttonLeftLedR3C8.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C8.Col = 0;
             this.id_buttonLeftLedR3C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR3C8.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C8.Image")));
             this.id_buttonLeftLedR3C8.Location = new System.Drawing.Point(534, 636);
             this.id_buttonLeftLedR3C8.Name = "id_buttonLeftLedR3C8";
+            this.id_buttonLeftLedR3C8.Row = 0;
             this.id_buttonLeftLedR3C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR3C8.TabIndex = 282;
             this.id_buttonLeftLedR3C8.Text = "F1";
@@ -1534,11 +1601,13 @@
             // id_buttonLeftLedR6C7
             // 
             this.id_buttonLeftLedR6C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C7.Col = 0;
             this.id_buttonLeftLedR6C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
             this.id_buttonLeftLedR6C7.Location = new System.Drawing.Point(534, 697);
             this.id_buttonLeftLedR6C7.Name = "id_buttonLeftLedR6C7";
+            this.id_buttonLeftLedR6C7.Row = 0;
             this.id_buttonLeftLedR6C7.Size = new System.Drawing.Size(55, 109);
             this.id_buttonLeftLedR6C7.TabIndex = 281;
             this.id_buttonLeftLedR6C7.Text = "F1";
@@ -1547,11 +1616,13 @@
             // id_buttonLeftLedR6C6
             // 
             this.id_buttonLeftLedR6C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C6.Col = 0;
             this.id_buttonLeftLedR6C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
             this.id_buttonLeftLedR6C6.Location = new System.Drawing.Point(473, 697);
             this.id_buttonLeftLedR6C6.Name = "id_buttonLeftLedR6C6";
+            this.id_buttonLeftLedR6C6.Row = 0;
             this.id_buttonLeftLedR6C6.Size = new System.Drawing.Size(55, 109);
             this.id_buttonLeftLedR6C6.TabIndex = 280;
             this.id_buttonLeftLedR6C6.Text = "F1";
@@ -1560,11 +1631,13 @@
             // id_buttonLeftLedR6C1
             // 
             this.id_buttonLeftLedR6C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C1.Col = 0;
             this.id_buttonLeftLedR6C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR6C1.Location = new System.Drawing.Point(19, 758);
             this.id_buttonLeftLedR6C1.Name = "id_buttonLeftLedR6C1";
+            this.id_buttonLeftLedR6C1.Row = 0;
             this.id_buttonLeftLedR6C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftLedR6C1.TabIndex = 279;
             this.id_buttonLeftLedR6C1.Text = "ESC";
@@ -1573,11 +1646,13 @@
             // id_buttonLeftLedR6C5
             // 
             this.id_buttonLeftLedR6C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C5.Col = 0;
             this.id_buttonLeftLedR6C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR6C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C5.Image")));
             this.id_buttonLeftLedR6C5.Location = new System.Drawing.Point(290, 758);
             this.id_buttonLeftLedR6C5.Name = "id_buttonLeftLedR6C5";
+            this.id_buttonLeftLedR6C5.Row = 0;
             this.id_buttonLeftLedR6C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR6C5.TabIndex = 276;
             this.id_buttonLeftLedR6C5.Text = "F1";
@@ -1586,11 +1661,13 @@
             // id_buttonLeftLedR6C4
             // 
             this.id_buttonLeftLedR6C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C4.Col = 0;
             this.id_buttonLeftLedR6C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR6C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C4.Image")));
             this.id_buttonLeftLedR6C4.Location = new System.Drawing.Point(229, 758);
             this.id_buttonLeftLedR6C4.Name = "id_buttonLeftLedR6C4";
+            this.id_buttonLeftLedR6C4.Row = 0;
             this.id_buttonLeftLedR6C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR6C4.TabIndex = 275;
             this.id_buttonLeftLedR6C4.Text = "F1";
@@ -1599,11 +1676,13 @@
             // id_buttonLeftLedR6C3
             // 
             this.id_buttonLeftLedR6C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C3.Col = 0;
             this.id_buttonLeftLedR6C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR6C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C3.Image")));
             this.id_buttonLeftLedR6C3.Location = new System.Drawing.Point(168, 758);
             this.id_buttonLeftLedR6C3.Name = "id_buttonLeftLedR6C3";
+            this.id_buttonLeftLedR6C3.Row = 0;
             this.id_buttonLeftLedR6C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR6C3.TabIndex = 274;
             this.id_buttonLeftLedR6C3.Text = "F1";
@@ -1612,11 +1691,13 @@
             // id_buttonLeftLedR6C2
             // 
             this.id_buttonLeftLedR6C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR6C2.Col = 0;
             this.id_buttonLeftLedR6C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR6C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR6C2.Image")));
             this.id_buttonLeftLedR6C2.Location = new System.Drawing.Point(107, 758);
             this.id_buttonLeftLedR6C2.Name = "id_buttonLeftLedR6C2";
+            this.id_buttonLeftLedR6C2.Row = 0;
             this.id_buttonLeftLedR6C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR6C2.TabIndex = 273;
             this.id_buttonLeftLedR6C2.Text = "F1";
@@ -1625,11 +1706,13 @@
             // id_buttonLeftLedR5C1
             // 
             this.id_buttonLeftLedR5C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C1.Col = 0;
             this.id_buttonLeftLedR5C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR5C1.Location = new System.Drawing.Point(19, 697);
             this.id_buttonLeftLedR5C1.Name = "id_buttonLeftLedR5C1";
+            this.id_buttonLeftLedR5C1.Row = 0;
             this.id_buttonLeftLedR5C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftLedR5C1.TabIndex = 272;
             this.id_buttonLeftLedR5C1.Text = "ESC";
@@ -1638,11 +1721,13 @@
             // id_buttonLeftLedR5C7
             // 
             this.id_buttonLeftLedR5C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C7.Col = 0;
             this.id_buttonLeftLedR5C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR5C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C7.Image")));
             this.id_buttonLeftLedR5C7.Location = new System.Drawing.Point(412, 697);
             this.id_buttonLeftLedR5C7.Name = "id_buttonLeftLedR5C7";
+            this.id_buttonLeftLedR5C7.Row = 0;
             this.id_buttonLeftLedR5C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR5C7.TabIndex = 271;
             this.id_buttonLeftLedR5C7.Text = "F1";
@@ -1651,11 +1736,13 @@
             // id_buttonLeftLedR5C6
             // 
             this.id_buttonLeftLedR5C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C6.Col = 0;
             this.id_buttonLeftLedR5C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR5C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C6.Image")));
             this.id_buttonLeftLedR5C6.Location = new System.Drawing.Point(351, 697);
             this.id_buttonLeftLedR5C6.Name = "id_buttonLeftLedR5C6";
+            this.id_buttonLeftLedR5C6.Row = 0;
             this.id_buttonLeftLedR5C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR5C6.TabIndex = 270;
             this.id_buttonLeftLedR5C6.Text = "F1";
@@ -1664,11 +1751,13 @@
             // id_buttonLeftLedR5C5
             // 
             this.id_buttonLeftLedR5C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C5.Col = 0;
             this.id_buttonLeftLedR5C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR5C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C5.Image")));
             this.id_buttonLeftLedR5C5.Location = new System.Drawing.Point(290, 697);
             this.id_buttonLeftLedR5C5.Name = "id_buttonLeftLedR5C5";
+            this.id_buttonLeftLedR5C5.Row = 0;
             this.id_buttonLeftLedR5C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR5C5.TabIndex = 269;
             this.id_buttonLeftLedR5C5.Text = "F1";
@@ -1677,11 +1766,13 @@
             // id_buttonLeftLedR5C4
             // 
             this.id_buttonLeftLedR5C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C4.Col = 0;
             this.id_buttonLeftLedR5C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR5C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C4.Image")));
             this.id_buttonLeftLedR5C4.Location = new System.Drawing.Point(229, 697);
             this.id_buttonLeftLedR5C4.Name = "id_buttonLeftLedR5C4";
+            this.id_buttonLeftLedR5C4.Row = 0;
             this.id_buttonLeftLedR5C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR5C4.TabIndex = 268;
             this.id_buttonLeftLedR5C4.Text = "F1";
@@ -1690,11 +1781,13 @@
             // id_buttonLeftLedR5C3
             // 
             this.id_buttonLeftLedR5C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C3.Col = 0;
             this.id_buttonLeftLedR5C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR5C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C3.Image")));
             this.id_buttonLeftLedR5C3.Location = new System.Drawing.Point(168, 697);
             this.id_buttonLeftLedR5C3.Name = "id_buttonLeftLedR5C3";
+            this.id_buttonLeftLedR5C3.Row = 0;
             this.id_buttonLeftLedR5C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR5C3.TabIndex = 267;
             this.id_buttonLeftLedR5C3.Text = "F1";
@@ -1703,11 +1796,13 @@
             // id_buttonLeftLedR5C2
             // 
             this.id_buttonLeftLedR5C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR5C2.Col = 0;
             this.id_buttonLeftLedR5C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR5C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR5C2.Image")));
             this.id_buttonLeftLedR5C2.Location = new System.Drawing.Point(107, 697);
             this.id_buttonLeftLedR5C2.Name = "id_buttonLeftLedR5C2";
+            this.id_buttonLeftLedR5C2.Row = 0;
             this.id_buttonLeftLedR5C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR5C2.TabIndex = 266;
             this.id_buttonLeftLedR5C2.Text = "F1";
@@ -1716,11 +1811,13 @@
             // id_buttonLeftLedR4C1
             // 
             this.id_buttonLeftLedR4C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C1.Col = 0;
             this.id_buttonLeftLedR4C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR4C1.Location = new System.Drawing.Point(19, 636);
             this.id_buttonLeftLedR4C1.Name = "id_buttonLeftLedR4C1";
+            this.id_buttonLeftLedR4C1.Row = 0;
             this.id_buttonLeftLedR4C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftLedR4C1.TabIndex = 265;
             this.id_buttonLeftLedR4C1.Text = "ESC";
@@ -1729,11 +1826,13 @@
             // id_buttonLeftLedR3C1
             // 
             this.id_buttonLeftLedR3C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C1.Col = 0;
             this.id_buttonLeftLedR3C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR3C1.Location = new System.Drawing.Point(19, 575);
             this.id_buttonLeftLedR3C1.Name = "id_buttonLeftLedR3C1";
+            this.id_buttonLeftLedR3C1.Row = 0;
             this.id_buttonLeftLedR3C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftLedR3C1.TabIndex = 264;
             this.id_buttonLeftLedR3C1.Text = "ESC";
@@ -1742,11 +1841,13 @@
             // id_buttonLeftLedR2C1
             // 
             this.id_buttonLeftLedR2C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C1.Col = 0;
             this.id_buttonLeftLedR2C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR2C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR2C1.Location = new System.Drawing.Point(19, 514);
             this.id_buttonLeftLedR2C1.Name = "id_buttonLeftLedR2C1";
+            this.id_buttonLeftLedR2C1.Row = 0;
             this.id_buttonLeftLedR2C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftLedR2C1.TabIndex = 263;
             this.id_buttonLeftLedR2C1.Text = "ESC";
@@ -1755,11 +1856,13 @@
             // id_buttonLeftLedR1C1
             // 
             this.id_buttonLeftLedR1C1.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C1.Col = 0;
             this.id_buttonLeftLedR1C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR1C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR1C1.Location = new System.Drawing.Point(19, 453);
             this.id_buttonLeftLedR1C1.Name = "id_buttonLeftLedR1C1";
+            this.id_buttonLeftLedR1C1.Row = 0;
             this.id_buttonLeftLedR1C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftLedR1C1.TabIndex = 262;
             this.id_buttonLeftLedR1C1.Text = "ESC";
@@ -1768,11 +1871,13 @@
             // id_buttonLeftLedR4C7
             // 
             this.id_buttonLeftLedR4C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C7.Col = 0;
             this.id_buttonLeftLedR4C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR4C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C7.Image")));
             this.id_buttonLeftLedR4C7.Location = new System.Drawing.Point(412, 636);
             this.id_buttonLeftLedR4C7.Name = "id_buttonLeftLedR4C7";
+            this.id_buttonLeftLedR4C7.Row = 0;
             this.id_buttonLeftLedR4C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR4C7.TabIndex = 261;
             this.id_buttonLeftLedR4C7.Text = "F1";
@@ -1781,11 +1886,13 @@
             // id_buttonLeftLedR4C6
             // 
             this.id_buttonLeftLedR4C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C6.Col = 0;
             this.id_buttonLeftLedR4C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR4C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C6.Image")));
             this.id_buttonLeftLedR4C6.Location = new System.Drawing.Point(351, 636);
             this.id_buttonLeftLedR4C6.Name = "id_buttonLeftLedR4C6";
+            this.id_buttonLeftLedR4C6.Row = 0;
             this.id_buttonLeftLedR4C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR4C6.TabIndex = 260;
             this.id_buttonLeftLedR4C6.Text = "F1";
@@ -1794,11 +1901,13 @@
             // id_buttonLeftLedR4C5
             // 
             this.id_buttonLeftLedR4C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C5.Col = 0;
             this.id_buttonLeftLedR4C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR4C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C5.Image")));
             this.id_buttonLeftLedR4C5.Location = new System.Drawing.Point(290, 636);
             this.id_buttonLeftLedR4C5.Name = "id_buttonLeftLedR4C5";
+            this.id_buttonLeftLedR4C5.Row = 0;
             this.id_buttonLeftLedR4C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR4C5.TabIndex = 259;
             this.id_buttonLeftLedR4C5.Text = "F1";
@@ -1807,11 +1916,13 @@
             // id_buttonLeftLedR4C4
             // 
             this.id_buttonLeftLedR4C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C4.Col = 0;
             this.id_buttonLeftLedR4C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR4C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C4.Image")));
             this.id_buttonLeftLedR4C4.Location = new System.Drawing.Point(229, 636);
             this.id_buttonLeftLedR4C4.Name = "id_buttonLeftLedR4C4";
+            this.id_buttonLeftLedR4C4.Row = 0;
             this.id_buttonLeftLedR4C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR4C4.TabIndex = 258;
             this.id_buttonLeftLedR4C4.Text = "F1";
@@ -1820,11 +1931,13 @@
             // id_buttonLeftLedR4C3
             // 
             this.id_buttonLeftLedR4C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C3.Col = 0;
             this.id_buttonLeftLedR4C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR4C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C3.Image")));
             this.id_buttonLeftLedR4C3.Location = new System.Drawing.Point(168, 636);
             this.id_buttonLeftLedR4C3.Name = "id_buttonLeftLedR4C3";
+            this.id_buttonLeftLedR4C3.Row = 0;
             this.id_buttonLeftLedR4C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR4C3.TabIndex = 257;
             this.id_buttonLeftLedR4C3.Text = "F1";
@@ -1833,11 +1946,13 @@
             // id_buttonLeftLedR4C2
             // 
             this.id_buttonLeftLedR4C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR4C2.Col = 0;
             this.id_buttonLeftLedR4C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR4C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR4C2.Image")));
             this.id_buttonLeftLedR4C2.Location = new System.Drawing.Point(107, 636);
             this.id_buttonLeftLedR4C2.Name = "id_buttonLeftLedR4C2";
+            this.id_buttonLeftLedR4C2.Row = 0;
             this.id_buttonLeftLedR4C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR4C2.TabIndex = 256;
             this.id_buttonLeftLedR4C2.Text = "F1";
@@ -1846,11 +1961,13 @@
             // id_buttonLeftLedR3C7
             // 
             this.id_buttonLeftLedR3C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C7.Col = 0;
             this.id_buttonLeftLedR3C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR3C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C7.Image")));
             this.id_buttonLeftLedR3C7.Location = new System.Drawing.Point(412, 575);
             this.id_buttonLeftLedR3C7.Name = "id_buttonLeftLedR3C7";
+            this.id_buttonLeftLedR3C7.Row = 0;
             this.id_buttonLeftLedR3C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR3C7.TabIndex = 255;
             this.id_buttonLeftLedR3C7.Text = "F1";
@@ -1859,11 +1976,13 @@
             // id_buttonLeftLedR3C6
             // 
             this.id_buttonLeftLedR3C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C6.Col = 0;
             this.id_buttonLeftLedR3C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR3C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C6.Image")));
             this.id_buttonLeftLedR3C6.Location = new System.Drawing.Point(351, 575);
             this.id_buttonLeftLedR3C6.Name = "id_buttonLeftLedR3C6";
+            this.id_buttonLeftLedR3C6.Row = 0;
             this.id_buttonLeftLedR3C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR3C6.TabIndex = 254;
             this.id_buttonLeftLedR3C6.Text = "F1";
@@ -1872,11 +1991,13 @@
             // id_buttonLeftLedR3C5
             // 
             this.id_buttonLeftLedR3C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C5.Col = 0;
             this.id_buttonLeftLedR3C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR3C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C5.Image")));
             this.id_buttonLeftLedR3C5.Location = new System.Drawing.Point(290, 575);
             this.id_buttonLeftLedR3C5.Name = "id_buttonLeftLedR3C5";
+            this.id_buttonLeftLedR3C5.Row = 0;
             this.id_buttonLeftLedR3C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR3C5.TabIndex = 253;
             this.id_buttonLeftLedR3C5.Text = "F1";
@@ -1885,11 +2006,13 @@
             // id_buttonLeftLedR3C4
             // 
             this.id_buttonLeftLedR3C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C4.Col = 0;
             this.id_buttonLeftLedR3C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR3C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C4.Image")));
             this.id_buttonLeftLedR3C4.Location = new System.Drawing.Point(229, 575);
             this.id_buttonLeftLedR3C4.Name = "id_buttonLeftLedR3C4";
+            this.id_buttonLeftLedR3C4.Row = 0;
             this.id_buttonLeftLedR3C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR3C4.TabIndex = 252;
             this.id_buttonLeftLedR3C4.Text = "F1";
@@ -1898,11 +2021,13 @@
             // id_buttonLeftLedR3C3
             // 
             this.id_buttonLeftLedR3C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C3.Col = 0;
             this.id_buttonLeftLedR3C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR3C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C3.Image")));
             this.id_buttonLeftLedR3C3.Location = new System.Drawing.Point(168, 575);
             this.id_buttonLeftLedR3C3.Name = "id_buttonLeftLedR3C3";
+            this.id_buttonLeftLedR3C3.Row = 0;
             this.id_buttonLeftLedR3C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR3C3.TabIndex = 251;
             this.id_buttonLeftLedR3C3.Text = "F1";
@@ -1911,11 +2036,13 @@
             // id_buttonLeftLedR3C2
             // 
             this.id_buttonLeftLedR3C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR3C2.Col = 0;
             this.id_buttonLeftLedR3C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR3C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR3C2.Image")));
             this.id_buttonLeftLedR3C2.Location = new System.Drawing.Point(107, 575);
             this.id_buttonLeftLedR3C2.Name = "id_buttonLeftLedR3C2";
+            this.id_buttonLeftLedR3C2.Row = 0;
             this.id_buttonLeftLedR3C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR3C2.TabIndex = 250;
             this.id_buttonLeftLedR3C2.Text = "F1";
@@ -1924,11 +2051,13 @@
             // id_buttonLeftLedR2C7
             // 
             this.id_buttonLeftLedR2C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C7.Col = 0;
             this.id_buttonLeftLedR2C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR2C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR2C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C7.Image")));
             this.id_buttonLeftLedR2C7.Location = new System.Drawing.Point(412, 514);
             this.id_buttonLeftLedR2C7.Name = "id_buttonLeftLedR2C7";
+            this.id_buttonLeftLedR2C7.Row = 0;
             this.id_buttonLeftLedR2C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR2C7.TabIndex = 249;
             this.id_buttonLeftLedR2C7.Text = "F1";
@@ -1937,11 +2066,13 @@
             // id_buttonLeftLedR2C6
             // 
             this.id_buttonLeftLedR2C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C6.Col = 0;
             this.id_buttonLeftLedR2C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR2C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR2C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C6.Image")));
             this.id_buttonLeftLedR2C6.Location = new System.Drawing.Point(351, 514);
             this.id_buttonLeftLedR2C6.Name = "id_buttonLeftLedR2C6";
+            this.id_buttonLeftLedR2C6.Row = 0;
             this.id_buttonLeftLedR2C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR2C6.TabIndex = 248;
             this.id_buttonLeftLedR2C6.Text = "F1";
@@ -1950,11 +2081,13 @@
             // id_buttonLeftLedR2C5
             // 
             this.id_buttonLeftLedR2C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C5.Col = 0;
             this.id_buttonLeftLedR2C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR2C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR2C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C5.Image")));
             this.id_buttonLeftLedR2C5.Location = new System.Drawing.Point(290, 514);
             this.id_buttonLeftLedR2C5.Name = "id_buttonLeftLedR2C5";
+            this.id_buttonLeftLedR2C5.Row = 0;
             this.id_buttonLeftLedR2C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR2C5.TabIndex = 247;
             this.id_buttonLeftLedR2C5.Text = "F1";
@@ -1963,11 +2096,13 @@
             // id_buttonLeftLedR2C4
             // 
             this.id_buttonLeftLedR2C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C4.Col = 0;
             this.id_buttonLeftLedR2C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR2C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR2C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C4.Image")));
             this.id_buttonLeftLedR2C4.Location = new System.Drawing.Point(229, 514);
             this.id_buttonLeftLedR2C4.Name = "id_buttonLeftLedR2C4";
+            this.id_buttonLeftLedR2C4.Row = 0;
             this.id_buttonLeftLedR2C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR2C4.TabIndex = 246;
             this.id_buttonLeftLedR2C4.Text = "F1";
@@ -1976,11 +2111,13 @@
             // id_buttonLeftLedR2C3
             // 
             this.id_buttonLeftLedR2C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C3.Col = 0;
             this.id_buttonLeftLedR2C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR2C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR2C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C3.Image")));
             this.id_buttonLeftLedR2C3.Location = new System.Drawing.Point(168, 514);
             this.id_buttonLeftLedR2C3.Name = "id_buttonLeftLedR2C3";
+            this.id_buttonLeftLedR2C3.Row = 0;
             this.id_buttonLeftLedR2C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR2C3.TabIndex = 245;
             this.id_buttonLeftLedR2C3.Text = "F1";
@@ -1989,11 +2126,13 @@
             // id_buttonLeftLedR2C2
             // 
             this.id_buttonLeftLedR2C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR2C2.Col = 0;
             this.id_buttonLeftLedR2C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR2C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR2C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR2C2.Image")));
             this.id_buttonLeftLedR2C2.Location = new System.Drawing.Point(107, 514);
             this.id_buttonLeftLedR2C2.Name = "id_buttonLeftLedR2C2";
+            this.id_buttonLeftLedR2C2.Row = 0;
             this.id_buttonLeftLedR2C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR2C2.TabIndex = 244;
             this.id_buttonLeftLedR2C2.Text = "F1";
@@ -2002,11 +2141,13 @@
             // id_buttonLeftLedR1C7
             // 
             this.id_buttonLeftLedR1C7.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C7.Col = 0;
             this.id_buttonLeftLedR1C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR1C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR1C7.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C7.Image")));
             this.id_buttonLeftLedR1C7.Location = new System.Drawing.Point(412, 453);
             this.id_buttonLeftLedR1C7.Name = "id_buttonLeftLedR1C7";
+            this.id_buttonLeftLedR1C7.Row = 0;
             this.id_buttonLeftLedR1C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR1C7.TabIndex = 243;
             this.id_buttonLeftLedR1C7.Text = "F1";
@@ -2015,11 +2156,13 @@
             // id_buttonLeftLedR1C6
             // 
             this.id_buttonLeftLedR1C6.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C6.Col = 0;
             this.id_buttonLeftLedR1C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR1C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR1C6.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C6.Image")));
             this.id_buttonLeftLedR1C6.Location = new System.Drawing.Point(351, 453);
             this.id_buttonLeftLedR1C6.Name = "id_buttonLeftLedR1C6";
+            this.id_buttonLeftLedR1C6.Row = 0;
             this.id_buttonLeftLedR1C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR1C6.TabIndex = 242;
             this.id_buttonLeftLedR1C6.Text = "F1";
@@ -2028,11 +2171,13 @@
             // id_buttonLeftLedR1C5
             // 
             this.id_buttonLeftLedR1C5.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C5.Col = 0;
             this.id_buttonLeftLedR1C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR1C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR1C5.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C5.Image")));
             this.id_buttonLeftLedR1C5.Location = new System.Drawing.Point(290, 453);
             this.id_buttonLeftLedR1C5.Name = "id_buttonLeftLedR1C5";
+            this.id_buttonLeftLedR1C5.Row = 0;
             this.id_buttonLeftLedR1C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR1C5.TabIndex = 241;
             this.id_buttonLeftLedR1C5.Text = "F1";
@@ -2041,11 +2186,13 @@
             // id_buttonLeftLedR1C4
             // 
             this.id_buttonLeftLedR1C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C4.Col = 0;
             this.id_buttonLeftLedR1C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR1C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR1C4.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C4.Image")));
             this.id_buttonLeftLedR1C4.Location = new System.Drawing.Point(229, 453);
             this.id_buttonLeftLedR1C4.Name = "id_buttonLeftLedR1C4";
+            this.id_buttonLeftLedR1C4.Row = 0;
             this.id_buttonLeftLedR1C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR1C4.TabIndex = 240;
             this.id_buttonLeftLedR1C4.Text = "F1";
@@ -2054,11 +2201,13 @@
             // id_buttonLeftLedR1C3
             // 
             this.id_buttonLeftLedR1C3.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C3.Col = 0;
             this.id_buttonLeftLedR1C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR1C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR1C3.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C3.Image")));
             this.id_buttonLeftLedR1C3.Location = new System.Drawing.Point(168, 453);
             this.id_buttonLeftLedR1C3.Name = "id_buttonLeftLedR1C3";
+            this.id_buttonLeftLedR1C3.Row = 0;
             this.id_buttonLeftLedR1C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR1C3.TabIndex = 239;
             this.id_buttonLeftLedR1C3.Text = "F1";
@@ -2067,57 +2216,39 @@
             // id_buttonLeftUpdateLed
             // 
             this.id_buttonLeftUpdateLed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonLeftUpdateLed.Col = 0;
             this.id_buttonLeftUpdateLed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonLeftUpdateLed.Location = new System.Drawing.Point(515, 586);
+            this.id_buttonLeftUpdateLed.Location = new System.Drawing.Point(473, 598);
             this.id_buttonLeftUpdateLed.Name = "id_buttonLeftUpdateLed";
-            this.id_buttonLeftUpdateLed.Size = new System.Drawing.Size(135, 32);
+            this.id_buttonLeftUpdateLed.Row = 0;
+            this.id_buttonLeftUpdateLed.Size = new System.Drawing.Size(177, 32);
             this.id_buttonLeftUpdateLed.TabIndex = 238;
             this.id_buttonLeftUpdateLed.Text = "Update";
             this.id_buttonLeftUpdateLed.UseVisualStyleBackColor = false;
             // 
-            // id_listboxLeftLedStyle
-            // 
-            this.id_listboxLeftLedStyle.BackColor = System.Drawing.Color.White;
-            this.id_listboxLeftLedStyle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_listboxLeftLedStyle.FormattingEnabled = true;
-            this.id_listboxLeftLedStyle.Items.AddRange(new object[] {
-            "Rainbow",
-            "Breath",
-            "On Press"});
-            this.id_listboxLeftLedStyle.Location = new System.Drawing.Point(515, 537);
-            this.id_listboxLeftLedStyle.Name = "id_listboxLeftLedStyle";
-            this.id_listboxLeftLedStyle.Size = new System.Drawing.Size(135, 41);
-            this.id_listboxLeftLedStyle.TabIndex = 237;
-            // 
             // id_buttonLeftLedConnectComPort
             // 
             this.id_buttonLeftLedConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonLeftLedConnectComPort.Col = 0;
             this.id_buttonLeftLedConnectComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonLeftLedConnectComPort.Location = new System.Drawing.Point(515, 475);
+            this.id_buttonLeftLedConnectComPort.Location = new System.Drawing.Point(473, 477);
             this.id_buttonLeftLedConnectComPort.Name = "id_buttonLeftLedConnectComPort";
-            this.id_buttonLeftLedConnectComPort.Size = new System.Drawing.Size(135, 33);
+            this.id_buttonLeftLedConnectComPort.Row = 0;
+            this.id_buttonLeftLedConnectComPort.Size = new System.Drawing.Size(171, 33);
             this.id_buttonLeftLedConnectComPort.TabIndex = 236;
             this.id_buttonLeftLedConnectComPort.Text = "Connect";
             this.id_buttonLeftLedConnectComPort.UseVisualStyleBackColor = false;
             // 
-            // id_listboxLeftLedComPort
-            // 
-            this.id_listboxLeftLedComPort.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_listboxLeftLedComPort.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_listboxLeftLedComPort.FormattingEnabled = true;
-            this.id_listboxLeftLedComPort.Location = new System.Drawing.Point(515, 453);
-            this.id_listboxLeftLedComPort.Name = "id_listboxLeftLedComPort";
-            this.id_listboxLeftLedComPort.Size = new System.Drawing.Size(135, 15);
-            this.id_listboxLeftLedComPort.TabIndex = 234;
-            // 
             // id_buttonLeftLedR1C2
             // 
             this.id_buttonLeftLedR1C2.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftLedR1C2.Col = 0;
             this.id_buttonLeftLedR1C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR1C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftLedR1C2.Image = ((System.Drawing.Image)(resources.GetObject("id_buttonLeftLedR1C2.Image")));
             this.id_buttonLeftLedR1C2.Location = new System.Drawing.Point(107, 453);
             this.id_buttonLeftLedR1C2.Name = "id_buttonLeftLedR1C2";
+            this.id_buttonLeftLedR1C2.Row = 0;
             this.id_buttonLeftLedR1C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftLedR1C2.TabIndex = 233;
             this.id_buttonLeftLedR1C2.Text = "F1";
@@ -2126,9 +2257,11 @@
             // id_buttonRightUpdateKey
             // 
             this.id_buttonRightUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonRightUpdateKey.Col = 0;
             this.id_buttonRightUpdateKey.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.id_buttonRightUpdateKey.Location = new System.Drawing.Point(739, 198);
             this.id_buttonRightUpdateKey.Name = "id_buttonRightUpdateKey";
+            this.id_buttonRightUpdateKey.Row = 0;
             this.id_buttonRightUpdateKey.Size = new System.Drawing.Size(177, 32);
             this.id_buttonRightUpdateKey.TabIndex = 230;
             this.id_buttonRightUpdateKey.Text = "Update";
@@ -2137,9 +2270,11 @@
             // id_buttonLeftUpdateKey
             // 
             this.id_buttonLeftUpdateKey.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonLeftUpdateKey.Col = 0;
             this.id_buttonLeftUpdateKey.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.id_buttonLeftUpdateKey.Location = new System.Drawing.Point(473, 198);
             this.id_buttonLeftUpdateKey.Name = "id_buttonLeftUpdateKey";
+            this.id_buttonLeftUpdateKey.Row = 0;
             this.id_buttonLeftUpdateKey.Size = new System.Drawing.Size(171, 32);
             this.id_buttonLeftUpdateKey.TabIndex = 229;
             this.id_buttonLeftUpdateKey.Text = "Update";
@@ -2170,22 +2305,27 @@
             // id_buttonRightKeyConnectComPort
             // 
             this.id_buttonRightKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonRightKeyConnectComPort.Col = 0;
             this.id_buttonRightKeyConnectComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.id_buttonRightKeyConnectComPort.Location = new System.Drawing.Point(740, 63);
             this.id_buttonRightKeyConnectComPort.Name = "id_buttonRightKeyConnectComPort";
+            this.id_buttonRightKeyConnectComPort.Row = 0;
             this.id_buttonRightKeyConnectComPort.Size = new System.Drawing.Size(176, 33);
             this.id_buttonRightKeyConnectComPort.TabIndex = 218;
             this.id_buttonRightKeyConnectComPort.Text = "Connect";
             this.id_buttonRightKeyConnectComPort.UseVisualStyleBackColor = false;
+            this.id_buttonRightKeyConnectComPort.Click += new System.EventHandler(this.Id_buttonRightKeyConnectComPort_Click);
             // 
             // id_buttonRightR6C3
             // 
             this.id_buttonRightR6C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR6C3.Col = 0;
             this.id_buttonRightR6C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C3.Location = new System.Drawing.Point(1166, 344);
             this.id_buttonRightR6C3.Name = "id_buttonRightR6C3";
+            this.id_buttonRightR6C3.Row = 0;
             this.id_buttonRightR6C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR6C3.TabIndex = 214;
             this.id_buttonRightR6C3.Text = "F1";
@@ -2194,11 +2334,13 @@
             // id_buttonRightR6C2
             // 
             this.id_buttonRightR6C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR6C2.Col = 0;
             this.id_buttonRightR6C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C2.Location = new System.Drawing.Point(1227, 344);
             this.id_buttonRightR6C2.Name = "id_buttonRightR6C2";
+            this.id_buttonRightR6C2.Row = 0;
             this.id_buttonRightR6C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR6C2.TabIndex = 213;
             this.id_buttonRightR6C2.Text = "F1";
@@ -2207,11 +2349,13 @@
             // id_buttonRightR6C4
             // 
             this.id_buttonRightR6C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR6C4.Col = 0;
             this.id_buttonRightR6C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C4.Location = new System.Drawing.Point(1105, 344);
             this.id_buttonRightR6C4.Name = "id_buttonRightR6C4";
+            this.id_buttonRightR6C4.Row = 0;
             this.id_buttonRightR6C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR6C4.TabIndex = 212;
             this.id_buttonRightR6C4.Text = "F1";
@@ -2220,11 +2364,13 @@
             // id_buttonRightR6C5
             // 
             this.id_buttonRightR6C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR6C5.Col = 0;
             this.id_buttonRightR6C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C5.Location = new System.Drawing.Point(1044, 344);
             this.id_buttonRightR6C5.Name = "id_buttonRightR6C5";
+            this.id_buttonRightR6C5.Row = 0;
             this.id_buttonRightR6C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR6C5.TabIndex = 211;
             this.id_buttonRightR6C5.Text = "F1";
@@ -2233,11 +2379,13 @@
             // id_buttonRightR5C1
             // 
             this.id_buttonRightR5C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR5C1.Col = 0;
             this.id_buttonRightR5C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR5C1.Location = new System.Drawing.Point(1288, 283);
             this.id_buttonRightR5C1.Name = "id_buttonRightR5C1";
+            this.id_buttonRightR5C1.Row = 0;
             this.id_buttonRightR5C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightR5C1.TabIndex = 210;
             this.id_buttonRightR5C1.Text = "ESC";
@@ -2246,11 +2394,13 @@
             // id_buttonRightR5C2
             // 
             this.id_buttonRightR5C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR5C2.Col = 0;
             this.id_buttonRightR5C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C2.Location = new System.Drawing.Point(1227, 283);
             this.id_buttonRightR5C2.Name = "id_buttonRightR5C2";
+            this.id_buttonRightR5C2.Row = 0;
             this.id_buttonRightR5C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR5C2.TabIndex = 209;
             this.id_buttonRightR5C2.Text = "F1";
@@ -2259,11 +2409,13 @@
             // id_buttonRightR5C3
             // 
             this.id_buttonRightR5C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR5C3.Col = 0;
             this.id_buttonRightR5C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C3.Location = new System.Drawing.Point(1166, 283);
             this.id_buttonRightR5C3.Name = "id_buttonRightR5C3";
+            this.id_buttonRightR5C3.Row = 0;
             this.id_buttonRightR5C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR5C3.TabIndex = 208;
             this.id_buttonRightR5C3.Text = "F1";
@@ -2272,11 +2424,13 @@
             // id_buttonRightR5C6
             // 
             this.id_buttonRightR5C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR5C6.Col = 0;
             this.id_buttonRightR5C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C6.Location = new System.Drawing.Point(983, 283);
             this.id_buttonRightR5C6.Name = "id_buttonRightR5C6";
+            this.id_buttonRightR5C6.Row = 0;
             this.id_buttonRightR5C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR5C6.TabIndex = 207;
             this.id_buttonRightR5C6.Text = "F1";
@@ -2285,11 +2439,13 @@
             // id_buttonRightR5C4
             // 
             this.id_buttonRightR5C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR5C4.Col = 0;
             this.id_buttonRightR5C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C4.Location = new System.Drawing.Point(1105, 283);
             this.id_buttonRightR5C4.Name = "id_buttonRightR5C4";
+            this.id_buttonRightR5C4.Row = 0;
             this.id_buttonRightR5C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR5C4.TabIndex = 206;
             this.id_buttonRightR5C4.Text = "F1";
@@ -2298,11 +2454,13 @@
             // id_buttonRightR5C5
             // 
             this.id_buttonRightR5C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR5C5.Col = 0;
             this.id_buttonRightR5C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C5.Location = new System.Drawing.Point(1044, 283);
             this.id_buttonRightR5C5.Name = "id_buttonRightR5C5";
+            this.id_buttonRightR5C5.Row = 0;
             this.id_buttonRightR5C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR5C5.TabIndex = 205;
             this.id_buttonRightR5C5.Text = "F1";
@@ -2311,12 +2469,14 @@
             // id_buttonRightR6C1
             // 
             this.id_buttonRightR6C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR6C1.Col = 0;
             this.id_buttonRightR6C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR6C1.Location = new System.Drawing.Point(1288, 344);
             this.id_buttonRightR6C1.Name = "id_buttonRightR6C1";
             this.id_buttonRightR6C1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.id_buttonRightR6C1.Row = 0;
             this.id_buttonRightR6C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightR6C1.TabIndex = 204;
             this.id_buttonRightR6C1.Text = "ESC";
@@ -2325,11 +2485,13 @@
             // id_buttonRightR4C2
             // 
             this.id_buttonRightR4C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR4C2.Col = 0;
             this.id_buttonRightR4C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C2.Location = new System.Drawing.Point(1227, 222);
             this.id_buttonRightR4C2.Name = "id_buttonRightR4C2";
+            this.id_buttonRightR4C2.Row = 0;
             this.id_buttonRightR4C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR4C2.TabIndex = 203;
             this.id_buttonRightR4C2.Text = "F1";
@@ -2338,11 +2500,13 @@
             // id_buttonRightR4C3
             // 
             this.id_buttonRightR4C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR4C3.Col = 0;
             this.id_buttonRightR4C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C3.Location = new System.Drawing.Point(1166, 222);
             this.id_buttonRightR4C3.Name = "id_buttonRightR4C3";
+            this.id_buttonRightR4C3.Row = 0;
             this.id_buttonRightR4C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR4C3.TabIndex = 202;
             this.id_buttonRightR4C3.Text = "F1";
@@ -2351,11 +2515,13 @@
             // id_buttonRightR4C4
             // 
             this.id_buttonRightR4C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR4C4.Col = 0;
             this.id_buttonRightR4C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C4.Location = new System.Drawing.Point(1105, 222);
             this.id_buttonRightR4C4.Name = "id_buttonRightR4C4";
+            this.id_buttonRightR4C4.Row = 0;
             this.id_buttonRightR4C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR4C4.TabIndex = 201;
             this.id_buttonRightR4C4.Text = "F1";
@@ -2364,11 +2530,13 @@
             // id_buttonRightR4C7
             // 
             this.id_buttonRightR4C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR4C7.Col = 0;
             this.id_buttonRightR4C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C7.Location = new System.Drawing.Point(922, 222);
             this.id_buttonRightR4C7.Name = "id_buttonRightR4C7";
+            this.id_buttonRightR4C7.Row = 0;
             this.id_buttonRightR4C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR4C7.TabIndex = 200;
             this.id_buttonRightR4C7.Text = "F1";
@@ -2377,11 +2545,13 @@
             // id_buttonRightR4C5
             // 
             this.id_buttonRightR4C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR4C5.Col = 0;
             this.id_buttonRightR4C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C5.Location = new System.Drawing.Point(1044, 222);
             this.id_buttonRightR4C5.Name = "id_buttonRightR4C5";
+            this.id_buttonRightR4C5.Row = 0;
             this.id_buttonRightR4C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR4C5.TabIndex = 199;
             this.id_buttonRightR4C5.Text = "F1";
@@ -2390,11 +2560,13 @@
             // id_buttonRightR4C6
             // 
             this.id_buttonRightR4C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR4C6.Col = 0;
             this.id_buttonRightR4C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C6.Location = new System.Drawing.Point(983, 222);
             this.id_buttonRightR4C6.Name = "id_buttonRightR4C6";
+            this.id_buttonRightR4C6.Row = 0;
             this.id_buttonRightR4C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR4C6.TabIndex = 198;
             this.id_buttonRightR4C6.Text = "F1";
@@ -2403,11 +2575,13 @@
             // id_buttonRightR3C2
             // 
             this.id_buttonRightR3C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR3C2.Col = 0;
             this.id_buttonRightR3C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C2.Location = new System.Drawing.Point(1227, 161);
             this.id_buttonRightR3C2.Name = "id_buttonRightR3C2";
+            this.id_buttonRightR3C2.Row = 0;
             this.id_buttonRightR3C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR3C2.TabIndex = 197;
             this.id_buttonRightR3C2.Text = "F1";
@@ -2416,11 +2590,13 @@
             // id_buttonRightR3C3
             // 
             this.id_buttonRightR3C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR3C3.Col = 0;
             this.id_buttonRightR3C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C3.Location = new System.Drawing.Point(1166, 161);
             this.id_buttonRightR3C3.Name = "id_buttonRightR3C3";
+            this.id_buttonRightR3C3.Row = 0;
             this.id_buttonRightR3C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR3C3.TabIndex = 196;
             this.id_buttonRightR3C3.Text = "F1";
@@ -2429,11 +2605,13 @@
             // id_buttonRightR3C4
             // 
             this.id_buttonRightR3C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR3C4.Col = 0;
             this.id_buttonRightR3C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C4.Location = new System.Drawing.Point(1105, 161);
             this.id_buttonRightR3C4.Name = "id_buttonRightR3C4";
+            this.id_buttonRightR3C4.Row = 0;
             this.id_buttonRightR3C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR3C4.TabIndex = 195;
             this.id_buttonRightR3C4.Text = "F1";
@@ -2442,11 +2620,13 @@
             // id_buttonRightR3C7
             // 
             this.id_buttonRightR3C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR3C7.Col = 0;
             this.id_buttonRightR3C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C7.Location = new System.Drawing.Point(922, 161);
             this.id_buttonRightR3C7.Name = "id_buttonRightR3C7";
+            this.id_buttonRightR3C7.Row = 0;
             this.id_buttonRightR3C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR3C7.TabIndex = 194;
             this.id_buttonRightR3C7.Text = "F1";
@@ -2455,11 +2635,13 @@
             // id_buttonRightR3C5
             // 
             this.id_buttonRightR3C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR3C5.Col = 0;
             this.id_buttonRightR3C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C5.Location = new System.Drawing.Point(1044, 161);
             this.id_buttonRightR3C5.Name = "id_buttonRightR3C5";
+            this.id_buttonRightR3C5.Row = 0;
             this.id_buttonRightR3C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR3C5.TabIndex = 193;
             this.id_buttonRightR3C5.Text = "F1";
@@ -2468,11 +2650,13 @@
             // id_buttonRightR3C6
             // 
             this.id_buttonRightR3C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR3C6.Col = 0;
             this.id_buttonRightR3C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C6.Location = new System.Drawing.Point(983, 161);
             this.id_buttonRightR3C6.Name = "id_buttonRightR3C6";
+            this.id_buttonRightR3C6.Row = 0;
             this.id_buttonRightR3C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR3C6.TabIndex = 192;
             this.id_buttonRightR3C6.Text = "F1";
@@ -2481,11 +2665,13 @@
             // id_buttonRightR2C2
             // 
             this.id_buttonRightR2C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR2C2.Col = 0;
             this.id_buttonRightR2C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C2.Location = new System.Drawing.Point(1227, 100);
             this.id_buttonRightR2C2.Name = "id_buttonRightR2C2";
+            this.id_buttonRightR2C2.Row = 0;
             this.id_buttonRightR2C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR2C2.TabIndex = 191;
             this.id_buttonRightR2C2.Text = "F1";
@@ -2494,11 +2680,13 @@
             // id_buttonRightR2C3
             // 
             this.id_buttonRightR2C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR2C3.Col = 0;
             this.id_buttonRightR2C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C3.Location = new System.Drawing.Point(1166, 100);
             this.id_buttonRightR2C3.Name = "id_buttonRightR2C3";
+            this.id_buttonRightR2C3.Row = 0;
             this.id_buttonRightR2C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR2C3.TabIndex = 190;
             this.id_buttonRightR2C3.Text = "F1";
@@ -2507,11 +2695,13 @@
             // id_buttonRightR2C4
             // 
             this.id_buttonRightR2C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR2C4.Col = 0;
             this.id_buttonRightR2C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C4.Location = new System.Drawing.Point(1105, 100);
             this.id_buttonRightR2C4.Name = "id_buttonRightR2C4";
+            this.id_buttonRightR2C4.Row = 0;
             this.id_buttonRightR2C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR2C4.TabIndex = 189;
             this.id_buttonRightR2C4.Text = "F1";
@@ -2520,11 +2710,13 @@
             // id_buttonRightR2C7
             // 
             this.id_buttonRightR2C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR2C7.Col = 0;
             this.id_buttonRightR2C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C7.Location = new System.Drawing.Point(922, 100);
             this.id_buttonRightR2C7.Name = "id_buttonRightR2C7";
+            this.id_buttonRightR2C7.Row = 0;
             this.id_buttonRightR2C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR2C7.TabIndex = 188;
             this.id_buttonRightR2C7.Text = "F1";
@@ -2533,11 +2725,13 @@
             // id_buttonRightR2C5
             // 
             this.id_buttonRightR2C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR2C5.Col = 0;
             this.id_buttonRightR2C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C5.Location = new System.Drawing.Point(1044, 100);
             this.id_buttonRightR2C5.Name = "id_buttonRightR2C5";
+            this.id_buttonRightR2C5.Row = 0;
             this.id_buttonRightR2C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR2C5.TabIndex = 187;
             this.id_buttonRightR2C5.Text = "F1";
@@ -2546,11 +2740,13 @@
             // id_buttonRightR2C6
             // 
             this.id_buttonRightR2C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR2C6.Col = 0;
             this.id_buttonRightR2C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C6.Location = new System.Drawing.Point(983, 100);
             this.id_buttonRightR2C6.Name = "id_buttonRightR2C6";
+            this.id_buttonRightR2C6.Row = 0;
             this.id_buttonRightR2C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR2C6.TabIndex = 186;
             this.id_buttonRightR2C6.Text = "F1";
@@ -2559,11 +2755,13 @@
             // id_buttonRightR4C1
             // 
             this.id_buttonRightR4C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR4C1.Col = 0;
             this.id_buttonRightR4C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR4C1.Location = new System.Drawing.Point(1288, 222);
             this.id_buttonRightR4C1.Name = "id_buttonRightR4C1";
+            this.id_buttonRightR4C1.Row = 0;
             this.id_buttonRightR4C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightR4C1.TabIndex = 185;
             this.id_buttonRightR4C1.Text = "ESC";
@@ -2572,11 +2770,13 @@
             // id_buttonRightR3C1
             // 
             this.id_buttonRightR3C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR3C1.Col = 0;
             this.id_buttonRightR3C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR3C1.Location = new System.Drawing.Point(1288, 161);
             this.id_buttonRightR3C1.Name = "id_buttonRightR3C1";
+            this.id_buttonRightR3C1.Row = 0;
             this.id_buttonRightR3C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightR3C1.TabIndex = 184;
             this.id_buttonRightR3C1.Text = "ESC";
@@ -2585,11 +2785,13 @@
             // id_buttonRightR2C1
             // 
             this.id_buttonRightR2C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR2C1.Col = 0;
             this.id_buttonRightR2C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR2C1.Location = new System.Drawing.Point(1288, 100);
             this.id_buttonRightR2C1.Name = "id_buttonRightR2C1";
+            this.id_buttonRightR2C1.Row = 0;
             this.id_buttonRightR2C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightR2C1.TabIndex = 183;
             this.id_buttonRightR2C1.Text = "ESC";
@@ -2598,11 +2800,13 @@
             // id_buttonRightR1C2
             // 
             this.id_buttonRightR1C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR1C2.Col = 0;
             this.id_buttonRightR1C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C2.Location = new System.Drawing.Point(1227, 39);
             this.id_buttonRightR1C2.Name = "id_buttonRightR1C2";
+            this.id_buttonRightR1C2.Row = 0;
             this.id_buttonRightR1C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR1C2.TabIndex = 182;
             this.id_buttonRightR1C2.Text = "F1";
@@ -2611,11 +2815,13 @@
             // id_buttonRightR1C3
             // 
             this.id_buttonRightR1C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR1C3.Col = 0;
             this.id_buttonRightR1C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C3.Location = new System.Drawing.Point(1166, 39);
             this.id_buttonRightR1C3.Name = "id_buttonRightR1C3";
+            this.id_buttonRightR1C3.Row = 0;
             this.id_buttonRightR1C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR1C3.TabIndex = 181;
             this.id_buttonRightR1C3.Text = "F1";
@@ -2624,11 +2830,13 @@
             // id_buttonRightR1C4
             // 
             this.id_buttonRightR1C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR1C4.Col = 0;
             this.id_buttonRightR1C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C4.Location = new System.Drawing.Point(1105, 39);
             this.id_buttonRightR1C4.Name = "id_buttonRightR1C4";
+            this.id_buttonRightR1C4.Row = 0;
             this.id_buttonRightR1C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR1C4.TabIndex = 180;
             this.id_buttonRightR1C4.Text = "F1";
@@ -2637,11 +2845,13 @@
             // id_buttonRightR1C7
             // 
             this.id_buttonRightR1C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR1C7.Col = 0;
             this.id_buttonRightR1C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C7.Location = new System.Drawing.Point(922, 39);
             this.id_buttonRightR1C7.Name = "id_buttonRightR1C7";
+            this.id_buttonRightR1C7.Row = 0;
             this.id_buttonRightR1C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR1C7.TabIndex = 179;
             this.id_buttonRightR1C7.Text = "F1";
@@ -2650,11 +2860,13 @@
             // id_buttonRightR1C5
             // 
             this.id_buttonRightR1C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR1C5.Col = 0;
             this.id_buttonRightR1C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C5.Location = new System.Drawing.Point(1044, 39);
             this.id_buttonRightR1C5.Name = "id_buttonRightR1C5";
+            this.id_buttonRightR1C5.Row = 0;
             this.id_buttonRightR1C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR1C5.TabIndex = 178;
             this.id_buttonRightR1C5.Text = "F1";
@@ -2663,11 +2875,13 @@
             // id_buttonRightR1C6
             // 
             this.id_buttonRightR1C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR1C6.Col = 0;
             this.id_buttonRightR1C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C6.Location = new System.Drawing.Point(983, 39);
             this.id_buttonRightR1C6.Name = "id_buttonRightR1C6";
+            this.id_buttonRightR1C6.Row = 0;
             this.id_buttonRightR1C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR1C6.TabIndex = 177;
             this.id_buttonRightR1C6.Text = "F1";
@@ -2676,11 +2890,13 @@
             // id_buttonRightR1C1
             // 
             this.id_buttonRightR1C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR1C1.Col = 0;
             this.id_buttonRightR1C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR1C1.Location = new System.Drawing.Point(1288, 39);
             this.id_buttonRightR1C1.Name = "id_buttonRightR1C1";
+            this.id_buttonRightR1C1.Row = 0;
             this.id_buttonRightR1C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonRightR1C1.TabIndex = 176;
             this.id_buttonRightR1C1.Text = "ESC";
@@ -2689,11 +2905,13 @@
             // id_buttonRightR6C8
             // 
             this.id_buttonRightR6C8.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR6C8.Col = 0;
             this.id_buttonRightR6C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C8.Location = new System.Drawing.Point(739, 358);
             this.id_buttonRightR6C8.Name = "id_buttonRightR6C8";
+            this.id_buttonRightR6C8.Row = 0;
             this.id_buttonRightR6C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR6C8.TabIndex = 175;
             this.id_buttonRightR6C8.Text = "F1";
@@ -2702,11 +2920,13 @@
             // id_buttonRightR5C8
             // 
             this.id_buttonRightR5C8.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR5C8.Col = 0;
             this.id_buttonRightR5C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C8.Location = new System.Drawing.Point(739, 297);
             this.id_buttonRightR5C8.Name = "id_buttonRightR5C8";
+            this.id_buttonRightR5C8.Row = 0;
             this.id_buttonRightR5C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR5C8.TabIndex = 174;
             this.id_buttonRightR5C8.Text = "F1";
@@ -2715,11 +2935,13 @@
             // id_buttonRightR5C7
             // 
             this.id_buttonRightR5C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR5C7.Col = 0;
             this.id_buttonRightR5C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C7.Location = new System.Drawing.Point(922, 283);
             this.id_buttonRightR5C7.Name = "id_buttonRightR5C7";
+            this.id_buttonRightR5C7.Row = 0;
             this.id_buttonRightR5C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR5C7.TabIndex = 173;
             this.id_buttonRightR5C7.Text = "F1";
@@ -2728,11 +2950,13 @@
             // id_buttonRightR3C8
             // 
             this.id_buttonRightR3C8.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR3C8.Col = 0;
             this.id_buttonRightR3C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C8.Location = new System.Drawing.Point(800, 236);
             this.id_buttonRightR3C8.Name = "id_buttonRightR3C8";
+            this.id_buttonRightR3C8.Row = 0;
             this.id_buttonRightR3C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR3C8.TabIndex = 172;
             this.id_buttonRightR3C8.Text = "F1";
@@ -2741,11 +2965,13 @@
             // id_buttonRightR4C8
             // 
             this.id_buttonRightR4C8.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR4C8.Col = 0;
             this.id_buttonRightR4C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C8.Location = new System.Drawing.Point(739, 236);
             this.id_buttonRightR4C8.Name = "id_buttonRightR4C8";
+            this.id_buttonRightR4C8.Row = 0;
             this.id_buttonRightR4C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonRightR4C8.TabIndex = 171;
             this.id_buttonRightR4C8.Text = "F1";
@@ -2754,11 +2980,13 @@
             // id_buttonRightR6C7
             // 
             this.id_buttonRightR6C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR6C7.Col = 0;
             this.id_buttonRightR6C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
             this.id_buttonRightR6C7.Location = new System.Drawing.Point(800, 297);
             this.id_buttonRightR6C7.Name = "id_buttonRightR6C7";
+            this.id_buttonRightR6C7.Row = 0;
             this.id_buttonRightR6C7.Size = new System.Drawing.Size(55, 109);
             this.id_buttonRightR6C7.TabIndex = 170;
             this.id_buttonRightR6C7.Text = "F1";
@@ -2767,11 +2995,13 @@
             // id_buttonRightR6C6
             // 
             this.id_buttonRightR6C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonRightR6C6.Col = 0;
             this.id_buttonRightR6C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonRightR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
             this.id_buttonRightR6C6.Location = new System.Drawing.Point(861, 297);
             this.id_buttonRightR6C6.Name = "id_buttonRightR6C6";
+            this.id_buttonRightR6C6.Row = 0;
             this.id_buttonRightR6C6.Size = new System.Drawing.Size(55, 109);
             this.id_buttonRightR6C6.TabIndex = 169;
             this.id_buttonRightR6C6.Text = "F1";
@@ -2780,11 +3010,13 @@
             // id_buttonLeftR6C8
             // 
             this.id_buttonLeftR6C8.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR6C8.Col = 0;
             this.id_buttonLeftR6C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C8.Location = new System.Drawing.Point(589, 358);
             this.id_buttonLeftR6C8.Name = "id_buttonLeftR6C8";
+            this.id_buttonLeftR6C8.Row = 0;
             this.id_buttonLeftR6C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR6C8.TabIndex = 168;
             this.id_buttonLeftR6C8.Text = "F1";
@@ -2793,11 +3025,13 @@
             // id_buttonLeftR5C8
             // 
             this.id_buttonLeftR5C8.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR5C8.Col = 0;
             this.id_buttonLeftR5C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C8.Location = new System.Drawing.Point(589, 297);
             this.id_buttonLeftR5C8.Name = "id_buttonLeftR5C8";
+            this.id_buttonLeftR5C8.Row = 0;
             this.id_buttonLeftR5C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR5C8.TabIndex = 167;
             this.id_buttonLeftR5C8.Text = "F1";
@@ -2806,11 +3040,13 @@
             // id_buttonLeftR4C8
             // 
             this.id_buttonLeftR4C8.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR4C8.Col = 0;
             this.id_buttonLeftR4C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C8.Location = new System.Drawing.Point(589, 236);
             this.id_buttonLeftR4C8.Name = "id_buttonLeftR4C8";
+            this.id_buttonLeftR4C8.Row = 0;
             this.id_buttonLeftR4C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR4C8.TabIndex = 166;
             this.id_buttonLeftR4C8.Text = "F1";
@@ -2819,11 +3055,13 @@
             // id_buttonLeftR3C8
             // 
             this.id_buttonLeftR3C8.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR3C8.Col = 0;
             this.id_buttonLeftR3C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C8.Location = new System.Drawing.Point(528, 236);
             this.id_buttonLeftR3C8.Name = "id_buttonLeftR3C8";
+            this.id_buttonLeftR3C8.Row = 0;
             this.id_buttonLeftR3C8.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR3C8.TabIndex = 165;
             this.id_buttonLeftR3C8.Text = "F1";
@@ -2832,11 +3070,13 @@
             // id_buttonLeftR6C7
             // 
             this.id_buttonLeftR6C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR6C7.Col = 0;
             this.id_buttonLeftR6C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
             this.id_buttonLeftR6C7.Location = new System.Drawing.Point(528, 297);
             this.id_buttonLeftR6C7.Name = "id_buttonLeftR6C7";
+            this.id_buttonLeftR6C7.Row = 0;
             this.id_buttonLeftR6C7.Size = new System.Drawing.Size(55, 109);
             this.id_buttonLeftR6C7.TabIndex = 164;
             this.id_buttonLeftR6C7.Text = "F1";
@@ -2845,11 +3085,13 @@
             // id_buttonLeftR6C6
             // 
             this.id_buttonLeftR6C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR6C6.Col = 0;
             this.id_buttonLeftR6C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
             this.id_buttonLeftR6C6.Location = new System.Drawing.Point(467, 297);
             this.id_buttonLeftR6C6.Name = "id_buttonLeftR6C6";
+            this.id_buttonLeftR6C6.Row = 0;
             this.id_buttonLeftR6C6.Size = new System.Drawing.Size(55, 109);
             this.id_buttonLeftR6C6.TabIndex = 163;
             this.id_buttonLeftR6C6.Text = "F1";
@@ -2858,11 +3100,13 @@
             // id_buttonLeftR6C5
             // 
             this.id_buttonLeftR6C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR6C5.Col = 0;
             this.id_buttonLeftR6C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C5.Location = new System.Drawing.Point(284, 344);
             this.id_buttonLeftR6C5.Name = "id_buttonLeftR6C5";
+            this.id_buttonLeftR6C5.Row = 0;
             this.id_buttonLeftR6C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR6C5.TabIndex = 162;
             this.id_buttonLeftR6C5.Text = "F1";
@@ -2871,11 +3115,13 @@
             // id_buttonLeftR6C2
             // 
             this.id_buttonLeftR6C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR6C2.Col = 0;
             this.id_buttonLeftR6C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C2.Location = new System.Drawing.Point(101, 344);
             this.id_buttonLeftR6C2.Name = "id_buttonLeftR6C2";
+            this.id_buttonLeftR6C2.Row = 0;
             this.id_buttonLeftR6C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR6C2.TabIndex = 161;
             this.id_buttonLeftR6C2.Text = "F1";
@@ -2884,11 +3130,13 @@
             // id_buttonLeftR6C4
             // 
             this.id_buttonLeftR6C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR6C4.Col = 0;
             this.id_buttonLeftR6C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C4.Location = new System.Drawing.Point(223, 344);
             this.id_buttonLeftR6C4.Name = "id_buttonLeftR6C4";
+            this.id_buttonLeftR6C4.Row = 0;
             this.id_buttonLeftR6C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR6C4.TabIndex = 160;
             this.id_buttonLeftR6C4.Text = "F1";
@@ -2897,11 +3145,13 @@
             // id_buttonLeftR6C3
             // 
             this.id_buttonLeftR6C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR6C3.Col = 0;
             this.id_buttonLeftR6C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C3.Location = new System.Drawing.Point(162, 344);
             this.id_buttonLeftR6C3.Name = "id_buttonLeftR6C3";
+            this.id_buttonLeftR6C3.Row = 0;
             this.id_buttonLeftR6C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR6C3.TabIndex = 159;
             this.id_buttonLeftR6C3.Text = "F1";
@@ -2910,11 +3160,13 @@
             // id_buttonLeftR6C1
             // 
             this.id_buttonLeftR6C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR6C1.Col = 0;
             this.id_buttonLeftR6C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR6C1.Location = new System.Drawing.Point(13, 344);
             this.id_buttonLeftR6C1.Name = "id_buttonLeftR6C1";
+            this.id_buttonLeftR6C1.Row = 0;
             this.id_buttonLeftR6C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftR6C1.TabIndex = 158;
             this.id_buttonLeftR6C1.Text = "ESC";
@@ -2923,11 +3175,13 @@
             // id_buttonLeftR5C7
             // 
             this.id_buttonLeftR5C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR5C7.Col = 0;
             this.id_buttonLeftR5C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C7.Location = new System.Drawing.Point(406, 283);
             this.id_buttonLeftR5C7.Name = "id_buttonLeftR5C7";
+            this.id_buttonLeftR5C7.Row = 0;
             this.id_buttonLeftR5C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR5C7.TabIndex = 157;
             this.id_buttonLeftR5C7.Text = "F1";
@@ -2936,11 +3190,13 @@
             // id_buttonLeftR5C6
             // 
             this.id_buttonLeftR5C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR5C6.Col = 0;
             this.id_buttonLeftR5C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C6.Location = new System.Drawing.Point(345, 283);
             this.id_buttonLeftR5C6.Name = "id_buttonLeftR5C6";
+            this.id_buttonLeftR5C6.Row = 0;
             this.id_buttonLeftR5C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR5C6.TabIndex = 156;
             this.id_buttonLeftR5C6.Text = "F1";
@@ -2949,11 +3205,13 @@
             // id_buttonLeftR5C5
             // 
             this.id_buttonLeftR5C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR5C5.Col = 0;
             this.id_buttonLeftR5C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C5.Location = new System.Drawing.Point(284, 283);
             this.id_buttonLeftR5C5.Name = "id_buttonLeftR5C5";
+            this.id_buttonLeftR5C5.Row = 0;
             this.id_buttonLeftR5C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR5C5.TabIndex = 155;
             this.id_buttonLeftR5C5.Text = "F1";
@@ -2962,11 +3220,13 @@
             // id_buttonLeftR5C2
             // 
             this.id_buttonLeftR5C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR5C2.Col = 0;
             this.id_buttonLeftR5C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C2.Location = new System.Drawing.Point(101, 283);
             this.id_buttonLeftR5C2.Name = "id_buttonLeftR5C2";
+            this.id_buttonLeftR5C2.Row = 0;
             this.id_buttonLeftR5C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR5C2.TabIndex = 154;
             this.id_buttonLeftR5C2.Text = "F1";
@@ -2975,11 +3235,13 @@
             // id_buttonLeftR5C4
             // 
             this.id_buttonLeftR5C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR5C4.Col = 0;
             this.id_buttonLeftR5C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C4.Location = new System.Drawing.Point(223, 283);
             this.id_buttonLeftR5C4.Name = "id_buttonLeftR5C4";
+            this.id_buttonLeftR5C4.Row = 0;
             this.id_buttonLeftR5C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR5C4.TabIndex = 153;
             this.id_buttonLeftR5C4.Text = "F1";
@@ -2988,11 +3250,13 @@
             // id_buttonLeftR5C3
             // 
             this.id_buttonLeftR5C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR5C3.Col = 0;
             this.id_buttonLeftR5C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C3.Location = new System.Drawing.Point(162, 283);
             this.id_buttonLeftR5C3.Name = "id_buttonLeftR5C3";
+            this.id_buttonLeftR5C3.Row = 0;
             this.id_buttonLeftR5C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR5C3.TabIndex = 152;
             this.id_buttonLeftR5C3.Text = "F1";
@@ -3001,11 +3265,13 @@
             // id_buttonLeftR4C7
             // 
             this.id_buttonLeftR4C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR4C7.Col = 0;
             this.id_buttonLeftR4C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C7.Location = new System.Drawing.Point(406, 222);
             this.id_buttonLeftR4C7.Name = "id_buttonLeftR4C7";
+            this.id_buttonLeftR4C7.Row = 0;
             this.id_buttonLeftR4C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR4C7.TabIndex = 151;
             this.id_buttonLeftR4C7.Text = "F1";
@@ -3014,11 +3280,13 @@
             // id_buttonLeftR4C6
             // 
             this.id_buttonLeftR4C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR4C6.Col = 0;
             this.id_buttonLeftR4C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C6.Location = new System.Drawing.Point(345, 222);
             this.id_buttonLeftR4C6.Name = "id_buttonLeftR4C6";
+            this.id_buttonLeftR4C6.Row = 0;
             this.id_buttonLeftR4C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR4C6.TabIndex = 150;
             this.id_buttonLeftR4C6.Text = "F1";
@@ -3027,11 +3295,13 @@
             // id_buttonLeftR4C5
             // 
             this.id_buttonLeftR4C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR4C5.Col = 0;
             this.id_buttonLeftR4C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C5.Location = new System.Drawing.Point(284, 222);
             this.id_buttonLeftR4C5.Name = "id_buttonLeftR4C5";
+            this.id_buttonLeftR4C5.Row = 0;
             this.id_buttonLeftR4C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR4C5.TabIndex = 149;
             this.id_buttonLeftR4C5.Text = "F1";
@@ -3040,11 +3310,13 @@
             // id_buttonLeftR4C2
             // 
             this.id_buttonLeftR4C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR4C2.Col = 0;
             this.id_buttonLeftR4C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C2.Location = new System.Drawing.Point(101, 222);
             this.id_buttonLeftR4C2.Name = "id_buttonLeftR4C2";
+            this.id_buttonLeftR4C2.Row = 0;
             this.id_buttonLeftR4C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR4C2.TabIndex = 148;
             this.id_buttonLeftR4C2.Text = "F1";
@@ -3053,11 +3325,13 @@
             // id_buttonLeftR4C4
             // 
             this.id_buttonLeftR4C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR4C4.Col = 0;
             this.id_buttonLeftR4C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C4.Location = new System.Drawing.Point(223, 222);
             this.id_buttonLeftR4C4.Name = "id_buttonLeftR4C4";
+            this.id_buttonLeftR4C4.Row = 0;
             this.id_buttonLeftR4C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR4C4.TabIndex = 147;
             this.id_buttonLeftR4C4.Text = "F1";
@@ -3066,11 +3340,13 @@
             // id_buttonLeftR4C3
             // 
             this.id_buttonLeftR4C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR4C3.Col = 0;
             this.id_buttonLeftR4C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C3.Location = new System.Drawing.Point(162, 222);
             this.id_buttonLeftR4C3.Name = "id_buttonLeftR4C3";
+            this.id_buttonLeftR4C3.Row = 0;
             this.id_buttonLeftR4C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR4C3.TabIndex = 146;
             this.id_buttonLeftR4C3.Text = "F1";
@@ -3079,11 +3355,13 @@
             // id_buttonLeftR3C7
             // 
             this.id_buttonLeftR3C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR3C7.Col = 0;
             this.id_buttonLeftR3C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C7.Location = new System.Drawing.Point(406, 161);
             this.id_buttonLeftR3C7.Name = "id_buttonLeftR3C7";
+            this.id_buttonLeftR3C7.Row = 0;
             this.id_buttonLeftR3C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR3C7.TabIndex = 145;
             this.id_buttonLeftR3C7.Text = "F1";
@@ -3092,11 +3370,13 @@
             // id_buttonLeftR3C6
             // 
             this.id_buttonLeftR3C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR3C6.Col = 0;
             this.id_buttonLeftR3C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C6.Location = new System.Drawing.Point(345, 161);
             this.id_buttonLeftR3C6.Name = "id_buttonLeftR3C6";
+            this.id_buttonLeftR3C6.Row = 0;
             this.id_buttonLeftR3C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR3C6.TabIndex = 144;
             this.id_buttonLeftR3C6.Text = "F1";
@@ -3105,11 +3385,13 @@
             // id_buttonLeftR3C5
             // 
             this.id_buttonLeftR3C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR3C5.Col = 0;
             this.id_buttonLeftR3C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C5.Location = new System.Drawing.Point(284, 161);
             this.id_buttonLeftR3C5.Name = "id_buttonLeftR3C5";
+            this.id_buttonLeftR3C5.Row = 0;
             this.id_buttonLeftR3C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR3C5.TabIndex = 143;
             this.id_buttonLeftR3C5.Text = "F1";
@@ -3118,11 +3400,13 @@
             // id_buttonLeftR3C2
             // 
             this.id_buttonLeftR3C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR3C2.Col = 0;
             this.id_buttonLeftR3C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C2.Location = new System.Drawing.Point(101, 161);
             this.id_buttonLeftR3C2.Name = "id_buttonLeftR3C2";
+            this.id_buttonLeftR3C2.Row = 0;
             this.id_buttonLeftR3C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR3C2.TabIndex = 142;
             this.id_buttonLeftR3C2.Text = "F1";
@@ -3131,11 +3415,13 @@
             // id_buttonLeftR3C4
             // 
             this.id_buttonLeftR3C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR3C4.Col = 0;
             this.id_buttonLeftR3C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C4.Location = new System.Drawing.Point(223, 161);
             this.id_buttonLeftR3C4.Name = "id_buttonLeftR3C4";
+            this.id_buttonLeftR3C4.Row = 0;
             this.id_buttonLeftR3C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR3C4.TabIndex = 141;
             this.id_buttonLeftR3C4.Text = "F1";
@@ -3144,11 +3430,13 @@
             // id_buttonLeftR3C3
             // 
             this.id_buttonLeftR3C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR3C3.Col = 0;
             this.id_buttonLeftR3C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C3.Location = new System.Drawing.Point(162, 161);
             this.id_buttonLeftR3C3.Name = "id_buttonLeftR3C3";
+            this.id_buttonLeftR3C3.Row = 0;
             this.id_buttonLeftR3C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR3C3.TabIndex = 140;
             this.id_buttonLeftR3C3.Text = "F1";
@@ -3157,11 +3445,13 @@
             // id_buttonLeftR2C7
             // 
             this.id_buttonLeftR2C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR2C7.Col = 0;
             this.id_buttonLeftR2C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C7.Location = new System.Drawing.Point(406, 100);
             this.id_buttonLeftR2C7.Name = "id_buttonLeftR2C7";
+            this.id_buttonLeftR2C7.Row = 0;
             this.id_buttonLeftR2C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR2C7.TabIndex = 139;
             this.id_buttonLeftR2C7.Text = "F1";
@@ -3171,11 +3461,13 @@
             // id_buttonLeftR2C6
             // 
             this.id_buttonLeftR2C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR2C6.Col = 0;
             this.id_buttonLeftR2C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C6.Location = new System.Drawing.Point(345, 100);
             this.id_buttonLeftR2C6.Name = "id_buttonLeftR2C6";
+            this.id_buttonLeftR2C6.Row = 0;
             this.id_buttonLeftR2C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR2C6.TabIndex = 138;
             this.id_buttonLeftR2C6.Text = "F1";
@@ -3185,11 +3477,13 @@
             // id_buttonLeftR2C5
             // 
             this.id_buttonLeftR2C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR2C5.Col = 0;
             this.id_buttonLeftR2C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C5.Location = new System.Drawing.Point(284, 100);
             this.id_buttonLeftR2C5.Name = "id_buttonLeftR2C5";
+            this.id_buttonLeftR2C5.Row = 0;
             this.id_buttonLeftR2C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR2C5.TabIndex = 137;
             this.id_buttonLeftR2C5.Text = "F1";
@@ -3199,11 +3493,13 @@
             // id_buttonLeftR2C2
             // 
             this.id_buttonLeftR2C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR2C2.Col = 0;
             this.id_buttonLeftR2C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C2.Location = new System.Drawing.Point(101, 100);
             this.id_buttonLeftR2C2.Name = "id_buttonLeftR2C2";
+            this.id_buttonLeftR2C2.Row = 0;
             this.id_buttonLeftR2C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR2C2.TabIndex = 136;
             this.id_buttonLeftR2C2.Text = "F1";
@@ -3213,11 +3509,13 @@
             // id_buttonLeftR2C4
             // 
             this.id_buttonLeftR2C4.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR2C4.Col = 0;
             this.id_buttonLeftR2C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C4.Location = new System.Drawing.Point(223, 100);
             this.id_buttonLeftR2C4.Name = "id_buttonLeftR2C4";
+            this.id_buttonLeftR2C4.Row = 0;
             this.id_buttonLeftR2C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR2C4.TabIndex = 135;
             this.id_buttonLeftR2C4.Text = "F1";
@@ -3227,11 +3525,13 @@
             // id_buttonLeftR2C3
             // 
             this.id_buttonLeftR2C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR2C3.Col = 0;
             this.id_buttonLeftR2C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C3.Location = new System.Drawing.Point(162, 100);
             this.id_buttonLeftR2C3.Name = "id_buttonLeftR2C3";
+            this.id_buttonLeftR2C3.Row = 0;
             this.id_buttonLeftR2C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR2C3.TabIndex = 134;
             this.id_buttonLeftR2C3.Text = "F1";
@@ -3241,12 +3541,14 @@
             // id_buttonLeftR5C1
             // 
             this.id_buttonLeftR5C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR5C1.Col = 0;
             this.id_buttonLeftR5C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR5C1.Location = new System.Drawing.Point(13, 283);
             this.id_buttonLeftR5C1.Name = "id_buttonLeftR5C1";
             this.id_buttonLeftR5C1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.id_buttonLeftR5C1.Row = 0;
             this.id_buttonLeftR5C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftR5C1.TabIndex = 133;
             this.id_buttonLeftR5C1.Text = "ESC";
@@ -3255,11 +3557,13 @@
             // id_buttonLeftR4C1
             // 
             this.id_buttonLeftR4C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR4C1.Col = 0;
             this.id_buttonLeftR4C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR4C1.Location = new System.Drawing.Point(13, 222);
             this.id_buttonLeftR4C1.Name = "id_buttonLeftR4C1";
+            this.id_buttonLeftR4C1.Row = 0;
             this.id_buttonLeftR4C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftR4C1.TabIndex = 132;
             this.id_buttonLeftR4C1.Text = "ESC";
@@ -3268,11 +3572,13 @@
             // id_buttonLeftR3C1
             // 
             this.id_buttonLeftR3C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR3C1.Col = 0;
             this.id_buttonLeftR3C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR3C1.Location = new System.Drawing.Point(13, 161);
             this.id_buttonLeftR3C1.Name = "id_buttonLeftR3C1";
+            this.id_buttonLeftR3C1.Row = 0;
             this.id_buttonLeftR3C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftR3C1.TabIndex = 131;
             this.id_buttonLeftR3C1.Text = "ESC";
@@ -3281,11 +3587,13 @@
             // id_buttonLeftR2C1
             // 
             this.id_buttonLeftR2C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR2C1.Col = 0;
             this.id_buttonLeftR2C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR2C1.Location = new System.Drawing.Point(13, 100);
             this.id_buttonLeftR2C1.Name = "id_buttonLeftR2C1";
+            this.id_buttonLeftR2C1.Row = 0;
             this.id_buttonLeftR2C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftR2C1.TabIndex = 130;
             this.id_buttonLeftR2C1.Text = "ESC";
@@ -3295,11 +3603,13 @@
             // id_buttonLeftR1C7
             // 
             this.id_buttonLeftR1C7.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR1C7.Col = 0;
             this.id_buttonLeftR1C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C7.Location = new System.Drawing.Point(406, 39);
             this.id_buttonLeftR1C7.Name = "id_buttonLeftR1C7";
+            this.id_buttonLeftR1C7.Row = 0;
             this.id_buttonLeftR1C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C7.TabIndex = 129;
             this.id_buttonLeftR1C7.Text = "F1";
@@ -3309,11 +3619,13 @@
             // id_buttonLeftR1C6
             // 
             this.id_buttonLeftR1C6.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR1C6.Col = 0;
             this.id_buttonLeftR1C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C6.Location = new System.Drawing.Point(345, 39);
             this.id_buttonLeftR1C6.Name = "id_buttonLeftR1C6";
+            this.id_buttonLeftR1C6.Row = 0;
             this.id_buttonLeftR1C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C6.TabIndex = 128;
             this.id_buttonLeftR1C6.Text = "F1";
@@ -3323,11 +3635,13 @@
             // id_buttonLeftR1C5
             // 
             this.id_buttonLeftR1C5.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR1C5.Col = 0;
             this.id_buttonLeftR1C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C5.Location = new System.Drawing.Point(284, 39);
             this.id_buttonLeftR1C5.Name = "id_buttonLeftR1C5";
+            this.id_buttonLeftR1C5.Row = 0;
             this.id_buttonLeftR1C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C5.TabIndex = 127;
             this.id_buttonLeftR1C5.Text = "F1";
@@ -3337,11 +3651,13 @@
             // id_buttonLeftR1C2
             // 
             this.id_buttonLeftR1C2.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR1C2.Col = 0;
             this.id_buttonLeftR1C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C2.Location = new System.Drawing.Point(101, 39);
             this.id_buttonLeftR1C2.Name = "id_buttonLeftR1C2";
+            this.id_buttonLeftR1C2.Row = 0;
             this.id_buttonLeftR1C2.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C2.TabIndex = 126;
             this.id_buttonLeftR1C2.Text = "F1";
@@ -3351,11 +3667,13 @@
             // id_buttonLeftR1C4
             // 
             this.id_buttonLeftR1C4.BackColor = System.Drawing.Color.Transparent;
+            this.id_buttonLeftR1C4.Col = 0;
             this.id_buttonLeftR1C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C4.Location = new System.Drawing.Point(223, 39);
             this.id_buttonLeftR1C4.Name = "id_buttonLeftR1C4";
+            this.id_buttonLeftR1C4.Row = 0;
             this.id_buttonLeftR1C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C4.TabIndex = 125;
             this.id_buttonLeftR1C4.Text = "F1";
@@ -3365,11 +3683,13 @@
             // id_buttonLeftR1C3
             // 
             this.id_buttonLeftR1C3.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR1C3.Col = 0;
             this.id_buttonLeftR1C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C3.Location = new System.Drawing.Point(162, 39);
             this.id_buttonLeftR1C3.Name = "id_buttonLeftR1C3";
+            this.id_buttonLeftR1C3.Row = 0;
             this.id_buttonLeftR1C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C3.TabIndex = 124;
             this.id_buttonLeftR1C3.Text = "F1";
@@ -3379,11 +3699,13 @@
             // id_buttonLeftR1C1
             // 
             this.id_buttonLeftR1C1.BackColor = System.Drawing.Color.Black;
+            this.id_buttonLeftR1C1.Col = 0;
             this.id_buttonLeftR1C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.id_buttonLeftR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR1C1.Location = new System.Drawing.Point(13, 39);
             this.id_buttonLeftR1C1.Name = "id_buttonLeftR1C1";
+            this.id_buttonLeftR1C1.Row = 0;
             this.id_buttonLeftR1C1.Size = new System.Drawing.Size(82, 55);
             this.id_buttonLeftR1C1.TabIndex = 123;
             this.id_buttonLeftR1C1.Text = "ESC";
@@ -3393,14 +3715,40 @@
             // id_buttonLeftKeyConnectComPort
             // 
             this.id_buttonLeftKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonLeftKeyConnectComPort.Col = 0;
             this.id_buttonLeftKeyConnectComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.id_buttonLeftKeyConnectComPort.Location = new System.Drawing.Point(473, 63);
             this.id_buttonLeftKeyConnectComPort.Name = "id_buttonLeftKeyConnectComPort";
+            this.id_buttonLeftKeyConnectComPort.Row = 0;
             this.id_buttonLeftKeyConnectComPort.Size = new System.Drawing.Size(171, 33);
             this.id_buttonLeftKeyConnectComPort.TabIndex = 119;
             this.id_buttonLeftKeyConnectComPort.Text = "Connect";
             this.id_buttonLeftKeyConnectComPort.UseVisualStyleBackColor = false;
             this.id_buttonLeftKeyConnectComPort.Click += new System.EventHandler(this.Id_buttonLeftKeyConnectComPort_Click);
+            // 
+            // id_comboboxLeftLedComPort
+            // 
+            this.id_comboboxLeftLedComPort.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.id_comboboxLeftLedComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.id_comboboxLeftLedComPort.FormattingEnabled = true;
+            this.id_comboboxLeftLedComPort.Location = new System.Drawing.Point(473, 453);
+            this.id_comboboxLeftLedComPort.Margin = new System.Windows.Forms.Padding(0);
+            this.id_comboboxLeftLedComPort.Name = "id_comboboxLeftLedComPort";
+            this.id_comboboxLeftLedComPort.Size = new System.Drawing.Size(171, 21);
+            this.id_comboboxLeftLedComPort.TabIndex = 346;
+            this.id_comboboxLeftLedComPort.Text = "Select Com Port";
+            // 
+            // id_comboboxRightLedComPort
+            // 
+            this.id_comboboxRightLedComPort.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.id_comboboxRightLedComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.id_comboboxRightLedComPort.FormattingEnabled = true;
+            this.id_comboboxRightLedComPort.Location = new System.Drawing.Point(739, 453);
+            this.id_comboboxRightLedComPort.Margin = new System.Windows.Forms.Padding(0);
+            this.id_comboboxRightLedComPort.Name = "id_comboboxRightLedComPort";
+            this.id_comboboxRightLedComPort.Size = new System.Drawing.Size(177, 21);
+            this.id_comboboxRightLedComPort.TabIndex = 347;
+            this.id_comboboxRightLedComPort.Text = "Select Com Port";
             // 
             // FreeErgonomics
             // 
@@ -3544,9 +3892,7 @@
         private Design.MyButton id_buttonLeftLedR1C4;
         private Design.MyButton id_buttonLeftLedR1C3;
         private Design.MyButton id_buttonLeftUpdateLed;
-        private System.Windows.Forms.ListBox id_listboxLeftLedStyle;
         private Design.MyButton id_buttonLeftLedConnectComPort;
-        private System.Windows.Forms.ListBox id_listboxLeftLedComPort;
         private Design.MyButton id_buttonLeftLedR4C7;
         private Design.MyButton id_buttonLeftLedR4C6;
         private Design.MyButton id_buttonLeftLedR4C5;
@@ -3591,7 +3937,6 @@
         private Design.MyButton id_buttonRightUpdateLed;
         private System.Windows.Forms.ListBox id_listboxRightLedStyle;
         private Design.MyButton id_buttonRightLedConnectComPort;
-        private System.Windows.Forms.ListBox listBox4;
         private Design.MyButton id_buttonRightLedR6C1;
         private Design.MyButton id_buttonRightLedR6C4;
         private Design.MyButton id_buttonRightLedR6C5;
@@ -3638,8 +3983,6 @@
         private Design.MyButton id_buttonLeftLedR3C8;
         private Design.MyButton id_buttonLeftLedR6C7;
         private Design.MyButton id_buttonLeftLedR6C6;
-        private System.Windows.Forms.ListBox id_listboxRightLedComPort;
-        private System.Windows.Forms.ListBox listBox5;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private Design.MyComboBox id_comboboxLeftKeyValue;
         private Design.MyComboBox id_comboboxLeftKeyLayer;
@@ -3647,6 +3990,8 @@
         private Design.MyComboBox id_comboboxRightKeyLayer;
         private Design.MyComboBox id_comboboxRightKeyComPort;
         private Design.MyComboBox id_comboboxRightKeyValue;
+        private MyComboBox id_comboboxLeftLedComPort;
+        private MyComboBox id_comboboxRightLedComPort;
     }
 }
 
