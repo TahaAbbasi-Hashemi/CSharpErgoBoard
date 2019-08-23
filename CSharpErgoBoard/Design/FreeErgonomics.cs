@@ -773,7 +773,6 @@ namespace CSharpErgoBoard.Design
                 Popup errorPopup = new Popup(error, "Connecting Error", m_selectedDarkMode);
             }
         }
-
         private void Id_buttonRightKeyConnectComPort_Click(object sender, EventArgs reason)
         {
             Programming.Logging.Instance.Log($"Right Keyboard Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
@@ -790,5 +789,94 @@ namespace CSharpErgoBoard.Design
                 Popup errorPopup = new Popup(error, "Connecting Error", m_selectedDarkMode);
             }
         }
+        private void Id_buttonLeftLedConnectComPort_Click(object sender, EventArgs reason)
+        {
+            Programming.Logging.Instance.Log($"Left LED Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
+                     "Information");
+            String currentPort = FullPortToJustCom((String)id_comboboxLeftLedComPort.SelectedItem);
+            Programming.Logging.Instance.Log(currentPort, "Information");
+
+            String error = null;
+            Boolean err = false;
+            err = m_processing.Connect("Left LED", currentPort, out error);
+
+            if (!err)
+            {
+                Popup errorPopup = new Popup(error, "Connecting Error", m_selectedDarkMode);
+            }
+        }
+        private void Id_buttonRightLedConnectComPort_Click(object sender, EventArgs reason)
+        {
+            Programming.Logging.Instance.Log($"Right LED Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
+                     "Information");
+            String currentPort = FullPortToJustCom((String)id_comboboxRightLedComPort.SelectedItem);
+            Programming.Logging.Instance.Log(currentPort, "Information");
+
+            String error = null;
+            Boolean err = false;
+            err = m_processing.Connect("Right LED", currentPort, out error);
+
+            if (!err)
+            {
+                Popup errorPopup = new Popup(error, "Connecting Error", m_selectedDarkMode);
+            }
+        }
+
+        private void id_buttonLeftUpdateLed_Click(object sender, EventArgs reason)
+        {
+            Programming.Logging.Instance.Log($"Right LED Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
+                                 "Information");
+
+            // Has a connection been made. 
+            if (!m_processing.IsConnected("Right LED"))
+            {
+                Programming.Logging.Instance.Log("Update was attempted to be made before connection", severity: "Error");
+                Popup noKeyError = new Popup("A connection must be made before a key can be updated.",
+                                             "Updating Keyboard Error",
+                                             m_selectedDarkMode);
+                return;
+            }
+            // If no key value was selected
+            if (id_comboboxLeftKeyValue.SelectedIndex == -1)
+            {
+                Programming.Logging.Instance.Log("A keyboard value was not selected", severity: "Error");
+                Popup noKeyError = new Popup("You need to enter a key value to continue",
+                                             "Updating Keyboard Error",
+                                             m_selectedDarkMode);
+                return;
+            }
+            // If no layer was selected
+            if (id_comboboxLeftKeyLayer.SelectedIndex == -1)
+            {
+                Programming.Logging.Instance.Log("A layer was not selected.", severity: "Error");
+                Popup noKeyError = new Popup("You need to enter a layer to continue",
+                                             "Updating Keyboard Error",
+                                             m_selectedDarkMode);
+                return;
+            }
+            // If no button was selected
+            if (id_textboxLeftKeyValue.Text == "Selected Button")
+            {
+                Programming.Logging.Instance.Log("No key was selected", severity: "Error");
+                Popup noKeyError = new Popup("You need to select a key to continue",
+                                             "Updating Keyboard Error",
+                                             m_selectedDarkMode);
+                return;
+            }
+
+            m_leftSelectedKeyButton.Text = (String)id_comboboxLeftKeyValue.SelectedItem;    // Updates the button 
+
+            m_processing.Update("Left Keyboard",
+                                (String)id_comboboxLeftKeyLayer.SelectedItem,
+                                m_leftSelectedKeyButton.MakeKeyName(),
+                                (String)id_comboboxLeftKeyValue.SelectedItem);
+        }
+
+        private void id_buttonRightUpdateLed_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
+using System.Threading;
 
 namespace CSharpErgoBoard.Design
 {
@@ -17,10 +18,11 @@ namespace CSharpErgoBoard.Design
         {
             ReadTimeout = 1000;
             BaudRate = 9600;
-            Parity = Parity.None;
+            //Parity = Parity.None;
             DataBits = 8;
             StopBits = StopBits.One;
             Handshake = Handshake.None;
+            ReceivedBytesThreshold = 1;
         }
 
         public Boolean MakeConnection(in String port, in String wantedType)
@@ -29,9 +31,10 @@ namespace CSharpErgoBoard.Design
             Open();
 
             WriteLine("Name");
-
+            Thread.Sleep(5000);
             m_type = ReadLine();
-            if (m_type == wantedType)
+
+            if (m_type.Substring(0,m_type.Length-1) == wantedType)
             {
                 return true;
             }

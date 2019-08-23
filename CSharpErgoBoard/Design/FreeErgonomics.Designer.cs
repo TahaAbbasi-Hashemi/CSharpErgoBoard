@@ -42,6 +42,12 @@
             this.id_menuReferences = new System.Windows.Forms.ToolStripMenuItem();
             this.id_menuCopyright = new System.Windows.Forms.ToolStripMenuItem();
             this.id_panelMain = new System.Windows.Forms.Panel();
+            this.id_listboxRightLedStyle = new System.Windows.Forms.ListBox();
+            this.id_textboxLeftKeyValue = new System.Windows.Forms.TextBox();
+            this.id_textboxRightKeyValue = new System.Windows.Forms.TextBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.id_comboboxRightLedComPort = new CSharpErgoBoard.Design.MyComboBox();
+            this.id_comboboxLeftLedComPort = new CSharpErgoBoard.Design.MyComboBox();
             this.id_comboboxRightKeyValue = new CSharpErgoBoard.Design.MyComboBox();
             this.id_comboboxRightKeyLayer = new CSharpErgoBoard.Design.MyComboBox();
             this.id_comboboxRightKeyComPort = new CSharpErgoBoard.Design.MyComboBox();
@@ -54,8 +60,6 @@
             this.id_buttonRightLedR5C8 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR6C6 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR6C7 = new CSharpErgoBoard.Design.MyButton();
-            this.id_buttonRightUpdateLed = new CSharpErgoBoard.Design.MyButton();
-            this.id_listboxRightLedStyle = new System.Windows.Forms.ListBox();
             this.id_buttonRightLedConnectComPort = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR6C1 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR6C4 = new CSharpErgoBoard.Design.MyButton();
@@ -142,13 +146,10 @@
             this.id_buttonLeftLedR1C5 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftLedR1C4 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftLedR1C3 = new CSharpErgoBoard.Design.MyButton();
-            this.id_buttonLeftUpdateLed = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftLedConnectComPort = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftLedR1C2 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightUpdateKey = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftUpdateKey = new CSharpErgoBoard.Design.MyButton();
-            this.id_textboxLeftKeyValue = new System.Windows.Forms.TextBox();
-            this.id_textboxRightKeyValue = new System.Windows.Forms.TextBox();
             this.id_buttonRightKeyConnectComPort = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightR6C3 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightR6C2 = new CSharpErgoBoard.Design.MyButton();
@@ -243,9 +244,8 @@
             this.id_buttonLeftR1C3 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftR1C1 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftKeyConnectComPort = new CSharpErgoBoard.Design.MyButton();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.id_comboboxLeftLedComPort = new CSharpErgoBoard.Design.MyComboBox();
-            this.id_comboboxRightLedComPort = new CSharpErgoBoard.Design.MyComboBox();
+            this.id_buttonLeftUpdateLed = new CSharpErgoBoard.Design.MyButton();
+            this.id_buttonRightUpdateLed = new CSharpErgoBoard.Design.MyButton();
             this.menuStrip1.SuspendLayout();
             this.id_panelMain.SuspendLayout();
             this.SuspendLayout();
@@ -557,6 +557,65 @@
             this.id_panelMain.Name = "id_panelMain";
             this.id_panelMain.Size = new System.Drawing.Size(1401, 854);
             this.id_panelMain.TabIndex = 1;
+            // 
+            // id_listboxRightLedStyle
+            // 
+            this.id_listboxRightLedStyle.BackColor = System.Drawing.Color.White;
+            this.id_listboxRightLedStyle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_listboxRightLedStyle.FormattingEnabled = true;
+            this.id_listboxRightLedStyle.Items.AddRange(new object[] {
+            "Rainbow",
+            "Breathing",
+            "On Press"});
+            this.id_listboxRightLedStyle.Location = new System.Drawing.Point(740, 551);
+            this.id_listboxRightLedStyle.Name = "id_listboxRightLedStyle";
+            this.id_listboxRightLedStyle.Size = new System.Drawing.Size(135, 41);
+            this.id_listboxRightLedStyle.TabIndex = 329;
+            // 
+            // id_textboxLeftKeyValue
+            // 
+            this.id_textboxLeftKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_textboxLeftKeyValue.Location = new System.Drawing.Point(473, 145);
+            this.id_textboxLeftKeyValue.Name = "id_textboxLeftKeyValue";
+            this.id_textboxLeftKeyValue.ReadOnly = true;
+            this.id_textboxLeftKeyValue.Size = new System.Drawing.Size(171, 20);
+            this.id_textboxLeftKeyValue.TabIndex = 228;
+            this.id_textboxLeftKeyValue.Text = "Selected Button";
+            this.id_textboxLeftKeyValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // id_textboxRightKeyValue
+            // 
+            this.id_textboxRightKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_textboxRightKeyValue.Location = new System.Drawing.Point(740, 145);
+            this.id_textboxRightKeyValue.Name = "id_textboxRightKeyValue";
+            this.id_textboxRightKeyValue.Size = new System.Drawing.Size(176, 20);
+            this.id_textboxRightKeyValue.TabIndex = 226;
+            this.id_textboxRightKeyValue.Text = "Selected Button";
+            this.id_textboxRightKeyValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // id_comboboxRightLedComPort
+            // 
+            this.id_comboboxRightLedComPort.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.id_comboboxRightLedComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.id_comboboxRightLedComPort.FormattingEnabled = true;
+            this.id_comboboxRightLedComPort.Location = new System.Drawing.Point(739, 453);
+            this.id_comboboxRightLedComPort.Margin = new System.Windows.Forms.Padding(0);
+            this.id_comboboxRightLedComPort.Name = "id_comboboxRightLedComPort";
+            this.id_comboboxRightLedComPort.Size = new System.Drawing.Size(177, 21);
+            this.id_comboboxRightLedComPort.TabIndex = 347;
+            this.id_comboboxRightLedComPort.Text = "Select Com Port";
+            // 
+            // id_comboboxLeftLedComPort
+            // 
+            this.id_comboboxLeftLedComPort.BackColor = System.Drawing.SystemColors.ScrollBar;
+            this.id_comboboxLeftLedComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.id_comboboxLeftLedComPort.FormattingEnabled = true;
+            this.id_comboboxLeftLedComPort.Location = new System.Drawing.Point(473, 453);
+            this.id_comboboxLeftLedComPort.Margin = new System.Windows.Forms.Padding(0);
+            this.id_comboboxLeftLedComPort.Name = "id_comboboxLeftLedComPort";
+            this.id_comboboxLeftLedComPort.Size = new System.Drawing.Size(171, 21);
+            this.id_comboboxLeftLedComPort.TabIndex = 346;
+            this.id_comboboxLeftLedComPort.Text = "Select Com Port";
             // 
             // id_comboboxRightKeyValue
             // 
@@ -898,33 +957,6 @@
             this.id_buttonRightLedR6C7.Text = "F1";
             this.id_buttonRightLedR6C7.UseVisualStyleBackColor = false;
             // 
-            // id_buttonRightUpdateLed
-            // 
-            this.id_buttonRightUpdateLed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonRightUpdateLed.Col = 0;
-            this.id_buttonRightUpdateLed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonRightUpdateLed.Location = new System.Drawing.Point(739, 598);
-            this.id_buttonRightUpdateLed.Name = "id_buttonRightUpdateLed";
-            this.id_buttonRightUpdateLed.Row = 0;
-            this.id_buttonRightUpdateLed.Size = new System.Drawing.Size(177, 32);
-            this.id_buttonRightUpdateLed.TabIndex = 330;
-            this.id_buttonRightUpdateLed.Text = "Update";
-            this.id_buttonRightUpdateLed.UseVisualStyleBackColor = false;
-            // 
-            // id_listboxRightLedStyle
-            // 
-            this.id_listboxRightLedStyle.BackColor = System.Drawing.Color.White;
-            this.id_listboxRightLedStyle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_listboxRightLedStyle.FormattingEnabled = true;
-            this.id_listboxRightLedStyle.Items.AddRange(new object[] {
-            "Rainbow",
-            "Breathing",
-            "On Press"});
-            this.id_listboxRightLedStyle.Location = new System.Drawing.Point(740, 551);
-            this.id_listboxRightLedStyle.Name = "id_listboxRightLedStyle";
-            this.id_listboxRightLedStyle.Size = new System.Drawing.Size(135, 41);
-            this.id_listboxRightLedStyle.TabIndex = 329;
-            // 
             // id_buttonRightLedConnectComPort
             // 
             this.id_buttonRightLedConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -937,6 +969,7 @@
             this.id_buttonRightLedConnectComPort.TabIndex = 328;
             this.id_buttonRightLedConnectComPort.Text = "Connect";
             this.id_buttonRightLedConnectComPort.UseVisualStyleBackColor = false;
+            this.id_buttonRightLedConnectComPort.Click += new System.EventHandler(this.Id_buttonRightLedConnectComPort_Click);
             // 
             // id_buttonRightLedR6C1
             // 
@@ -2213,19 +2246,6 @@
             this.id_buttonLeftLedR1C3.Text = "F1";
             this.id_buttonLeftLedR1C3.UseVisualStyleBackColor = false;
             // 
-            // id_buttonLeftUpdateLed
-            // 
-            this.id_buttonLeftUpdateLed.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.id_buttonLeftUpdateLed.Col = 0;
-            this.id_buttonLeftUpdateLed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_buttonLeftUpdateLed.Location = new System.Drawing.Point(473, 598);
-            this.id_buttonLeftUpdateLed.Name = "id_buttonLeftUpdateLed";
-            this.id_buttonLeftUpdateLed.Row = 0;
-            this.id_buttonLeftUpdateLed.Size = new System.Drawing.Size(177, 32);
-            this.id_buttonLeftUpdateLed.TabIndex = 238;
-            this.id_buttonLeftUpdateLed.Text = "Update";
-            this.id_buttonLeftUpdateLed.UseVisualStyleBackColor = false;
-            // 
             // id_buttonLeftLedConnectComPort
             // 
             this.id_buttonLeftLedConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -2238,6 +2258,7 @@
             this.id_buttonLeftLedConnectComPort.TabIndex = 236;
             this.id_buttonLeftLedConnectComPort.Text = "Connect";
             this.id_buttonLeftLedConnectComPort.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedConnectComPort.Click += new System.EventHandler(this.Id_buttonLeftLedConnectComPort_Click);
             // 
             // id_buttonLeftLedR1C2
             // 
@@ -2280,27 +2301,6 @@
             this.id_buttonLeftUpdateKey.Text = "Update";
             this.id_buttonLeftUpdateKey.UseVisualStyleBackColor = false;
             this.id_buttonLeftUpdateKey.Click += new System.EventHandler(this.Id_buttonLeftUpdateKey_Click);
-            // 
-            // id_textboxLeftKeyValue
-            // 
-            this.id_textboxLeftKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_textboxLeftKeyValue.Location = new System.Drawing.Point(473, 145);
-            this.id_textboxLeftKeyValue.Name = "id_textboxLeftKeyValue";
-            this.id_textboxLeftKeyValue.ReadOnly = true;
-            this.id_textboxLeftKeyValue.Size = new System.Drawing.Size(171, 20);
-            this.id_textboxLeftKeyValue.TabIndex = 228;
-            this.id_textboxLeftKeyValue.Text = "Selected Button";
-            this.id_textboxLeftKeyValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // id_textboxRightKeyValue
-            // 
-            this.id_textboxRightKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_textboxRightKeyValue.Location = new System.Drawing.Point(740, 145);
-            this.id_textboxRightKeyValue.Name = "id_textboxRightKeyValue";
-            this.id_textboxRightKeyValue.Size = new System.Drawing.Size(176, 20);
-            this.id_textboxRightKeyValue.TabIndex = 226;
-            this.id_textboxRightKeyValue.Text = "Selected Button";
-            this.id_textboxRightKeyValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // id_buttonRightKeyConnectComPort
             // 
@@ -3726,29 +3726,33 @@
             this.id_buttonLeftKeyConnectComPort.UseVisualStyleBackColor = false;
             this.id_buttonLeftKeyConnectComPort.Click += new System.EventHandler(this.Id_buttonLeftKeyConnectComPort_Click);
             // 
-            // id_comboboxLeftLedComPort
+            // id_buttonLeftUpdateLed
             // 
-            this.id_comboboxLeftLedComPort.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.id_comboboxLeftLedComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_comboboxLeftLedComPort.FormattingEnabled = true;
-            this.id_comboboxLeftLedComPort.Location = new System.Drawing.Point(473, 453);
-            this.id_comboboxLeftLedComPort.Margin = new System.Windows.Forms.Padding(0);
-            this.id_comboboxLeftLedComPort.Name = "id_comboboxLeftLedComPort";
-            this.id_comboboxLeftLedComPort.Size = new System.Drawing.Size(171, 21);
-            this.id_comboboxLeftLedComPort.TabIndex = 346;
-            this.id_comboboxLeftLedComPort.Text = "Select Com Port";
+            this.id_buttonLeftUpdateLed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonLeftUpdateLed.Col = 0;
+            this.id_buttonLeftUpdateLed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.id_buttonLeftUpdateLed.Location = new System.Drawing.Point(473, 598);
+            this.id_buttonLeftUpdateLed.Name = "id_buttonLeftUpdateLed";
+            this.id_buttonLeftUpdateLed.Row = 0;
+            this.id_buttonLeftUpdateLed.Size = new System.Drawing.Size(177, 32);
+            this.id_buttonLeftUpdateLed.TabIndex = 238;
+            this.id_buttonLeftUpdateLed.Text = "Update";
+            this.id_buttonLeftUpdateLed.UseVisualStyleBackColor = false;
+            this.id_buttonLeftUpdateLed.Click += new System.EventHandler(this.id_buttonLeftUpdateLed_Click);
             // 
-            // id_comboboxRightLedComPort
+            // id_buttonRightUpdateLed
             // 
-            this.id_comboboxRightLedComPort.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.id_comboboxRightLedComPort.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.id_comboboxRightLedComPort.FormattingEnabled = true;
-            this.id_comboboxRightLedComPort.Location = new System.Drawing.Point(739, 453);
-            this.id_comboboxRightLedComPort.Margin = new System.Windows.Forms.Padding(0);
-            this.id_comboboxRightLedComPort.Name = "id_comboboxRightLedComPort";
-            this.id_comboboxRightLedComPort.Size = new System.Drawing.Size(177, 21);
-            this.id_comboboxRightLedComPort.TabIndex = 347;
-            this.id_comboboxRightLedComPort.Text = "Select Com Port";
+            this.id_buttonRightUpdateLed.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.id_buttonRightUpdateLed.Col = 0;
+            this.id_buttonRightUpdateLed.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.id_buttonRightUpdateLed.Location = new System.Drawing.Point(739, 598);
+            this.id_buttonRightUpdateLed.Name = "id_buttonRightUpdateLed";
+            this.id_buttonRightUpdateLed.Row = 0;
+            this.id_buttonRightUpdateLed.Size = new System.Drawing.Size(177, 32);
+            this.id_buttonRightUpdateLed.TabIndex = 330;
+            this.id_buttonRightUpdateLed.Text = "Update";
+            this.id_buttonRightUpdateLed.UseVisualStyleBackColor = false;
+            this.id_buttonRightUpdateLed.Click += new System.EventHandler(this.id_buttonRightUpdateLed_Click);
             // 
             // FreeErgonomics
             // 
@@ -3891,7 +3895,6 @@
         private Design.MyButton id_buttonLeftLedR1C5;
         private Design.MyButton id_buttonLeftLedR1C4;
         private Design.MyButton id_buttonLeftLedR1C3;
-        private Design.MyButton id_buttonLeftUpdateLed;
         private Design.MyButton id_buttonLeftLedConnectComPort;
         private Design.MyButton id_buttonLeftLedR4C7;
         private Design.MyButton id_buttonLeftLedR4C6;
@@ -3934,7 +3937,6 @@
         private Design.MyButton id_buttonRightLedR5C8;
         private Design.MyButton id_buttonRightLedR6C6;
         private Design.MyButton id_buttonRightLedR6C7;
-        private Design.MyButton id_buttonRightUpdateLed;
         private System.Windows.Forms.ListBox id_listboxRightLedStyle;
         private Design.MyButton id_buttonRightLedConnectComPort;
         private Design.MyButton id_buttonRightLedR6C1;
@@ -3992,6 +3994,8 @@
         private Design.MyComboBox id_comboboxRightKeyValue;
         private MyComboBox id_comboboxLeftLedComPort;
         private MyComboBox id_comboboxRightLedComPort;
+        private MyButton id_buttonRightUpdateLed;
+        private MyButton id_buttonLeftUpdateLed;
     }
 }
 

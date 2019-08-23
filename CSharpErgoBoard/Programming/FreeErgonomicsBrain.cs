@@ -13,6 +13,7 @@ namespace CSharpErgoBoard.Programming
     {
 
         //Private Readonly Members
+        private readonly Dictionary<String, UInt32> m_conversion = new Dictionary<String, UInt32>();
         private readonly Design.MySerialPort m_leftKeyConnection = new Design.MySerialPort();
         private readonly Design.MySerialPort m_rightKeyConnection = new Design.MySerialPort();
         private readonly Design.MySerialPort m_leftLEDConnection = new Design.MySerialPort();
@@ -45,6 +46,52 @@ namespace CSharpErgoBoard.Programming
 
         public FreeErgonomicsBrain()
         {
+            // Layers
+            m_conversion.Add("None", 0);
+            m_conversion.Add("Layer 1", 1);
+            m_conversion.Add("Layer 2", 2);
+            m_conversion.Add("layer 3", 3);
+            m_conversion.Add("Layer 4", 4);
+            m_conversion.Add("Layer 5", 5);
+
+            m_conversion.Add("Left Ctrl", 128);
+            m_conversion.Add("Left Shift", 129);
+            m_conversion.Add("Left Alt", 130);
+            m_conversion.Add("Left Win", 131);
+            m_conversion.Add("Right Ctrl", 132);
+            m_conversion.Add("Right Shift", 133);
+            m_conversion.Add("Right Alt", 134);
+            m_conversion.Add("Right Win", 135);
+            m_conversion.Add("Up Arrow", 218);
+            m_conversion.Add("Down Arrow", 217);
+            m_conversion.Add("Left Arrow", 216);
+            m_conversion.Add("Right Arrow", 215);
+            m_conversion.Add("Backspace", 178);
+            m_conversion.Add("Tab", 179);
+            m_conversion.Add("Return", 176);
+            m_conversion.Add("Esc", 177);
+            m_conversion.Add("Insert", 209);
+            m_conversion.Add("Delete", 212);
+            m_conversion.Add("Page Up", 211);
+            m_conversion.Add("Page Down", 214);
+            m_conversion.Add("Home", 210);
+            m_conversion.Add("End", 213);
+            m_conversion.Add("Caps Lock", 193);
+            // All 24 F keys.
+            int j = 1;
+            for (UInt32 i = 194; i < 252; i++)
+            {
+                String name = "F" + j.ToString();
+                m_conversion.Add(name, i);
+                j++;
+            }
+
+            // Characters
+            m_conversion.Add("Space", 32);
+            m_conversion.Add("~", 126);
+
+
+
 
         }
 
@@ -143,8 +190,22 @@ namespace CSharpErgoBoard.Programming
             // Wrong type
             if (!rightType)
             {
+                Logging.Instance.Log("Connection was made, but wrong information gotten", "Debug");
+                Logging.Instance.Log(connectingPort.Type, "Debug");
+                connectingPort.Close();
+
+                if (connectingPort.Type == "NA")
+                {
+                    error = "No response was gotten from the port.\n" +
+                        "Please make sure this is the correct port or try again.";
+
+                }
+                else
+                {
+                    error = "This port is a :" + connectingPort.Type + "\n" +
+                        "Please try a different connection for a :" + type + "connection.";
+                }
                 return false;
-                ;
             }
             Logging.Instance.Log("A serial port connection for '" + type + "' was made at '" + comPort + "'", "Success");
 
@@ -222,6 +283,12 @@ namespace CSharpErgoBoard.Programming
             return true;
         }
 
+        public Boolean Convert(in String inValue, out Int32 outValue)
+        {
+
+            outValue = 2; 
+            return true;
+        }
         public void Close()
         {
             m_leftKeyConnection.Close();

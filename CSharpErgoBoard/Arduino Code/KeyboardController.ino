@@ -1,6 +1,6 @@
 ﻿#include "Keyboard.h"
 
-/*
+/*qqqqwwwwewqewqeqwewqqqqqAAaaaaaaaaaa
    Layer Change Keys
    Change to layer 0 206
    Change to layer 1 207
@@ -9,17 +9,28 @@
    Change to layer 4 210
 */
 
-byte changeLayer0 = 206;
-byte changeLayer1 = 207;
-byte changeLayer2 = 208;
-byte changeLayer3 = 209;
-byte changeLayer4 = 210;
-byte layer = 1;  // max of 5 layers
+byte none = 0;
+byte changeLayer0 = 1;
+byte changeLayer1 = 2;
+byte changeLayer2 = 3;
+byte changeLayer3 = 5;
+byte changeLayer4 = 5;
+char ctrlKey = KEY_LEFT_GUI;
+byte layer = 0;  // max of 5 layers
 int layers[5][6][8] =
 {
+  // Layer 000qqqqq
+  {
+    {KEY_ESC,  KEY_F1,  KEY_F2,  KEY_F3,  KEY_F4,  KEY_F5,  KEY_F6,  0},
+    {96,  49,   50,   51,   52,   53,   54,   0},
+    {KEY_TAB,  113,  119,  101,  114,  116,  0,    0},
+    {KEY_CAPS_LOCK,  97,   115,  100,  102,  103,  178,  0},
+    {KEY_LEFT_SHIFT,  122,  120,  99,   118,  98,   179,  0},
+    {KEY_LEFT_CTRL,  131,  130,  0,    176,  32,   179,  0}
+  },
   // Layer 1
   {
-    {177,  194,  195,  196,  197,  198,  199,  0},
+    {KEY_F7,  KEY_F8,  KEY_F9,  KEY_F10,  KEY_F11,  KEY_F12,  199,  0},
     {126,  49,   50,   51,   52,   53,   54,   0},
     {179,  113,  119,  101,  114,  116,  0,    0},
     {193,  97,   115,  100,  102,  103,  178,  0},
@@ -52,19 +63,10 @@ int layers[5][6][8] =
     {193,  97,   115,  100,  102,  103,  178,  0},
     {133,  122,  120,  99,   118,  98,   179,  0},
     {128,  131,  130,  0,    176,  32,   179,  0}
-  },
-  // Layer 5
-  {
-    {177,  194,  195,  196,  197,  198,  199,  0},
-    {126,  49,   50,   51,   52,   53,   54,   0},
-    {179,  113,  119,  101,  114,  116,  0,    0},
-    {193,  97,   115,  100,  102,  103,  178,  0},
-    {133,  122,  120,  99,   118,  98,   179,  0},
-    {128,  131,  130,  0,    176,  32,   179,  0}
   }
 };
 
-int rows[6] = { A0, A1, A2, A3, A4, A5};
+int rows[6] = {A5, A4, A3, A2, A1, A0};
 
 unsigned long waitTime[6][8] =
 {
@@ -82,11 +84,11 @@ void setup()
 {
   // open the serial port:
   Serial.begin(9600);
-  while (!Serial)
+  //while (!Serial)
   { // wait for serial connection to be setup.
     ;
   }
-  Serial.setTimeout(10);  // 10ms timeout instead of 1s
+  Serial.setTimeout(100);  // 10ms timeout instead of 1s
 
   // initialize control over the keyboard:
   Keyboard.begin();
@@ -136,9 +138,18 @@ void loop()
     }
     Serial.write("Reset time");
   }
+  
+  if (Serial.available())
+  {
+    String command = Serial.readString();
+    if (command.substring(0, 4) == "Name")
+    {
+      Serial.println("Left Keyboard"); 
+    }
+  }
 
   // This goes through of the rows, and scans it across each of the colums.
-  for (byte i = 5; i >= 0; i--)
+  for (byte i = 0; i <= 6; i++)
   {
     digitalWrite(rows[i], LOW);
     for (byte j = 2; j < 10; j++)
@@ -147,9 +158,9 @@ void loop()
       {
         if ((micros() - waitTime[i][j]) > waitwait)
         {
-          Keyboard.press(layers[0][i][j - 2]);
+          Keyboard.press(layers[layer][i][j - 2]);
           waitTime[i][j] = micros();
-          Serial.println("A button was pressed");
+          Serial.println("A button was pressed as ");
         }
       }
       else
@@ -160,125 +171,3 @@ void loop()
     digitalWrite(rows[i], HIGH);
   }
 }
-//
-//    // Row 1.
-//    digitalWrite(A5, LOW);
-//    byte i = 0;
-//    for (byte j = 2; j < 10; j++)
-//    {
-//      if (digitalRead(j) == 0)
-//      {
-//        if ((micros() - waitTime[i][j]) > waitwait)
-//        {
-//          Keyboard.write(layers[layer][i][j - 2]);
-//          waitTime[i][j] = micros();
-//        }
-//      }
-//    }
-//    digitalWrite(A5, HIGH);
-//
-//    // Row2
-//    digitalWrite(A4, LOW);
-//    i = 1;
-//    for (byte j = 2; j < 10; j++)
-//    {
-//      if (digitalRead(j) == 0)
-//      {
-//        if ((micros() - waitTime[i][j]) > waitwait)
-//        {
-//          Keyboard.press(layers[0][i][j - 2]);
-//          waitTime[i][j] = micros();
-//        }
-//      }
-//      else
-//      {
-//        Keyboard.release(layers[0][i][j - 2]);
-//      }
-//    }
-//    digitalWrite(A4, HIGH);
-//
-//
-//    // Row3
-//    digitalWrite(A3, LOW);
-//    i = 2;
-//    for (byte j = 2; j < 10; j++)
-//    {
-//      if (digitalRead(j) == 0)
-//      {
-//        if ((micros() - waitTime[i][j]) > waitwait)
-//        {
-//          Keyboard.press(layers[0][i][j - 2]);
-//          digitalWrite(13, HIGH);
-//          waitTime[i][j] = micros();
-//          Serial.println("A button was pressed");
-//        }
-//      }
-//      else
-//      {
-//        Keyboard.release(layers[0][i][j - 2]);
-//      }
-//    }
-//    digitalWrite(A3, HIGH);
-//
-//
-//    // Row4
-//    digitalWrite(A2, LOW);
-//    i = 3;
-//    for (byte j = 2; j < 10; j++)
-//    {
-//      if (digitalRead(j) == 0)
-//      {
-//        if ((micros() - waitTime[i][j]) > waitwait)
-//        {
-//          Keyboard.press(layers[0][i][j - 2]);
-//          waitTime[i][j] = micros();
-//        }
-//      }
-//      else
-//      {
-//        Keyboard.release(layers[0][i][j - 2]);
-//      }
-//    }
-//    digitalWrite(A2, HIGH);
-//
-//
-//    // Row5
-//    digitalWrite(A1, LOW);
-//    i = 4;
-//    for (byte j = 2; j < 10; j++)
-//    {
-//      if (digitalRead(j) == 0)
-//      {
-//        if ((micros() - waitTime[i][j]) > waitwait)
-//        {
-//          Keyboard.press(layers[0][i][j - 2]);
-//          waitTime[i][j] = micros();
-//        }
-//      }
-//      else
-//      {
-//        Keyboard.release(layers[0][i][j - 2]);
-//      }
-//    }
-//    digitalWrite(A1, HIGH);
-//
-//    // Row6
-//    digitalWrite(A0, LOW);
-//    i = 5;
-//    for (byte j = 2; j < 10; j++)
-//    {
-//      if (digitalRead(j) == 0)
-//      {
-//        if ((micros() - waitTime[i][j]) > waitwait)
-//        {
-//          Keyboard.press(layers[0][i][j - 2]);
-//          waitTime[i][j] = micros();
-//        }
-//      }
-//      else
-//      {
-//        Keyboard.release(layers[0][i][j - 2]);
-//      }
-//    }
-//    digitalWrite(A0, HIGH);
-//}
