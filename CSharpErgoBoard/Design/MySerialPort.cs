@@ -34,7 +34,7 @@ namespace CSharpErgoBoard.Design
             Thread.Sleep(5000);
             m_type = ReadLine();
 
-            if (m_type.Substring(0,m_type.Length-1) == wantedType)
+            if (m_type.Contains(wantedType))
             {
                 return true;
             }
