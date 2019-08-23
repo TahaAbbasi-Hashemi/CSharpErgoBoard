@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace CSharpErgoBoard
+namespace FreeErgonomics
 {
     /// <summary>
     /// This is the main program class. 

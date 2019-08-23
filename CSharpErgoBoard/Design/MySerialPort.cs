@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.IO.Ports;
 using System.Threading;
 
-namespace CSharpErgoBoard.Design
+namespace FreeErgonomics.Design
 {
     class MySerialPort : SerialPort
     {

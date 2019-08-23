@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSharpErgoBoard.Properties
+namespace FreeErgonomics.Properties
 {
 
 

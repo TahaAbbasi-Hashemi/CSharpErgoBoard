@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getports',['GetPorts',['../class_c_sharp_ergo_board_1_1_design_1_1_ergo_board.html#a4b34a90a16b92568d3d8e3e4f592c3fc',1,'CSharpErgoBoard::Design::ErgoBoard']]]
+  ['getports',['GetPorts',['../da/d27/class_c_sharp_ergo_board_1_1_programming_1_1_free_ergonomics_brain.html#a14bde3bad606dc741d59bb9ecc049879',1,'CSharpErgoBoard::Programming::FreeErgonomicsBrain']]]
 ];

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpErgoBoard", "CSharpErgoBoard\CSharpErgoBoard.csproj", "{05A714C0-1ED5-4BBF-A4C2-5697F3662DFB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeErgonomics", "CSharpErgoBoard\FreeErgonomics.csproj", "{05A714C0-1ED5-4BBF-A4C2-5697F3662DFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

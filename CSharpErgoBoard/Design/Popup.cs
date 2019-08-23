@@ -4,7 +4,7 @@ using System.Media;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace CSharpErgoBoard.Design
+namespace FreeErgonomics.Design
 {
     /// <summary>
     /// This is intended to be a message box that is able to enter dark mode.
