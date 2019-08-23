@@ -1,8 +1,11 @@
 var searchData=
 [
-  ['date',['Date',['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html#ac3830b2e5561368ea9358db979a84280',1,'CSharpErgoBoard::LogData']]],
-  ['default',['Default',['../dc/dab/class_c_sharp_ergo_board_1_1_properties_1_1_settings.html#aec0b9e6a2eedb1d956a01d9820d3df11',1,'CSharpErgoBoard::Properties::Settings']]],
-  ['defaultinstance',['defaultInstance',['../dc/dab/class_c_sharp_ergo_board_1_1_properties_1_1_settings.html#a1aad50edf3ade5a4e99a462276cbaa77',1,'CSharpErgoBoard::Properties::Settings']]],
-  ['directory',['Directory',['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html#a77c2790fdf64e233cf134f3f871d65b0',1,'CSharpErgoBoard::Logging']]],
-  ['dispose',['Dispose',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#aa5cef49da44f4f1daa68f0bbc90f6957',1,'CSharpErgoBoard.ErgoBoard.Dispose()'],['../de/d4e/class_c_sharp_ergo_board_1_1_popup.html#a6f61d4221db442eaaa2a1a084bef31d6',1,'CSharpErgoBoard.Popup.Dispose()']]]
+  ['cpuclock',['CpuClock',['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#acdcee908185aaed4261484dbfe986f02',1,'CSharpErgoBoard::Programming::SystemMonitor']]],
+  ['cpucores',['CpuCores',['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#ac642e67fd5dd91616e78c6e19009baa4',1,'CSharpErgoBoard::Programming::SystemMonitor']]],
+  ['cpuload',['CpuLoad',['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#a3ff8dac2d92b1c98e102c8a5b5f1a9b0',1,'CSharpErgoBoard::Programming::SystemMonitor']]],
+  ['cputemp',['CpuTemp',['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#a665d0736c2f7ef8ecbee45d917512ad0',1,'CSharpErgoBoard::Programming::SystemMonitor']]],
+  ['csharpergoboard',['CSharpErgoBoard',['../namespace_c_sharp_ergo_board.html',1,'']]],
+  ['design',['Design',['../namespace_c_sharp_ergo_board_1_1_design.html',1,'CSharpErgoBoard']]],
+  ['programming',['Programming',['../namespace_c_sharp_ergo_board_1_1_programming.html',1,'CSharpErgoBoard']]],
+  ['properties',['Properties',['../namespace_c_sharp_ergo_board_1_1_properties.html',1,'CSharpErgoBoard']]]
 ];

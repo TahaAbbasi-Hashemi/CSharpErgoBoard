@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['filename',['FileName',['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html#a0d6363b6c0ec30380f9d3da55bc9f9db',1,'CSharpErgoBoard::LogData']]],
-  ['flush',['Flush',['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html#a8141fda0f8362685e846c8fe7b053538',1,'CSharpErgoBoard::Logging']]],
-  ['fullporttojustcom',['FullPortToJustCom',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#abec2796cf0673e446ace8d3e2836ab76',1,'CSharpErgoBoard::ErgoBoard']]]
+  ['end',['End',['../class_c_sharp_ergo_board_1_1_programming_1_1_logging.html#a49a09843bb0704dcc91c36efdad7766f',1,'CSharpErgoBoard.Programming.Logging.End()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_singleton.html#a7bc21df69ac9302a5ebb17dce769560a',1,'CSharpErgoBoard.Programming.Singleton.End()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#a93879c90cadd645fc63f9a817ed867cb',1,'CSharpErgoBoard.Programming.SystemMonitor.End()']]],
+  ['ergoboard',['ErgoBoard',['../class_c_sharp_ergo_board_1_1_design_1_1_ergo_board.html',1,'CSharpErgoBoard.Design.ErgoBoard'],['../class_c_sharp_ergo_board_1_1_design_1_1_ergo_board.html#a29b0b73f9a307722c3efe19e9900420b',1,'CSharpErgoBoard.Design.ErgoBoard.ErgoBoard()']]],
+  ['existance',['Existance',['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#af6c960ba417b70d69b4331ecfab418bc',1,'CSharpErgoBoard::Programming::SystemMonitor']]]
 ];

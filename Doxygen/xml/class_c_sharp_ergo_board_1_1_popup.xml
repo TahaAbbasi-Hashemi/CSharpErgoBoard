@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_popup" kind="class" language="C#" prot="public">
+    <compoundname>CSharpErgoBoard::Popup</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Form</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_popup_1a4a4ec5fd7488c4c8a288bbc63d0865db" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Popup.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <initializer>= &quot;To allow for multiple modes of pop ups instead of the basic messenger popup&quot;</initializer>
+        <briefdescription>
+<para>The purpose of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" line="24" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_popup_1a020d7ef9bed3bcd4a5a276a1f343cc1a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Popup.ToString</definition>
+        <argsstring></argsstring>
+        <name>ToString</name>
+        <initializer>= &quot;Popup child of Form&quot;</initializer>
+        <briefdescription>
+<para>To convert the class to a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" line="28" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_popup_1adb98e678a9d12d26d49398bdf9df892b" prot="private" static="no" mutable="no">
+        <type>System.ComponentModel.IContainer</type>
+        <definition>System.ComponentModel.IContainer CSharpErgoBoard.Popup.components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+<para>Required designer variable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" line="8" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_popup_1addf6ab45e97d0ea962d8e497f29e7403" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Button</type>
+        <definition>System.Windows.Forms.Button CSharpErgoBoard.Popup.id_buttonOkay</definition>
+        <argsstring></argsstring>
+        <name>id_buttonOkay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" line="71" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_popup_1a18b9f8b7e69e8c5b7168bc934a134006" prot="private" static="no" mutable="no">
+        <type>System.Windows.Forms.Label</type>
+        <definition>System.Windows.Forms.Label CSharpErgoBoard.Popup.id_labelText</definition>
+        <argsstring></argsstring>
+        <name>id_labelText</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" line="72" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_popup_1a673eca47bf96cc41b1a4bae51de57f75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>CSharpErgoBoard.Popup.Popup</definition>
+        <argsstring>(String text, String caption, Boolean darkMode)</argsstring>
+        <name>Popup</name>
+        <param>
+          <type>String</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>String</type>
+          <declname>caption</declname>
+        </param>
+        <param>
+          <type>Boolean</type>
+          <declname>darkMode</declname>
+        </param>
+        <briefdescription>
+<para>The default constructor for the popup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The message intended to appear</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>caption</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the popup</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>darkMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If darkmode is selected at the time of the popups creation. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+true</para>
+<para>for darkmode.</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" line="37" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" bodystart="37" bodyend="53"/>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_logging_1a7ada93e9c9e9e815fbb7627e08292513" compoundref="_logging_8cs" startline="168" endline="185">CSharpErgoBoard.Programming.Logging.Instance</references>
+        <references refid="class_c_sharp_ergo_board_1_1_programming_1_1_logging_1a9615e81de1ad9899a60cb6c9b949e4c8" compoundref="_logging_8cs" startline="220" endline="240">CSharpErgoBoard.Programming.Logging.Log</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_popup_1ade5b04198bcefbfd8f190125d7f1faaa" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.Popup.Id_buttonOkay_Click</definition>
+        <argsstring>(object sender, EventArgs reason)</argsstring>
+        <name>Id_buttonOkay_Click</name>
+        <param>
+          <type>object</type>
+          <declname>sender</declname>
+        </param>
+        <param>
+          <type>EventArgs</type>
+          <declname>reason</declname>
+        </param>
+        <briefdescription>
+<para>A function corresponding to pressing the okay button on the popup. This ends the life of the popup. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sender</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The object that called this function</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reason</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>What event caused the object to call this function</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" line="60" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" bodystart="60" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_popup_1a57599e17a8770963c3a76d6ef9c23a62" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.Popup.InitializeComponent</definition>
+        <argsstring>()</argsstring>
+        <name>InitializeComponent</name>
+        <briefdescription>
+<para>Required method for Designer support - do not modify the contents of this method with the code editor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" line="29" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" bodystart="29" bodyend="67"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_popup_1a6f61d4221db442eaaa2a1a084bef31d6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CSharpErgoBoard.Popup.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+<para>Clean up any resources being used. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>disposing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>true if managed resources should be disposed; otherwise, false.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" line="14" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.Designer.cs" bodystart="14" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is intended to be a message box that is able to enter dark mode. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>As regular message boxes are unable to change apperence this is made to allow for appearance changes in the message box. This is generally created to let the user know that they have made a error somewhere and need to edit or change something. The popup also produces a windows based noise for error popups. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="24">
+        <label>Form</label>
+      </node>
+      <node id="23">
+        <label>CSharpErgoBoard.Popup</label>
+        <link refid="class_c_sharp_ergo_board_1_1_popup"/>
+        <childnode refid="24" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="26">
+        <label>Form</label>
+      </node>
+      <node id="25">
+        <label>CSharpErgoBoard.Popup</label>
+        <link refid="class_c_sharp_ergo_board_1_1_popup"/>
+        <childnode refid="26" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" line="19" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs" bodystart="18" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1adb98e678a9d12d26d49398bdf9df892b" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>components</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1a6f61d4221db442eaaa2a1a084bef31d6" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>Dispose</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1addf6ab45e97d0ea962d8e497f29e7403" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>id_buttonOkay</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1ade5b04198bcefbfd8f190125d7f1faaa" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>Id_buttonOkay_Click</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1a18b9f8b7e69e8c5b7168bc934a134006" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>id_labelText</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1a57599e17a8770963c3a76d6ef9c23a62" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>InitializeComponent</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1a673eca47bf96cc41b1a4bae51de57f75" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>Popup</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1a4a4ec5fd7488c4c8a288bbc63d0865db" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>Purpose</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_popup_1a020d7ef9bed3bcd4a5a276a1f343cc1a" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Popup</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

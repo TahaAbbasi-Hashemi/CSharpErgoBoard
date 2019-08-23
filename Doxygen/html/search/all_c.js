@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['ramload',['RamLoad',['../d3/df3/class_c_sharp_ergo_board_1_1_system_monitor.html#a9ded23bf5f0f7b0496fab2879f9908a1',1,'CSharpErgoBoard::SystemMonitor']]],
-  ['resourceculture',['resourceCulture',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#ad83b2523cf92b2aec251eb86e224bad3',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['resourceman',['resourceMan',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#a74e6939e3402f8b414530f761dfbe01e',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['resourcemanager',['ResourceManager',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#ad52da0d5960aca6ab61bb2b2be24c0b4',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['resources',['Resources',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html',1,'CSharpErgoBoard.Properties.Resources'],['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#aba07f3040159442ecb4ec90b8f7e74df',1,'CSharpErgoBoard.Properties.Resources.Resources()']]],
-  ['resources_2edesigner_2ecs',['Resources.Designer.cs',['../d6/d0e/_resources_8_designer_8cs.html',1,'']]]
+  ['popup',['Popup',['../class_c_sharp_ergo_board_1_1_design_1_1_popup.html',1,'CSharpErgoBoard.Design.Popup'],['../class_c_sharp_ergo_board_1_1_design_1_1_popup.html#a0bd72de8d20e176e6b05aaa4cfcbf242',1,'CSharpErgoBoard.Design.Popup.Popup()']]],
+  ['program',['Program',['../class_c_sharp_ergo_board_1_1_program.html',1,'CSharpErgoBoard']]],
+  ['purpose',['Purpose',['../class_c_sharp_ergo_board_1_1_design_1_1_ergo_board.html#ae2edf913558f6e8a8048275aa1e30fd9',1,'CSharpErgoBoard.Design.ErgoBoard.Purpose()'],['../class_c_sharp_ergo_board_1_1_design_1_1_my_button.html#a29edb2ba92a8e3ca65e6f3b66a1a317d',1,'CSharpErgoBoard.Design.MyButton.Purpose()'],['../class_c_sharp_ergo_board_1_1_design_1_1_my_combo_box.html#ac03866e856cdff47133c6985f87b090a',1,'CSharpErgoBoard.Design.MyComboBox.Purpose()'],['../class_c_sharp_ergo_board_1_1_design_1_1_popup.html#a7e05d26854021ac023ae353a5605611c',1,'CSharpErgoBoard.Design.Popup.Purpose()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_logging.html#ab68b1cb6895ad5cf9204d401cc079353',1,'CSharpErgoBoard.Programming.Logging.Purpose()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_singleton.html#a4244a838f6896fd5e2d379d8854c2e25',1,'CSharpErgoBoard.Programming.Singleton.Purpose()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#aea7dbc5e6d03e038b385f86d792e9246',1,'CSharpErgoBoard.Programming.SystemMonitor.Purpose()']]]
 ];

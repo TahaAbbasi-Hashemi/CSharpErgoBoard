@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_my_combo_box" kind="class" language="C#" prot="public">
+    <compoundname>CSharpErgoBoard::MyComboBox</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">ComboBox</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_my_combo_box_1a0387929405c3d8eebba8e19caf5c0ce3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.MyComboBox.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <initializer>= &quot;To allow for multiple modes of pop ups instead of the basic messenger popup&quot;</initializer>
+        <briefdescription>
+<para>The purpose of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="22" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_my_combo_box_1aa845b15be5527f90b1a9273f86abb301" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.MyComboBox.ToString</definition>
+        <argsstring></argsstring>
+        <name>ToString</name>
+        <initializer>= &quot;MyComboBox child of Combobox&quot;</initializer>
+        <briefdescription>
+<para>To convert the class to a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="26" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_my_combo_box_1a3df1de40e9f70a37c235fca39534e05a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool CSharpErgoBoard.MyComboBox.DarkMode</definition>
+        <argsstring></argsstring>
+        <name>DarkMode</name>
+        <briefdescription>
+<para>Used to indicate if darkmode is selected or not. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>. by default this is false. <itemizedlist>
+<listitem>
+<para>true <linebreak/>
+ If the button is on dark mode. </para>
+</listitem>
+<listitem>
+<para>false <linebreak/>
+ If the button is on light mode. </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="54" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_my_combo_box_1adb37b8c53e33454d5060be9ec637149a" prot="private" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int CSharpErgoBoard.MyComboBox.WM_PAINT</definition>
+        <argsstring></argsstring>
+        <name>WM_PAINT</name>
+        <initializer>= 0xF</initializer>
+        <briefdescription>
+<para>A command provided by windows this is used to indicate painting when dealing with win32 api. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="32" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_my_combo_box_1a6c6db047ea886aedf3b3996f0e46fa45" prot="private" static="no" mutable="no">
+        <type>readonly Int32</type>
+        <definition>readonly Int32 CSharpErgoBoard.MyComboBox.m_buttonWidth</definition>
+        <argsstring></argsstring>
+        <name>m_buttonWidth</name>
+        <initializer>= SystemInformation.HorizontalScrollBarArrowWidth</initializer>
+        <briefdescription>
+<para>The width of the combo box scroll down button. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="38" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_my_combo_box_1ab24489157d3151b4890809761fbeaced" prot="private" static="no" mutable="no">
+        <type>Boolean</type>
+        <definition>Boolean CSharpErgoBoard.MyComboBox.m_selectDarkMode</definition>
+        <argsstring></argsstring>
+        <name>m_selectDarkMode</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="41" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_my_combo_box_1a3188be51d022c1801d2eb6f4469818f3" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void CSharpErgoBoard.MyComboBox.WndProc</definition>
+        <argsstring>(ref Message command)</argsstring>
+        <name>WndProc</name>
+        <param>
+          <type>ref Message</type>
+          <declname>command</declname>
+        </param>
+        <briefdescription>
+<para>This adds a small black border around the ComboBox. Normally there is a small white border but this adds a black one now. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>command</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The type of command we are sending the combo box.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="61" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="61" bodyend="86"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_my_combo_box_1a18eacb964dab9f7bc766fa47699960a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.MyComboBox.ModeChange</definition>
+        <argsstring>(in Boolean darkModeTrue)</argsstring>
+        <name>ModeChange</name>
+        <param>
+          <type>in Boolean</type>
+          <declname>darkModeTrue</declname>
+        </param>
+        <briefdescription>
+<para>This is used to change the mode of the combo box </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>darkModeTrue</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True if dark mode is selected, see <ref refid="class_c_sharp_ergo_board_1_1_my_combo_box_1a3df1de40e9f70a37c235fca39534e05a" kindref="member">DarkMode</ref> for more information on dark mode.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="91" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="91" bodyend="108"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is intended to be a extension of the combobox class provided by windows forms. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This class exists because the current combo box has a white outline surrounding the button. by overriding the draw class we are able to produce a black border ontop of the white border resolving the issue at hand. This also allows for ease of converting to dark mode. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="20">
+        <label>ComboBox</label>
+      </node>
+      <node id="19">
+        <label>CSharpErgoBoard.MyComboBox</label>
+        <link refid="class_c_sharp_ergo_board_1_1_my_combo_box"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="22">
+        <label>ComboBox</label>
+      </node>
+      <node id="21">
+        <label>CSharpErgoBoard.MyComboBox</label>
+        <link refid="class_c_sharp_ergo_board_1_1_my_combo_box"/>
+        <childnode refid="22" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" line="17" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/MyComboBox.cs" bodystart="16" bodyend="109"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_my_combo_box_1a3df1de40e9f70a37c235fca39534e05a" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::MyComboBox</scope><name>DarkMode</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_my_combo_box_1a6c6db047ea886aedf3b3996f0e46fa45" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::MyComboBox</scope><name>m_buttonWidth</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_my_combo_box_1ab24489157d3151b4890809761fbeaced" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::MyComboBox</scope><name>m_selectDarkMode</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_my_combo_box_1a18eacb964dab9f7bc766fa47699960a4" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::MyComboBox</scope><name>ModeChange</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_my_combo_box_1a0387929405c3d8eebba8e19caf5c0ce3" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::MyComboBox</scope><name>Purpose</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_my_combo_box_1aa845b15be5527f90b1a9273f86abb301" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::MyComboBox</scope><name>ToString</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_my_combo_box_1adb37b8c53e33454d5060be9ec637149a" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::MyComboBox</scope><name>WM_PAINT</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_my_combo_box_1a3188be51d022c1801d2eb6f4469818f3" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::MyComboBox</scope><name>WndProc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

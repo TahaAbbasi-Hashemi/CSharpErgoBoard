@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="_popup_8cs" kind="file" language="C#">
+    <compoundname>Popup.cs</compoundname>
+    <innerclass refid="class_c_sharp_ergo_board_1_1_design_1_1_popup" prot="public">CSharpErgoBoard::Design::Popup</innerclass>
+    <innernamespace refid="namespace_c_sharp_ergo_board">CSharpErgoBoard</innernamespace>
+    <innernamespace refid="namespace_c_sharp_ergo_board_1_1_design">CSharpErgoBoard::Design</innernamespace>
+    <innernamespace refid="namespace_system_1_1_media">System::Media</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Using</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System;</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Media;</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Drawing;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>System.Windows.Forms;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespace_c_sharp_ergo_board_1_1_design" kindref="compound">CSharpErgoBoard.Design</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17" refid="class_c_sharp_ergo_board_1_1_design_1_1_popup" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">partial<sp/>class<sp/></highlight><highlight class="normal"><ref refid="class_c_sharp_ergo_board_1_1_design_1_1_popup" kindref="compound">Popup</ref><sp/>:<sp/>Form</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Class<sp/>Atributes</highlight></codeline>
+<codeline lineno="23" refid="class_c_sharp_ergo_board_1_1_design_1_1_popup_1a7e05d26854021ac023ae353a5605611c" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>String<sp/><ref refid="class_c_sharp_ergo_board_1_1_design_1_1_popup_1a7e05d26854021ac023ae353a5605611c" kindref="member">Purpose</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;To<sp/>allow<sp/>for<sp/>multiple<sp/>modes<sp/>of<sp/>pop<sp/>ups<sp/>instead<sp/>of<sp/>the<sp/>basic<sp/>messenger<sp/>popup&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="27" refid="class_c_sharp_ergo_board_1_1_design_1_1_popup_1a6261c25bdadb1fda40addf2705603c9d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>String<sp/><ref refid="class_c_sharp_ergo_board_1_1_design_1_1_popup_1a6261c25bdadb1fda40addf2705603c9d" kindref="member">ToString</ref><sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/>}<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Popup<sp/>child<sp/>of<sp/>Form&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Functions</highlight></codeline>
+<codeline lineno="36" refid="class_c_sharp_ergo_board_1_1_design_1_1_popup_1a0bd72de8d20e176e6b05aaa4cfcbf242" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="class_c_sharp_ergo_board_1_1_design_1_1_popup_1a0bd72de8d20e176e6b05aaa4cfcbf242" kindref="member">Popup</ref>(String<sp/>text,<sp/>String<sp/>caption,<sp/>Boolean<sp/>darkMode)</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>SystemSounds.Exclamation.Play();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Programming.Logging.Instance.Log(</highlight><highlight class="stringliteral">&quot;A<sp/>popup<sp/>window<sp/>was<sp/>made.&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Information&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitializeComponent();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id_labelText.Text<sp/>=<sp/>text;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Text<sp/>=<sp/>caption;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(darkMode)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Color<sp/>kindofBlack<sp/>=<sp/>Color.FromArgb(255,<sp/>50,<sp/>50,<sp/>50);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Color<sp/>backgroundBlack<sp/>=<sp/>Color.FromArgb(255,<sp/>20,<sp/>20,<sp/>20);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BackColor<sp/>=<sp/>kindofBlack;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ForeColor<sp/>=<sp/>Color.WhiteSmoke;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id_buttonOkay.BackColor<sp/>=<sp/>backgroundBlack;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>id_buttonOkay.ForeColor<sp/>=<sp/>System.Drawing.Color.WhiteSmoke;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Id_buttonOkay_Click(</highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>sender,<sp/>EventArgs<sp/>reason)</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Programming.Logging.Instance.Log($</highlight><highlight class="stringliteral">&quot;Popup<sp/>okay<sp/>button<sp/>was<sp/>pressed<sp/>\&quot;<sp/>{sender.ToString()}<sp/>\&quot;<sp/>by<sp/>\&quot;<sp/>{reason.ToString()}<sp/>\&quot;<sp/>&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;Information&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this.Close();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/Popup.cs"/>
+  </compounddef>
+</doxygen>

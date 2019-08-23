@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_program" kind="class" language="C#" prot="public">
+    <compoundname>CSharpErgoBoard::Program</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_program_1a9ea05ce4932616c91b0464466afbbb8e" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CSharpErgoBoard.Program.Main</definition>
+        <argsstring>()</argsstring>
+        <name>Main</name>
+        <briefdescription>
+<para>The main entry point for the application. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This thread is created by windows forms. The main purpose of this is to start or initalize all processes. The processes started are : Logging, ErgoBoard, System Monitor. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Program.cs" line="21" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Program.cs" bodystart="21" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the main program class. This is the main entry point for the entire application. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Program.cs" line="12" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Program.cs" bodystart="11" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_program_1a9ea05ce4932616c91b0464466afbbb8e" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

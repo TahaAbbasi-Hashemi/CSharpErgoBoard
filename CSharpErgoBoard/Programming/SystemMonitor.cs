@@ -5,7 +5,7 @@ using System.Threading;
 using OpenHardwareMonitor.Hardware;
 
 
-namespace CSharpErgoBoard
+namespace CSharpErgoBoard.Programming
 {
     /// <summary>
     /// A class which runs and records the properties of the PC. 
@@ -41,11 +41,6 @@ namespace CSharpErgoBoard
         private static readonly List<Double> m_gpuTemp = new List<Double>();
         private static readonly List<Double> m_ramLoad = new List<Double>();
         private static readonly List<Double> m_hddLoad = new List<Double>();
-
-        // Purely Private Variables
-        /// <summary>
-        /// The instance of the singleton
-        /// </summary>
         protected new static SystemMonitor m_instance = null;
 
         // Readonly Private Variables
@@ -244,7 +239,7 @@ namespace CSharpErgoBoard
         /// </summary>
         public static void UpdateValues()
         {
-            Logging.Instance.Log("A update was run");
+            Programming.Logging.Instance.Log("A update was run");
 
             try
             {

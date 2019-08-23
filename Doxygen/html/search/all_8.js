@@ -1,11 +1,6 @@
 var searchData=
 [
-  ['linenumber',['LineNumber',['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html#a5af1a52cf9ace77f07a710eba60511fd',1,'CSharpErgoBoard::LogData']]],
-  ['listbox4',['listBox4',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a367951294e89f601f3556988553210de',1,'CSharpErgoBoard::ErgoBoard']]],
-  ['listbox5',['listBox5',['../d4/df4/class_c_sharp_ergo_board_1_1_ergo_board.html#a11d46e5909771226d7cf007d56aeab61',1,'CSharpErgoBoard::ErgoBoard']]],
-  ['log',['Log',['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html#afa39e9878a11dd0288f92e055f1dab5e',1,'CSharpErgoBoard::Logging']]],
-  ['logdata',['LogData',['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html',1,'CSharpErgoBoard.LogData'],['../db/d01/class_c_sharp_ergo_board_1_1_log_data.html#ad4711364bc6cfab2cd15bdce66741e4b',1,'CSharpErgoBoard.LogData.LogData()']]],
-  ['logformat',['LogFormat',['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html#a537a69ec923ba19784756a5dd6c27951',1,'CSharpErgoBoard::Logging']]],
-  ['logging',['Logging',['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html',1,'CSharpErgoBoard.Logging'],['../d1/d30/class_c_sharp_ergo_board_1_1_logging.html#a01f8b779817e6d3dae75a02185836b16',1,'CSharpErgoBoard.Logging.Logging()']]],
-  ['logging_2ecs',['Logging.cs',['../db/da7/_logging_8cs.html',1,'']]]
+  ['instance',['Instance',['../class_c_sharp_ergo_board_1_1_programming_1_1_logging.html#a7ada93e9c9e9e815fbb7627e08292513',1,'CSharpErgoBoard.Programming.Logging.Instance()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_singleton.html#a49c38892ae8241bdb15b668575f1f09e',1,'CSharpErgoBoard.Programming.Singleton.Instance()'],['../class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor.html#a5f31bb7d14f66b187cb92702328dabf0',1,'CSharpErgoBoard.Programming.SystemMonitor.Instance()']]],
+  ['isflushed',['IsFlushed',['../class_c_sharp_ergo_board_1_1_programming_1_1_logging.html#a07e3b5e49dda9af9593fc4f0d00d64af',1,'CSharpErgoBoard::Programming::Logging']]],
+  ['isselected',['IsSelected',['../class_c_sharp_ergo_board_1_1_design_1_1_my_button.html#a07c8abf091248dfcbf603be86395f603',1,'CSharpErgoBoard::Design::MyButton']]]
 ];

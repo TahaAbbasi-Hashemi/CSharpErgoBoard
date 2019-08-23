@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['resourceculture',['resourceCulture',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#ad83b2523cf92b2aec251eb86e224bad3',1,'CSharpErgoBoard::Properties::Resources']]],
-  ['resourceman',['resourceMan',['../db/d05/class_c_sharp_ergo_board_1_1_properties_1_1_resources.html#a74e6939e3402f8b414530f761dfbe01e',1,'CSharpErgoBoard::Properties::Resources']]]
+  ['wm_5fpaint',['WM_PAINT',['../class_c_sharp_ergo_board_1_1_my_combo_box.html#adb37b8c53e33454d5060be9ec637149a',1,'CSharpErgoBoard::MyComboBox']]]
 ];

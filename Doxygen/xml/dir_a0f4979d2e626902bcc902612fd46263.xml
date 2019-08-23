@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="dir_a0f4979d2e626902bcc902612fd46263" kind="dir">
+    <compoundname>C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming</compoundname>
+    <innerfile refid="_i_o_connect_8cs">IOConnect.cs</innerfile>
+    <innerfile refid="_logging_8cs">Logging.cs</innerfile>
+    <innerfile refid="_program_8cs">Program.cs</innerfile>
+    <innerfile refid="_singleton_8cs">Singleton.cs</innerfile>
+    <innerfile refid="_system_monitor_8cs">SystemMonitor.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/"/>
+  </compounddef>
+</doxygen>

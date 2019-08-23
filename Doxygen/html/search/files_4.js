@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['logging_2ecs',['Logging.cs',['../db/da7/_logging_8cs.html',1,'']]]
+  ['logging_2ecs',['Logging.cs',['../_logging_8cs.html',1,'']]]
 ];

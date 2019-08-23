@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace_c_sharp_ergo_board_1_1_programming" kind="namespace" language="C#">
+    <compoundname>CSharpErgoBoard::Programming</compoundname>
+    <innerclass refid="class_c_sharp_ergo_board_1_1_programming_1_1_logging" prot="public">CSharpErgoBoard::Programming::Logging</innerclass>
+    <innerclass refid="class_c_sharp_ergo_board_1_1_programming_1_1_singleton" prot="public">CSharpErgoBoard::Programming::Singleton</innerclass>
+    <innerclass refid="class_c_sharp_ergo_board_1_1_programming_1_1_system_monitor" prot="public">CSharpErgoBoard::Programming::SystemMonitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="8" column="1"/>
+  </compounddef>
+</doxygen>

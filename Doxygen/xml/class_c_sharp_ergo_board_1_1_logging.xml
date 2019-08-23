@@ -1,0 +1,491 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="class_c_sharp_ergo_board_1_1_logging" kind="class" language="C#" prot="public">
+    <compoundname>CSharpErgoBoard::Logging</compoundname>
+    <basecompoundref refid="class_c_sharp_ergo_board_1_1_singleton" prot="public" virt="non-virtual">CSharpErgoBoard.Singleton</basecompoundref>
+    <innerclass refid="class_c_sharp_ergo_board_1_1_logging_1_1_log_data" prot="private">CSharpErgoBoard::Logging::LogData</innerclass>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_logging_1ae7852895293bb73f3a5f6e922df76aba" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Logging.Name</definition>
+        <argsstring></argsstring>
+        <name>Name</name>
+        <initializer>= &quot;Logging&quot;</initializer>
+        <briefdescription>
+<para>The name of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="27" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_logging_1a306b6aa4e303970b0a8c245c21c7c6c4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Logging.Purpose</definition>
+        <argsstring></argsstring>
+        <name>Purpose</name>
+        <initializer>= &quot;To record what happens during the lifespan of the program&quot;</initializer>
+        <briefdescription>
+<para>The purpose of the class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="31" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_logging_1a2fac53460363072312292b773d5b8dae" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new String</type>
+        <definition>new String CSharpErgoBoard.Logging.ToString</definition>
+        <argsstring></argsstring>
+        <name>ToString</name>
+        <initializer>= &quot;A <ref refid="class_c_sharp_ergo_board_1_1_singleton" kindref="compound">Singleton</ref> <ref refid="class_c_sharp_ergo_board_1_1_logging" kindref="compound">Logging</ref> Class&quot;</initializer>
+        <briefdescription>
+<para>To convert the class to a string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="35" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_logging_1a537a69ec923ba19784756a5dd6c27951" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Logging.LogFormat</definition>
+        <argsstring></argsstring>
+        <name>LogFormat</name>
+        <briefdescription>
+<para>This is the format that the log will be saved as. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>The default method is &quot;%D (%T), \&quot;F" L : M" as it contains all the nessary criteria. If you wish to create your own format you can use these variables to indicate properties of the log.</para>
+<para><itemizedlist>
+<listitem>
+<para>D <linebreak/>
+ would represent the date the log was made in YYYY-MM-DD  </para>
+</listitem>
+<listitem>
+<para>T <linebreak/>
+ would represent the time that the log was made in HH:MM:SS TT </para>
+</listitem>
+<listitem>
+<para>t <linebreak/>
+ woudl represent the thread that called the log. </para>
+</listitem>
+<listitem>
+<para>F <linebreak/>
+ would represent the file that the log was made in. </para>
+</listitem>
+<listitem>
+<para>L <linebreak/>
+ would represent the line that the log was written on. </para>
+</listitem>
+<listitem>
+<para>M <linebreak/>
+ would represent the message the log contains. </para>
+</listitem>
+<listitem>
+<para>m <linebreak/>
+ would represent the member of the class that called the log. </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="148" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="148" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_logging_1a77c2790fdf64e233cf134f3f871d65b0" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Logging.Directory</definition>
+        <argsstring></argsstring>
+        <name>Directory</name>
+        <briefdescription>
+<para>Logs must be saved in a file somewhere to be read, Directory is the name of the file where the logs are saved. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="152" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="152" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_logging_1a0f659a702aa5d11154517659ef485b90" prot="public" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>new <ref refid="class_c_sharp_ergo_board_1_1_logging" kindref="compound">Logging</ref></type>
+        <definition>new Logging CSharpErgoBoard.Logging.Instance</definition>
+        <argsstring></argsstring>
+        <name>Instance</name>
+        <briefdescription>
+<para>This is the instance of the singleton class. Any commands must be called using </para>
+        </briefdescription>
+        <detaileddescription>
+<para>A singleton class has one or no instances. In order to use the instance this must be called. This also starts the threading and logging process of the class. </para>
+<para>Logging.Instance.LogFormat(&quot;%D %T : %M&quot;); // Changing the log format. Logging.Instance.Flush();// Flush the previously made logs. Logging.Instance.Log(&quot;Example of making a log&quot;); Logging.Instance.Log(&quot;Example of making a log with severity&quot;, &quot;Error&quot;); Logging.Instance.End() // Ends the logging process </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="167" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="168" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="property" id="class_c_sharp_ergo_board_1_1_logging_1a7eaef5477460497c46a5e317fe0b214e" prot="protected" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool CSharpErgoBoard.Logging.IsFlushed</definition>
+        <argsstring></argsstring>
+        <name>IsFlushed</name>
+        <briefdescription>
+<para>A boolean value being used if we want to flush the system </para>
+        </briefdescription>
+        <detaileddescription>
+<para>. by default this is false. It should be noted that this process is very quick, it may be missed if you are looking for it. <itemizedlist>
+<listitem>
+<para>true <linebreak/>
+ If the logging process is being flushed </para>
+</listitem>
+<listitem>
+<para>false <linebreak/>
+ If the logging process is not being flushed. </para>
+</listitem>
+</itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="197" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="197" bodyend="197"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_logging_1a03d07c8686913043749d76ad85d0c226" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Logging.m_logFormat</definition>
+        <argsstring></argsstring>
+        <name>m_logFormat</name>
+        <initializer>= &quot;%D (%T), (%m) &lt;%L&gt; : %M&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="38" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_logging_1a17a6b8d45e9bc2fab82c250d823c6b71" prot="private" static="yes" mutable="no">
+        <type>String</type>
+        <definition>String CSharpErgoBoard.Logging.m_directory</definition>
+        <argsstring></argsstring>
+        <name>m_directory</name>
+        <initializer>= @&quot;C:\Users\Taha Abbasi-Hashemi\source\repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="39" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_logging_1a1b94b7a565981b2f96a03d325336f82d" prot="private" static="yes" mutable="no">
+        <type>Boolean</type>
+        <definition>Boolean CSharpErgoBoard.Logging.m_flush</definition>
+        <argsstring></argsstring>
+        <name>m_flush</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="40" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_logging_1a537bb614b4b678a760127634b67bcb67" prot="private" static="yes" mutable="no">
+        <type>new <ref refid="class_c_sharp_ergo_board_1_1_logging" kindref="compound">Logging</ref></type>
+        <definition>new Logging CSharpErgoBoard.Logging.m_instance</definition>
+        <argsstring></argsstring>
+        <name>m_instance</name>
+        <initializer>= null</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="41" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_logging_1a92cceb938c1ab1c601f463e749c04dd1" prot="private" static="yes" mutable="no">
+        <type>readonly Queue&lt; LogData &gt;</type>
+        <definition>readonly Queue&lt;LogData&gt; CSharpErgoBoard.Logging.m_output</definition>
+        <argsstring></argsstring>
+        <name>m_output</name>
+        <initializer>= new Queue&lt;LogData&gt;()</initializer>
+        <briefdescription>
+<para>The data queue of logs being saved </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="116" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_logging_1a10185a4dfb00a5517ae4df461c08fb67" prot="private" static="yes" mutable="no">
+        <type>readonly Mutex</type>
+        <definition>readonly Mutex CSharpErgoBoard.Logging.m_outputLock</definition>
+        <argsstring></argsstring>
+        <name>m_outputLock</name>
+        <initializer>= new Mutex()</initializer>
+        <briefdescription>
+<para>This is used to ensure that our queue is thread safe </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="120" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_logging_1a30dd8d7c3e517a5aa6215f700d9c7dd9" prot="protected" static="yes" mutable="no">
+        <type>new readonly Thread</type>
+        <definition>new readonly Thread CSharpErgoBoard.Logging.m_thread</definition>
+        <argsstring></argsstring>
+        <name>m_thread</name>
+        <initializer>= new Thread(ThreadFunction)</initializer>
+        <briefdescription>
+<para>The thread run by the singleton </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="124" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_c_sharp_ergo_board_1_1_logging_1ab94dbe1ca518e2b8bb07f046788055b5" prot="protected" static="yes" mutable="no">
+        <type>new readonly Object</type>
+        <definition>new readonly Object CSharpErgoBoard.Logging.m_padlock</definition>
+        <argsstring></argsstring>
+        <name>m_padlock</name>
+        <initializer>= new Object()</initializer>
+        <briefdescription>
+<para>To ensure that our singleton is thread safe </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="128" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="128" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_logging_1a01f8b779817e6d3dae75a02185836b16" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>static</type>
+        <definition>static CSharpErgoBoard.Logging.Logging</definition>
+        <argsstring>()</argsstring>
+        <name>Logging</name>
+        <briefdescription>
+<para>The default static constructor. This is neither public or private intentionally to allow for singleton class </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="204" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="204" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_logging_1adf5015d9cff391c45d2fd2bac61d1716" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>new void</type>
+        <definition>static new void CSharpErgoBoard.Logging.ThreadFunction</definition>
+        <argsstring>()</argsstring>
+        <name>ThreadFunction</name>
+        <briefdescription>
+<para>This function is run by the thread. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This is used to save the logging process. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="247" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="247" bodyend="326"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_logging_1a8141fda0f8362685e846c8fe7b053538" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void CSharpErgoBoard.Logging.Flush</definition>
+        <argsstring>()</argsstring>
+        <name>Flush</name>
+        <briefdescription>
+<para>Removes all previously made logs. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="208" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="208" bodyend="211"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_logging_1af522bcfa684a1d38609f9b7481f7289a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void CSharpErgoBoard.Logging.Log</definition>
+        <argsstring>(in String message, in String severity=&quot;&quot;, [System.Runtime.CompilerServices.CallerMemberName] in String memberName=&quot;&quot;, [System.Runtime.CompilerServices.CallerFilePath] in String filePath=&quot;&quot;, [System.Runtime.CompilerServices.CallerLineNumber] in Int32 lineNumber=0)</argsstring>
+        <name>Log</name>
+        <param>
+          <type>in String</type>
+          <declname>message</declname>
+        </param>
+        <param>
+          <type>in String</type>
+          <declname>severity</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <attributes>[System.Runtime.CompilerServices.CallerMemberName]</attributes>
+          <type>in String</type>
+          <declname>memberName</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <attributes>[System.Runtime.CompilerServices.CallerFilePath]</attributes>
+          <type>in String</type>
+          <declname>filePath</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <attributes>[System.Runtime.CompilerServices.CallerLineNumber]</attributes>
+          <type>in Int32</type>
+          <declname>lineNumber</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>This function creates a log to be saved. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>message</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is the message you want saved to log. This is mandatory to have</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>severity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>This is the severity of the message, current TBA</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>memberName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Using macros finds the member name that made the log</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filePath</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Using macros finds the current file name that the log was made on</para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>lineNumber</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Using macros finds the line number that the log was made on</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="220" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="220" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="class_c_sharp_ergo_board_1_1_logging_1abfc2fcf0268cbdcc2438d02ab5e4f6b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>override void</type>
+        <definition>override void CSharpErgoBoard.Logging.End</definition>
+        <argsstring>()</argsstring>
+        <name>End</name>
+        <reimplements refid="class_c_sharp_ergo_board_1_1_singleton_1a885363b259c5710fecb9076534aa0ea1">End</reimplements>
+        <briefdescription>
+<para>This stops the threading process, if this function is not called, then the program can not close. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="330" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="330" bodyend="335"/>
+        <references refid="class_c_sharp_ergo_board_1_1_singleton_1a9834c811c39ecfe52b8f79417b330e7d" compoundref="_singleton_8cs" startline="37">CSharpErgoBoard.Singleton.m_running</references>
+        <references refid="class_c_sharp_ergo_board_1_1_logging_1a30dd8d7c3e517a5aa6215f700d9c7dd9" compoundref="_logging_8cs" startline="124">CSharpErgoBoard.Logging.m_thread</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The logging class is used to record what happens during runtime of the program. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This is a singleton class used to record actions done during runtime of the the program. Because the logging system is singleton based any class can call it as long as it is in the scope. This allows for benifits of not having multiple logging sections in the program. The logging class is thread safe, and uses locks. <linebreak/>
+ <linebreak/>
+For more information regarding singleton please see <ref refid="class_c_sharp_ergo_board_1_1_singleton" kindref="compound">Singleton</ref> class. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="7">
+        <label>Singleton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_singleton"/>
+      </node>
+      <node id="6">
+        <label>CSharpErgoBoard.Logging</label>
+        <link refid="class_c_sharp_ergo_board_1_1_logging"/>
+        <childnode refid="7" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="9">
+        <label>Singleton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_singleton"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+      <node id="8">
+        <label>CSharpErgoBoard.Logging</label>
+        <link refid="class_c_sharp_ergo_board_1_1_logging"/>
+        <childnode refid="9" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>CSharpErgoBoard.Singleton</label>
+        <link refid="class_c_sharp_ergo_board_1_1_singleton"/>
+        <childnode refid="10" relation="usage">
+          <edgelabel>m_instance</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" line="22" column="1" bodyfile="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Programming/Logging.cs" bodystart="21" bodyend="336"/>
+    <listofallmembers>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a77c2790fdf64e233cf134f3f871d65b0" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>Directory</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1abfc2fcf0268cbdcc2438d02ab5e4f6b8" prot="public" virt="virtual"><scope>CSharpErgoBoard::Logging</scope><name>End</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a8141fda0f8362685e846c8fe7b053538" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>Flush</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a0f659a702aa5d11154517659ef485b90" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>Instance</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a7eaef5477460497c46a5e317fe0b214e" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>IsFlushed</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1af522bcfa684a1d38609f9b7481f7289a" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>Log</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a537a69ec923ba19784756a5dd6c27951" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>LogFormat</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a01f8b779817e6d3dae75a02185836b16" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>Logging</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a17a6b8d45e9bc2fab82c250d823c6b71" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_directory</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a1b94b7a565981b2f96a03d325336f82d" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_flush</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a537bb614b4b678a760127634b67bcb67" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_instance</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a03d07c8686913043749d76ad85d0c226" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_logFormat</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a92cceb938c1ab1c601f463e749c04dd1" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_output</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a10185a4dfb00a5517ae4df461c08fb67" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_outputLock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1ab94dbe1ca518e2b8bb07f046788055b5" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_padlock</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_singleton_1a9834c811c39ecfe52b8f79417b330e7d" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_running</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a30dd8d7c3e517a5aa6215f700d9c7dd9" prot="protected" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>m_thread</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1ae7852895293bb73f3a5f6e922df76aba" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>Name</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a306b6aa4e303970b0a8c245c21c7c6c4" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>Purpose</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1adf5015d9cff391c45d2fd2bac61d1716" prot="private" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>ThreadFunction</name></member>
+      <member refid="class_c_sharp_ergo_board_1_1_logging_1a2fac53460363072312292b773d5b8dae" prot="public" virt="non-virtual"><scope>CSharpErgoBoard::Logging</scope><name>ToString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

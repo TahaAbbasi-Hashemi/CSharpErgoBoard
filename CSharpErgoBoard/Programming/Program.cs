@@ -22,9 +22,9 @@ namespace CSharpErgoBoard
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Logging.Instance.Log("Program Has started");    // Have the logging system start
-            SystemMonitor.Instance.Existance(); // Have the system monitor start
-            Application.Run(new ErgoBoard());
+            Programming.Logging.Instance.Log("Program Has started");    // Have the logging system start
+            Programming.SystemMonitor.Instance.Existance(); // Have the system monitor start
+            Application.Run(new Design.FreeErgonomics());
         }
     }
 }

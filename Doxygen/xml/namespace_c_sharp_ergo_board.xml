@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.15">
+  <compounddef id="namespace_c_sharp_ergo_board" kind="namespace" language="C#">
+    <compoundname>CSharpErgoBoard</compoundname>
+    <innerclass refid="class_c_sharp_ergo_board_1_1_program" prot="public">CSharpErgoBoard::Program</innerclass>
+    <innernamespace refid="namespace_c_sharp_ergo_board_1_1_design">CSharpErgoBoard::Design</innernamespace>
+    <innernamespace refid="namespace_c_sharp_ergo_board_1_1_programming">CSharpErgoBoard::Programming</innernamespace>
+    <innernamespace refid="namespace_c_sharp_ergo_board_1_1_properties">CSharpErgoBoard::Properties</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Taha Abbasi-Hashemi/source/repos/CSharpErgoBoard/CSharpErgoBoard/Design/ErgoBoard.cs" line="15" column="1"/>
+  </compounddef>
+</doxygen>
