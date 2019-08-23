@@ -5,7 +5,7 @@ using System.Threading;
 using OpenHardwareMonitor.Hardware;
 
 
-namespace FreeErgonomics.Programming
+namespace CSharpErgoBoard.Programming
 {
     /// <summary>
     /// A class which runs and records the properties of the PC. 

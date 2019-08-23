@@ -8,7 +8,7 @@
 //using System.IO.Ports;
 //using System.Threading;
 
-//namespace FreeErgonomics
+//namespace CSharpErgoBoard
 //{
 //    /// <summary>
 //    /// A class with its own dedicated thread. Used for Processing serial IO between the keyboard and the computer.

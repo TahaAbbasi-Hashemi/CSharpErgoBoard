@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 using System.IO.Ports;
 
 
-namespace FreeErgonomics.Programming
+namespace CSharpErgoBoard.Programming
 {
     class FreeErgonomicsBrain
     {
 
         //Private Readonly Members
-        private readonly Design.MySerialPort m_leftKeyConnection = new Design.MySerialPort();
-        private readonly Design.MySerialPort m_rightKeyConnection = new Design.MySerialPort();
-        private readonly Design.MySerialPort m_leftLEDConnection = new Design.MySerialPort();
-        private readonly Design.MySerialPort m_rightLEDConnection = new Design.MySerialPort();
+        private Design.MySerialPort m_leftKeyConnection = new Design.MySerialPort();
+        private Design.MySerialPort m_rightKeyConnection = new Design.MySerialPort();
+        private Design.MySerialPort m_leftLEDConnection = new Design.MySerialPort();
+        private Design.MySerialPort m_rightLEDConnection = new Design.MySerialPort();
 
 
         /// <summary>
@@ -67,6 +67,21 @@ namespace FreeErgonomics.Programming
             }
 
             return names;
+        }
+
+        public String FullPortToJustCom(String fullPortName)
+        {
+            String[] comNames = SerialPort.GetPortNames();
+
+            foreach (String com in comNames)
+            {
+                Logging.Instance.Log(com);
+                if (fullPortName.Contains(com))
+                {
+                    return com;
+                }
+            }
+            return "COM3";
         }
 
         private Boolean GetSerialPort(in String type, out Design.MySerialPort serialPort, out String error)
@@ -143,28 +158,36 @@ namespace FreeErgonomics.Programming
             // Wrong type
             if (!rightType)
             {
-                return false;
-                ;
+                if (connectingPort.Type == "NA")
+                {
+                    error = "No response from the device.\n" +
+                        "Either try again or try a different port.";
+                }
+                else
+                {
+                    error = "This is a " + connectingPort.Type + " and not a " + type + " port. \n" +
+                        "Try a different port.";
+                }
             }
             Logging.Instance.Log("A serial port connection for '" + type + "' was made at '" + comPort + "'", "Success");
 
-            //// Return
-            //if (type == "Left Keyboard")
-            //{
-            //    m_leftKeyConnection = connectingPort;
-            //}
-            //else if (type == "Right Keyboard")
-            //{
-            //    m_rightKeyConnection = connectingPort;
-            //}
-            //else if (type == "Left LED")
-            //{
-            //    m_leftLEDConnection = connectingPort;
-            //}
-            //else if (type == "Right LED")
-            //{
-            //    m_rightLEDConnection = connectingPort;
-            //}
+            // Return
+            if (type == "Left Keyboard")
+            {
+                m_leftKeyConnection = connectingPort;
+            }
+            else if (type == "Right Keyboard")
+            {
+                m_rightKeyConnection = connectingPort;
+            }
+            else if (type == "Left LED")
+            {
+                m_leftLEDConnection = connectingPort;
+            }
+            else if (type == "Right LED")
+            {
+                m_rightLEDConnection = connectingPort;
+            }
 
             return true;
         }

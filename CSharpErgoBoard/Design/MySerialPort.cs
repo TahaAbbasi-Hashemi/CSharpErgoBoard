@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO.Ports;
 
-namespace FreeErgonomics.Design
+namespace CSharpErgoBoard.Design
 {
     class MySerialPort : SerialPort
     {
@@ -31,7 +31,7 @@ namespace FreeErgonomics.Design
             WriteLine("Name");
 
             m_type = ReadLine();
-            if (m_type == wantedType)
+            if (m_type.StartsWith(wantedType))
             {
                 return true;
             }

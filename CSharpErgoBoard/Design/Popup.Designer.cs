@@ -1,4 +1,4 @@
-﻿namespace FreeErgonomics.Design
+﻿namespace CSharpErgoBoard.Design
 {
     partial class Popup
     {

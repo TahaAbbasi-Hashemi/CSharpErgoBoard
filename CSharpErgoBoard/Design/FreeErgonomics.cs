@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 
-namespace FreeErgonomics.Design
+namespace CSharpErgoBoard.Design
 {
     /// <summary>
     /// The graphical interface class
@@ -688,7 +688,7 @@ namespace FreeErgonomics.Design
         private String FullPortToJustCom(String fullPortName)
         {
             //TODO remove hard coding here. 
-            return "COM4";
+            return "COM3";
         }
 
         /// <summary>
@@ -715,7 +715,7 @@ namespace FreeErgonomics.Design
             if (!m_processing.IsConnected("Left Keyboard"))
             {
                 Programming.Logging.Instance.Log("Update was attempted to be made before connection", severity: "Error");
-                Popup noKeyError = new Popup("A connection must be made before a key can be updated.",
+                new Popup("A connection must be made before a key can be updated.",
                                              "Updating Keyboard Error",
                                              m_selectedDarkMode);
                 return;
@@ -724,7 +724,7 @@ namespace FreeErgonomics.Design
             if (id_comboboxLeftKeyValue.SelectedIndex == -1)
             {
                 Programming.Logging.Instance.Log("A keyboard value was not selected", severity: "Error");
-                Popup noKeyError = new Popup("You need to enter a key value to continue",
+                new Popup("You need to enter a key value to continue",
                                              "Updating Keyboard Error",
                                              m_selectedDarkMode);
                 return;
@@ -733,7 +733,7 @@ namespace FreeErgonomics.Design
             if (id_comboboxLeftKeyLayer.SelectedIndex == -1)
             {
                 Programming.Logging.Instance.Log("A layer was not selected.", severity: "Error");
-                Popup noKeyError = new Popup("You need to enter a layer to continue",
+                new Popup("You need to enter a layer to continue",
                                              "Updating Keyboard Error",
                                              m_selectedDarkMode);
                 return;
@@ -742,7 +742,7 @@ namespace FreeErgonomics.Design
             if (id_textboxLeftKeyValue.Text == "Selected Button")
             {
                 Programming.Logging.Instance.Log("No key was selected", severity: "Error");
-                Popup noKeyError = new Popup("You need to select a key to continue",
+                new Popup("You need to select a key to continue",
                                              "Updating Keyboard Error",
                                              m_selectedDarkMode);
                 return;
@@ -761,7 +761,16 @@ namespace FreeErgonomics.Design
         {
             Programming.Logging.Instance.Log($"Left Keyboard Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
                                  "Information");
-            String currentPort = FullPortToJustCom((String)id_comboboxLeftKeyComPort.SelectedItem);
+
+            if(id_comboboxLeftKeyComPort.SelectedIndex == -1)
+            {
+                Programming.Logging.Instance.Log("A serial port was not selected.", severity: "Error");
+                new Popup("You need to select a com port to continue",
+                                             "Connecting Error",
+                                             m_selectedDarkMode);
+                return;
+            }
+            String currentPort = m_processing.FullPortToJustCom((String)id_comboboxLeftKeyComPort.SelectedItem);
             Programming.Logging.Instance.Log(currentPort, "Information");
 
             String error = null;
@@ -770,7 +779,7 @@ namespace FreeErgonomics.Design
 
             if (!err)
             {
-                Popup errorPopup = new Popup(error, "Connecting Error", m_selectedDarkMode);
+                new Popup(error, "Connecting Error", m_selectedDarkMode);
             }
         }
 
@@ -787,7 +796,7 @@ namespace FreeErgonomics.Design
 
             if (!err)
             {
-                Popup errorPopup = new Popup(error, "Connecting Error", m_selectedDarkMode);
+                new Popup(error, "Connecting Error", m_selectedDarkMode);
             }
         }
     }
