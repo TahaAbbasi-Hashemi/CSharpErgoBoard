@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 
-namespace CSharpErgoBoard.Programming
+namespace FreeErgonomics.Programming
 {
 
     /// <summary>
@@ -36,7 +36,7 @@ namespace CSharpErgoBoard.Programming
 
         // Private Encapsulated Members
         private static String m_logFormat = "%D (%T), (%m) <%L> : %M";
-        private static String m_directory = @"C:\Users\Taha Abbasi-Hashemi\source\repos\CSharpErgoBoard\CSharpErgoBoard\Logs\Logs.log";
+        private static String m_directory = @"C:\Users\Taha Abbasi-Hashemi\source\repos\FreeErgonomics\FreeErgonomics\Logs\Logs.log";
         private static Boolean m_flush = false;
         private new static Logging m_instance = null;
 

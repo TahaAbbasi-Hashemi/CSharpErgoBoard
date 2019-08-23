@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['selectdarkmode',['SelectDarkMode',['../class_c_sharp_ergo_board_1_1_design_1_1_ergo_board.html#a977cba761c56abf2f22181ed630ab725',1,'CSharpErgoBoard::Design::ErgoBoard']]],
-  ['selected',['Selected',['../class_c_sharp_ergo_board_1_1_design_1_1_my_button.html#a1b2c7a0ff9d3ef3d48114170d33fff56',1,'CSharpErgoBoard::Design::MyButton']]],
-  ['selectlightmode',['SelectLightMode',['../class_c_sharp_ergo_board_1_1_design_1_1_ergo_board.html#aa43edb231f6b528353aa4f1e41af00e4',1,'CSharpErgoBoard::Design::ErgoBoard']]]
+  ['selectdarkmode',['SelectDarkMode',['../da/d1b/class_c_sharp_ergo_board_1_1_design_1_1_free_ergonomics.html#a4adabbe76f4551bf201e9e0e2df0c918',1,'CSharpErgoBoard::Design::FreeErgonomics']]],
+  ['selected',['Selected',['../d2/d00/class_c_sharp_ergo_board_1_1_design_1_1_my_button.html#a1b2c7a0ff9d3ef3d48114170d33fff56',1,'CSharpErgoBoard::Design::MyButton']]],
+  ['selectlightmode',['SelectLightMode',['../da/d1b/class_c_sharp_ergo_board_1_1_design_1_1_free_ergonomics.html#a2e07dfba1beba910bc655d9fbfa1ddda',1,'CSharpErgoBoard::Design::FreeErgonomics']]]
 ];

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.IO.Ports;
 
 
-namespace CSharpErgoBoard.Programming
+namespace FreeErgonomics.Programming
 {
     class FreeErgonomicsBrain
     {
