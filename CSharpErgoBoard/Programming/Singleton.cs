@@ -2,7 +2,7 @@
 using System;
 using System.Threading;
 
-namespace FreeErgonomics.Programming
+namespace CSharpErgoBoard.Programming
 {
     /// <summary>
     /// A Basic Singleton Class used for helping other singleton classes be made

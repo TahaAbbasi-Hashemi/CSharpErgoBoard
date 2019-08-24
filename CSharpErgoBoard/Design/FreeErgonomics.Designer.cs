@@ -1,4 +1,4 @@
-﻿namespace FreeErgonomics.Design
+﻿namespace CSharpErgoBoard.Design
 {
     partial class FreeErgonomics
     {
@@ -933,7 +933,7 @@
             this.id_buttonRightLedR6C6.Col = 0;
             this.id_buttonRightLedR6C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightLedR6C6.Image = global::FreeErgonomics.Properties.Resources.TallKeyLightLED;
+            this.id_buttonRightLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
             this.id_buttonRightLedR6C6.Location = new System.Drawing.Point(862, 697);
             this.id_buttonRightLedR6C6.Name = "id_buttonRightLedR6C6";
             this.id_buttonRightLedR6C6.Row = 0;
@@ -948,7 +948,7 @@
             this.id_buttonRightLedR6C7.Col = 0;
             this.id_buttonRightLedR6C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightLedR6C7.Image = global::FreeErgonomics.Properties.Resources.TallKeyLightLED;
+            this.id_buttonRightLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
             this.id_buttonRightLedR6C7.Location = new System.Drawing.Point(801, 697);
             this.id_buttonRightLedR6C7.Name = "id_buttonRightLedR6C7";
             this.id_buttonRightLedR6C7.Row = 0;
@@ -977,7 +977,7 @@
             this.id_buttonRightLedR6C1.Col = 0;
             this.id_buttonRightLedR6C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR6C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightLedR6C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonRightLedR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR6C1.Location = new System.Drawing.Point(1288, 758);
             this.id_buttonRightLedR6C1.Name = "id_buttonRightLedR6C1";
             this.id_buttonRightLedR6C1.Row = 0;
@@ -1052,7 +1052,7 @@
             this.id_buttonRightLedR5C1.Col = 0;
             this.id_buttonRightLedR5C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR5C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightLedR5C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonRightLedR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR5C1.Location = new System.Drawing.Point(1288, 697);
             this.id_buttonRightLedR5C1.Name = "id_buttonRightLedR5C1";
             this.id_buttonRightLedR5C1.Row = 0;
@@ -1157,7 +1157,7 @@
             this.id_buttonRightLedR4C1.Col = 0;
             this.id_buttonRightLedR4C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR4C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightLedR4C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonRightLedR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR4C1.Location = new System.Drawing.Point(1288, 636);
             this.id_buttonRightLedR4C1.Name = "id_buttonRightLedR4C1";
             this.id_buttonRightLedR4C1.Row = 0;
@@ -1172,7 +1172,7 @@
             this.id_buttonRightLedR3C1.Col = 0;
             this.id_buttonRightLedR3C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR3C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightLedR3C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonRightLedR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR3C1.Location = new System.Drawing.Point(1288, 575);
             this.id_buttonRightLedR3C1.Name = "id_buttonRightLedR3C1";
             this.id_buttonRightLedR3C1.Row = 0;
@@ -1187,7 +1187,7 @@
             this.id_buttonRightLedR2C1.Col = 0;
             this.id_buttonRightLedR2C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR2C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightLedR2C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonRightLedR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR2C1.Location = new System.Drawing.Point(1288, 514);
             this.id_buttonRightLedR2C1.Name = "id_buttonRightLedR2C1";
             this.id_buttonRightLedR2C1.Row = 0;
@@ -1202,7 +1202,7 @@
             this.id_buttonRightLedR1C1.Col = 0;
             this.id_buttonRightLedR1C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightLedR1C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightLedR1C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonRightLedR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonRightLedR1C1.Location = new System.Drawing.Point(1288, 453);
             this.id_buttonRightLedR1C1.Name = "id_buttonRightLedR1C1";
             this.id_buttonRightLedR1C1.Row = 0;
@@ -1637,7 +1637,7 @@
             this.id_buttonLeftLedR6C7.Col = 0;
             this.id_buttonLeftLedR6C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftLedR6C7.Image = global::FreeErgonomics.Properties.Resources.TallKeyLightLED;
+            this.id_buttonLeftLedR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
             this.id_buttonLeftLedR6C7.Location = new System.Drawing.Point(534, 697);
             this.id_buttonLeftLedR6C7.Name = "id_buttonLeftLedR6C7";
             this.id_buttonLeftLedR6C7.Row = 0;
@@ -1652,7 +1652,7 @@
             this.id_buttonLeftLedR6C6.Col = 0;
             this.id_buttonLeftLedR6C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftLedR6C6.Image = global::FreeErgonomics.Properties.Resources.TallKeyLightLED;
+            this.id_buttonLeftLedR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLightLED;
             this.id_buttonLeftLedR6C6.Location = new System.Drawing.Point(473, 697);
             this.id_buttonLeftLedR6C6.Name = "id_buttonLeftLedR6C6";
             this.id_buttonLeftLedR6C6.Row = 0;
@@ -1667,7 +1667,7 @@
             this.id_buttonLeftLedR6C1.Col = 0;
             this.id_buttonLeftLedR6C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR6C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftLedR6C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonLeftLedR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR6C1.Location = new System.Drawing.Point(19, 758);
             this.id_buttonLeftLedR6C1.Name = "id_buttonLeftLedR6C1";
             this.id_buttonLeftLedR6C1.Row = 0;
@@ -1742,7 +1742,7 @@
             this.id_buttonLeftLedR5C1.Col = 0;
             this.id_buttonLeftLedR5C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR5C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftLedR5C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonLeftLedR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR5C1.Location = new System.Drawing.Point(19, 697);
             this.id_buttonLeftLedR5C1.Name = "id_buttonLeftLedR5C1";
             this.id_buttonLeftLedR5C1.Row = 0;
@@ -1847,7 +1847,7 @@
             this.id_buttonLeftLedR4C1.Col = 0;
             this.id_buttonLeftLedR4C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR4C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftLedR4C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonLeftLedR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR4C1.Location = new System.Drawing.Point(19, 636);
             this.id_buttonLeftLedR4C1.Name = "id_buttonLeftLedR4C1";
             this.id_buttonLeftLedR4C1.Row = 0;
@@ -1862,7 +1862,7 @@
             this.id_buttonLeftLedR3C1.Col = 0;
             this.id_buttonLeftLedR3C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR3C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftLedR3C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonLeftLedR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR3C1.Location = new System.Drawing.Point(19, 575);
             this.id_buttonLeftLedR3C1.Name = "id_buttonLeftLedR3C1";
             this.id_buttonLeftLedR3C1.Row = 0;
@@ -1877,7 +1877,7 @@
             this.id_buttonLeftLedR2C1.Col = 0;
             this.id_buttonLeftLedR2C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR2C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftLedR2C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonLeftLedR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR2C1.Location = new System.Drawing.Point(19, 514);
             this.id_buttonLeftLedR2C1.Name = "id_buttonLeftLedR2C1";
             this.id_buttonLeftLedR2C1.Row = 0;
@@ -1892,7 +1892,7 @@
             this.id_buttonLeftLedR1C1.Col = 0;
             this.id_buttonLeftLedR1C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftLedR1C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftLedR1C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLightLED;
+            this.id_buttonLeftLedR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLightLED;
             this.id_buttonLeftLedR1C1.Location = new System.Drawing.Point(19, 453);
             this.id_buttonLeftLedR1C1.Name = "id_buttonLeftLedR1C1";
             this.id_buttonLeftLedR1C1.Row = 0;
@@ -2322,7 +2322,7 @@
             this.id_buttonRightR6C3.Col = 0;
             this.id_buttonRightR6C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR6C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C3.Location = new System.Drawing.Point(1166, 344);
             this.id_buttonRightR6C3.Name = "id_buttonRightR6C3";
             this.id_buttonRightR6C3.Row = 0;
@@ -2337,7 +2337,7 @@
             this.id_buttonRightR6C2.Col = 0;
             this.id_buttonRightR6C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR6C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C2.Location = new System.Drawing.Point(1227, 344);
             this.id_buttonRightR6C2.Name = "id_buttonRightR6C2";
             this.id_buttonRightR6C2.Row = 0;
@@ -2352,7 +2352,7 @@
             this.id_buttonRightR6C4.Col = 0;
             this.id_buttonRightR6C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR6C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C4.Location = new System.Drawing.Point(1105, 344);
             this.id_buttonRightR6C4.Name = "id_buttonRightR6C4";
             this.id_buttonRightR6C4.Row = 0;
@@ -2367,7 +2367,7 @@
             this.id_buttonRightR6C5.Col = 0;
             this.id_buttonRightR6C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR6C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C5.Location = new System.Drawing.Point(1044, 344);
             this.id_buttonRightR6C5.Name = "id_buttonRightR6C5";
             this.id_buttonRightR6C5.Row = 0;
@@ -2382,7 +2382,7 @@
             this.id_buttonRightR5C1.Col = 0;
             this.id_buttonRightR5C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR5C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonRightR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR5C1.Location = new System.Drawing.Point(1288, 283);
             this.id_buttonRightR5C1.Name = "id_buttonRightR5C1";
             this.id_buttonRightR5C1.Row = 0;
@@ -2397,7 +2397,7 @@
             this.id_buttonRightR5C2.Col = 0;
             this.id_buttonRightR5C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR5C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C2.Location = new System.Drawing.Point(1227, 283);
             this.id_buttonRightR5C2.Name = "id_buttonRightR5C2";
             this.id_buttonRightR5C2.Row = 0;
@@ -2412,7 +2412,7 @@
             this.id_buttonRightR5C3.Col = 0;
             this.id_buttonRightR5C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR5C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C3.Location = new System.Drawing.Point(1166, 283);
             this.id_buttonRightR5C3.Name = "id_buttonRightR5C3";
             this.id_buttonRightR5C3.Row = 0;
@@ -2427,7 +2427,7 @@
             this.id_buttonRightR5C6.Col = 0;
             this.id_buttonRightR5C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR5C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C6.Location = new System.Drawing.Point(983, 283);
             this.id_buttonRightR5C6.Name = "id_buttonRightR5C6";
             this.id_buttonRightR5C6.Row = 0;
@@ -2442,7 +2442,7 @@
             this.id_buttonRightR5C4.Col = 0;
             this.id_buttonRightR5C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR5C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C4.Location = new System.Drawing.Point(1105, 283);
             this.id_buttonRightR5C4.Name = "id_buttonRightR5C4";
             this.id_buttonRightR5C4.Row = 0;
@@ -2457,7 +2457,7 @@
             this.id_buttonRightR5C5.Col = 0;
             this.id_buttonRightR5C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR5C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C5.Location = new System.Drawing.Point(1044, 283);
             this.id_buttonRightR5C5.Name = "id_buttonRightR5C5";
             this.id_buttonRightR5C5.Row = 0;
@@ -2472,7 +2472,7 @@
             this.id_buttonRightR6C1.Col = 0;
             this.id_buttonRightR6C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR6C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonRightR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR6C1.Location = new System.Drawing.Point(1288, 344);
             this.id_buttonRightR6C1.Name = "id_buttonRightR6C1";
             this.id_buttonRightR6C1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2488,7 +2488,7 @@
             this.id_buttonRightR4C2.Col = 0;
             this.id_buttonRightR4C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR4C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C2.Location = new System.Drawing.Point(1227, 222);
             this.id_buttonRightR4C2.Name = "id_buttonRightR4C2";
             this.id_buttonRightR4C2.Row = 0;
@@ -2503,7 +2503,7 @@
             this.id_buttonRightR4C3.Col = 0;
             this.id_buttonRightR4C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR4C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C3.Location = new System.Drawing.Point(1166, 222);
             this.id_buttonRightR4C3.Name = "id_buttonRightR4C3";
             this.id_buttonRightR4C3.Row = 0;
@@ -2518,7 +2518,7 @@
             this.id_buttonRightR4C4.Col = 0;
             this.id_buttonRightR4C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR4C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C4.Location = new System.Drawing.Point(1105, 222);
             this.id_buttonRightR4C4.Name = "id_buttonRightR4C4";
             this.id_buttonRightR4C4.Row = 0;
@@ -2533,7 +2533,7 @@
             this.id_buttonRightR4C7.Col = 0;
             this.id_buttonRightR4C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR4C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C7.Location = new System.Drawing.Point(922, 222);
             this.id_buttonRightR4C7.Name = "id_buttonRightR4C7";
             this.id_buttonRightR4C7.Row = 0;
@@ -2548,7 +2548,7 @@
             this.id_buttonRightR4C5.Col = 0;
             this.id_buttonRightR4C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR4C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C5.Location = new System.Drawing.Point(1044, 222);
             this.id_buttonRightR4C5.Name = "id_buttonRightR4C5";
             this.id_buttonRightR4C5.Row = 0;
@@ -2563,7 +2563,7 @@
             this.id_buttonRightR4C6.Col = 0;
             this.id_buttonRightR4C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR4C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C6.Location = new System.Drawing.Point(983, 222);
             this.id_buttonRightR4C6.Name = "id_buttonRightR4C6";
             this.id_buttonRightR4C6.Row = 0;
@@ -2578,7 +2578,7 @@
             this.id_buttonRightR3C2.Col = 0;
             this.id_buttonRightR3C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR3C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C2.Location = new System.Drawing.Point(1227, 161);
             this.id_buttonRightR3C2.Name = "id_buttonRightR3C2";
             this.id_buttonRightR3C2.Row = 0;
@@ -2593,7 +2593,7 @@
             this.id_buttonRightR3C3.Col = 0;
             this.id_buttonRightR3C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR3C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C3.Location = new System.Drawing.Point(1166, 161);
             this.id_buttonRightR3C3.Name = "id_buttonRightR3C3";
             this.id_buttonRightR3C3.Row = 0;
@@ -2608,7 +2608,7 @@
             this.id_buttonRightR3C4.Col = 0;
             this.id_buttonRightR3C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR3C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C4.Location = new System.Drawing.Point(1105, 161);
             this.id_buttonRightR3C4.Name = "id_buttonRightR3C4";
             this.id_buttonRightR3C4.Row = 0;
@@ -2623,7 +2623,7 @@
             this.id_buttonRightR3C7.Col = 0;
             this.id_buttonRightR3C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR3C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C7.Location = new System.Drawing.Point(922, 161);
             this.id_buttonRightR3C7.Name = "id_buttonRightR3C7";
             this.id_buttonRightR3C7.Row = 0;
@@ -2638,7 +2638,7 @@
             this.id_buttonRightR3C5.Col = 0;
             this.id_buttonRightR3C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR3C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C5.Location = new System.Drawing.Point(1044, 161);
             this.id_buttonRightR3C5.Name = "id_buttonRightR3C5";
             this.id_buttonRightR3C5.Row = 0;
@@ -2653,7 +2653,7 @@
             this.id_buttonRightR3C6.Col = 0;
             this.id_buttonRightR3C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR3C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C6.Location = new System.Drawing.Point(983, 161);
             this.id_buttonRightR3C6.Name = "id_buttonRightR3C6";
             this.id_buttonRightR3C6.Row = 0;
@@ -2668,7 +2668,7 @@
             this.id_buttonRightR2C2.Col = 0;
             this.id_buttonRightR2C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR2C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C2.Location = new System.Drawing.Point(1227, 100);
             this.id_buttonRightR2C2.Name = "id_buttonRightR2C2";
             this.id_buttonRightR2C2.Row = 0;
@@ -2683,7 +2683,7 @@
             this.id_buttonRightR2C3.Col = 0;
             this.id_buttonRightR2C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR2C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C3.Location = new System.Drawing.Point(1166, 100);
             this.id_buttonRightR2C3.Name = "id_buttonRightR2C3";
             this.id_buttonRightR2C3.Row = 0;
@@ -2698,7 +2698,7 @@
             this.id_buttonRightR2C4.Col = 0;
             this.id_buttonRightR2C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR2C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C4.Location = new System.Drawing.Point(1105, 100);
             this.id_buttonRightR2C4.Name = "id_buttonRightR2C4";
             this.id_buttonRightR2C4.Row = 0;
@@ -2713,7 +2713,7 @@
             this.id_buttonRightR2C7.Col = 0;
             this.id_buttonRightR2C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR2C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C7.Location = new System.Drawing.Point(922, 100);
             this.id_buttonRightR2C7.Name = "id_buttonRightR2C7";
             this.id_buttonRightR2C7.Row = 0;
@@ -2728,7 +2728,7 @@
             this.id_buttonRightR2C5.Col = 0;
             this.id_buttonRightR2C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR2C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C5.Location = new System.Drawing.Point(1044, 100);
             this.id_buttonRightR2C5.Name = "id_buttonRightR2C5";
             this.id_buttonRightR2C5.Row = 0;
@@ -2743,7 +2743,7 @@
             this.id_buttonRightR2C6.Col = 0;
             this.id_buttonRightR2C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR2C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR2C6.Location = new System.Drawing.Point(983, 100);
             this.id_buttonRightR2C6.Name = "id_buttonRightR2C6";
             this.id_buttonRightR2C6.Row = 0;
@@ -2758,7 +2758,7 @@
             this.id_buttonRightR4C1.Col = 0;
             this.id_buttonRightR4C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR4C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonRightR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR4C1.Location = new System.Drawing.Point(1288, 222);
             this.id_buttonRightR4C1.Name = "id_buttonRightR4C1";
             this.id_buttonRightR4C1.Row = 0;
@@ -2773,7 +2773,7 @@
             this.id_buttonRightR3C1.Col = 0;
             this.id_buttonRightR3C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR3C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonRightR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR3C1.Location = new System.Drawing.Point(1288, 161);
             this.id_buttonRightR3C1.Name = "id_buttonRightR3C1";
             this.id_buttonRightR3C1.Row = 0;
@@ -2788,7 +2788,7 @@
             this.id_buttonRightR2C1.Col = 0;
             this.id_buttonRightR2C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR2C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR2C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonRightR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR2C1.Location = new System.Drawing.Point(1288, 100);
             this.id_buttonRightR2C1.Name = "id_buttonRightR2C1";
             this.id_buttonRightR2C1.Row = 0;
@@ -2803,7 +2803,7 @@
             this.id_buttonRightR1C2.Col = 0;
             this.id_buttonRightR1C2.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR1C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C2.Location = new System.Drawing.Point(1227, 39);
             this.id_buttonRightR1C2.Name = "id_buttonRightR1C2";
             this.id_buttonRightR1C2.Row = 0;
@@ -2818,7 +2818,7 @@
             this.id_buttonRightR1C3.Col = 0;
             this.id_buttonRightR1C3.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR1C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C3.Location = new System.Drawing.Point(1166, 39);
             this.id_buttonRightR1C3.Name = "id_buttonRightR1C3";
             this.id_buttonRightR1C3.Row = 0;
@@ -2833,7 +2833,7 @@
             this.id_buttonRightR1C4.Col = 0;
             this.id_buttonRightR1C4.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR1C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C4.Location = new System.Drawing.Point(1105, 39);
             this.id_buttonRightR1C4.Name = "id_buttonRightR1C4";
             this.id_buttonRightR1C4.Row = 0;
@@ -2848,7 +2848,7 @@
             this.id_buttonRightR1C7.Col = 0;
             this.id_buttonRightR1C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR1C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C7.Location = new System.Drawing.Point(922, 39);
             this.id_buttonRightR1C7.Name = "id_buttonRightR1C7";
             this.id_buttonRightR1C7.Row = 0;
@@ -2863,7 +2863,7 @@
             this.id_buttonRightR1C5.Col = 0;
             this.id_buttonRightR1C5.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR1C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C5.Location = new System.Drawing.Point(1044, 39);
             this.id_buttonRightR1C5.Name = "id_buttonRightR1C5";
             this.id_buttonRightR1C5.Row = 0;
@@ -2878,7 +2878,7 @@
             this.id_buttonRightR1C6.Col = 0;
             this.id_buttonRightR1C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR1C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR1C6.Location = new System.Drawing.Point(983, 39);
             this.id_buttonRightR1C6.Name = "id_buttonRightR1C6";
             this.id_buttonRightR1C6.Row = 0;
@@ -2893,7 +2893,7 @@
             this.id_buttonRightR1C1.Col = 0;
             this.id_buttonRightR1C1.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR1C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR1C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonRightR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonRightR1C1.Location = new System.Drawing.Point(1288, 39);
             this.id_buttonRightR1C1.Name = "id_buttonRightR1C1";
             this.id_buttonRightR1C1.Row = 0;
@@ -2908,7 +2908,7 @@
             this.id_buttonRightR6C8.Col = 0;
             this.id_buttonRightR6C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR6C8.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR6C8.Location = new System.Drawing.Point(739, 358);
             this.id_buttonRightR6C8.Name = "id_buttonRightR6C8";
             this.id_buttonRightR6C8.Row = 0;
@@ -2923,7 +2923,7 @@
             this.id_buttonRightR5C8.Col = 0;
             this.id_buttonRightR5C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR5C8.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C8.Location = new System.Drawing.Point(739, 297);
             this.id_buttonRightR5C8.Name = "id_buttonRightR5C8";
             this.id_buttonRightR5C8.Row = 0;
@@ -2938,7 +2938,7 @@
             this.id_buttonRightR5C7.Col = 0;
             this.id_buttonRightR5C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR5C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR5C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR5C7.Location = new System.Drawing.Point(922, 283);
             this.id_buttonRightR5C7.Name = "id_buttonRightR5C7";
             this.id_buttonRightR5C7.Row = 0;
@@ -2953,7 +2953,7 @@
             this.id_buttonRightR3C8.Col = 0;
             this.id_buttonRightR3C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR3C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR3C8.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR3C8.Location = new System.Drawing.Point(800, 236);
             this.id_buttonRightR3C8.Name = "id_buttonRightR3C8";
             this.id_buttonRightR3C8.Row = 0;
@@ -2968,7 +2968,7 @@
             this.id_buttonRightR4C8.Col = 0;
             this.id_buttonRightR4C8.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR4C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR4C8.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonRightR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonRightR4C8.Location = new System.Drawing.Point(739, 236);
             this.id_buttonRightR4C8.Name = "id_buttonRightR4C8";
             this.id_buttonRightR4C8.Row = 0;
@@ -2983,7 +2983,7 @@
             this.id_buttonRightR6C7.Col = 0;
             this.id_buttonRightR6C7.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR6C7.Image = global::FreeErgonomics.Properties.Resources.TallKeyLight;
+            this.id_buttonRightR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
             this.id_buttonRightR6C7.Location = new System.Drawing.Point(800, 297);
             this.id_buttonRightR6C7.Name = "id_buttonRightR6C7";
             this.id_buttonRightR6C7.Row = 0;
@@ -2998,7 +2998,7 @@
             this.id_buttonRightR6C6.Col = 0;
             this.id_buttonRightR6C6.FlatAppearance.BorderSize = 0;
             this.id_buttonRightR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonRightR6C6.Image = global::FreeErgonomics.Properties.Resources.TallKeyLight;
+            this.id_buttonRightR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
             this.id_buttonRightR6C6.Location = new System.Drawing.Point(861, 297);
             this.id_buttonRightR6C6.Name = "id_buttonRightR6C6";
             this.id_buttonRightR6C6.Row = 0;
@@ -3013,7 +3013,7 @@
             this.id_buttonLeftR6C8.Col = 0;
             this.id_buttonLeftR6C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR6C8.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR6C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C8.Location = new System.Drawing.Point(589, 358);
             this.id_buttonLeftR6C8.Name = "id_buttonLeftR6C8";
             this.id_buttonLeftR6C8.Row = 0;
@@ -3028,7 +3028,7 @@
             this.id_buttonLeftR5C8.Col = 0;
             this.id_buttonLeftR5C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR5C8.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR5C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C8.Location = new System.Drawing.Point(589, 297);
             this.id_buttonLeftR5C8.Name = "id_buttonLeftR5C8";
             this.id_buttonLeftR5C8.Row = 0;
@@ -3043,7 +3043,7 @@
             this.id_buttonLeftR4C8.Col = 0;
             this.id_buttonLeftR4C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR4C8.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR4C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C8.Location = new System.Drawing.Point(589, 236);
             this.id_buttonLeftR4C8.Name = "id_buttonLeftR4C8";
             this.id_buttonLeftR4C8.Row = 0;
@@ -3058,7 +3058,7 @@
             this.id_buttonLeftR3C8.Col = 0;
             this.id_buttonLeftR3C8.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR3C8.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR3C8.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C8.Location = new System.Drawing.Point(528, 236);
             this.id_buttonLeftR3C8.Name = "id_buttonLeftR3C8";
             this.id_buttonLeftR3C8.Row = 0;
@@ -3073,7 +3073,7 @@
             this.id_buttonLeftR6C7.Col = 0;
             this.id_buttonLeftR6C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR6C7.Image = global::FreeErgonomics.Properties.Resources.TallKeyLight;
+            this.id_buttonLeftR6C7.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
             this.id_buttonLeftR6C7.Location = new System.Drawing.Point(528, 297);
             this.id_buttonLeftR6C7.Name = "id_buttonLeftR6C7";
             this.id_buttonLeftR6C7.Row = 0;
@@ -3088,7 +3088,7 @@
             this.id_buttonLeftR6C6.Col = 0;
             this.id_buttonLeftR6C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR6C6.Image = global::FreeErgonomics.Properties.Resources.TallKeyLight;
+            this.id_buttonLeftR6C6.Image = global::CSharpErgoBoard.Properties.Resources.TallKeyLight;
             this.id_buttonLeftR6C6.Location = new System.Drawing.Point(467, 297);
             this.id_buttonLeftR6C6.Name = "id_buttonLeftR6C6";
             this.id_buttonLeftR6C6.Row = 0;
@@ -3103,7 +3103,7 @@
             this.id_buttonLeftR6C5.Col = 0;
             this.id_buttonLeftR6C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR6C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR6C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C5.Location = new System.Drawing.Point(284, 344);
             this.id_buttonLeftR6C5.Name = "id_buttonLeftR6C5";
             this.id_buttonLeftR6C5.Row = 0;
@@ -3118,7 +3118,7 @@
             this.id_buttonLeftR6C2.Col = 0;
             this.id_buttonLeftR6C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR6C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR6C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C2.Location = new System.Drawing.Point(101, 344);
             this.id_buttonLeftR6C2.Name = "id_buttonLeftR6C2";
             this.id_buttonLeftR6C2.Row = 0;
@@ -3133,7 +3133,7 @@
             this.id_buttonLeftR6C4.Col = 0;
             this.id_buttonLeftR6C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR6C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR6C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C4.Location = new System.Drawing.Point(223, 344);
             this.id_buttonLeftR6C4.Name = "id_buttonLeftR6C4";
             this.id_buttonLeftR6C4.Row = 0;
@@ -3148,7 +3148,7 @@
             this.id_buttonLeftR6C3.Col = 0;
             this.id_buttonLeftR6C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR6C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR6C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR6C3.Location = new System.Drawing.Point(162, 344);
             this.id_buttonLeftR6C3.Name = "id_buttonLeftR6C3";
             this.id_buttonLeftR6C3.Row = 0;
@@ -3163,7 +3163,7 @@
             this.id_buttonLeftR6C1.Col = 0;
             this.id_buttonLeftR6C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR6C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR6C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonLeftR6C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR6C1.Location = new System.Drawing.Point(13, 344);
             this.id_buttonLeftR6C1.Name = "id_buttonLeftR6C1";
             this.id_buttonLeftR6C1.Row = 0;
@@ -3178,7 +3178,7 @@
             this.id_buttonLeftR5C7.Col = 0;
             this.id_buttonLeftR5C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR5C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR5C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C7.Location = new System.Drawing.Point(406, 283);
             this.id_buttonLeftR5C7.Name = "id_buttonLeftR5C7";
             this.id_buttonLeftR5C7.Row = 0;
@@ -3193,7 +3193,7 @@
             this.id_buttonLeftR5C6.Col = 0;
             this.id_buttonLeftR5C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR5C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR5C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C6.Location = new System.Drawing.Point(345, 283);
             this.id_buttonLeftR5C6.Name = "id_buttonLeftR5C6";
             this.id_buttonLeftR5C6.Row = 0;
@@ -3208,7 +3208,7 @@
             this.id_buttonLeftR5C5.Col = 0;
             this.id_buttonLeftR5C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR5C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR5C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C5.Location = new System.Drawing.Point(284, 283);
             this.id_buttonLeftR5C5.Name = "id_buttonLeftR5C5";
             this.id_buttonLeftR5C5.Row = 0;
@@ -3223,7 +3223,7 @@
             this.id_buttonLeftR5C2.Col = 0;
             this.id_buttonLeftR5C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR5C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR5C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C2.Location = new System.Drawing.Point(101, 283);
             this.id_buttonLeftR5C2.Name = "id_buttonLeftR5C2";
             this.id_buttonLeftR5C2.Row = 0;
@@ -3238,7 +3238,7 @@
             this.id_buttonLeftR5C4.Col = 0;
             this.id_buttonLeftR5C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR5C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR5C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C4.Location = new System.Drawing.Point(223, 283);
             this.id_buttonLeftR5C4.Name = "id_buttonLeftR5C4";
             this.id_buttonLeftR5C4.Row = 0;
@@ -3253,7 +3253,7 @@
             this.id_buttonLeftR5C3.Col = 0;
             this.id_buttonLeftR5C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR5C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR5C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR5C3.Location = new System.Drawing.Point(162, 283);
             this.id_buttonLeftR5C3.Name = "id_buttonLeftR5C3";
             this.id_buttonLeftR5C3.Row = 0;
@@ -3268,7 +3268,7 @@
             this.id_buttonLeftR4C7.Col = 0;
             this.id_buttonLeftR4C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR4C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR4C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C7.Location = new System.Drawing.Point(406, 222);
             this.id_buttonLeftR4C7.Name = "id_buttonLeftR4C7";
             this.id_buttonLeftR4C7.Row = 0;
@@ -3283,7 +3283,7 @@
             this.id_buttonLeftR4C6.Col = 0;
             this.id_buttonLeftR4C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR4C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR4C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C6.Location = new System.Drawing.Point(345, 222);
             this.id_buttonLeftR4C6.Name = "id_buttonLeftR4C6";
             this.id_buttonLeftR4C6.Row = 0;
@@ -3298,7 +3298,7 @@
             this.id_buttonLeftR4C5.Col = 0;
             this.id_buttonLeftR4C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR4C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR4C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C5.Location = new System.Drawing.Point(284, 222);
             this.id_buttonLeftR4C5.Name = "id_buttonLeftR4C5";
             this.id_buttonLeftR4C5.Row = 0;
@@ -3313,7 +3313,7 @@
             this.id_buttonLeftR4C2.Col = 0;
             this.id_buttonLeftR4C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR4C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR4C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C2.Location = new System.Drawing.Point(101, 222);
             this.id_buttonLeftR4C2.Name = "id_buttonLeftR4C2";
             this.id_buttonLeftR4C2.Row = 0;
@@ -3328,7 +3328,7 @@
             this.id_buttonLeftR4C4.Col = 0;
             this.id_buttonLeftR4C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR4C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR4C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C4.Location = new System.Drawing.Point(223, 222);
             this.id_buttonLeftR4C4.Name = "id_buttonLeftR4C4";
             this.id_buttonLeftR4C4.Row = 0;
@@ -3343,7 +3343,7 @@
             this.id_buttonLeftR4C3.Col = 0;
             this.id_buttonLeftR4C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR4C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR4C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR4C3.Location = new System.Drawing.Point(162, 222);
             this.id_buttonLeftR4C3.Name = "id_buttonLeftR4C3";
             this.id_buttonLeftR4C3.Row = 0;
@@ -3358,7 +3358,7 @@
             this.id_buttonLeftR3C7.Col = 0;
             this.id_buttonLeftR3C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR3C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR3C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C7.Location = new System.Drawing.Point(406, 161);
             this.id_buttonLeftR3C7.Name = "id_buttonLeftR3C7";
             this.id_buttonLeftR3C7.Row = 0;
@@ -3373,7 +3373,7 @@
             this.id_buttonLeftR3C6.Col = 0;
             this.id_buttonLeftR3C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR3C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR3C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C6.Location = new System.Drawing.Point(345, 161);
             this.id_buttonLeftR3C6.Name = "id_buttonLeftR3C6";
             this.id_buttonLeftR3C6.Row = 0;
@@ -3388,7 +3388,7 @@
             this.id_buttonLeftR3C5.Col = 0;
             this.id_buttonLeftR3C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR3C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR3C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C5.Location = new System.Drawing.Point(284, 161);
             this.id_buttonLeftR3C5.Name = "id_buttonLeftR3C5";
             this.id_buttonLeftR3C5.Row = 0;
@@ -3403,7 +3403,7 @@
             this.id_buttonLeftR3C2.Col = 0;
             this.id_buttonLeftR3C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR3C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR3C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C2.Location = new System.Drawing.Point(101, 161);
             this.id_buttonLeftR3C2.Name = "id_buttonLeftR3C2";
             this.id_buttonLeftR3C2.Row = 0;
@@ -3418,7 +3418,7 @@
             this.id_buttonLeftR3C4.Col = 0;
             this.id_buttonLeftR3C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR3C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR3C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C4.Location = new System.Drawing.Point(223, 161);
             this.id_buttonLeftR3C4.Name = "id_buttonLeftR3C4";
             this.id_buttonLeftR3C4.Row = 0;
@@ -3433,7 +3433,7 @@
             this.id_buttonLeftR3C3.Col = 0;
             this.id_buttonLeftR3C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR3C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR3C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR3C3.Location = new System.Drawing.Point(162, 161);
             this.id_buttonLeftR3C3.Name = "id_buttonLeftR3C3";
             this.id_buttonLeftR3C3.Row = 0;
@@ -3448,7 +3448,7 @@
             this.id_buttonLeftR2C7.Col = 0;
             this.id_buttonLeftR2C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR2C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR2C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C7.Location = new System.Drawing.Point(406, 100);
             this.id_buttonLeftR2C7.Name = "id_buttonLeftR2C7";
             this.id_buttonLeftR2C7.Row = 0;
@@ -3464,7 +3464,7 @@
             this.id_buttonLeftR2C6.Col = 0;
             this.id_buttonLeftR2C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR2C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR2C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C6.Location = new System.Drawing.Point(345, 100);
             this.id_buttonLeftR2C6.Name = "id_buttonLeftR2C6";
             this.id_buttonLeftR2C6.Row = 0;
@@ -3480,7 +3480,7 @@
             this.id_buttonLeftR2C5.Col = 0;
             this.id_buttonLeftR2C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR2C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR2C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C5.Location = new System.Drawing.Point(284, 100);
             this.id_buttonLeftR2C5.Name = "id_buttonLeftR2C5";
             this.id_buttonLeftR2C5.Row = 0;
@@ -3496,7 +3496,7 @@
             this.id_buttonLeftR2C2.Col = 0;
             this.id_buttonLeftR2C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR2C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR2C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C2.Location = new System.Drawing.Point(101, 100);
             this.id_buttonLeftR2C2.Name = "id_buttonLeftR2C2";
             this.id_buttonLeftR2C2.Row = 0;
@@ -3512,7 +3512,7 @@
             this.id_buttonLeftR2C4.Col = 0;
             this.id_buttonLeftR2C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR2C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR2C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C4.Location = new System.Drawing.Point(223, 100);
             this.id_buttonLeftR2C4.Name = "id_buttonLeftR2C4";
             this.id_buttonLeftR2C4.Row = 0;
@@ -3528,7 +3528,7 @@
             this.id_buttonLeftR2C3.Col = 0;
             this.id_buttonLeftR2C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR2C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR2C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR2C3.Location = new System.Drawing.Point(162, 100);
             this.id_buttonLeftR2C3.Name = "id_buttonLeftR2C3";
             this.id_buttonLeftR2C3.Row = 0;
@@ -3544,7 +3544,7 @@
             this.id_buttonLeftR5C1.Col = 0;
             this.id_buttonLeftR5C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR5C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR5C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonLeftR5C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR5C1.Location = new System.Drawing.Point(13, 283);
             this.id_buttonLeftR5C1.Name = "id_buttonLeftR5C1";
             this.id_buttonLeftR5C1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -3560,7 +3560,7 @@
             this.id_buttonLeftR4C1.Col = 0;
             this.id_buttonLeftR4C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR4C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR4C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonLeftR4C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR4C1.Location = new System.Drawing.Point(13, 222);
             this.id_buttonLeftR4C1.Name = "id_buttonLeftR4C1";
             this.id_buttonLeftR4C1.Row = 0;
@@ -3575,7 +3575,7 @@
             this.id_buttonLeftR3C1.Col = 0;
             this.id_buttonLeftR3C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR3C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR3C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonLeftR3C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR3C1.Location = new System.Drawing.Point(13, 161);
             this.id_buttonLeftR3C1.Name = "id_buttonLeftR3C1";
             this.id_buttonLeftR3C1.Row = 0;
@@ -3590,7 +3590,7 @@
             this.id_buttonLeftR2C1.Col = 0;
             this.id_buttonLeftR2C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR2C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR2C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonLeftR2C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR2C1.Location = new System.Drawing.Point(13, 100);
             this.id_buttonLeftR2C1.Name = "id_buttonLeftR2C1";
             this.id_buttonLeftR2C1.Row = 0;
@@ -3606,7 +3606,7 @@
             this.id_buttonLeftR1C7.Col = 0;
             this.id_buttonLeftR1C7.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR1C7.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR1C7.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C7.Location = new System.Drawing.Point(406, 39);
             this.id_buttonLeftR1C7.Name = "id_buttonLeftR1C7";
             this.id_buttonLeftR1C7.Row = 0;
@@ -3622,7 +3622,7 @@
             this.id_buttonLeftR1C6.Col = 0;
             this.id_buttonLeftR1C6.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR1C6.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR1C6.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C6.Location = new System.Drawing.Point(345, 39);
             this.id_buttonLeftR1C6.Name = "id_buttonLeftR1C6";
             this.id_buttonLeftR1C6.Row = 0;
@@ -3638,7 +3638,7 @@
             this.id_buttonLeftR1C5.Col = 0;
             this.id_buttonLeftR1C5.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR1C5.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR1C5.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C5.Location = new System.Drawing.Point(284, 39);
             this.id_buttonLeftR1C5.Name = "id_buttonLeftR1C5";
             this.id_buttonLeftR1C5.Row = 0;
@@ -3654,7 +3654,7 @@
             this.id_buttonLeftR1C2.Col = 0;
             this.id_buttonLeftR1C2.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR1C2.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR1C2.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C2.Location = new System.Drawing.Point(101, 39);
             this.id_buttonLeftR1C2.Name = "id_buttonLeftR1C2";
             this.id_buttonLeftR1C2.Row = 0;
@@ -3670,7 +3670,7 @@
             this.id_buttonLeftR1C4.Col = 0;
             this.id_buttonLeftR1C4.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR1C4.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR1C4.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C4.Location = new System.Drawing.Point(223, 39);
             this.id_buttonLeftR1C4.Name = "id_buttonLeftR1C4";
             this.id_buttonLeftR1C4.Row = 0;
@@ -3686,7 +3686,7 @@
             this.id_buttonLeftR1C3.Col = 0;
             this.id_buttonLeftR1C3.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR1C3.Image = global::FreeErgonomics.Properties.Resources.SingleKeyLight;
+            this.id_buttonLeftR1C3.Image = global::CSharpErgoBoard.Properties.Resources.SingleKeyLight;
             this.id_buttonLeftR1C3.Location = new System.Drawing.Point(162, 39);
             this.id_buttonLeftR1C3.Name = "id_buttonLeftR1C3";
             this.id_buttonLeftR1C3.Row = 0;
@@ -3702,7 +3702,7 @@
             this.id_buttonLeftR1C1.Col = 0;
             this.id_buttonLeftR1C1.FlatAppearance.BorderSize = 0;
             this.id_buttonLeftR1C1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.id_buttonLeftR1C1.Image = global::FreeErgonomics.Properties.Resources.WideKeyLight;
+            this.id_buttonLeftR1C1.Image = global::CSharpErgoBoard.Properties.Resources.WideKeyLight;
             this.id_buttonLeftR1C1.Location = new System.Drawing.Point(13, 39);
             this.id_buttonLeftR1C1.Name = "id_buttonLeftR1C1";
             this.id_buttonLeftR1C1.Row = 0;

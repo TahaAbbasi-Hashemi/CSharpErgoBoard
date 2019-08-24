@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
 
-namespace FreeErgonomics.Design
+namespace CSharpErgoBoard.Design
 {
     /// <summary>
     /// The graphical interface class

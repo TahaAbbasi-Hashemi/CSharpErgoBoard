@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace FreeErgonomics.Design
+namespace CSharpErgoBoard.Design
 {
     /// <summary>
     /// This is intended to be a extension of the button class provided by windows forms. 

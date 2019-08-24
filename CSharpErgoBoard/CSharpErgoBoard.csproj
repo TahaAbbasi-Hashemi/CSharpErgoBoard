@@ -156,6 +156,7 @@
     </Compile>
     <None Include="app.manifest" />
     <None Include="Arduino Code\KeyboardController.ino" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="CSharpErgoBoard_TemporaryKey.pfx" />
     <None Include="Logs\Logs.log" />
     <None Include="Properties\Settings.settings">
