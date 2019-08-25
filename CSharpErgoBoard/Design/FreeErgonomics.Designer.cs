@@ -4031,10 +4031,12 @@
         private Design.MyComboBox id_comboboxRightKeyLayer;
         private Design.MyComboBox id_comboboxRightKeyComPort;
         private Design.MyComboBox id_comboboxRightKeyValue;
-        private MyComboBox id_comboboxLeftLedComPort;
-        private MyComboBox id_comboboxRightLedComPort;
-        private MyButton id_buttonRightUpdateLed;
-        private MyButton id_buttonLeftUpdateLed;
+        private Design.MyComboBox id_comboboxLeftLedComPort;
+        private Design.MyComboBox id_comboboxRightLedComPort;
+        private Design.MyButton id_buttonRightUpdateLed;
+        private Design.MyButton id_buttonLeftUpdateLed;
+
+        //private System.Collections.Generic.List<Design.MyButton>
     }
 }
 

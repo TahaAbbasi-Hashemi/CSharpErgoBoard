@@ -324,5 +324,14 @@ namespace CSharpErgoBoard.Programming
             m_leftLEDConnection.Close();
             m_rightLEDConnection.Close();
         }
+        
+        public Boolean Save()
+        {
+            return true;
+        }
+        public Boolean Load()
+        {
+            return false;
+        }
     }
 }

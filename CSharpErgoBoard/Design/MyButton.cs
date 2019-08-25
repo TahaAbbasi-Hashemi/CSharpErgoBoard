@@ -1,8 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-
-namespace CSharpErgoBoard.Design
+﻿namespace CSharpErgoBoard.Design
 {
     /// <summary>
     /// This is intended to be a extension of the button class provided by windows forms. 
@@ -15,23 +11,23 @@ namespace CSharpErgoBoard.Design
     /// This is because you can only select a button knowing what the button is, but you do not have to know what the button is to unselect it to select something else.
     /// If you were to select another button you must first unselect the currently selected button.
     /// </remarks>
-    class MyButton : Button
+    class MyButton : System.Windows.Forms.Button
     {
         // Class Attributes
         /// <summary>
         /// The purpose of the class
         /// </summary>
-        public String Purpose { get; } = "To allow for ease of when buttons are converted to and from dark mode along side with entering selection mode for keyboard buttons.";
+        public System.String Purpose { get; } = "To allow for ease of when buttons are converted to and from dark mode along side with entering selection mode for keyboard buttons.";
         /// <summary>
-        /// To convert the class to a string.
+        /// To convert the class to a System.String.
         /// </summary>
-        public new String ToString { get; } = "Design.MyButton child of Button";
+        public new System.String ToString { get; } = "Design.MyButton child of Button";
 
         /// <summary>
         /// Design.MyButton Class error.
         /// </summary>
-        [Serializable()]
-        private class MyButtonError : Exception
+        [System.Serializable()]
+        private class MyButtonError : System.Exception
         {
             // Functions
             /// <summary>
@@ -42,25 +38,25 @@ namespace CSharpErgoBoard.Design
             /// Constructor with a message.
             /// </summary>
             /// <param name="message"> The message being reported to the user.</param>
-            public MyButtonError(string message) : base(message) { }
+            public MyButtonError(System.String message) : base(message) { }
             /// <summary>
             /// A Constructor with a inner error
             /// </summary>
             /// <param name="message"> The message being reported.</param>
             /// <param name="inner"> The error that progogated this error.</param>
-            public MyButtonError(string message, System.Exception inner) : base(message, inner) { }
+            public MyButtonError(System.String message, System.Exception inner) : base(message, inner) { }
         }
 
         // Private Encapsulated Members
-        private Boolean m_selectDarkMode = false;
-        private Boolean m_selected = false;
-        private String m_type = null;
+        private System.Boolean m_selectDarkMode = false;
+        private System.Boolean m_selected = false;
+        private System.String m_type = null;
 
         // Private Readonly Members
         /// <summary>
         /// This is a dark black that has less strain on the average persons eye. This is is more of a very dark gray.
         /// </summary>
-        private readonly Color m_kindofBlack = Color.FromArgb(255, 50, 50, 50);
+        private readonly System.Drawing.Color m_kindofBlack = System.Drawing.Color.FromArgb(255, 50, 50, 50);
 
         // Encapsulation Functions
         /// <summary>
@@ -73,7 +69,7 @@ namespace CSharpErgoBoard.Design
         /// <item>false</item> <description>\n If the button is on light mode.</description>
         /// </list>
         /// </remarks>
-        public bool DarkMode { get => m_selectDarkMode; }
+        public System.Boolean DarkMode { get => m_selectDarkMode; }
         /// <summary>
         /// Used to indicate if we are currently selected or not.
         /// </summary>
@@ -86,9 +82,9 @@ namespace CSharpErgoBoard.Design
         /// <item>false</item> <description>\n If the user has not currently selected this button</description>
         /// </list>
         /// </remarks>
-        public bool IsSelected { get => m_selected; }
+        public System.Boolean IsSelected { get => m_selected; }
         /// <summary>
-        /// A string indicating the type of button is being used.  
+        /// A System.String indicating the type of button is being used.  
         /// </summary>
         /// <remarks>
         /// Only keyboard buttons use this feature.
@@ -103,15 +99,15 @@ namespace CSharpErgoBoard.Design
         /// <item>SingleLED</item> <description>\n This is for the LED version of Single.</description>
         /// </list>
         /// </remarks>
-        public string ButtonType { get => m_type; }
+        public System.String ButtonType { get => m_type; }
         /// <summary>
         /// The row that the Image button is on relative to the keyboard. This can only be used by image buttons.
         /// </summary>
-        public int Row { get; set; } = 0;
+        public System.Int32 Row { get; set; } = 0;
         /// <summary>
         /// The colum that the image button is on relative to the keyboard. This can only be used by image buttons.
         /// </summary>
-        public int Col { get; set; } = 0;
+        public System.Int32 Col { get; set; } = 0;
 
         // Functions
         /// <summary>
@@ -121,7 +117,7 @@ namespace CSharpErgoBoard.Design
         /// Added Select() to prevent a bug where buttons are considered selected when they should not be.
         /// </BugFix>
         /// <param name="darkModeTrue"> true if darkmode is selected. See <see cref="DarkMode"/> for more information.</param>
-        public void ModeChange(in Boolean darkModeTrue)
+        public void ModeChange(in System.Boolean darkModeTrue)
         {
             m_selectDarkMode = darkModeTrue;
             Select();   // This is to get rid of a bug where buttons are randomly selected when the program starts.
@@ -130,13 +126,13 @@ namespace CSharpErgoBoard.Design
             if (darkModeTrue)
             {
                 BackColor = m_kindofBlack;
-                ForeColor = Color.WhiteSmoke;
+                ForeColor = System.Drawing.Color.WhiteSmoke;
             }
             // If Light Mode Selected
             else
             {
-                BackColor = Color.WhiteSmoke;
-                ForeColor = Color.Black;
+                BackColor = System.Drawing.Color.WhiteSmoke;
+                ForeColor = System.Drawing.Color.Black;
             }
         }
         /// <summary>
@@ -145,7 +141,7 @@ namespace CSharpErgoBoard.Design
         /// <param name="darkModeTrue"> true if darkmode is selected. See <see cref="DarkMode"/> for more information.</param>
         /// <param name="type">The type of button that is undergoing the mode change. See <see cref="ButtonType"/> for button types.</param>
         /// <exception cref="MyButtonError"> When a unusable type is selected.</exception>
-        public void ModeChange(in Boolean darkModeTrue, in String type)
+        public void ModeChange(in System.Boolean darkModeTrue, in System.String type)
         {
             m_selectDarkMode = darkModeTrue;
             m_type = type;
@@ -279,13 +275,12 @@ namespace CSharpErgoBoard.Design
         /// See <see cref="IsSelected"/> for more information on what selection means.\n
         /// See <see cref="UnSelected"/> for more information in regards to unselecting a button.
         /// </remarks>
-        /// <param name="type">The type of button that is selected. See <see cref="ButtonType"/> for button types.</param>
         /// <exception cref="MyButtonError"> When a unusable type is selected.</exception>
         public void Selected()
         {
             // Update row and col
-            Row = (Int32)(Name[Name.Length - 3]) - '0';
-            Col = (Int32)(Name[Name.Length - 1]) - '0';
+            Row = (System.Int32)(Name[Name.Length - 3]) - '0';
+            Col = (System.Int32)(Name[Name.Length - 1]) - '0';
             m_selected = true;
             ModeChange(m_selectDarkMode, m_type);
         }
@@ -309,16 +304,16 @@ namespace CSharpErgoBoard.Design
         /// <summary>
         /// Produces a controller readbale value that can be used.
         /// </summary>
-        /// <returns>A string containing the row and colums. EG : R1C1</returns>
-        public String MakeKeyName()
+        /// <returns>A System.String containing the row and colums. EG : R1C1</returns>
+        public System.String MakeKeyName()
         {
             return "R" + Name[Name.Length-3] + "C" + Name[Name.Length - 1];
         }
         /// <summary>
         /// Produces a human reablable value that can be used.
         /// </summary>
-        /// <returns> A string containing the row and column. EG: Row 1, Column 1</returns>
-        public String MakeKeyNameValue()
+        /// <returns> A System.String containing the row and column. EG: Row 1, Column 1</returns>
+        public System.String MakeKeyNameValue()
         {
             return "Row " + Row.ToString() + ", Column " + Col.ToString();
         }
