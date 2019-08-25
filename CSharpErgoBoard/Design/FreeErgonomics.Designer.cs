@@ -694,6 +694,7 @@
             this.id_comboboxRightKeyLayer.Size = new System.Drawing.Size(176, 21);
             this.id_comboboxRightKeyLayer.TabIndex = 344;
             this.id_comboboxRightKeyLayer.Text = "Layer Selection";
+            this.id_comboboxRightKeyLayer.SelectedIndexChanged += new System.EventHandler(this.Id_comboboxRightKeyLayer_SelectedIndexChanged);
             // 
             // id_comboboxRightKeyComPort
             // 
@@ -735,6 +736,7 @@
             this.id_comboboxLeftKeyLayer.Size = new System.Drawing.Size(171, 21);
             this.id_comboboxLeftKeyLayer.TabIndex = 341;
             this.id_comboboxLeftKeyLayer.Text = "Select Layer";
+            this.id_comboboxLeftKeyLayer.SelectedIndexChanged += new System.EventHandler(this.Id_comboboxLeftKeyLayer_SelectedIndexChanged);
             // 
             // id_comboboxLeftKeyValue
             // 
@@ -3679,7 +3681,7 @@
             this.id_buttonLeftR1C7.Row = 0;
             this.id_buttonLeftR1C7.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C7.TabIndex = 129;
-            this.id_buttonLeftR1C7.Text = "F1";
+            this.id_buttonLeftR1C7.Text = "F6";
             this.id_buttonLeftR1C7.UseVisualStyleBackColor = false;
             this.id_buttonLeftR1C7.Click += new System.EventHandler(this.Id_buttonLeftR1C7_Click);
             // 
@@ -3695,7 +3697,7 @@
             this.id_buttonLeftR1C6.Row = 0;
             this.id_buttonLeftR1C6.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C6.TabIndex = 128;
-            this.id_buttonLeftR1C6.Text = "F1";
+            this.id_buttonLeftR1C6.Text = "F5";
             this.id_buttonLeftR1C6.UseVisualStyleBackColor = false;
             this.id_buttonLeftR1C6.Click += new System.EventHandler(this.Id_buttonLeftR1C6_Click);
             // 
@@ -3711,7 +3713,7 @@
             this.id_buttonLeftR1C5.Row = 0;
             this.id_buttonLeftR1C5.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C5.TabIndex = 127;
-            this.id_buttonLeftR1C5.Text = "F1";
+            this.id_buttonLeftR1C5.Text = "F4";
             this.id_buttonLeftR1C5.UseVisualStyleBackColor = false;
             this.id_buttonLeftR1C5.Click += new System.EventHandler(this.Id_buttonLeftR1C5_Click);
             // 
@@ -3743,7 +3745,7 @@
             this.id_buttonLeftR1C4.Row = 0;
             this.id_buttonLeftR1C4.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C4.TabIndex = 125;
-            this.id_buttonLeftR1C4.Text = "F1";
+            this.id_buttonLeftR1C4.Text = "F3";
             this.id_buttonLeftR1C4.UseVisualStyleBackColor = false;
             this.id_buttonLeftR1C4.Click += new System.EventHandler(this.Id_buttonLeftR1C4_Click);
             // 
@@ -3759,7 +3761,7 @@
             this.id_buttonLeftR1C3.Row = 0;
             this.id_buttonLeftR1C3.Size = new System.Drawing.Size(55, 55);
             this.id_buttonLeftR1C3.TabIndex = 124;
-            this.id_buttonLeftR1C3.Text = "F1";
+            this.id_buttonLeftR1C3.Text = "F2";
             this.id_buttonLeftR1C3.UseVisualStyleBackColor = false;
             this.id_buttonLeftR1C3.Click += new System.EventHandler(this.Id_buttonLeftR1C3_Click);
             // 

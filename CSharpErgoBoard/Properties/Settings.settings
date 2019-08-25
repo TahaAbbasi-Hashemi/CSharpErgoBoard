@@ -11,5 +11,8 @@
     <Setting Name="Row2" Type="System.String" Scope="User">
       <Value Profile="(Default)">`, 1, 2, 3, 4, 5, None, None, None, None, 6, 7, 8, 9, 0, -</Value>
     </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
   </Settings>
 </SettingsFile>

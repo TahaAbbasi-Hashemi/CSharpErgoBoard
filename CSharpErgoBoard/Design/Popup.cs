@@ -33,9 +33,9 @@ namespace CSharpErgoBoard.Design
         /// <param name="text"> The message intended to appear</param>
         /// <param name="caption"> The name of the popup</param>
         /// <param name="darkMode"> If darkmode is selected at the time of the popups creation. <value>true</value> for darkmode.</param>
-        public Popup(String text, String caption, Boolean darkMode)
+        public Popup(String text, String caption = "", Boolean darkMode = false)
         {
-            SystemSounds.Exclamation.Play();
+            SystemSounds.Hand.Play();
             Programming.Logging.Instance.Log("A popup window was made with the caption : " + caption, "Debug");
             InitializeComponent();
             id_labelText.Text = text;
@@ -49,7 +49,7 @@ namespace CSharpErgoBoard.Design
                 BackColor = kindofBlack;
                 ForeColor = Color.WhiteSmoke;
                 id_buttonOkay.BackColor = backgroundBlack;
-                id_buttonOkay.ForeColor = System.Drawing.Color.WhiteSmoke;
+                id_buttonOkay.ForeColor = Color.WhiteSmoke;
             }
 
             // Resizing

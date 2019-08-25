@@ -1,4 +1,11 @@
-﻿namespace CSharpErgoBoard.Design
+﻿using System;
+using System.Collections.Specialized;
+using System.Drawing;
+using System.Windows.Forms;
+using System.Xml;
+using System.Configuration;
+
+namespace CSharpErgoBoard.Design
 {
     /// <summary>
     /// This is intended to be a extension of the button class provided by windows forms. 
@@ -10,24 +17,27 @@
     /// In order to unselect a function a selection must first be made.
     /// This is because you can only select a button knowing what the button is, but you do not have to know what the button is to unselect it to select something else.
     /// If you were to select another button you must first unselect the currently selected button.
+    /// 
+    /// Very often the changeMode functions act as secondary constructors. This is because while they do not construct anything they are always called immedatly when the program starts. 
+    /// This allows for any GUI hard changes to go through and allow for soft modifications to happen after. This is not a good method but it does the job as expected.;
     /// </remarks>
-    class MyButton : System.Windows.Forms.Button
+    class MyButton : Button
     {
         // Class Attributes
         /// <summary>
         /// The purpose of the class
         /// </summary>
-        public System.String Purpose { get; } = "To allow for ease of when buttons are converted to and from dark mode along side with entering selection mode for keyboard buttons.";
+        public String Purpose { get; } = "To allow for ease of when buttons are converted to and from dark mode along side with entering selection mode for keyboard buttons.";
         /// <summary>
-        /// To convert the class to a System.String.
+        /// To convert the class to a String.
         /// </summary>
-        public new System.String ToString { get; } = "Design.MyButton child of Button";
+        public new String ToString { get; } = "Design.MyButton child of Button";
 
         /// <summary>
         /// Design.MyButton Class error.
         /// </summary>
-        [System.Serializable()]
-        private class MyButtonError : System.Exception
+        [Serializable()]
+        private class MyButtonError : Exception
         {
             // Functions
             /// <summary>
@@ -38,25 +48,40 @@
             /// Constructor with a message.
             /// </summary>
             /// <param name="message"> The message being reported to the user.</param>
-            public MyButtonError(System.String message) : base(message) { }
+            public MyButtonError(String message) : base(message) { }
             /// <summary>
             /// A Constructor with a inner error
             /// </summary>
             /// <param name="message"> The message being reported.</param>
             /// <param name="inner"> The error that progogated this error.</param>
-            public MyButtonError(System.String message, System.Exception inner) : base(message, inner) { }
+            public MyButtonError(String message, Exception inner) : base(message, inner) { }
         }
 
         // Private Encapsulated Members
-        private System.Boolean m_selectDarkMode = false;
-        private System.Boolean m_selected = false;
-        private System.String m_type = null;
+        private Boolean m_selectDarkMode = false;
+        private Boolean m_selected = false;
+        /// <summary>
+        /// The side that the key is on.
+        /// </summary>
+        private String m_side = null;
+        /// <summary>
+        /// If the key is a led or regular key
+        /// </summary>
+        private String m_type = null;
+        /// <summary>
+        /// If it is single, tall or side.
+        /// </summary>
+        private String m_size = null;
+        private static UInt32 m_leftLayer = 1;
+        private static UInt32 m_rightLayer = 1;
 
         // Private Readonly Members
         /// <summary>
         /// This is a dark black that has less strain on the average persons eye. This is is more of a very dark gray.
         /// </summary>
-        private readonly System.Drawing.Color m_kindofBlack = System.Drawing.Color.FromArgb(255, 50, 50, 50);
+        private readonly Color m_kindofBlack = Color.FromArgb(255, 50, 50, 50);
+
+
 
         // Encapsulation Functions
         /// <summary>
@@ -69,7 +94,7 @@
         /// <item>false</item> <description>\n If the button is on light mode.</description>
         /// </list>
         /// </remarks>
-        public System.Boolean DarkMode { get => m_selectDarkMode; }
+        public Boolean DarkMode { get => m_selectDarkMode; }
         /// <summary>
         /// Used to indicate if we are currently selected or not.
         /// </summary>
@@ -82,9 +107,9 @@
         /// <item>false</item> <description>\n If the user has not currently selected this button</description>
         /// </list>
         /// </remarks>
-        public System.Boolean IsSelected { get => m_selected; }
+        public Boolean IsSelected { get => m_selected; }
         /// <summary>
-        /// A System.String indicating the type of button is being used.  
+        /// A String indicating the type of button is being used.  
         /// </summary>
         /// <remarks>
         /// Only keyboard buttons use this feature.
@@ -99,17 +124,26 @@
         /// <item>SingleLED</item> <description>\n This is for the LED version of Single.</description>
         /// </list>
         /// </remarks>
-        public System.String ButtonType { get => m_type; }
+        public String ButtonSize { get => m_size; }
         /// <summary>
         /// The row that the Image button is on relative to the keyboard. This can only be used by image buttons.
         /// </summary>
-        public System.Int32 Row { get; set; } = 0;
+        public Int32 Row { get; set; } = 0;
         /// <summary>
         /// The colum that the image button is on relative to the keyboard. This can only be used by image buttons.
         /// </summary>
-        public System.Int32 Col { get; set; } = 0;
+        public Int32 Col { get; set; } = 0;
+        public static UInt32 LeftLayer { get => m_leftLayer; set => m_leftLayer = value; }
+        public static UInt32 RightLayer { get => m_rightLayer; set => m_rightLayer = value; }
 
         // Functions
+        /// <summary>
+        /// Default constructor sets up the internal values by finding out the contents of the name. 
+        /// </summary>
+        public MyButton()
+        {
+            
+        }
         /// <summary>
         /// This is used for mode conversion between light and dark mode for basic button types.
         /// </summary>
@@ -117,7 +151,7 @@
         /// Added Select() to prevent a bug where buttons are considered selected when they should not be.
         /// </BugFix>
         /// <param name="darkModeTrue"> true if darkmode is selected. See <see cref="DarkMode"/> for more information.</param>
-        public void ModeChange(in System.Boolean darkModeTrue)
+        public void ModeChange(in Boolean darkModeTrue)
         {
             m_selectDarkMode = darkModeTrue;
             Select();   // This is to get rid of a bug where buttons are randomly selected when the program starts.
@@ -126,27 +160,28 @@
             if (darkModeTrue)
             {
                 BackColor = m_kindofBlack;
-                ForeColor = System.Drawing.Color.WhiteSmoke;
+                ForeColor = Color.WhiteSmoke;
             }
             // If Light Mode Selected
             else
             {
-                BackColor = System.Drawing.Color.WhiteSmoke;
-                ForeColor = System.Drawing.Color.Black;
+                BackColor = Color.WhiteSmoke;
+                ForeColor = Color.Black;
             }
         }
         /// <summary>
         /// This is for mode conversion between light and dark for image type buttons.
         /// </summary>
         /// <param name="darkModeTrue"> true if darkmode is selected. See <see cref="DarkMode"/> for more information.</param>
-        /// <param name="type">The type of button that is undergoing the mode change. See <see cref="ButtonType"/> for button types.</param>
+        /// <param name="size">The type of button that is undergoing the mode change. See <see cref="ButtonSize"/> for button types.</param>
         /// <exception cref="MyButtonError"> When a unusable type is selected.</exception>
-        public void ModeChange(in System.Boolean darkModeTrue, in System.String type)
+        public void ModeChange(in Boolean darkModeTrue, in String size)
         {
             m_selectDarkMode = darkModeTrue;
-            m_type = type;
+            m_size = size;
+            UpdateValues();
 
-            if (!type.Contains("LED"))
+            if (!size.Contains("LED"))
             {
                 ModeChange(darkModeTrue);
             }
@@ -161,53 +196,53 @@
                 // If not selected
                 if (!m_selected)
                 {
-                    if (type == "Tall")
+                    if (size == "Tall")
                     {
                         Image = Properties.Resources.TallKeyDark;
                     }
-                    else if (type == "TallLED")
+                    else if (size == "TallLED")
                     {
                         Image = Properties.Resources.TallKeyDarkLED;
                     }
-                    else if (type == "Wide")
+                    else if (size == "Wide")
                     {
                         Image = Properties.Resources.WideKeyDark;
                     }
-                    else if (type == "WideLED")
+                    else if (size == "WideLED")
                     {
                         Image = Properties.Resources.WideKeyDarkLED;
                     }
-                    else if (type == "Single")
+                    else if (size == "Single")
                     {
                         Image = Properties.Resources.SingleKeyDark;
                     }
-                    else if (type == "SingleLED")
+                    else if (size == "SingleLED")
                     {
                         Image = Properties.Resources.SingleKeyDarkLED;
                     }
                     else
                     {
-                        throw new MyButtonError("The wrong type of button was selected on button with name :" + Name);
+                        throw new MyButtonError("The wrong size of button was selected on button with name :" + Name);
                     }
                 }
                 // If selected
                 else
                 {
-                    if (type == "Tall")
+                    if (size == "Tall")
                     {
                         Image = Properties.Resources.TallKeyDarkSelected;
                     }
-                    else if (type == "Wide")
+                    else if (size == "Wide")
                     {
                         Image = Properties.Resources.WideKeyDarkSelected;
                     }
-                    else if (type == "Single")
+                    else if (size == "Single")
                     {
                         Image = Properties.Resources.SingleKeyDarkSelected;
                     }
                     else
                     {
-                        throw new MyButtonError("The wrong type of button was selected on button with name :" + Name);
+                        throw new MyButtonError("The wrong size of button was selected on button with name :" + Name);
                     }
                 }
             }
@@ -218,55 +253,57 @@
                 // Keyboard Buttons
                 if (!m_selected)
                 {
-                    if (type == "Tall")
+                    if (size == "Tall")
                     {
                         Image = Properties.Resources.TallKeyLight;
                     }
-                    else if (type == "TallLED")
+                    else if (size == "TallLED")
                     {
                         Image = Properties.Resources.TallKeyLightLED;
                     }
-                    else if (type == "Wide")
+                    else if (size == "Wide")
                     {
                         Image = Properties.Resources.WideKeyLight;
                     }
-                    else if (type == "WideLED")
+                    else if (size == "WideLED")
                     {
                         Image = Properties.Resources.WideKeyLightLED;
                     }
-                    else if (type == "Single")
+                    else if (size == "Single")
                     {
                         Image = Properties.Resources.SingleKeyLight;
                     }
-                    else if (type == "SingleLED")
+                    else if (size == "SingleLED")
                     {
                         Image = Properties.Resources.SingleKeyLightLED;
                     }
                     else
                     {
-                        throw new MyButtonError("The wrong type of button was selected on button with name :" + Name);
+                        throw new MyButtonError("The wrong size of button was selected on button with name :" + Name);
                     }
                 }
                 else
                 {
-                    if (type == "Tall")
+                    if (size == "Tall")
                     {
                         Image = Properties.Resources.TallKeyLightSelected;
                     }
-                    else if (type == "Wide")
+                    else if (size == "Wide")
                     {
                         Image = Properties.Resources.WideKeyLightSelected;
                     }
-                    else if (type == "Single")
+                    else if (size == "Single")
                     {
                         Image = Properties.Resources.SingleKeyLightSelected;
                     }
                     else
                     {
-                        throw new MyButtonError("The wrong type of button was selected on button with name :" + Name);
+                        throw new MyButtonError("The wrong size of button was selected on button with name :" + Name);
                     }
                 }
             }
+
+            UpdateButton();
         }
         /// <summary>
         /// If one of the image buttons is selected.
@@ -278,11 +315,8 @@
         /// <exception cref="MyButtonError"> When a unusable type is selected.</exception>
         public void Selected()
         {
-            // Update row and col
-            Row = (System.Int32)(Name[Name.Length - 3]) - '0';
-            Col = (System.Int32)(Name[Name.Length - 1]) - '0';
             m_selected = true;
-            ModeChange(m_selectDarkMode, m_type);
+            ModeChange(m_selectDarkMode, m_size);
         }
         /// <summary>
         /// If one of the image buttons is unselected.
@@ -294,28 +328,118 @@
         /// <exception cref="MyButtonError"> When Unselected occurs before selection a selection was made.</exception>
         public void UnSelected()
         {
-            if (m_type == null)
+            if (m_size == null)
             {
                 throw new MyButtonError("Unselected function occured before selection function on button with name :" + Name);
             }
             m_selected = false;
-            ModeChange(m_selectDarkMode, m_type);
+            ModeChange(m_selectDarkMode, m_size);
         }
         /// <summary>
         /// Produces a controller readbale value that can be used.
         /// </summary>
-        /// <returns>A System.String containing the row and colums. EG : R1C1</returns>
-        public System.String MakeKeyName()
+        /// <returns>A String containing the row and colums. EG : R1C1</returns>
+        public String MakeKeyName()
         {
-            return "R" + Name[Name.Length-3] + "C" + Name[Name.Length - 1];
+            return "R" + Name[Name.Length - 3] + "C" + Name[Name.Length - 1];
         }
         /// <summary>
         /// Produces a human reablable value that can be used.
         /// </summary>
-        /// <returns> A System.String containing the row and column. EG: Row 1, Column 1</returns>
-        public System.String MakeKeyNameValue()
+        /// <returns> A String containing the row and column. EG: Row 1, Column 1</returns>
+        public String MakeKeyNameValue()
         {
             return "Row " + Row.ToString() + ", Column " + Col.ToString();
+        }
+
+        private void UpdateValues()
+        {
+            // Update row and col
+            Row = (Int32)(Name[Name.Length - 3]) - '0';
+            Col = (Int32)(Name[Name.Length - 1]) - '0';
+            if (Name.Length == 0)
+            {
+                throw new Exception("something is wrong here");
+            }
+            if (Name.Contains("id_buttonRight"))
+            {
+                m_side = "Right";
+            }
+            else if (Name.Contains("Id_buttonLeft"))
+            {
+                m_side = "Left";
+            }
+            if (Name.Contains("Key"))
+            {
+                m_type = "Key";
+            }
+            else if (Name.Contains("Led"))
+            {
+                m_type = "Led";
+            }
+        }
+
+        private String MakeSettingName()
+        {
+            // "LeftKeyR1C1L1
+            String name = "";
+            name += m_side;
+            name += m_type;
+            name += MakeKeyName();
+            name += "L";
+            if (m_side == "Left")
+            {
+                if (m_leftLayer == 0)
+                name += m_leftLayer.ToString();
+            }
+            else if (m_side == "Right")
+            {
+                name += m_rightLayer.ToString();
+            }
+            return name;
+        }
+
+        public Boolean UpdateButton()
+        {
+            UpdateValues();
+            try
+            {
+                NameValueCollection appSettings = ConfigurationManager.AppSettings;
+                if (appSettings[MakeSettingName()] != null)
+                {
+                    Text = appSettings[MakeSettingName()];
+                }
+            }
+            catch (ConfigurationErrorsException)
+            {
+                new Popup("Error", "Error", true);
+                return false;
+            }
+            return true;
+        }
+        public Boolean SaveButton(in String value = "None")
+        {
+            try
+            {
+                Configuration configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                KeyValueConfigurationCollection settings = configFile.AppSettings.Settings;
+                if (settings[MakeSettingName()] == null)
+                {
+                    settings.Add(MakeSettingName(), value);
+                }
+                else
+                {
+                    settings[MakeSettingName()].Value = value;
+                }
+                configFile.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
+            }
+            catch (ConfigurationErrorsException)
+            {
+                new Popup("Error", "Error", true);
+                return false;
+            }
+            return UpdateButton();
         }
     }
 }

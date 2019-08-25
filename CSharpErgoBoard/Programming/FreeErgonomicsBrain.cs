@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Management;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.IO.Ports;
+using CSharpErgoBoard.Design;
+using CSharpErgoBoard.Properties;
 
 
 namespace CSharpErgoBoard.Programming
@@ -13,11 +11,11 @@ namespace CSharpErgoBoard.Programming
     {
         //Private Readonly Members
         private readonly Dictionary<String, UInt32> m_conversion = new Dictionary<String, UInt32>();
-        private readonly Design.MySerialPort m_leftKeyConnection = new Design.MySerialPort();
-        private readonly Design.MySerialPort m_rightKeyConnection = new Design.MySerialPort();
-        private readonly Design.MySerialPort m_leftLEDConnection = new Design.MySerialPort();
-        private readonly Design.MySerialPort m_rightLEDConnection = new Design.MySerialPort();
-        
+        private readonly MySerialPort m_leftKeyConnection = new MySerialPort();
+        private readonly MySerialPort m_rightKeyConnection = new MySerialPort();
+        private readonly MySerialPort m_leftLEDConnection = new MySerialPort();
+        private readonly MySerialPort m_rightLEDConnection = new MySerialPort();
+
         /// <summary>
         /// Programming.FreeErgonomicsBrain Class error.
         /// </summary>
@@ -41,7 +39,7 @@ namespace CSharpErgoBoard.Programming
             /// <param name="inner"> The error that progogated this error.</param>
             public FreeErgonomicsBrainError(in String message, in Exception inner) : base(message, inner) { }
         }
-        
+
         // Functions.
         /// <summary>
         /// Default constructor. 
@@ -124,13 +122,31 @@ namespace CSharpErgoBoard.Programming
             return names;
         }
         /// <summary>
+        /// Converts the comport with the description to just the com port.
+        /// </summary>
+        /// <param name="comPort">The com port being used. EG: "Arduino Leonardo (COM4)"</param>
+        /// <exception cref="FreeErgonomicsBrainError"> An error is thrown when the right serial port can not be found. This can happen if you select a printer port.</exception>
+        /// <returns>Just the com port, from the example above it would return "COM4"</returns>
+        private String JustComPort(in String comPort)
+        {
+            foreach (String com in MySerialPort.GetPortNames())
+            {
+                Logging.Instance.Log(com);
+                if (comPort.Contains("(" + com + ")"))
+                {
+                    return com;
+                }
+            }
+            throw new FreeErgonomicsBrainError("Could not find the right serial port");
+        }
+        /// <summary>
         /// Using the value type finds the correct serial port connection required
         /// </summary>
         /// <param name="type"> The type of serial port you want. </param>
         /// <param name="serialPort"> An out value, this is the serial port you are given.</param>
         /// <param name="error">An out value, indicating what went wrong</param>
         /// <returns>True if the process worked, false if it failed.</returns>
-        private Boolean GetSerialPort(in String type, out Design.MySerialPort serialPort, out String error)
+        private Boolean GetSerialPort(in String type, out MySerialPort serialPort, out String error)
         {
             error = null;
             serialPort = null;
@@ -170,84 +186,93 @@ namespace CSharpErgoBoard.Programming
         public Boolean Connect(in String type, in String comPort, out String error)
         {
             error = null;
-            Design.MySerialPort connectingPort;
 
-            GetSerialPort(type, out connectingPort, out error);
+            GetSerialPort(type, out MySerialPort connectingPort, out error);
 
-            // Already connected.
-            if (connectingPort.IsOpen)
-            {
-                error = "Connection is already made. \n" +
-                    "If you wish to change connection please disconnect first. ";
-                Logging.Instance.Log("Connection is already made.", "Error");
-                return false;
+            for (Byte i = 0; i <1; i++)
+            {   // A for loop that happens once.
+                // Already connected.
+                if (connectingPort.IsOpen)
+                {
+                    error = "Connection is already made. \n" +
+                        "If you wish to change connection please disconnect first. ";
+                    Logging.Instance.Log("Connection is already made.", "Error");
+                    break;
+                }
+
+                // Make connection and find type
+                Boolean rightType = false;
+                try
+                {
+                    rightType = connectingPort.MakeConnection(JustComPort(comPort), type);
+                }
+                catch (System.IO.IOException)
+                {
+                    error = "Can not connect to the com port selected";
+                    Logging.Instance.Log(error, "Error");
+                    break;
+                }
+                catch (TimeoutException)
+                {
+                    error = "Failed to get a response from the device.\n" +
+                        "Please try again or change com port.";
+                    Logging.Instance.Log("Failed to get a response from the device", "Error");
+                    break;
+                }
+                catch (UnauthorizedAccessException)
+                {
+                    error = "This com port is already in use by another device";
+                    Logging.Instance.Log("Tried to connect to a already existing serial port", "Debug");
+                    break;
+                }
+                catch (NullReferenceException)
+                {
+                    error = "No COM port has been selected\n" +
+                        "Please select one and try again.";
+                    Logging.Instance.Log("Attempt to connect without com port was made", "Debug");
+                    break;
+                }
+                catch (FreeErgonomicsBrainError)
+                {
+                    error = "You may have selected a printer port.\n" +
+                        "Please make sure you have a com port selected";
+                    Logging.Instance.Log("A not found port name was selected.", "Error");
+                    break;
+                }
+
+                // Wrong type
+                if (!rightType)
+                {
+                    Logging.Instance.Log("Connection was made, but wrong information gotten", "Debug");
+                    Logging.Instance.Log(connectingPort.Type, "Debug");
+                    connectingPort.Close();
+
+                    if (connectingPort.Type == "M")
+                    {
+                        error = "No response was gotten from the port.\n" +
+                            "Please make sure this is the correct port or try again.";
+
+                    }
+                    else
+                    {
+                        error = "This port is a :" + connectingPort.Type + "\n" +
+                            "Please try a different connection for a :" + type + " connection.";
+                    }
+                    break;
+                }
             }
 
-            // Make connection and find type
-            Boolean rightType = false;
-            try
+            if (error == null)
             {
-                rightType = connectingPort.MakeConnection(comPort, type);
-            }
-            catch (System.IO.IOException)
-            {
-                error = "Can not connect to the com port selected";
-                Logging.Instance.Log(error, "Error");
-                return false;
-            }
-            catch (TimeoutException)
-            {
-                error = "Failed to get a response from the device.\n" +
-                    "Please try again or change com port.";
-                Logging.Instance.Log("Failed to get a response from the device", "Error");
-            }
-            catch (UnauthorizedAccessException)
-            {
-                error = "This com port is already in use by another device";
-                Logging.Instance.Log("Tried to connect to a already existing serial port", "Debug");
-            }
+                Logging.Instance.Log("A serial port connection for '" + type + "' was made at '" + comPort + "'", "Success");
 
-            // Wrong type
-            if (!rightType)
+                return true;
+            }
+            else
             {
-                Logging.Instance.Log("Connection was made, but wrong information gotten", "Debug");
-                Logging.Instance.Log(connectingPort.Type, "Debug");
                 connectingPort.Close();
-
-                if (connectingPort.Type == "NA")
-                {
-                    error = "No response was gotten from the port.\n" +
-                        "Please make sure this is the correct port or try again.";
-
-                }
-                else
-                {
-                    error = "This port is a :" + connectingPort.Type + "\n" +
-                        "Please try a different connection for a :" + type + "connection.";
-                }
                 return false;
             }
-            Logging.Instance.Log("A serial port connection for '" + type + "' was made at '" + comPort + "'", "Success");
-
-            //// Return
-            //if (type == "Left Keyboard")
-            //{
-            //    m_leftKeyConnection = connectingPort;
-            //}
-            //else if (type == "Right Keyboard")
-            //{
-            //    m_rightKeyConnection = connectingPort;
-            //}
-            //else if (type == "Left LED")
-            //{
-            //    m_leftLEDConnection = connectingPort;
-            //}
-            //else if (type == "Right LED")
-            //{
-            //    m_rightLEDConnection = connectingPort;
-            //}
-
-            return true;
         }
         /// <summary>
         /// Checks to see if the serial port is already connected
@@ -256,9 +281,7 @@ namespace CSharpErgoBoard.Programming
         /// <returns>True if a connection is already made, false if no connection is made.</returns>
         public Boolean IsConnected(in String type)
         {
-            Design.MySerialPort connectingPort;
-
-            GetSerialPort(type, out connectingPort, out String error);
+            GetSerialPort(type, out MySerialPort connectingPort, out String error);
             try
             {
                 return connectingPort.IsOpen;
@@ -277,12 +300,11 @@ namespace CSharpErgoBoard.Programming
         /// <param name="key">What is the name of the keyboard key.</param>
         /// <param name="value">What is the value of the new keyboard key.</param>
         /// <returns>True if a update was sent to the controller.</returns>
-        public Boolean Update(in String type, in String layer, in String key, in String value)
+        private Boolean Update(in String type, in String layer, in String key, in String value)
         {
-            Design.MySerialPort connectingPort;
             String message;
 
-            GetSerialPort(type, out connectingPort, out String error);
+            GetSerialPort(type, out MySerialPort connectingPort, out String error);
 
             message = "U";  // The update character
             message += key; // Key contains the row and column in a R1C1 fashion. 
@@ -314,6 +336,35 @@ namespace CSharpErgoBoard.Programming
 
             return true;
         }
+        public Boolean Update(in String type, in MyComboBox layer, in MyButton key, in MyComboBox value, out String error)
+        {
+            error = null;
+            if (!IsConnected(type))
+            {
+                error = "A connection must be made before a key can be updated.";
+                Logging.Instance.Log("Attempt to update before making connection was made", "Debug");
+                return false;
+            }
+            if (layer.SelectedIndex == -1)
+            {
+                error = "A layer must be selected before a key can be updated.";
+                Logging.Instance.Log("Attempt to update before selecting a layer was made", "Debug");
+                return false;
+            }
+            if (key == null)
+            {
+                error = "A key must be selected before a key can be updated";
+                return false;
+            }
+            if (value.SelectedIndex == -1)
+            {
+                error = "A key value must be selected before a key can be updated";
+                return false;
+            }
+
+            return Update(type, (String)layer.SelectedItem, key.MakeKeyName(), (String)value.SelectedItem);
+        }
+
         /// <summary>
         /// Closes all the serial port connections. This should always be called otherwise issues do happen.
         /// </summary>
@@ -324,14 +375,6 @@ namespace CSharpErgoBoard.Programming
             m_leftLEDConnection.Close();
             m_rightLEDConnection.Close();
         }
-        
-        public Boolean Save()
-        {
-            return true;
-        }
-        public Boolean Load()
-        {
-            return false;
-        }
+
     }
 }
