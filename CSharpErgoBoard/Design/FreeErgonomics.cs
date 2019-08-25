@@ -36,6 +36,7 @@ namespace CSharpErgoBoard.Design
         /// This essentially acts as a reference to the button that is selected by the user.
         /// </summary>
         private MyButton m_leftSelectedKeyButton = null;
+        private MyButton m_rightSelectedKeyButton = null;
         private readonly Programming.FreeErgonomicsBrain m_processing = new Programming.FreeErgonomicsBrain();
         private Boolean m_selectedDarkMode = false;
 
@@ -56,7 +57,14 @@ namespace CSharpErgoBoard.Design
                 id_comboboxRightLedComPort.Items.Add(port);
             }
 
-            SelectLightMode();
+            if (Properties.Settings.Default.Darkmode)
+            {
+                SelectDarkMode();
+            }
+            else
+            {
+                SelectLightMode();
+            }
         }
 
 
@@ -163,6 +171,11 @@ namespace CSharpErgoBoard.Design
         /// </remarks>
         public void ModeUpdated()
         {
+
+
+            Properties.Settings.Default.Darkmode = m_selectedDarkMode;
+            Properties.Settings.Default.Save();
+
             // Converts all Combo Boxes to their respective modes.
             id_comboboxLeftKeyValue.ModeChange(m_selectedDarkMode);
             id_comboboxLeftKeyLayer.ModeChange(m_selectedDarkMode);
@@ -471,9 +484,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C1;
-            m_leftSelectedKeyButton.Row = 1;
-            m_leftSelectedKeyButton.Col = 1;
-            m_leftSelectedKeyButton.Selected("Wide");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -486,9 +497,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C2;
-            m_leftSelectedKeyButton.Row = 1;
-            m_leftSelectedKeyButton.Col = 2;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -501,9 +510,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C3;
-            m_leftSelectedKeyButton.Row = 1;
-            m_leftSelectedKeyButton.Col = 3;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -516,9 +523,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C4;
-            m_leftSelectedKeyButton.Row = 1;
-            m_leftSelectedKeyButton.Col = 4;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -531,9 +536,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C5;
-            m_leftSelectedKeyButton.Row = 1;
-            m_leftSelectedKeyButton.Col = 5;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -546,9 +549,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C6;
-            m_leftSelectedKeyButton.Row = 1;
-            m_leftSelectedKeyButton.Col = 6;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -561,9 +562,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C7;
-            m_leftSelectedKeyButton.Row = 1;
-            m_leftSelectedKeyButton.Col = 7;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -576,9 +575,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C1;
-            m_leftSelectedKeyButton.Row = 2;
-            m_leftSelectedKeyButton.Col = 1;
-            m_leftSelectedKeyButton.Selected("Wide");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -591,9 +588,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C2;
-            m_leftSelectedKeyButton.Row = 2;
-            m_leftSelectedKeyButton.Col = 2;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -606,9 +601,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C3;
-            m_leftSelectedKeyButton.Row = 2;
-            m_leftSelectedKeyButton.Col = 3;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -621,9 +614,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C4;
-            m_leftSelectedKeyButton.Row = 2;
-            m_leftSelectedKeyButton.Col = 4;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -636,9 +627,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C5;
-            m_leftSelectedKeyButton.Row = 2;
-            m_leftSelectedKeyButton.Col = 5;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -651,9 +640,7 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C6;
-            m_leftSelectedKeyButton.Row = 2;
-            m_leftSelectedKeyButton.Col = 6;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
@@ -666,12 +653,520 @@ namespace CSharpErgoBoard.Design
                 m_leftSelectedKeyButton.UnSelected();
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C7;
-            m_leftSelectedKeyButton.Row = 2;
-            m_leftSelectedKeyButton.Col = 7;
-            m_leftSelectedKeyButton.Selected("Single");
+            m_leftSelectedKeyButton.Selected();
             id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
 
             Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR3C1_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR3C1;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+
+        }
+        private void Id_buttonLeftR3C2_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR3C2;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+
+        }
+        private void Id_buttonLeftR3C3_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR3C3;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR3C4_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR3C4;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR3C5_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR3C5;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR3C6_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR3C6;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR3C7_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR3C7;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR3C8_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR3C8;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR4C1_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR4C1;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR4C2_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR4C2;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR4C3_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR4C3;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR4C4_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR4C4;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR4C5_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR4C5;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR4C6_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR4C6;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR4C7_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR4C7;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR4C8_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR4C8;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR5C1_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR5C1;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR5C2_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR5C2;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR5C3_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR5C3;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR5C4_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR5C4;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR5C5_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR5C5;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR5C6_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR5C6;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR5C7_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR5C7;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR5C8_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR5C8;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR6C1_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR6C1;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR6C2_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR6C2;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR6C3_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR6C3;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR6C4_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR6C4;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR6C5_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR6C5;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR6C6_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR6C6;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR6C7_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR6C7;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonLeftR6C8_Click(object sender, EventArgs reason)
+        {
+            if (m_leftSelectedKeyButton != null)
+            {
+                m_leftSelectedKeyButton.UnSelected();
+            }
+            m_leftSelectedKeyButton = id_buttonLeftR6C8;
+            m_leftSelectedKeyButton.Selected();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        // Right keyboard side.
+        private void Id_buttonRightR1C1_Click(object sender, EventArgs reason)
+        {
+            if (m_rightSelectedKeyButton != null)
+            {
+                m_rightSelectedKeyButton.UnSelected();
+            }
+            m_rightSelectedKeyButton = id_buttonRightR1C1;
+            m_rightSelectedKeyButton.Selected();
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonRightR1C2_Click(object sender, EventArgs reason)
+        {
+            if (m_rightSelectedKeyButton != null)
+            {
+                m_rightSelectedKeyButton.UnSelected();
+            }
+            m_rightSelectedKeyButton = id_buttonRightR1C2;
+            m_rightSelectedKeyButton.Selected();
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonRightR1C3_Click(object sender, EventArgs reason)
+        {
+            if (m_rightSelectedKeyButton != null)
+            {
+                m_rightSelectedKeyButton.UnSelected();
+            }
+            m_rightSelectedKeyButton = id_buttonRightR1C3;
+            m_rightSelectedKeyButton.Selected();
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonRightR1C4_Click(object sender, EventArgs reason)
+        {
+            if (m_rightSelectedKeyButton != null)
+            {
+                m_rightSelectedKeyButton.UnSelected();
+            }
+            m_rightSelectedKeyButton = id_buttonRightR1C4;
+            m_rightSelectedKeyButton.Selected();
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonRightR1C5_Click(object sender, EventArgs reason)
+        {
+            if (m_rightSelectedKeyButton != null)
+            {
+                m_rightSelectedKeyButton.UnSelected();
+            }
+            m_rightSelectedKeyButton = id_buttonRightR1C5;
+            m_rightSelectedKeyButton.Selected();
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonRightR1C6_Click(object sender, EventArgs reason)
+        {
+            if (m_rightSelectedKeyButton != null)
+            {
+                m_rightSelectedKeyButton.UnSelected();
+            }
+            m_rightSelectedKeyButton = id_buttonRightR1C6;
+            m_rightSelectedKeyButton.Selected();
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void Id_buttonRightR1C7_Click(object sender, EventArgs reason)
+        {
+            if (m_rightSelectedKeyButton != null)
+            {
+                m_rightSelectedKeyButton.UnSelected();
+            }
+            m_rightSelectedKeyButton = id_buttonRightR1C7;
+            m_rightSelectedKeyButton.Selected();
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+
+            Programming.Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
         }
 
@@ -682,8 +1177,6 @@ namespace CSharpErgoBoard.Design
         /// When this button is pressed it will try to connect to the corresponding serial port.
         /// If it can not find that serial port it will output a popup telling you that you have an error.
         /// </remarks>
-        /// <param name="sender"> The object that called this function</param>
-        /// <param name="reason"> What event caused the object to call this function</param>
 
         private String FullPortToJustCom(String fullPortName)
         {
@@ -822,7 +1315,7 @@ namespace CSharpErgoBoard.Design
             }
         }
 
-        private void id_buttonLeftUpdateLed_Click(object sender, EventArgs reason)
+        private void Id_buttonLeftUpdateLed_Click(object sender, EventArgs reason)
         {
             Programming.Logging.Instance.Log($"Right LED Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
                                  "Information");
@@ -872,11 +1365,11 @@ namespace CSharpErgoBoard.Design
                                 (String)id_comboboxLeftKeyValue.SelectedItem);
         }
 
-        private void id_buttonRightUpdateLed_Click(object sender, EventArgs e)
+        private void Id_buttonRightUpdateLed_Click(object sender, EventArgs reason)
         {
 
         }
 
-
+  
     }
 }

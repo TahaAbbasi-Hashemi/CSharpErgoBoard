@@ -148,6 +148,7 @@ namespace CSharpErgoBoard.Design
         public void ModeChange(in Boolean darkModeTrue, in String type)
         {
             m_selectDarkMode = darkModeTrue;
+            m_type = type;
 
             if (!type.Contains("LED"))
             {
@@ -280,11 +281,13 @@ namespace CSharpErgoBoard.Design
         /// </remarks>
         /// <param name="type">The type of button that is selected. See <see cref="ButtonType"/> for button types.</param>
         /// <exception cref="MyButtonError"> When a unusable type is selected.</exception>
-        public void Selected(in String type)
+        public void Selected()
         {
+            // Update row and col
+            Row = (Int32)(Name[Name.Length - 3]) - '0';
+            Col = (Int32)(Name[Name.Length - 1]) - '0';
             m_selected = true;
-            m_type = type;
-            ModeChange(m_selectDarkMode, type);
+            ModeChange(m_selectDarkMode, m_type);
         }
         /// <summary>
         /// If one of the image buttons is unselected.
@@ -303,11 +306,18 @@ namespace CSharpErgoBoard.Design
             m_selected = false;
             ModeChange(m_selectDarkMode, m_type);
         }
-
+        /// <summary>
+        /// Produces a controller readbale value that can be used.
+        /// </summary>
+        /// <returns>A string containing the row and colums. EG : R1C1</returns>
         public String MakeKeyName()
         {
-            return "R" + Row.ToString() + "C" + Col.ToString();
+            return "R" + Name[Name.Length-3] + "C" + Name[Name.Length - 1];
         }
+        /// <summary>
+        /// Produces a human reablable value that can be used.
+        /// </summary>
+        /// <returns> A string containing the row and column. EG: Row 1, Column 1</returns>
         public String MakeKeyNameValue()
         {
             return "Row " + Row.ToString() + ", Column " + Col.ToString();

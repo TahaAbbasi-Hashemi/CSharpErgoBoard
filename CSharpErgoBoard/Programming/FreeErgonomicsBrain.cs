@@ -11,15 +11,13 @@ namespace CSharpErgoBoard.Programming
 {
     class FreeErgonomicsBrain
     {
-
         //Private Readonly Members
         private readonly Dictionary<String, UInt32> m_conversion = new Dictionary<String, UInt32>();
         private readonly Design.MySerialPort m_leftKeyConnection = new Design.MySerialPort();
         private readonly Design.MySerialPort m_rightKeyConnection = new Design.MySerialPort();
         private readonly Design.MySerialPort m_leftLEDConnection = new Design.MySerialPort();
         private readonly Design.MySerialPort m_rightLEDConnection = new Design.MySerialPort();
-
-
+        
         /// <summary>
         /// Programming.FreeErgonomicsBrain Class error.
         /// </summary>
@@ -43,7 +41,15 @@ namespace CSharpErgoBoard.Programming
             /// <param name="inner"> The error that progogated this error.</param>
             public FreeErgonomicsBrainError(in String message, in Exception inner) : base(message, inner) { }
         }
-
+        
+        // Functions.
+        /// <summary>
+        /// Default constructor. 
+        /// </summary>
+        /// <remarks>
+        /// This is used as a way of ensuring all the proper values are saved and stored. 
+        /// This adds all the conversion values to the conversion table.
+        /// </remarks>
         public FreeErgonomicsBrain()
         {
             // Layers
@@ -53,7 +59,7 @@ namespace CSharpErgoBoard.Programming
             m_conversion.Add("layer 3", 3);
             m_conversion.Add("Layer 4", 4);
             m_conversion.Add("Layer 5", 5);
-
+            // Commands
             m_conversion.Add("Left Ctrl", 128);
             m_conversion.Add("Left Shift", 129);
             m_conversion.Add("Left Alt", 130);
@@ -85,16 +91,18 @@ namespace CSharpErgoBoard.Programming
                 m_conversion.Add(name, i);
                 j++;
             }
-
             // Characters
             m_conversion.Add("Space", 32);
-            m_conversion.Add("~", 126);
+            String fullTable = "`1234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./";
+            foreach (Char character in fullTable)
+            {
+                m_conversion.Add(character.ToString(), (UInt32)character);
+            }
 
 
 
 
         }
-
         /// <summary>
         /// Finds a list of serial ports and their friendly descriptions and returns it. 
         /// </summary>
@@ -115,7 +123,13 @@ namespace CSharpErgoBoard.Programming
 
             return names;
         }
-
+        /// <summary>
+        /// Using the value type finds the correct serial port connection required
+        /// </summary>
+        /// <param name="type"> The type of serial port you want. </param>
+        /// <param name="serialPort"> An out value, this is the serial port you are given.</param>
+        /// <param name="error">An out value, indicating what went wrong</param>
+        /// <returns>True if the process worked, false if it failed.</returns>
         private Boolean GetSerialPort(in String type, out Design.MySerialPort serialPort, out String error)
         {
             error = null;
@@ -146,7 +160,13 @@ namespace CSharpErgoBoard.Programming
 
             return true;
         }
-
+        /// <summary>
+        /// Attempts to connect to the selected serial port type.
+        /// </summary>
+        /// <param name="type">The type of serial port connection wanted</param>
+        /// <param name="comPort">The communication port the serial connection is on.</param>
+        /// <param name="error">An out value, indicating what went wrong. Null if everything worked out correctly</param>
+        /// <returns>True if a connection was made, false if a connection was not made.</returns>
         public Boolean Connect(in String type, in String comPort, out String error)
         {
             error = null;
@@ -229,7 +249,11 @@ namespace CSharpErgoBoard.Programming
 
             return true;
         }
-
+        /// <summary>
+        /// Checks to see if the serial port is already connected
+        /// </summary>
+        /// <param name="type">The type of serial port connection wanted</param>
+        /// <returns>True if a connection is already made, false if no connection is made.</returns>
         public Boolean IsConnected(in String type)
         {
             Design.MySerialPort connectingPort;
@@ -245,7 +269,14 @@ namespace CSharpErgoBoard.Programming
                 return false;
             }
         }
-
+        /// <summary>
+        /// Sends a update command to the controller to update the 
+        /// </summary>
+        /// <param name="type"> The type of serial port connection wanted. EG: Left keyboard, right keyboard</param>
+        /// <param name="layer">What layer the updated key is going on. </param>
+        /// <param name="key">What is the name of the keyboard key.</param>
+        /// <param name="value">What is the value of the new keyboard key.</param>
+        /// <returns>True if a update was sent to the controller.</returns>
         public Boolean Update(in String type, in String layer, in String key, in String value)
         {
             Design.MySerialPort connectingPort;
@@ -253,7 +284,8 @@ namespace CSharpErgoBoard.Programming
 
             GetSerialPort(type, out connectingPort, out String error);
 
-            message = key;
+            message = "U";  // The update character
+            message += key; // Key contains the row and column in a R1C1 fashion. 
             if (layer == "Layer 1")
             {
                 message += "L1";
@@ -282,13 +314,9 @@ namespace CSharpErgoBoard.Programming
 
             return true;
         }
-
-        public Boolean Convert(in String inValue, out Int32 outValue)
-        {
-
-            outValue = 2; 
-            return true;
-        }
+        /// <summary>
+        /// Closes all the serial port connections. This should always be called otherwise issues do happen.
+        /// </summary>
         public void Close()
         {
             m_leftKeyConnection.Close();
