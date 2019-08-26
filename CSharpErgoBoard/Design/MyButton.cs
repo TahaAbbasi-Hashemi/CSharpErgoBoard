@@ -58,7 +58,13 @@ namespace CSharpErgoBoard.Design
         }
 
         // Private Encapsulated Members
+        /// <summary>
+        /// True if darkmode is selected, false if light mode is selected
+        /// </summary>
         private Boolean m_selectDarkMode = false;
+        /// <summary>
+        /// If the button is currently selected by the user.
+        /// </summary>
         private Boolean m_selected = false;
         /// <summary>
         /// The side that the key is on.
@@ -72,7 +78,13 @@ namespace CSharpErgoBoard.Design
         /// If it is single, tall or side.
         /// </summary>
         private String m_size = null;
+        /// <summary>
+        /// The layer the left keyboard is on
+        /// </summary>
         private static UInt32 m_leftLayer = 1;
+        /// <summary>
+        /// The layer that the right keyboard is on.
+        /// </summary>
         private static UInt32 m_rightLayer = 1;
 
         // Private Readonly Members
@@ -133,7 +145,13 @@ namespace CSharpErgoBoard.Design
         /// The colum that the image button is on relative to the keyboard. This can only be used by image buttons.
         /// </summary>
         public Int32 Col { get; set; } = 0;
+        /// <summary>
+        /// The layer that the left keyboard is currently on. this is static so that all the keys on the left hand side are on the exact same layer.
+        /// </summary>
         public static UInt32 LeftLayer { get => m_leftLayer; set => m_leftLayer = value; }
+        /// <summary>
+        /// The layer that the right keyboard is currently on. This is static so that all the keys on the right hand side are on the same exact layer.
+        /// </summary>
         public static UInt32 RightLayer { get => m_rightLayer; set => m_rightLayer = value; }
 
         // Functions
@@ -142,7 +160,7 @@ namespace CSharpErgoBoard.Design
         /// </summary>
         public MyButton()
         {
-            
+
         }
         /// <summary>
         /// This is used for mode conversion between light and dark mode for basic button types.
@@ -351,7 +369,33 @@ namespace CSharpErgoBoard.Design
         {
             return "Row " + Row.ToString() + ", Column " + Col.ToString();
         }
-
+        /// <summary>
+        /// Produces name that is used by the setting saving function.
+        /// </summary>
+        /// <returns>A setting readbale name of the button</returns>
+        private String MakeSettingName()
+        {
+            // "LeftKeyR1C1L1
+            String name = "";
+            name += m_side;
+            name += m_type;
+            name += MakeKeyName();
+            name += "L";
+            if (m_side == "Left")
+            {
+                if (m_leftLayer == 0)
+                    name += m_leftLayer.ToString();
+            }
+            else if (m_side == "Right")
+            {
+                name += m_rightLayer.ToString();
+            }
+            return name;
+        }
+        /// <summary>
+        /// The name of the button holds the information about the button. 
+        /// Unforuntatly name is not part of the constructor so it goes here instead. 
+        /// </summary>
         private void UpdateValues()
         {
             // Update row and col
@@ -378,27 +422,10 @@ namespace CSharpErgoBoard.Design
                 m_type = "Led";
             }
         }
-
-        private String MakeSettingName()
-        {
-            // "LeftKeyR1C1L1
-            String name = "";
-            name += m_side;
-            name += m_type;
-            name += MakeKeyName();
-            name += "L";
-            if (m_side == "Left")
-            {
-                if (m_leftLayer == 0)
-                name += m_leftLayer.ToString();
-            }
-            else if (m_side == "Right")
-            {
-                name += m_rightLayer.ToString();
-            }
-            return name;
-        }
-
+        /// <summary>
+        /// Loads information from the user settings.  
+        /// </summary>
+        /// <returns>True if the button was properly updated, and false if it failed.</returns>
         public Boolean UpdateButton()
         {
             UpdateValues();
@@ -412,11 +439,16 @@ namespace CSharpErgoBoard.Design
             }
             catch (ConfigurationErrorsException)
             {
-                new Popup("Error", "Error", true);
+                new Popup("Error", "Error", true);  //I do not know what to do if we have a error here.
                 return false;
             }
             return true;
         }
+        /// <summary>
+        /// Saves the value of the button to the user settings
+        /// </summary>
+        /// <param name="value">The text that the button currently holds</param>
+        /// <returns>True if the informatino was saved, false if it was not.</returns>
         public Boolean SaveButton(in String value = "None")
         {
             try
@@ -436,7 +468,7 @@ namespace CSharpErgoBoard.Design
             }
             catch (ConfigurationErrorsException)
             {
-                new Popup("Error", "Error", true);
+                new Popup("Error", "Error", true);  // I do not know what to do if we have a error here.
                 return false;
             }
             return UpdateButton();

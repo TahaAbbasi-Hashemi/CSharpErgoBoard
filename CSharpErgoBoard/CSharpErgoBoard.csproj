@@ -135,7 +135,6 @@
     <Compile Include="Programming\Singleton.cs" />
     <Compile Include="Programming\Logging.cs" />
     <Compile Include="Programming\SystemMonitor.cs" />
-    <Compile Include="Programming\IOConnect.cs" />
     <Compile Include="Design\FreeErgonomics.cs">
       <SubType>Form</SubType>
     </Compile>

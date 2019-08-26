@@ -63,9 +63,6 @@ namespace CSharpErgoBoard.Design
                 SelectLightMode();
             }
         }
-
-
-
         /// <summary>
         /// Changes the color layout of the application to a dark mode style. 
         /// </summary>
@@ -112,7 +109,6 @@ namespace CSharpErgoBoard.Design
             // All other properties
             ModeUpdated();
         }
-
         /// <summary>
         /// Changes the color layout of the application to a light mode style
         /// </summary>
@@ -158,7 +154,6 @@ namespace CSharpErgoBoard.Design
 
             ModeUpdated();
         }
-
         /// <summary>
         /// If lightmode or darkmode is selected this forces a update for buttons, combo boxes and textboxes. 
         /// </summary>
@@ -422,7 +417,6 @@ namespace CSharpErgoBoard.Design
                 id_buttonRightLedR6C8.ModeChange(m_selectedDarkMode, "SingleLED");
             }
         }
-
         /// <summary>
         /// This function happens automatically when the program is loaded.
         /// </summary>
@@ -1260,7 +1254,7 @@ namespace CSharpErgoBoard.Design
         /// <param name="reason"> What event caused the object to call this function</param>
         private void Id_buttonLeftUpdateKey_Click(object sender, EventArgs reason)
         {
-            Logging.Instance.Log($"Left Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
+            Logging.Instance.Log($"Left Keyboard Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
                                  "Information");
 
 

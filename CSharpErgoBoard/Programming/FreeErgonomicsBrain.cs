@@ -11,10 +11,10 @@ namespace CSharpErgoBoard.Programming
     {
         //Private Readonly Members
         private readonly Dictionary<String, UInt32> m_conversion = new Dictionary<String, UInt32>();
-        private readonly MySerialPort m_leftKeyConnection = new MySerialPort();
-        private readonly MySerialPort m_rightKeyConnection = new MySerialPort();
-        private readonly MySerialPort m_leftLEDConnection = new MySerialPort();
-        private readonly MySerialPort m_rightLEDConnection = new MySerialPort();
+        private readonly MySerialPort m_leftKeyConnection = new MySerialPort(true);
+        private readonly MySerialPort m_rightKeyConnection = new MySerialPort(true);
+        private readonly MySerialPort m_leftLEDConnection = new MySerialPort(false);
+        private readonly MySerialPort m_rightLEDConnection = new MySerialPort(false);
 
         /// <summary>
         /// Programming.FreeErgonomicsBrain Class error.
@@ -247,11 +247,10 @@ namespace CSharpErgoBoard.Programming
                     Logging.Instance.Log(connectingPort.Type, "Debug");
                     connectingPort.Close();
 
-                    if (connectingPort.Type == "M")
+                    if (connectingPort.Type == null)
                     {
                         error = "No response was gotten from the port.\n" +
                             "Please make sure this is the correct port or try again.";
-
                     }
                     else
                     {
@@ -336,6 +335,20 @@ namespace CSharpErgoBoard.Programming
 
             return true;
         }
+        /// <summary>
+        /// Sends a update command to the controller to update keys or leds.
+        /// </summary>
+        /// <remarks>
+        /// Originally all the error checking was done in the GUI class this function is meant to be a inbetween the real update function
+        /// and the GUI. This function just sets up the real update function as well as doing all the error checking
+        /// so that the GUI is dedicated to GUI processing.
+        /// </remarks>
+        /// <param name="type"> The type of controller you are trying to communate with</param>
+        /// <param name="layer"> What layer you want to edit the controls on. </param>
+        /// <param name="key"> The button that is selected</param>
+        /// <param name="value">The value that is going to be edited</param>
+        /// <param name="error">If anything goes wrong it would be printed out here and used for a popup box.</param>
+        /// <returns>True if everything worked, false if something goes wrong exactly what happened would be in error.</returns>
         public Boolean Update(in String type, in MyComboBox layer, in MyButton key, in MyComboBox value, out String error)
         {
             error = null;
@@ -364,7 +377,6 @@ namespace CSharpErgoBoard.Programming
 
             return Update(type, (String)layer.SelectedItem, key.MakeKeyName(), (String)value.SelectedItem);
         }
-
         /// <summary>
         /// Closes all the serial port connections. This should always be called otherwise issues do happen.
         /// </summary>
