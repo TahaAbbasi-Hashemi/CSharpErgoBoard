@@ -1168,6 +1168,7 @@ namespace CSharpErgoBoard.Design
 
             if (!worked)
             {
+                MyColorDialog joe = new MyColorDialog(true);
                 new Popup(error, "Connecting Error", m_selectedDarkMode);
             }
             else

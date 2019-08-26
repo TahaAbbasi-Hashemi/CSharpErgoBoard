@@ -119,6 +119,9 @@
     <Compile Include="Design\MyButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Design\MyColorDialog.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Design\Popup.cs">
       <SubType>Form</SubType>
     </Compile>
