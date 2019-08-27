@@ -245,7 +245,6 @@
             this.id_buttonLeftR1C3 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftR1C1 = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftKeyConnectComPort = new CSharpErgoBoard.Design.MyButton();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.menuStrip1.SuspendLayout();
             this.id_panelMain.SuspendLayout();
             this.SuspendLayout();
@@ -1895,6 +1894,7 @@
             this.id_buttonLeftLedR1C1.TabIndex = 262;
             this.id_buttonLeftLedR1C1.Text = "ESC";
             this.id_buttonLeftLedR1C1.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C1.Click += new System.EventHandler(this.id_buttonLeftLedR1C1_Click);
             // 
             // id_buttonLeftLedR4C7
             // 
@@ -2180,6 +2180,7 @@
             this.id_buttonLeftLedR1C7.TabIndex = 243;
             this.id_buttonLeftLedR1C7.Text = "F1";
             this.id_buttonLeftLedR1C7.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C7.Click += new System.EventHandler(this.id_buttonLeftLedR1C7_Click);
             // 
             // id_buttonLeftLedR1C6
             // 
@@ -2195,6 +2196,7 @@
             this.id_buttonLeftLedR1C6.TabIndex = 242;
             this.id_buttonLeftLedR1C6.Text = "F1";
             this.id_buttonLeftLedR1C6.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C6.Click += new System.EventHandler(this.id_buttonLeftLedR1C6_Click);
             // 
             // id_buttonLeftLedR1C5
             // 
@@ -2210,6 +2212,7 @@
             this.id_buttonLeftLedR1C5.TabIndex = 241;
             this.id_buttonLeftLedR1C5.Text = "F1";
             this.id_buttonLeftLedR1C5.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C5.Click += new System.EventHandler(this.id_buttonLeftLedR1C5_Click);
             // 
             // id_buttonLeftLedR1C4
             // 
@@ -2225,6 +2228,7 @@
             this.id_buttonLeftLedR1C4.TabIndex = 240;
             this.id_buttonLeftLedR1C4.Text = "F1";
             this.id_buttonLeftLedR1C4.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C4.Click += new System.EventHandler(this.id_buttonLeftLedR1C4_Click);
             // 
             // id_buttonLeftLedR1C3
             // 
@@ -2240,6 +2244,7 @@
             this.id_buttonLeftLedR1C3.TabIndex = 239;
             this.id_buttonLeftLedR1C3.Text = "F1";
             this.id_buttonLeftLedR1C3.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C3.Click += new System.EventHandler(this.id_buttonLeftLedR1C3_Click);
             // 
             // id_buttonLeftUpdateLed
             // 
@@ -2283,6 +2288,7 @@
             this.id_buttonLeftLedR1C2.TabIndex = 233;
             this.id_buttonLeftLedR1C2.Text = "F1";
             this.id_buttonLeftLedR1C2.UseVisualStyleBackColor = false;
+            this.id_buttonLeftLedR1C2.Click += new System.EventHandler(this.id_buttonLeftLedR1C2_Click);
             // 
             // id_buttonRightUpdateKey
             // 
@@ -4026,7 +4032,6 @@
         private Design.MyButton id_buttonLeftLedR3C8;
         private Design.MyButton id_buttonLeftLedR6C7;
         private Design.MyButton id_buttonLeftLedR6C6;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private Design.MyComboBox id_comboboxLeftKeyValue;
         private Design.MyComboBox id_comboboxLeftKeyLayer;
         private Design.MyComboBox id_comboboxLeftKeyComPort;

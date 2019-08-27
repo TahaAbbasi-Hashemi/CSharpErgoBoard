@@ -33,7 +33,9 @@ namespace CSharpErgoBoard.Design
         /// This essentially acts as a reference to the button that is selected by the user.
         /// </summary>
         private MyButton m_leftSelectedKeyButton = null;
+        private MyButton m_leftSelectedLedButton = null;
         private MyButton m_rightSelectedKeyButton = null;
+        private MyButton m_rightSelectedLedButton = null;
         private readonly FreeErgonomicsBrain m_processing = new FreeErgonomicsBrain();
         private Boolean m_selectedDarkMode = false;
 
@@ -1168,7 +1170,7 @@ namespace CSharpErgoBoard.Design
 
             if (!worked)
             {
-                MyColorDialog joe = new MyColorDialog(true);
+
                 new Popup(error, "Connecting Error", m_selectedDarkMode);
             }
             else
@@ -1176,6 +1178,12 @@ namespace CSharpErgoBoard.Design
                 SystemSounds.Asterisk.Play();
             }
         }
+
+        private void GetColor(out Color myColor)
+        {
+            throw new NotImplementedException();
+        }
+
         private void Id_buttonRightKeyConnectComPort_Click(object sender, EventArgs reason)
         {
             Logging.Instance.Log($"Right Keyboard Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
@@ -1279,50 +1287,13 @@ namespace CSharpErgoBoard.Design
         }
         private void Id_buttonLeftUpdateLed_Click(object sender, EventArgs reason)
         {
-            //Logging.Instance.Log($"Right LED Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
-            //                     "Information");
-
-            //// Has a connection been made. 
-            //if (!m_processing.IsConnected("Right LED"))
-            //{
-            //    Logging.Instance.Log("Update was attempted to be made before connection", severity: "Error");
-            //    Popup noKeyError = new Popup("A connection must be made before a key can be updated.",
-            //                                 "Updating Keyboard Error",
-            //                                 m_selectedDarkMode);
-            //    //return;
-            //}
-            //// If no key value was selected
-            //if (id_comboboxLeftKeyValue.SelectedIndex == -1)
-            //{
-            //    Logging.Instance.Log("A keyboard value was not selected", severity: "Error");
-            //    Popup noKeyError = new Popup("You need to enter a key value to continue",
-            //                                 "Updating Keyboard Error",
-            //                                 m_selectedDarkMode);
-            //    return;
-            //}
-            //// If no layer was selected
-            //if (id_comboboxLeftKeyLayer.SelectedIndex == -1)
-            //{
-            //    Logging.Instance.Log("A layer was not selected.", severity: "Error");
-            //    Popup noKeyError = new Popup("You need to enter a layer to continue",
-            //                                 "Updating Keyboard Error",
-            //                                 m_selectedDarkMode);
-            //    return;
-            //}
-            //// If no button was selected
-            //if (id_textboxLeftKeyValue.Text == "Selected Button")
-            //{
-            //    Logging.Instance.Log("No key was selected", severity: "Error");
-            //    Popup noKeyError = new Popup("You need to select a key to continue",
-            //                                 "Updating Keyboard Error",
-            //                                 m_selectedDarkMode);
-            //    return;
-            //}
-
-            //m_processing.Update("Left Keyboard",
-            //                    (String)id_comboboxLeftKeyLayer.SelectedItem,
-            //                    m_leftSelectedKeyButton.MakeKeyName(),
-            //                    (String)id_comboboxLeftKeyValue.SelectedItem);
+            using (MyColorBox test = new MyColorBox(true))
+            {
+                if (test.ShowDialog() == DialogResult.OK)
+                {
+                    m_leftSelectedLedButton.BackColor = MyColorBox.SelectedColor;
+                }
+            }
         }
         private void Id_buttonRightUpdateLed_Click(object sender, EventArgs reason)
         {
@@ -1347,5 +1318,34 @@ namespace CSharpErgoBoard.Design
             }
         }
 
+        private void id_buttonLeftLedR1C1_Click(Object sender, EventArgs e)
+        {
+            m_leftSelectedLedButton = id_buttonLeftLedR1C1;
+        }
+        private void id_buttonLeftLedR1C2_Click(Object sender, EventArgs e)
+        {
+            m_leftSelectedLedButton = id_buttonLeftLedR1C2;
+        }
+
+        private void id_buttonLeftLedR1C3_Click(Object sender, EventArgs e)
+        {
+
+        }
+        private void id_buttonLeftLedR1C4_Click(Object sender, EventArgs e)
+        {
+
+        }
+        private void id_buttonLeftLedR1C5_Click(Object sender, EventArgs e)
+        {
+
+        }
+        private void id_buttonLeftLedR1C6_Click(Object sender, EventArgs e)
+        {
+
+        }
+        private void id_buttonLeftLedR1C7_Click(Object sender, EventArgs e)
+        {
+
+        }
     }
 }
