@@ -11,10 +11,14 @@ namespace CSharpErgoBoard.Programming
     {
         //Private Readonly Members
         private readonly Dictionary<String, UInt32> m_conversion = new Dictionary<String, UInt32>();
+        private readonly Dictionary<UInt32, String> m_reverseConversion = new Dictionary<UInt32, String>();
         private readonly MySerialPort m_leftKeyConnection = new MySerialPort(true);
         private readonly MySerialPort m_rightKeyConnection = new MySerialPort(true);
         private readonly MySerialPort m_leftLEDConnection = new MySerialPort(false);
         private readonly MySerialPort m_rightLEDConnection = new MySerialPort(false);
+
+        public Dictionary<String, UInt32> Conversion => m_conversion;
+        public Dictionary<UInt32, String> ReverseConversion => m_reverseConversion;
 
         /// <summary>
         /// Programming.FreeErgonomicsBrain Class error.
@@ -54,7 +58,7 @@ namespace CSharpErgoBoard.Programming
             m_conversion.Add("None", 0);
             m_conversion.Add("Layer 1", 1);
             m_conversion.Add("Layer 2", 2);
-            m_conversion.Add("layer 3", 3);
+            m_conversion.Add("Layer 3", 3);
             m_conversion.Add("Layer 4", 4);
             m_conversion.Add("Layer 5", 5);
             // Commands
@@ -81,25 +85,34 @@ namespace CSharpErgoBoard.Programming
             m_conversion.Add("Home", 210);
             m_conversion.Add("End", 213);
             m_conversion.Add("Caps Lock", 193);
+            m_conversion.Add("Space", 32);
             // All 24 F keys.
             int j = 1;
-            for (UInt32 i = 194; i < 252; i++)
+            for (UInt32 i = 194; i < 206; i++)
             {
                 String name = "F" + j.ToString();
                 m_conversion.Add(name, i);
                 j++;
             }
             // Characters
-            m_conversion.Add("Space", 32);
-            String fullTable = "`1234567890-=qwertyuiop[]\asdfghjkl;'zxcvbnm,./";
+            String fullTable = "`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?";
             foreach (Char character in fullTable)
             {
                 m_conversion.Add(character.ToString(), (UInt32)character);
             }
 
-
-
-
+            // Make reverse conversion 
+            foreach (KeyValuePair<String, UInt32> group in m_conversion)
+            {
+                try
+                {
+                    m_reverseConversion.Add(group.Value, group.Key);
+                }
+                catch (ArgumentException)
+                {
+                    new Popup("I am not sure what just happened", group.Key);
+                }
+            }
         }
         /// <summary>
         /// Finds a list of serial ports and their friendly descriptions and returns it. 
@@ -189,7 +202,7 @@ namespace CSharpErgoBoard.Programming
 
             GetSerialPort(type, out MySerialPort connectingPort, out error);
 
-            for (Byte i = 0; i <1; i++)
+            for (Byte i = 0; i < 1; i++)
             {   // A for loop that happens once.
                 // Already connected.
                 if (connectingPort.IsOpen)
@@ -292,51 +305,7 @@ namespace CSharpErgoBoard.Programming
             }
         }
         /// <summary>
-        /// Sends a update command to the controller to update the 
-        /// </summary>
-        /// <param name="type"> The type of serial port connection wanted. EG: Left keyboard, right keyboard</param>
-        /// <param name="layer">What layer the updated key is going on. </param>
-        /// <param name="key">What is the name of the keyboard key.</param>
-        /// <param name="value">What is the value of the new keyboard key.</param>
-        /// <returns>True if a update was sent to the controller.</returns>
-        private Boolean Update(in String type, in String layer, in String key, in String value)
-        {
-            String message;
-
-            GetSerialPort(type, out MySerialPort connectingPort, out String error);
-
-            message = "U";  // The update character
-            message += key; // Key contains the row and column in a R1C1 fashion. 
-            if (layer == "Layer 1")
-            {
-                message += "L1";
-            }
-            else if (layer == "Layer 2")
-            {
-                message += "L2";
-            }
-            else if (layer == "Layer 3")
-            {
-                message += "L3";
-            }
-            else if (layer == "Layer 4")
-            {
-                message += "L4";
-            }
-            else if (layer == "Layer 5")
-            {
-                message += "L5";
-            }
-            message += "'";
-            message += value;
-            message += "'";
-
-            connectingPort.WriteLine(message);
-
-            return true;
-        }
-        /// <summary>
-        /// Sends a update command to the controller to update keys or leds.
+        /// Sends a set command to the controller to update keys or leds.
         /// </summary>
         /// <remarks>
         /// Originally all the error checking was done in the GUI class this function is meant to be a inbetween the real update function
@@ -349,7 +318,7 @@ namespace CSharpErgoBoard.Programming
         /// <param name="value">The value that is going to be edited</param>
         /// <param name="error">If anything goes wrong it would be printed out here and used for a popup box.</param>
         /// <returns>True if everything worked, false if something goes wrong exactly what happened would be in error.</returns>
-        public Boolean Update(in String type, in MyComboBox layer, in MyButton key, in MyComboBox value, out String error)
+        public Boolean Update(in String type, in MyComboBox layer, in KeyButton key, in MyComboBox value, out String error)
         {
             error = null;
             if (!IsConnected(type))
@@ -375,7 +344,67 @@ namespace CSharpErgoBoard.Programming
                 return false;
             }
 
-            return Update(type, (String)layer.SelectedItem, key.MakeKeyName(), (String)value.SelectedItem);
+            String message;
+            if (!GetSerialPort(type, out MySerialPort connectingPort, out error))
+            {
+                return false;
+            }
+
+            message = "Set";  // The update character
+            message += key.KeyName;
+            Conversion.TryGetValue((String)value.SelectedItem, out UInt32 uintValue);
+            message += uintValue.ToString();
+
+            connectingPort.WriteLine(message);
+
+            return true;
+        }
+        public Boolean ReloadKey(in String type, in MyComboBox layer, in KeyButton key, out String error, out String text)
+        {
+            text = null;
+            error = null;
+            String message;
+
+            if (!IsConnected(type))
+            {
+                error = "A connection must be made before a key can be updated.";
+                Logging.Instance.Log("Attempt to update before making connection was made", "Debug");
+                return false;
+            }
+            if (layer.SelectedIndex == -1)
+            {
+                error = "A layer must be selected before a key can be updated.";
+                Logging.Instance.Log("Attempt to update before selecting a layer was made", "Debug");
+                return false;
+            }
+            if (!GetSerialPort(type, out MySerialPort connectingPort, out error))
+            {
+                return false;
+            }
+
+            message = "Get";  // The update character
+            message += key.KeyName; ;
+            connectingPort.WriteLine(message);
+
+            try
+            {
+                message = String.Empty;
+                message = connectingPort.ReadLine();
+                message = message.Trim();
+
+                UInt32 number = UInt32.Parse(message);
+                message = String.Empty;
+                m_reverseConversion.TryGetValue(number, out message);
+            }
+            catch (TimeoutException)
+            {
+                error = "A Key value could not be found.";
+                return false;
+            }
+            text = message;
+            connectingPort.DiscardInBuffer();
+
+            return true;
         }
         /// <summary>
         /// Closes all the serial port connections. This should always be called otherwise issues do happen.

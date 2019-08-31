@@ -32,12 +32,16 @@ namespace CSharpErgoBoard.Design
         /// <summary>
         /// This essentially acts as a reference to the button that is selected by the user.
         /// </summary>
-        private MyButton m_leftSelectedKeyButton = null;
-        private MyButton m_leftSelectedLedButton = null;
-        private MyButton m_rightSelectedKeyButton = null;
-        private MyButton m_rightSelectedLedButton = null;
+        private KeyButton m_leftSelectedKeyButton = null;
+        private KeyButton m_leftSelectedLedButton = null;
+        private KeyButton m_rightSelectedKeyButton = null;
+        private KeyButton m_rightSelectedLedButton = null;
         private readonly FreeErgonomicsBrain m_processing = new FreeErgonomicsBrain();
         private Boolean m_selectedDarkMode = false;
+        private List<KeyButton> m_leftKeys = new List<KeyButton>();
+        private List<KeyButton> m_leftLed = new List<KeyButton>();
+        private List<KeyButton> m_rightKeys = new List<KeyButton>();
+        private List<KeyButton> m_rightLed = new List<KeyButton>();
 
         // Functions
         /// <summary>
@@ -46,16 +50,17 @@ namespace CSharpErgoBoard.Design
         public FreeErgonomics()
         {
             InitializeComponent();
-            // List the serial port names.
-            List<String> possiblePorts = m_processing.GetPorts();
-            foreach (String port in possiblePorts)
+            LoadSerialPorts();
+            SetUpKeys();
+            // Reload all the comboboxs.
+            id_comboboxLeftKeyValue.Items.Clear();
+            id_comboboxRightKeyValue.Items.Clear();
+            foreach (var dict in m_processing.Conversion)
             {
-                id_comboboxRightKeyComPort.Items.Add(port);
-                id_comboboxLeftKeyComPort.Items.Add(port);
-                id_comboboxLeftLedComPort.Items.Add(port);
-                id_comboboxRightLedComPort.Items.Add(port);
+                id_comboboxLeftKeyValue.Items.Add(dict.Key);
+                id_comboboxRightKeyValue.Items.Add(dict.Key);
             }
-
+            // Setup dark mode for the inital start up. 
             if (Settings.Default.Darkmode)
             {
                 SelectDarkMode();
@@ -64,6 +69,261 @@ namespace CSharpErgoBoard.Design
             {
                 SelectLightMode();
             }
+        }
+        public void LoadSerialPorts()
+        {
+            List<String> possiblePorts = m_processing.GetPorts();
+            foreach (String port in possiblePorts)
+            {
+                id_comboboxRightKeyComPort.Items.Add(port);
+                id_comboboxLeftKeyComPort.Items.Add(port);
+                id_comboboxLeftLedComPort.Items.Add(port);
+                id_comboboxRightLedComPort.Items.Add(port);
+            }
+        }
+        public void SetUpKeys()
+        {
+            m_leftKeys.Clear();
+            m_leftKeys.Add(id_buttonLeftR1C1);
+            m_leftKeys.Add(id_buttonLeftR1C2);
+            m_leftKeys.Add(id_buttonLeftR1C3);
+            m_leftKeys.Add(id_buttonLeftR1C4);
+            m_leftKeys.Add(id_buttonLeftR1C5);
+            m_leftKeys.Add(id_buttonLeftR1C6);
+            m_leftKeys.Add(id_buttonLeftR1C7);
+            m_leftKeys.Add(id_buttonLeftR2C1);
+            m_leftKeys.Add(id_buttonLeftR2C2);
+            m_leftKeys.Add(id_buttonLeftR2C3);
+            m_leftKeys.Add(id_buttonLeftR2C4);
+            m_leftKeys.Add(id_buttonLeftR2C5);
+            m_leftKeys.Add(id_buttonLeftR2C6);
+            m_leftKeys.Add(id_buttonLeftR2C7);
+            m_leftKeys.Add(id_buttonLeftR3C1);
+            m_leftKeys.Add(id_buttonLeftR3C2);
+            m_leftKeys.Add(id_buttonLeftR3C3);
+            m_leftKeys.Add(id_buttonLeftR3C4);
+            m_leftKeys.Add(id_buttonLeftR3C5);
+            m_leftKeys.Add(id_buttonLeftR3C6);
+            m_leftKeys.Add(id_buttonLeftR3C7);
+            m_leftKeys.Add(id_buttonLeftR3C8);
+            m_leftKeys.Add(id_buttonLeftR4C1);
+            m_leftKeys.Add(id_buttonLeftR4C2);
+            m_leftKeys.Add(id_buttonLeftR4C3);
+            m_leftKeys.Add(id_buttonLeftR4C4);
+            m_leftKeys.Add(id_buttonLeftR4C5);
+            m_leftKeys.Add(id_buttonLeftR4C6);
+            m_leftKeys.Add(id_buttonLeftR4C7);
+            m_leftKeys.Add(id_buttonLeftR4C8);
+            m_leftKeys.Add(id_buttonLeftR5C1);
+            m_leftKeys.Add(id_buttonLeftR5C2);
+            m_leftKeys.Add(id_buttonLeftR5C3);
+            m_leftKeys.Add(id_buttonLeftR5C4);
+            m_leftKeys.Add(id_buttonLeftR5C5);
+            m_leftKeys.Add(id_buttonLeftR5C6);
+            m_leftKeys.Add(id_buttonLeftR5C7);
+            m_leftKeys.Add(id_buttonLeftR5C8);
+            m_leftKeys.Add(id_buttonLeftR6C1);
+            m_leftKeys.Add(id_buttonLeftR6C2);
+            m_leftKeys.Add(id_buttonLeftR6C3);
+            m_leftKeys.Add(id_buttonLeftR6C4);
+            m_leftKeys.Add(id_buttonLeftR6C5);
+            m_leftKeys.Add(id_buttonLeftR6C6);
+            m_leftKeys.Add(id_buttonLeftR6C7);
+            m_leftKeys.Add(id_buttonLeftR6C8);
+            m_rightKeys.Clear();
+            m_rightKeys.Add(id_buttonRightR1C1);
+            m_rightKeys.Add(id_buttonRightR1C2);
+            m_rightKeys.Add(id_buttonRightR1C3);
+            m_rightKeys.Add(id_buttonRightR1C4);
+            m_rightKeys.Add(id_buttonRightR1C5);
+            m_rightKeys.Add(id_buttonRightR1C6);
+            m_rightKeys.Add(id_buttonRightR1C7);
+            m_rightKeys.Add(id_buttonRightR2C1);
+            m_rightKeys.Add(id_buttonRightR2C2);
+            m_rightKeys.Add(id_buttonRightR2C3);
+            m_rightKeys.Add(id_buttonRightR2C4);
+            m_rightKeys.Add(id_buttonRightR2C5);
+            m_rightKeys.Add(id_buttonRightR2C6);
+            m_rightKeys.Add(id_buttonRightR2C7);
+            m_rightKeys.Add(id_buttonRightR3C1);
+            m_rightKeys.Add(id_buttonRightR3C2);
+            m_rightKeys.Add(id_buttonRightR3C3);
+            m_rightKeys.Add(id_buttonRightR3C4);
+            m_rightKeys.Add(id_buttonRightR3C5);
+            m_rightKeys.Add(id_buttonRightR3C6);
+            m_rightKeys.Add(id_buttonRightR3C7);
+            m_rightKeys.Add(id_buttonRightR3C8);
+            m_rightKeys.Add(id_buttonRightR4C1);
+            m_rightKeys.Add(id_buttonRightR4C2);
+            m_rightKeys.Add(id_buttonRightR4C3);
+            m_rightKeys.Add(id_buttonRightR4C4);
+            m_rightKeys.Add(id_buttonRightR4C5);
+            m_rightKeys.Add(id_buttonRightR4C6);
+            m_rightKeys.Add(id_buttonRightR4C7);
+            m_rightKeys.Add(id_buttonRightR4C8);
+            m_rightKeys.Add(id_buttonRightR5C1);
+            m_rightKeys.Add(id_buttonRightR5C2);
+            m_rightKeys.Add(id_buttonRightR5C3);
+            m_rightKeys.Add(id_buttonRightR5C4);
+            m_rightKeys.Add(id_buttonRightR5C5);
+            m_rightKeys.Add(id_buttonRightR5C6);
+            m_rightKeys.Add(id_buttonRightR5C7);
+            m_rightKeys.Add(id_buttonRightR5C8);
+            m_rightKeys.Add(id_buttonRightR6C1);
+            m_rightKeys.Add(id_buttonRightR6C2);
+            m_rightKeys.Add(id_buttonRightR6C3);
+            m_rightKeys.Add(id_buttonRightR6C4);
+            m_rightKeys.Add(id_buttonRightR6C5);
+            m_rightKeys.Add(id_buttonRightR6C6);
+            m_rightKeys.Add(id_buttonRightR6C7);
+            m_rightKeys.Add(id_buttonRightR6C8);
+            m_leftLed.Clear();
+            m_leftLed.Add(id_buttonLeftLedR1C1);
+            m_leftLed.Add(id_buttonLeftLedR1C2);
+            m_leftLed.Add(id_buttonLeftLedR1C3);
+            m_leftLed.Add(id_buttonLeftLedR1C4);
+            m_leftLed.Add(id_buttonLeftLedR1C5);
+            m_leftLed.Add(id_buttonLeftLedR1C6);
+            m_leftLed.Add(id_buttonLeftLedR1C7);
+            m_leftLed.Add(id_buttonLeftLedR2C1);
+            m_leftLed.Add(id_buttonLeftLedR2C2);
+            m_leftLed.Add(id_buttonLeftLedR2C3);
+            m_leftLed.Add(id_buttonLeftLedR2C4);
+            m_leftLed.Add(id_buttonLeftLedR2C5);
+            m_leftLed.Add(id_buttonLeftLedR2C6);
+            m_leftLed.Add(id_buttonLeftLedR2C7);
+            m_leftLed.Add(id_buttonLeftLedR3C1);
+            m_leftLed.Add(id_buttonLeftLedR3C2);
+            m_leftLed.Add(id_buttonLeftLedR3C3);
+            m_leftLed.Add(id_buttonLeftLedR3C4);
+            m_leftLed.Add(id_buttonLeftLedR3C5);
+            m_leftLed.Add(id_buttonLeftLedR3C6);
+            m_leftLed.Add(id_buttonLeftLedR3C7);
+            m_leftLed.Add(id_buttonLeftLedR3C8);
+            m_leftLed.Add(id_buttonLeftLedR4C1);
+            m_leftLed.Add(id_buttonLeftLedR4C2);
+            m_leftLed.Add(id_buttonLeftLedR4C3);
+            m_leftLed.Add(id_buttonLeftLedR4C4);
+            m_leftLed.Add(id_buttonLeftLedR4C5);
+            m_leftLed.Add(id_buttonLeftLedR4C6);
+            m_leftLed.Add(id_buttonLeftLedR4C7);
+            m_leftLed.Add(id_buttonLeftLedR4C8);
+            m_leftLed.Add(id_buttonLeftLedR5C1);
+            m_leftLed.Add(id_buttonLeftLedR5C2);
+            m_leftLed.Add(id_buttonLeftLedR5C3);
+            m_leftLed.Add(id_buttonLeftLedR5C4);
+            m_leftLed.Add(id_buttonLeftLedR5C5);
+            m_leftLed.Add(id_buttonLeftLedR5C6);
+            m_leftLed.Add(id_buttonLeftLedR5C7);
+            m_leftLed.Add(id_buttonLeftLedR5C8);
+            m_leftLed.Add(id_buttonLeftLedR6C1);
+            m_leftLed.Add(id_buttonLeftLedR6C2);
+            m_leftLed.Add(id_buttonLeftLedR6C3);
+            m_leftLed.Add(id_buttonLeftLedR6C4);
+            m_leftLed.Add(id_buttonLeftLedR6C5);
+            m_leftLed.Add(id_buttonLeftLedR6C6);
+            m_leftLed.Add(id_buttonLeftLedR6C7);
+            m_leftLed.Add(id_buttonLeftLedR6C8);
+            m_rightLed.Clear();
+            m_rightLed.Add(id_buttonRightLedR1C1);
+            m_rightLed.Add(id_buttonRightLedR1C2);
+            m_rightLed.Add(id_buttonRightLedR1C3);
+            m_rightLed.Add(id_buttonRightLedR1C4);
+            m_rightLed.Add(id_buttonRightLedR1C5);
+            m_rightLed.Add(id_buttonRightLedR1C6);
+            m_rightLed.Add(id_buttonRightLedR1C7);
+            m_rightLed.Add(id_buttonRightLedR2C1);
+            m_rightLed.Add(id_buttonRightLedR2C2);
+            m_rightLed.Add(id_buttonRightLedR2C3);
+            m_rightLed.Add(id_buttonRightLedR2C4);
+            m_rightLed.Add(id_buttonRightLedR2C5);
+            m_rightLed.Add(id_buttonRightLedR2C6);
+            m_rightLed.Add(id_buttonRightLedR2C7);
+            m_rightLed.Add(id_buttonRightLedR3C1);
+            m_rightLed.Add(id_buttonRightLedR3C2);
+            m_rightLed.Add(id_buttonRightLedR3C3);
+            m_rightLed.Add(id_buttonRightLedR3C4);
+            m_rightLed.Add(id_buttonRightLedR3C5);
+            m_rightLed.Add(id_buttonRightLedR3C6);
+            m_rightLed.Add(id_buttonRightLedR3C7);
+            m_rightLed.Add(id_buttonRightLedR3C8);
+            m_rightLed.Add(id_buttonRightLedR4C1);
+            m_rightLed.Add(id_buttonRightLedR4C2);
+            m_rightLed.Add(id_buttonRightLedR4C3);
+            m_rightLed.Add(id_buttonRightLedR4C4);
+            m_rightLed.Add(id_buttonRightLedR4C5);
+            m_rightLed.Add(id_buttonRightLedR4C6);
+            m_rightLed.Add(id_buttonRightLedR4C7);
+            m_rightLed.Add(id_buttonRightLedR4C8);
+            m_rightLed.Add(id_buttonRightLedR5C1);
+            m_rightLed.Add(id_buttonRightLedR5C2);
+            m_rightLed.Add(id_buttonRightLedR5C3);
+            m_rightLed.Add(id_buttonRightLedR5C4);
+            m_rightLed.Add(id_buttonRightLedR5C5);
+            m_rightLed.Add(id_buttonRightLedR5C6);
+            m_rightLed.Add(id_buttonRightLedR5C7);
+            m_rightLed.Add(id_buttonRightLedR5C8);
+            m_rightLed.Add(id_buttonRightLedR6C1);
+            m_rightLed.Add(id_buttonRightLedR6C2);
+            m_rightLed.Add(id_buttonRightLedR6C3);
+            m_rightLed.Add(id_buttonRightLedR6C4);
+            m_rightLed.Add(id_buttonRightLedR6C5);
+            m_rightLed.Add(id_buttonRightLedR6C6);
+            m_rightLed.Add(id_buttonRightLedR6C7);
+            m_rightLed.Add(id_buttonRightLedR6C8);
+
+            foreach (KeyButton key in m_leftKeys)
+            {
+                key.Setup();
+            }
+            foreach (KeyButton key in m_rightKeys)
+            {
+                key.Setup();
+            }
+            foreach (KeyButton key in m_leftLed)
+            {
+                key.Setup();
+            }
+            foreach (KeyButton key in m_rightLed)
+            {
+                key.Setup();
+            }
+            // Special Keys.
+            id_buttonLeftR1C1.Setup(size: "Wide");
+            id_buttonLeftR2C1.Setup(size: "Wide");
+            id_buttonLeftR3C1.Setup(size: "Wide");
+            id_buttonLeftR4C1.Setup(size: "Wide");
+            id_buttonLeftR5C1.Setup(size: "Wide");
+            id_buttonLeftR6C1.Setup(size: "Wide");
+            id_buttonLeftR6C6.Setup(size: "Tall");
+            id_buttonLeftR6C7.Setup(size: "Tall");
+
+            id_buttonRightR1C1.Setup(size: "Wide");
+            id_buttonRightR2C1.Setup(size: "Wide");
+            id_buttonRightR3C1.Setup(size: "Wide");
+            id_buttonRightR4C1.Setup(size: "Wide");
+            id_buttonRightR5C1.Setup(size: "Wide");
+            id_buttonRightR6C1.Setup(size: "Wide");
+            id_buttonRightR6C6.Setup(size: "Tall");
+            id_buttonRightR6C7.Setup(size: "Tall");
+
+            id_buttonLeftLedR1C1.Setup(size: "Wide");
+            id_buttonLeftLedR2C1.Setup(size: "Wide");
+            id_buttonLeftLedR3C1.Setup(size: "Wide");
+            id_buttonLeftLedR4C1.Setup(size: "Wide");
+            id_buttonLeftLedR5C1.Setup(size: "Wide");
+            id_buttonLeftLedR6C1.Setup(size: "Wide");
+            id_buttonLeftLedR6C6.Setup(size: "Tall");
+            id_buttonLeftLedR6C7.Setup(size: "Tall");
+
+            id_buttonRightLedR1C1.Setup(size: "Wide");
+            id_buttonRightLedR2C1.Setup(size: "Wide");
+            id_buttonRightLedR3C1.Setup(size: "Wide");
+            id_buttonRightLedR4C1.Setup(size: "Wide");
+            id_buttonRightLedR5C1.Setup(size: "Wide");
+            id_buttonRightLedR6C1.Setup(size: "Wide");
+            id_buttonRightLedR6C6.Setup(size: "Tall");
+            id_buttonRightLedR6C7.Setup(size: "Tall");
         }
         /// <summary>
         /// Changes the color layout of the application to a dark mode style. 
@@ -82,8 +342,8 @@ namespace CSharpErgoBoard.Design
             id_panelMain.ForeColor = Color.WhiteSmoke;
 
             //Menu Strip
-            menuStrip1.BackColor = Color.DimGray;
-            menuStrip1.ForeColor = Color.WhiteSmoke;
+            id_menuMain.BackColor = Color.DimGray;
+            id_menuMain.ForeColor = Color.WhiteSmoke;
             id_menuFile.BackColor = Color.DimGray;
             id_menuEdit.BackColor = Color.DimGray;
             id_menuView.BackColor = Color.DimGray;
@@ -129,8 +389,8 @@ namespace CSharpErgoBoard.Design
             id_panelMain.ForeColor = Color.Black;
 
             // Menu Strip
-            menuStrip1.BackColor = Color.Gainsboro;
-            menuStrip1.ForeColor = Color.Black;
+            id_menuMain.BackColor = Color.Gainsboro;
+            id_menuMain.ForeColor = Color.Black;
             id_menuFile.BackColor = Color.Gainsboro;
             id_menuEdit.BackColor = Color.Gainsboro;
             id_menuView.BackColor = Color.Gainsboro;
@@ -187,236 +447,21 @@ namespace CSharpErgoBoard.Design
             id_buttonRightUpdateLed.ModeChange(m_selectedDarkMode);
             id_buttonRightLedConnectComPort.ModeChange(m_selectedDarkMode);
 
-            // Left hand side
-            // Keyboard Keys
+            foreach (KeyButton key in m_leftKeys)
             {
-                // Column 1
-                id_buttonLeftR1C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonLeftR2C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonLeftR3C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonLeftR4C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonLeftR5C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonLeftR6C1.ModeChange(m_selectedDarkMode, "Wide");
-                // Column 2
-                id_buttonLeftR1C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR2C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR3C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR4C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR5C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR6C2.ModeChange(m_selectedDarkMode, "Single");
-                // Column 3
-                id_buttonLeftR1C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR2C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR3C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR4C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR5C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR6C3.ModeChange(m_selectedDarkMode, "Single");
-                // Column 4
-                id_buttonLeftR1C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR2C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR3C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR4C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR5C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR6C4.ModeChange(m_selectedDarkMode, "Single");
-                // Column 5
-                id_buttonLeftR1C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR2C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR3C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR4C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR5C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR6C5.ModeChange(m_selectedDarkMode, "Single");
-                // Column 6
-                id_buttonLeftR1C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR2C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR3C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR4C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR5C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR6C6.ModeChange(m_selectedDarkMode, "Tall");
-                // Column 7
-                id_buttonLeftR1C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR2C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR3C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR4C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR5C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR6C7.ModeChange(m_selectedDarkMode, "Tall");
-                // Column 8
-                id_buttonLeftR3C8.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR4C8.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR5C8.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonLeftR6C8.ModeChange(m_selectedDarkMode, "Single");
+                key.ModeChange(m_selectedDarkMode);
             }
-            //LEDS
+            foreach (KeyButton key in m_rightKeys)
             {
-                // Column 1
-                id_buttonLeftLedR1C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonLeftLedR2C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonLeftLedR3C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonLeftLedR4C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonLeftLedR5C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonLeftLedR6C1.ModeChange(m_selectedDarkMode, "WideLED");
-                // Column 2
-                id_buttonLeftLedR1C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR2C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR3C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR4C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR5C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR6C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                // Column 3
-                id_buttonLeftLedR1C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR2C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR3C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR4C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR5C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR6C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                // Column 4
-                id_buttonLeftLedR1C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR2C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR3C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR4C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR5C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR6C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                // Column 5
-                id_buttonLeftLedR1C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR2C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR3C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR4C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR5C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR6C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                // Column 6
-                id_buttonLeftLedR1C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR2C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR3C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR4C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR5C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR6C6.ModeChange(m_selectedDarkMode, "TallLED");
-                // Column 7
-                id_buttonLeftLedR1C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR2C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR3C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR4C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR5C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR6C7.ModeChange(m_selectedDarkMode, "TallLED");
-                // Column 8
-                id_buttonLeftLedR3C8.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR4C8.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR5C8.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonLeftLedR6C8.ModeChange(m_selectedDarkMode, "SingleLED");
+                key.ModeChange(m_selectedDarkMode);
             }
-
-            // Right Hand side
-            // Keyboard Keys
+            foreach (KeyButton key in m_leftLed)
             {
-                // Column 1
-                id_buttonRightR1C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonRightR2C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonRightR3C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonRightR4C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonRightR5C1.ModeChange(m_selectedDarkMode, "Wide");
-                id_buttonRightR6C1.ModeChange(m_selectedDarkMode, "Wide");
-                // Column 2
-                id_buttonRightR1C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR2C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR3C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR4C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR5C2.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR6C2.ModeChange(m_selectedDarkMode, "Single");
-                // Column 3
-                id_buttonRightR1C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR2C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR3C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR4C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR5C3.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR6C3.ModeChange(m_selectedDarkMode, "Single");
-                // Column 4
-                id_buttonRightR1C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR2C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR3C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR4C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR5C4.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR6C4.ModeChange(m_selectedDarkMode, "Single");
-                // Column 5
-                id_buttonRightR1C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR2C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR3C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR4C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR5C5.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR6C5.ModeChange(m_selectedDarkMode, "Single");
-                // Column 6
-                id_buttonRightR1C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR2C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR3C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR4C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR5C6.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR6C6.ModeChange(m_selectedDarkMode, "Tall");
-                // Column 7
-                id_buttonRightR1C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR2C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR3C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR4C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR5C7.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR6C7.ModeChange(m_selectedDarkMode, "Tall");
-                // Column 8
-                id_buttonRightR3C8.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR4C8.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR5C8.ModeChange(m_selectedDarkMode, "Single");
-                id_buttonRightR6C8.ModeChange(m_selectedDarkMode, "Single");
+                key.ModeChange(m_selectedDarkMode);
             }
-            //LEDS
+            foreach (KeyButton key in m_rightLed)
             {
-                // Column 1
-                id_buttonRightLedR1C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonRightLedR2C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonRightLedR3C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonRightLedR4C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonRightLedR5C1.ModeChange(m_selectedDarkMode, "WideLED");
-                id_buttonRightLedR6C1.ModeChange(m_selectedDarkMode, "WideLED");
-                // Column 2
-                id_buttonRightLedR1C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR2C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR3C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR4C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR5C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR6C2.ModeChange(m_selectedDarkMode, "SingleLED");
-                // Column 3
-                id_buttonRightLedR1C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR2C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR3C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR4C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR5C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR6C3.ModeChange(m_selectedDarkMode, "SingleLED");
-                // Column 4
-                id_buttonRightLedR1C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR2C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR3C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR4C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR5C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR6C4.ModeChange(m_selectedDarkMode, "SingleLED");
-                // Column 5
-                id_buttonRightLedR1C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR2C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR3C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR4C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR5C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR6C5.ModeChange(m_selectedDarkMode, "SingleLED");
-                // Column 6
-                id_buttonRightLedR1C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR2C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR3C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR4C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR5C6.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR6C6.ModeChange(m_selectedDarkMode, "TallLED");
-                // Column 7
-                id_buttonRightLedR1C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR2C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR3C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR4C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR5C7.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR6C7.ModeChange(m_selectedDarkMode, "TallLED");
-                // Column 8
-                id_buttonRightLedR3C8.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR4C8.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR5C8.ModeChange(m_selectedDarkMode, "SingleLED");
-                id_buttonRightLedR6C8.ModeChange(m_selectedDarkMode, "SingleLED");
+                key.ModeChange(m_selectedDarkMode);
             }
         }
         /// <summary>
@@ -438,6 +483,8 @@ namespace CSharpErgoBoard.Design
             SystemMonitor.Instance.End();
             m_processing.Close();
         }
+
+        #region Menu Bar Actions         
         /// <summary>
         /// Quits the program using the menu button.
         /// </summary>
@@ -462,17 +509,37 @@ namespace CSharpErgoBoard.Design
         {
             SelectLightMode();
         }
+        /// <summary>
+        /// Reloads all the keys.
+        /// </summary>
+        /// <param name="sender">The object that called this function </param> 
+        /// <param name="reason">What event caused the object to call this function </param>
+        private void Id_menuReloadKeys_Click(Object sender, EventArgs reason)
+        {
+            //SetUpKeys();
+        }
+        /// <summary>
+        /// Reloads all the serial ports.
+        /// </summary>
+        /// <param name="sender">The object that called this function </param> 
+        /// <param name="reason">What event caused the object to call this function </param>
+        private void Id_menuReloadSerialPorts_Click(Object sender, EventArgs reason)
+        {
+            LoadSerialPorts();
+        }
+        #endregion
 
+        #region Keyboard Button Press Actions
         // Keyboard Keys
         private void Id_buttonLeftR1C1_Click(object sender, EventArgs reason)
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
-            m_leftSelectedKeyButton = id_buttonLeftR1C1;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton = id_buttonLeftR1C1; //TODO fix
+            m_leftSelectedKeyButton.SelectKey();
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -481,11 +548,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C2;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -494,11 +561,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C3;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -507,11 +574,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C4;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -520,11 +587,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C5;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -533,11 +600,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C6;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -546,11 +613,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR1C7;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -559,11 +626,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C1;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -572,11 +639,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C2;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -585,11 +652,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C3;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -598,11 +665,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C4;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -611,11 +678,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C5;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -624,11 +691,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C6;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -637,11 +704,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR2C7;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -650,11 +717,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR3C1;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -664,11 +731,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR3C2;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -678,11 +745,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR3C3;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -691,11 +758,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR3C4;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -704,11 +771,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR3C5;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -717,11 +784,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR3C6;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -730,11 +797,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR3C7;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -743,11 +810,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR3C8;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -756,11 +823,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR4C1;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -769,11 +836,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR4C2;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -782,11 +849,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR4C3;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -795,11 +862,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR4C4;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -808,11 +875,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR4C5;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -821,11 +888,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR4C6;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -834,11 +901,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR4C7;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -847,11 +914,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR4C8;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -860,11 +927,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR5C1;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -873,11 +940,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR5C2;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -886,11 +953,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR5C3;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -899,11 +966,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR5C4;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -912,11 +979,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR5C5;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -925,11 +992,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR5C6;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -938,11 +1005,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR5C7;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -951,11 +1018,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR5C8;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -964,11 +1031,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR6C1;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -977,11 +1044,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR6C2;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -990,11 +1057,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR6C3;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1003,11 +1070,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR6C4;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1016,11 +1083,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR6C5;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1029,11 +1096,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR6C6;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1042,11 +1109,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR6C7;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1055,11 +1122,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_leftSelectedKeyButton != null)
             {
-                m_leftSelectedKeyButton.UnSelected();
+                m_leftSelectedKeyButton.SelectKey(false);
             }
             m_leftSelectedKeyButton = id_buttonLeftR6C8;
-            m_leftSelectedKeyButton.Selected();
-            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.MakeKeyNameValue();
+            m_leftSelectedKeyButton.SelectKey(true);
+            id_textboxLeftKeyValue.Text = m_leftSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Left keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1069,11 +1136,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_rightSelectedKeyButton != null)
             {
-                m_rightSelectedKeyButton.UnSelected();
+                m_rightSelectedKeyButton.SelectKey(false);
             }
             m_rightSelectedKeyButton = id_buttonRightR1C1;
-            m_rightSelectedKeyButton.Selected();
-            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+            m_rightSelectedKeyButton.SelectKey(true);
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1082,11 +1149,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_rightSelectedKeyButton != null)
             {
-                m_rightSelectedKeyButton.UnSelected();
+                m_rightSelectedKeyButton.SelectKey(false);
             }
             m_rightSelectedKeyButton = id_buttonRightR1C2;
-            m_rightSelectedKeyButton.Selected();
-            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+            m_rightSelectedKeyButton.SelectKey(true);
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1095,11 +1162,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_rightSelectedKeyButton != null)
             {
-                m_rightSelectedKeyButton.UnSelected();
+                m_rightSelectedKeyButton.SelectKey(false);
             }
             m_rightSelectedKeyButton = id_buttonRightR1C3;
-            m_rightSelectedKeyButton.Selected();
-            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+            m_rightSelectedKeyButton.SelectKey(true);
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1108,11 +1175,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_rightSelectedKeyButton != null)
             {
-                m_rightSelectedKeyButton.UnSelected();
+                m_rightSelectedKeyButton.SelectKey(false);
             }
             m_rightSelectedKeyButton = id_buttonRightR1C4;
-            m_rightSelectedKeyButton.Selected();
-            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+            m_rightSelectedKeyButton.SelectKey(true);
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1121,11 +1188,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_rightSelectedKeyButton != null)
             {
-                m_rightSelectedKeyButton.UnSelected();
+                m_rightSelectedKeyButton.SelectKey(false);
             }
             m_rightSelectedKeyButton = id_buttonRightR1C5;
-            m_rightSelectedKeyButton.Selected();
-            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+            m_rightSelectedKeyButton.SelectKey(true);
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1134,11 +1201,11 @@ namespace CSharpErgoBoard.Design
         {
             if (m_rightSelectedKeyButton != null)
             {
-                m_rightSelectedKeyButton.UnSelected();
+                m_rightSelectedKeyButton.SelectKey(false);
             }
             m_rightSelectedKeyButton = id_buttonRightR1C6;
-            m_rightSelectedKeyButton.Selected();
-            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+            m_rightSelectedKeyButton.SelectKey(true);
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
@@ -1147,23 +1214,24 @@ namespace CSharpErgoBoard.Design
         {
             if (m_rightSelectedKeyButton != null)
             {
-                m_rightSelectedKeyButton.UnSelected();
+                m_rightSelectedKeyButton.SelectKey(false);
             }
             m_rightSelectedKeyButton = id_buttonRightR1C7;
-            m_rightSelectedKeyButton.Selected();
-            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.MakeKeyNameValue();
+            m_rightSelectedKeyButton.SelectKey(true);
+            id_textboxRightKeyValue.Text = m_rightSelectedKeyButton.KeyValue;
 
             Logging.Instance.Log($"Right keyboard \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
                                   "Information");
         }
+        #endregion
 
-
+        #region Keyboard and LED Connect Button
         // Connect Buttons
         private void Id_buttonLeftKeyConnectComPort_Click(object sender, EventArgs reason)
         {
             Logging.Instance.Log($"Left Keyboard Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
                                  "Information");
-            
+
             Boolean worked = m_processing.Connect("Left Keyboard",
                                                   (String)id_comboboxLeftKeyComPort.SelectedItem,
                                                   out String error);
@@ -1178,12 +1246,6 @@ namespace CSharpErgoBoard.Design
                 SystemSounds.Asterisk.Play();
             }
         }
-
-        private void GetColor(out Color myColor)
-        {
-            throw new NotImplementedException();
-        }
-
         private void Id_buttonRightKeyConnectComPort_Click(object sender, EventArgs reason)
         {
             Logging.Instance.Log($"Right Keyboard Connect button pressed \" {sender.ToString()} \" by \" {reason.ToString()} \" ",
@@ -1244,6 +1306,7 @@ namespace CSharpErgoBoard.Design
                 SystemSounds.Asterisk.Play();
             }
         }
+        #endregion
 
         // Update Buttons
         /// <summary>
@@ -1276,7 +1339,7 @@ namespace CSharpErgoBoard.Design
             {
                 new Popup(error, "Updating keyboard Error", m_selectedDarkMode);
             }
-            else if (!m_leftSelectedKeyButton.SaveButton((String)id_comboboxLeftKeyValue.SelectedItem))
+            else if (m_leftSelectedKeyButton.SaveKey((String)id_comboboxLeftKeyValue.SelectedItem) == null)
             {
                 new Popup("There was a error saving the button", "Updating Keyboard Error", true);
             }
@@ -1305,47 +1368,144 @@ namespace CSharpErgoBoard.Design
         {
             if (id_comboboxLeftKeyLayer.SelectedIndex != -1)
             {
-                MyButton.LeftLayer = (UInt32)id_comboboxLeftKeyLayer.SelectedIndex + 1;
-                ModeUpdated();
+                foreach (KeyButton key in m_leftKeys)
+                {
+                    key.Layer = (UInt32)id_comboboxLeftKeyLayer.SelectedIndex + 1;
+                    key.UpdateKey();
+                }
             }
         }
         private void Id_comboboxRightKeyLayer_SelectedIndexChanged(object sender, EventArgs reason)
         {
             if (id_comboboxRightKeyLayer.SelectedIndex != -1)
             {
-                MyButton.RightLayer = (UInt32)id_comboboxRightKeyLayer.SelectedIndex + 1;
-                ModeUpdated();
+                foreach (KeyButton key in m_rightKeys)
+                {
+                    key.Layer = (UInt32)id_comboboxRightKeyLayer.SelectedIndex + 1;
+                    key.UpdateKey();
+                }
             }
         }
 
-        private void id_buttonLeftLedR1C1_Click(Object sender, EventArgs e)
+        private void id_buttonLeftLedR1C1_Click(Object sender, EventArgs reason)
         {
-            m_leftSelectedLedButton = id_buttonLeftLedR1C1;
+            if (m_leftSelectedLedButton != null)
+            {
+                m_leftSelectedLedButton.SelectKey(false);
+            }
+            m_leftSelectedLedButton = id_buttonLeftLedR1C1; //TODO fix
+            m_leftSelectedLedButton.SelectKey();
+            id_textboxLeftKeyValue.Text = m_leftSelectedLedButton.KeyValue;
+
+            Logging.Instance.Log($"Left LED \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+            //m_leftSelectedLedButton = id_buttonLeftLedR1C1;
         }
-        private void id_buttonLeftLedR1C2_Click(Object sender, EventArgs e)
+        private void id_buttonLeftLedR1C2_Click(Object sender, EventArgs reason)
         {
+            if (m_leftSelectedLedButton != null)
+            {
+                m_leftSelectedLedButton.SelectKey(false);
+            }
             m_leftSelectedLedButton = id_buttonLeftLedR1C2;
+            m_leftSelectedLedButton.SelectKey();
+            id_textboxLeftKeyValue.Text = m_leftSelectedLedButton.KeyValue;
+
+            Logging.Instance.Log($"Left LED \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void id_buttonLeftLedR1C3_Click(Object sender, EventArgs reason)
+        {
+            if (m_leftSelectedLedButton != null)
+            {
+                m_leftSelectedLedButton.SelectKey(false);
+            }
+            m_leftSelectedLedButton = id_buttonLeftLedR1C3;
+            m_leftSelectedLedButton.SelectKey();
+            id_textboxLeftKeyValue.Text = m_leftSelectedLedButton.KeyValue;
+
+            Logging.Instance.Log($"Left LED \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void id_buttonLeftLedR1C4_Click(Object sender, EventArgs reason)
+        {
+            if (m_leftSelectedLedButton != null)
+            {
+                m_leftSelectedLedButton.SelectKey(false);
+            }
+            m_leftSelectedLedButton = id_buttonLeftLedR1C4;
+            m_leftSelectedLedButton.SelectKey();
+            id_textboxLeftKeyValue.Text = m_leftSelectedLedButton.KeyValue;
+
+            Logging.Instance.Log($"Left LED \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void id_buttonLeftLedR1C5_Click(Object sender, EventArgs reason)
+        {
+            if (m_leftSelectedLedButton != null)
+            {
+                m_leftSelectedLedButton.SelectKey(false);
+            }
+            m_leftSelectedLedButton = id_buttonLeftLedR1C5;
+            m_leftSelectedLedButton.SelectKey();
+            id_textboxLeftKeyValue.Text = m_leftSelectedLedButton.KeyValue;
+
+            Logging.Instance.Log($"Left LED \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void id_buttonLeftLedR1C6_Click(Object sender, EventArgs reason)
+        {
+            if (m_leftSelectedLedButton != null)
+            {
+                m_leftSelectedLedButton.SelectKey(false);
+            }
+            m_leftSelectedLedButton = id_buttonLeftLedR1C6;
+            m_leftSelectedLedButton.SelectKey();
+            id_textboxLeftKeyValue.Text = m_leftSelectedLedButton.KeyValue;
+
+            Logging.Instance.Log($"Left LED \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
+        }
+        private void id_buttonLeftLedR1C7_Click(Object sender, EventArgs reason)
+        {
+            if (m_leftSelectedLedButton != null)
+            {
+                m_leftSelectedLedButton.SelectKey(false);
+            }
+            m_leftSelectedLedButton = id_buttonLeftLedR1C7;
+            m_leftSelectedLedButton.SelectKey();
+            id_textboxLeftKeyValue.Text = m_leftSelectedLedButton.KeyValue;
+
+            Logging.Instance.Log($"Left LED \" {id_textboxLeftKeyValue.Text} \" key was selected by \" {sender.ToString()} \" selected by \" {reason.ToString()} \" ",
+                                  "Information");
         }
 
-        private void id_buttonLeftLedR1C3_Click(Object sender, EventArgs e)
+        private void Id_menuAuthor_Click(Object sender, EventArgs e)
         {
-
+            new Popup("The author of this program is\n" +
+                "Taha Abbasi-Hashemi", "Author", m_selectedDarkMode);
         }
-        private void id_buttonLeftLedR1C4_Click(Object sender, EventArgs e)
-        {
 
-        }
-        private void id_buttonLeftLedR1C5_Click(Object sender, EventArgs e)
+        private void Id_menuReloadLeftKey_Click(Object sender, EventArgs e)
         {
-
-        }
-        private void id_buttonLeftLedR1C6_Click(Object sender, EventArgs e)
-        {
-
-        }
-        private void id_buttonLeftLedR1C7_Click(Object sender, EventArgs e)
-        {
-
+            foreach (KeyButton key in m_leftKeys)
+            {
+                if (key.Type == "Key")
+                {
+                    if (m_processing.ReloadKey("Left Keyboard", id_comboboxLeftKeyLayer, key, out String error, out String text))
+                    {
+                        Logging.Instance.Log(text +  " The value at " + key.KeyName);
+                        key.Text = text;
+                        //key.SaveKey(text);
+                        //break;
+                    }
+                    else
+                    {
+                        new Popup(error, "Reload error", m_selectedDarkMode);
+                        break;
+                    }
+                }
+            }
         }
     }
 }

@@ -90,6 +90,7 @@ namespace CSharpErgoBoard.Design
         /// <param name="darkModeTrue"> True if dark mode is selected, see <see cref="DarkMode"/> for more information on dark mode.</param>
         public void ModeChange(in Boolean darkModeTrue)
         {
+            Select();   // This is to fix a stupid bug.
             m_selectDarkMode = darkModeTrue;
             Color kindofBlack = Color.FromArgb(255, 50, 50, 50);
             // If dark Mode Selected

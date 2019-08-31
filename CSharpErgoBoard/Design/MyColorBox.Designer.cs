@@ -84,14 +84,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.id_labelChosenColor = new System.Windows.Forms.Label();
             this.id_buttonSelectColor = new System.Windows.Forms.Button();
-            this.id_buttonCustom1 = new System.Windows.Forms.Button();
-            this.id_buttonCustom2 = new System.Windows.Forms.Button();
-            this.id_buttonCustom3 = new System.Windows.Forms.Button();
-            this.id_buttonCustom4 = new System.Windows.Forms.Button();
-            this.id_buttonCustom5 = new System.Windows.Forms.Button();
-            this.id_buttonCustom6 = new System.Windows.Forms.Button();
-            this.id_buttonCustom7 = new System.Windows.Forms.Button();
-            this.id_buttonCustom8 = new System.Windows.Forms.Button();
+            this.id_buttonCustom1 = new CSharpErgoBoard.Design.MyColorButton();
+            this.id_buttonCustom2 = new CSharpErgoBoard.Design.MyColorButton();
+            this.id_buttonCustom3 = new CSharpErgoBoard.Design.MyColorButton();
+            this.id_buttonCustom4 = new CSharpErgoBoard.Design.MyColorButton();
+            this.id_buttonCustom5 = new CSharpErgoBoard.Design.MyColorButton();
+            this.id_buttonCustom6 = new CSharpErgoBoard.Design.MyColorButton();
+            this.id_buttonCustom7 = new CSharpErgoBoard.Design.MyColorButton();
+            this.id_buttonCustom8 = new CSharpErgoBoard.Design.MyColorButton();
             ((System.ComponentModel.ISupportInitialize)(this.id_numericRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.id_numericBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.id_numericGreen)).BeginInit();
@@ -692,7 +692,7 @@
             // 
             // id_buttonSelectColor
             // 
-            this.id_buttonSelectColor.BackColor = System.Drawing.Color.Green;
+            this.id_buttonSelectColor.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.id_buttonSelectColor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.id_buttonSelectColor.Location = new System.Drawing.Point(302, 262);
             this.id_buttonSelectColor.Name = "id_buttonSelectColor";
@@ -711,7 +711,7 @@
             this.id_buttonCustom1.Size = new System.Drawing.Size(30, 30);
             this.id_buttonCustom1.TabIndex = 56;
             this.id_buttonCustom1.UseVisualStyleBackColor = false;
-            this.id_buttonCustom1.Click += new System.EventHandler(this.id_buttonCustom1_Click);
+            this.id_buttonCustom1.Click += new System.EventHandler(this.Id_buttonCustom1_Click);
             // 
             // id_buttonCustom2
             // 
@@ -922,13 +922,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label id_labelChosenColor;
         private System.Windows.Forms.Button id_buttonSelectColor;
-        private System.Windows.Forms.Button id_buttonCustom1;
-        private System.Windows.Forms.Button id_buttonCustom2;
-        private System.Windows.Forms.Button id_buttonCustom3;
-        private System.Windows.Forms.Button id_buttonCustom4;
-        private System.Windows.Forms.Button id_buttonCustom5;
-        private System.Windows.Forms.Button id_buttonCustom6;
-        private System.Windows.Forms.Button id_buttonCustom7;
-        private System.Windows.Forms.Button id_buttonCustom8;
+        private CSharpErgoBoard.Design.MyColorButton id_buttonCustom1;
+        private CSharpErgoBoard.Design.MyColorButton id_buttonCustom2;
+        private CSharpErgoBoard.Design.MyColorButton id_buttonCustom3;
+        private CSharpErgoBoard.Design.MyColorButton id_buttonCustom4;
+        private CSharpErgoBoard.Design.MyColorButton id_buttonCustom5;
+        private CSharpErgoBoard.Design.MyColorButton id_buttonCustom6;
+        private CSharpErgoBoard.Design.MyColorButton id_buttonCustom7;
+        private CSharpErgoBoard.Design.MyColorButton id_buttonCustom8;
     }
 }

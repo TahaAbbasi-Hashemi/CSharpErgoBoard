@@ -26,48 +26,15 @@ namespace CSharpErgoBoard.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("True")]
-        public bool Darkmode {
-            get {
+        public bool Darkmode
+        {
+            get
+            {
                 return ((bool)(this["Darkmode"]));
             }
-            set {
+            set
+            {
                 this["Darkmode"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ESC, F1, F2, F3, F4, F5, F6, F7, F8, F9, F10, F11, F12,PRINTSCREEN")]
-        public string Row1 {
-            get {
-                return ((string)(this["Row1"]));
-            }
-            set {
-                this["Row1"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("`, 1, 2, 3, 4, 5, None, None, None, None, 6, 7, 8, 9, 0, -")]
-        public string Row2 {
-            get {
-                return ((string)(this["Row2"]));
-            }
-            set {
-                this["Row2"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string Setting {
-            get {
-                return ((string)(this["Setting"]));
-            }
-            set {
-                this["Setting"] = value;
             }
         }
     }

@@ -12,7 +12,7 @@ namespace CSharpErgoBoard.Design
         private static Color m_selectedColor = new Color();
         private UInt32 m_maxNumber = 255;
         private Boolean m_customSelected = false;
-        private Button m_selectedButton = new Button();
+        private MyColorButton m_selectedButton = new MyColorButton();
 
         public Boolean Selected { get => m_selected; set => m_selected = value; }
         public Boolean GotColor { get => m_gotColor; set => m_gotColor = value; }
@@ -380,11 +380,15 @@ namespace CSharpErgoBoard.Design
             }
         }
 
-        private void id_buttonCustom1_Click(Object sender, EventArgs e)
+        private void Id_buttonCustom1_Click(Object sender, EventArgs e)
         {
             m_selected = false;
             m_customSelected = true;
-            m_selectedColor = id_buttonCustom1.BackColor;
+            Color newColor = Color.FromArgb((Int32)id_numericRed.Value,
+                                            (Int32)id_numericGreen.Value,
+                                            (Int32)id_numericBlue.Value);
+            m_selectedColor = newColor;
+            id_buttonCustom1.BackColor = newColor;
             m_selectedButton = id_buttonCustom1;
             id_labelChosenColor.BackColor = m_selectedColor;
             id_numericRed.Value = id_labelChosenColor.BackColor.R;

@@ -1,13 +1,4 @@
-﻿#include "Keyboard.h"
-
-/*qqqqwwwwewqewqeqwewqqqqqAAaaaaaaaaaa
-   Layer Change Keys
-   Change to layer 0 206
-   Change to layer 1 207
-   Change to layer 2 208
-   Change to layer 3 209
-   Change to layer 4 210
-*/
+#include "Keyboard.h"
 
 byte none = 0;
 byte changeLayer0 = 1;
@@ -22,10 +13,10 @@ int layers[5][6][8] =
   // Layer 000qqqqq
   {
     {KEY_ESC,  KEY_F1,  KEY_F2,  KEY_F3,  KEY_F4,  KEY_F5,  KEY_F6,  0},
-    {96,  49,   50,   51,   52,   53,   54,   0},
-    {KEY_TAB,  113,  119,  101,  114,  116,  0,    0},
-    {KEY_CAPS_LOCK,  97,   115,  100,  102,  103,  178,  0},
-    {KEY_LEFT_SHIFT,  122,  120,  99,   118,  98,   179,  0},
+    {96,  49,   50,   51,   52,   53,   changeLayer0,   0},
+    {KEY_TAB,  113,  119,  101,  114,  116,  changeLayer1,    0},
+    {KEY_CAPS_LOCK,  97,   115,  100,  102,  103,  changeLayer2,  0},
+    {KEY_LEFT_SHIFT,  122,  120,  99,   118,  98,   changeLayer4,  0},
     {KEY_LEFT_CTRL,  131,  130,  0,    176,  32,   179,  0}
   },
   // Layer 1
@@ -82,15 +73,10 @@ unsigned long waitwait = 100000;  // Using Gateron Green found 100ms to be a eno
 
 void setup()
 {
-  // open the serial port:
+  //Serial
   Serial.begin(9600);
-  //while (!Serial)
-  { // wait for serial connection to be setup.
-    ;
-  }
   Serial.setTimeout(100);  // 10ms timeout instead of 1s
-
-  // initialize control over the keyboard:
+  //Keyboard
   Keyboard.begin();
 
   pinMode(A0, OUTPUT);
@@ -138,17 +124,33 @@ void loop()
     }
     Serial.write("Reset time");
   }
-  
+
+  //Serial Control
   if (Serial.available())
   {
     String command = Serial.readString();
     if (command.substring(0, 4) == "Name")
     {
-      Serial.println("Left Keyboard"); 
+      Serial.println("Left Keyboard");
+    }
+    else if (command.startsWith("Get"))
+    {
+      int commandLayer = command.substring(4, 6).toInt();
+      int commandRow = command.substring(6, 7).toInt();
+      int commandCol = command.substring(8, 9).toInt();
+      Serial.println(layers[commandLayer][commandRow][commandCol]);
+    }
+    else if (command.startsWith("Set"))
+    {
+      int commandLayer = command.substring(4, 6).toInt();
+      int commandRow = command.substring(6, 7).toInt();
+      int commandCol = command.substring(8, 9).toInt();
+      int commandValue = command.substring(10).toInt();
+      layers[commandLayer][commandRow][commandCol] = commandValue;
     }
   }
 
-  // This goes through of the rows, and scans it across each of the colums.
+  // Keyboard Control
   for (byte i = 0; i <= 6; i++)
   {
     digitalWrite(rows[i], LOW);
@@ -160,7 +162,6 @@ void loop()
         {
           Keyboard.press(layers[layer][i][j - 2]);
           waitTime[i][j] = micros();
-          Serial.println("A button was pressed as ");
         }
       }
       else
