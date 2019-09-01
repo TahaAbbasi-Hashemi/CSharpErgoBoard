@@ -2002,8 +2002,7 @@ namespace CSharpErgoBoard.Design
                     {
                         Logging.Instance.Log(text +  " The value at " + key.KeyName);
                         key.Text = text;
-                        //key.SaveKey(text);
-                        //break;
+                        key.SaveKey(text);
                     }
                     else
                     {

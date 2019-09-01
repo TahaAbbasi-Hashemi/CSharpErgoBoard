@@ -1,27 +1,20 @@
 #include "Keyboard.h"
 
-byte none = 0;
-byte changeLayer0 = 1;
-byte changeLayer1 = 2;
-byte changeLayer2 = 3;
-byte changeLayer3 = 5;
-byte changeLayer4 = 5;
-char ctrlKey = KEY_LEFT_GUI;
 byte layer = 0;  // max of 5 layers
-int layers[5][6][8] =
+int layers[5][6][8] = // 5 layers, 6 rows, 8 columns.
 {
-  // Layer 000qqqqq
+  // Layer 0
   {
-    {KEY_ESC,  KEY_F1,  KEY_F2,  KEY_F3,  KEY_F4,  KEY_F5,  KEY_F6,  0},
-    {96,  49,   50,   51,   52,   53,   changeLayer0,   0},
-    {KEY_TAB,  113,  119,  101,  114,  116,  changeLayer1,    0},
-    {KEY_CAPS_LOCK,  97,   115,  100,  102,  103,  changeLayer2,  0},
-    {KEY_LEFT_SHIFT,  122,  120,  99,   118,  98,   changeLayer4,  0},
-    {KEY_LEFT_CTRL,  131,  130,  0,    176,  32,   179,  0}
+    {177,  194,  195,  196,  197,  198,  199, 0},
+    {96,   49,   50,   51,   52,   53,   1,   0},
+    {179,  113,  119,  101,  114,  116,  2,   0},
+    {193,  97,   115,  100,  102,  103,  3,   0},
+    {133,  122,  120,  99,   118,  98,   4,   0},
+    {128,  131,  130,  0,    176,  32,   179, 0}
   },
   // Layer 1
   {
-    {KEY_F7,  KEY_F8,  KEY_F9,  KEY_F10,  KEY_F11,  KEY_F12,  199,  0},
+    {177,  194,  195,  196,  197,  198,  199,  0},
     {126,  49,   50,   51,   52,   53,   54,   0},
     {179,  113,  119,  101,  114,  116,  0,    0},
     {193,  97,   115,  100,  102,  103,  178,  0},
@@ -57,7 +50,7 @@ int layers[5][6][8] =
   }
 };
 
-int rows[6] = {A5, A4, A3, A2, A1, A0};
+int rows[6] = {A5, A4, A3, A2, A1, A0}; // The keys for the rows. This exists because the A series is hard to convert to numbers.
 
 unsigned long waitTime[6][8] =
 {
@@ -105,7 +98,7 @@ void setup()
   digitalWrite(A4, HIGH);
   digitalWrite(A5, HIGH);
 }
-//
+
 void loop()
 {
   /*
@@ -113,6 +106,7 @@ void loop()
      This reset is set to be 100ms long
      Reducing this number could cause issues of keyboard not being functinoal for 70 minuites.
   */
+  // Time reset.
   if (micros() < 100000)
   {
     for (byte i = 0; i < 6; i++)
@@ -160,8 +154,40 @@ void loop()
       {
         if ((micros() - waitTime[i][j]) > waitwait)
         {
-          Keyboard.press(layers[layer][i][j - 2]);
-          waitTime[i][j] = micros();
+          // If layer change.
+          if (layers[layer][i][j - 2] < 6) // Special keys.
+          {
+            int key = layers[layer][i][j - 2];
+            if (key == 0)
+            {
+              continue; // This is the null key.
+            }
+            else if (key == 1) 
+            {
+              layer = 0;
+            }
+            else if (key == 2) 
+            {
+              layer = 1;
+            }
+            else if (key == 3)
+            {
+              layer = 2;
+            }
+            else if (key == 4)
+            {
+              layer = 3;
+            }
+            else if (key == 5)
+            {
+              layer = 4;
+            }
+          }
+          else  // Character/command keys.
+          {
+            Keyboard.press(layers[layer][i][j - 2]);
+            waitTime[i][j] = micros();
+          }
         }
       }
       else

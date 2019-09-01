@@ -94,6 +94,13 @@ namespace CSharpErgoBoard.Programming
                 m_conversion.Add(name, i);
                 j++;
             }
+            for (UInt32 i = 240; i < 252; i++)
+            {
+
+                String name = "F" + j.ToString();
+                m_conversion.Add(name, i);
+                j++;
+            }
             // Characters
             String fullTable = "`1234567890-=qwertyuiop[]\\asdfghjkl;'zxcvbnm,./~!@#$%^&*()_+QWERTYUIOP{}|ASDFGHJKL:\"ZXCVBNM<>?";
             foreach (Char character in fullTable)
@@ -361,6 +368,16 @@ namespace CSharpErgoBoard.Programming
 
             return true;
         }
+        /// <summary>
+        /// Realoads information from the keyboard to the program. 
+        /// This is intended for use when you switch between different computers or reload a program and lose all your information.
+        /// </summary>
+        /// <param name="type"> The type of device you are reloading</param>
+        /// <param name="layer"> The layer that you are reloading</param>
+        /// <param name="key"> The key that is being loaded</param>
+        /// <param name="error"> If anything goes wrong it will go here. </param>
+        /// <param name="text"> The text held in the string that is loaded.</param>
+        /// <returns></returns>
         public Boolean ReloadKey(in String type, in MyComboBox layer, in KeyButton key, out String error, out String text)
         {
             text = null;
