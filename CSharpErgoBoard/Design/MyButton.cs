@@ -62,8 +62,6 @@ namespace CSharpErgoBoard.Design
         /// True if darkmode is selected, false if light mode is selected
         /// </summary>
         private Boolean m_selectDarkMode = false;
-        private UInt32 m_row = 0;
-        private UInt32 m_col = 0;
 
         // Private Readonly Members
         /// <summary>

@@ -53,9 +53,6 @@
             this.id_menuReferences = new System.Windows.Forms.ToolStripMenuItem();
             this.id_menuCopyright = new System.Windows.Forms.ToolStripMenuItem();
             this.id_panelMain = new System.Windows.Forms.Panel();
-            this.id_listboxRightLedStyle = new System.Windows.Forms.ListBox();
-            this.id_textboxLeftKeyValue = new System.Windows.Forms.TextBox();
-            this.id_textboxRightKeyValue = new System.Windows.Forms.TextBox();
             this.id_comboboxRightLedComPort = new CSharpErgoBoard.Design.MyComboBox();
             this.id_comboboxLeftLedComPort = new CSharpErgoBoard.Design.MyComboBox();
             this.id_comboboxRightKeyValue = new CSharpErgoBoard.Design.MyComboBox();
@@ -71,6 +68,7 @@
             this.id_buttonRightLedR6C6 = new CSharpErgoBoard.Design.KeyButton();
             this.id_buttonRightLedR6C7 = new CSharpErgoBoard.Design.KeyButton();
             this.id_buttonRightUpdateLed = new CSharpErgoBoard.Design.MyButton();
+            this.id_listboxRightLedStyle = new System.Windows.Forms.ListBox();
             this.id_buttonRightLedConnectComPort = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightLedR6C1 = new CSharpErgoBoard.Design.KeyButton();
             this.id_buttonRightLedR6C4 = new CSharpErgoBoard.Design.KeyButton();
@@ -162,6 +160,8 @@
             this.id_buttonLeftLedR1C2 = new CSharpErgoBoard.Design.KeyButton();
             this.id_buttonRightUpdateKey = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonLeftUpdateKey = new CSharpErgoBoard.Design.MyButton();
+            this.id_textboxLeftKeyValue = new System.Windows.Forms.TextBox();
+            this.id_textboxRightKeyValue = new System.Windows.Forms.TextBox();
             this.id_buttonRightKeyConnectComPort = new CSharpErgoBoard.Design.MyButton();
             this.id_buttonRightR6C3 = new CSharpErgoBoard.Design.KeyButton();
             this.id_buttonRightR6C2 = new CSharpErgoBoard.Design.KeyButton();
@@ -655,41 +655,6 @@
             this.id_panelMain.Size = new System.Drawing.Size(1401, 854);
             this.id_panelMain.TabIndex = 1;
             // 
-            // id_listboxRightLedStyle
-            // 
-            this.id_listboxRightLedStyle.BackColor = System.Drawing.Color.White;
-            this.id_listboxRightLedStyle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_listboxRightLedStyle.FormattingEnabled = true;
-            this.id_listboxRightLedStyle.Items.AddRange(new object[] {
-            "Rainbow",
-            "Breathing",
-            "On Press"});
-            this.id_listboxRightLedStyle.Location = new System.Drawing.Point(740, 551);
-            this.id_listboxRightLedStyle.Name = "id_listboxRightLedStyle";
-            this.id_listboxRightLedStyle.Size = new System.Drawing.Size(135, 41);
-            this.id_listboxRightLedStyle.TabIndex = 329;
-            // 
-            // id_textboxLeftKeyValue
-            // 
-            this.id_textboxLeftKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_textboxLeftKeyValue.Location = new System.Drawing.Point(473, 145);
-            this.id_textboxLeftKeyValue.Name = "id_textboxLeftKeyValue";
-            this.id_textboxLeftKeyValue.ReadOnly = true;
-            this.id_textboxLeftKeyValue.Size = new System.Drawing.Size(171, 20);
-            this.id_textboxLeftKeyValue.TabIndex = 228;
-            this.id_textboxLeftKeyValue.Text = "Selected Button";
-            this.id_textboxLeftKeyValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // id_textboxRightKeyValue
-            // 
-            this.id_textboxRightKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id_textboxRightKeyValue.Location = new System.Drawing.Point(740, 145);
-            this.id_textboxRightKeyValue.Name = "id_textboxRightKeyValue";
-            this.id_textboxRightKeyValue.Size = new System.Drawing.Size(176, 20);
-            this.id_textboxRightKeyValue.TabIndex = 226;
-            this.id_textboxRightKeyValue.Text = "Selected Button";
-            this.id_textboxRightKeyValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // id_comboboxRightLedComPort
             // 
             this.id_comboboxRightLedComPort.BackColor = System.Drawing.SystemColors.ScrollBar;
@@ -1081,6 +1046,20 @@
             this.id_buttonRightUpdateLed.Text = "Update";
             this.id_buttonRightUpdateLed.UseVisualStyleBackColor = false;
             this.id_buttonRightUpdateLed.Click += new System.EventHandler(this.Id_buttonRightUpdateLed_Click);
+            // 
+            // id_listboxRightLedStyle
+            // 
+            this.id_listboxRightLedStyle.BackColor = System.Drawing.Color.White;
+            this.id_listboxRightLedStyle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_listboxRightLedStyle.FormattingEnabled = true;
+            this.id_listboxRightLedStyle.Items.AddRange(new object[] {
+            "Rainbow",
+            "Breathing",
+            "On Press"});
+            this.id_listboxRightLedStyle.Location = new System.Drawing.Point(740, 551);
+            this.id_listboxRightLedStyle.Name = "id_listboxRightLedStyle";
+            this.id_listboxRightLedStyle.Size = new System.Drawing.Size(135, 41);
+            this.id_listboxRightLedStyle.TabIndex = 329;
             // 
             // id_buttonRightLedConnectComPort
             // 
@@ -2610,6 +2589,27 @@
             this.id_buttonLeftUpdateKey.UseVisualStyleBackColor = false;
             this.id_buttonLeftUpdateKey.Click += new System.EventHandler(this.Id_buttonLeftUpdateKey_Click);
             // 
+            // id_textboxLeftKeyValue
+            // 
+            this.id_textboxLeftKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_textboxLeftKeyValue.Location = new System.Drawing.Point(473, 145);
+            this.id_textboxLeftKeyValue.Name = "id_textboxLeftKeyValue";
+            this.id_textboxLeftKeyValue.ReadOnly = true;
+            this.id_textboxLeftKeyValue.Size = new System.Drawing.Size(171, 20);
+            this.id_textboxLeftKeyValue.TabIndex = 228;
+            this.id_textboxLeftKeyValue.Text = "Selected Button";
+            this.id_textboxLeftKeyValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // id_textboxRightKeyValue
+            // 
+            this.id_textboxRightKeyValue.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.id_textboxRightKeyValue.Location = new System.Drawing.Point(740, 145);
+            this.id_textboxRightKeyValue.Name = "id_textboxRightKeyValue";
+            this.id_textboxRightKeyValue.Size = new System.Drawing.Size(176, 20);
+            this.id_textboxRightKeyValue.TabIndex = 226;
+            this.id_textboxRightKeyValue.Text = "Selected Button";
+            this.id_textboxRightKeyValue.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // id_buttonRightKeyConnectComPort
             // 
             this.id_buttonRightKeyConnectComPort.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -2638,6 +2638,7 @@
             this.id_buttonRightR6C3.Text = "F1";
             this.id_buttonRightR6C3.UseVisualStyleBackColor = false;
             this.id_buttonRightR6C3.Value = "None";
+            this.id_buttonRightR6C3.Click += new System.EventHandler(this.Id_buttonRightR6C3_Click);
             // 
             // id_buttonRightR6C2
             // 
@@ -2655,6 +2656,7 @@
             this.id_buttonRightR6C2.Text = "F1";
             this.id_buttonRightR6C2.UseVisualStyleBackColor = false;
             this.id_buttonRightR6C2.Value = "None";
+            this.id_buttonRightR6C2.Click += new System.EventHandler(this.Id_buttonRightR6C2_Click);
             // 
             // id_buttonRightR6C4
             // 
@@ -2672,6 +2674,7 @@
             this.id_buttonRightR6C4.Text = "F1";
             this.id_buttonRightR6C4.UseVisualStyleBackColor = false;
             this.id_buttonRightR6C4.Value = "None";
+            this.id_buttonRightR6C4.Click += new System.EventHandler(this.Id_buttonRightR6C4_Click);
             // 
             // id_buttonRightR6C5
             // 
@@ -2689,6 +2692,7 @@
             this.id_buttonRightR6C5.Text = "F1";
             this.id_buttonRightR6C5.UseVisualStyleBackColor = false;
             this.id_buttonRightR6C5.Value = "None";
+            this.id_buttonRightR6C5.Click += new System.EventHandler(this.Id_buttonRightR6C5_Click);
             // 
             // id_buttonRightR5C1
             // 
@@ -2706,6 +2710,7 @@
             this.id_buttonRightR5C1.Text = "ESC";
             this.id_buttonRightR5C1.UseVisualStyleBackColor = false;
             this.id_buttonRightR5C1.Value = "None";
+            this.id_buttonRightR5C1.Click += new System.EventHandler(this.Id_buttonRightR5C1_Click);
             // 
             // id_buttonRightR5C2
             // 
@@ -2723,6 +2728,7 @@
             this.id_buttonRightR5C2.Text = "F1";
             this.id_buttonRightR5C2.UseVisualStyleBackColor = false;
             this.id_buttonRightR5C2.Value = "None";
+            this.id_buttonRightR5C2.Click += new System.EventHandler(this.Id_buttonRightR5C2_Click);
             // 
             // id_buttonRightR5C3
             // 
@@ -2740,6 +2746,7 @@
             this.id_buttonRightR5C3.Text = "F1";
             this.id_buttonRightR5C3.UseVisualStyleBackColor = false;
             this.id_buttonRightR5C3.Value = "None";
+            this.id_buttonRightR5C3.Click += new System.EventHandler(this.Id_buttonRightR5C3_Click);
             // 
             // id_buttonRightR5C6
             // 
@@ -2757,6 +2764,7 @@
             this.id_buttonRightR5C6.Text = "F1";
             this.id_buttonRightR5C6.UseVisualStyleBackColor = false;
             this.id_buttonRightR5C6.Value = "None";
+            this.id_buttonRightR5C6.Click += new System.EventHandler(this.Id_buttonRightR5C6_Click);
             // 
             // id_buttonRightR5C4
             // 
@@ -2774,6 +2782,7 @@
             this.id_buttonRightR5C4.Text = "F1";
             this.id_buttonRightR5C4.UseVisualStyleBackColor = false;
             this.id_buttonRightR5C4.Value = "None";
+            this.id_buttonRightR5C4.Click += new System.EventHandler(this.Id_buttonRightR5C4_Click);
             // 
             // id_buttonRightR5C5
             // 
@@ -2791,6 +2800,7 @@
             this.id_buttonRightR5C5.Text = "F1";
             this.id_buttonRightR5C5.UseVisualStyleBackColor = false;
             this.id_buttonRightR5C5.Value = "None";
+            this.id_buttonRightR5C5.Click += new System.EventHandler(this.Id_buttonRightR5C5_Click);
             // 
             // id_buttonRightR6C1
             // 
@@ -2809,6 +2819,7 @@
             this.id_buttonRightR6C1.Text = "ESC";
             this.id_buttonRightR6C1.UseVisualStyleBackColor = false;
             this.id_buttonRightR6C1.Value = "None";
+            this.id_buttonRightR6C1.Click += new System.EventHandler(this.Id_buttonRightR6C1_Click);
             // 
             // id_buttonRightR4C2
             // 
@@ -2826,6 +2837,7 @@
             this.id_buttonRightR4C2.Text = "F1";
             this.id_buttonRightR4C2.UseVisualStyleBackColor = false;
             this.id_buttonRightR4C2.Value = "None";
+            this.id_buttonRightR4C2.Click += new System.EventHandler(this.Id_buttonRightR4C2_Click);
             // 
             // id_buttonRightR4C3
             // 
@@ -2843,6 +2855,7 @@
             this.id_buttonRightR4C3.Text = "F1";
             this.id_buttonRightR4C3.UseVisualStyleBackColor = false;
             this.id_buttonRightR4C3.Value = "None";
+            this.id_buttonRightR4C3.Click += new System.EventHandler(this.Id_buttonRightR4C3_Click);
             // 
             // id_buttonRightR4C4
             // 
@@ -2860,6 +2873,7 @@
             this.id_buttonRightR4C4.Text = "F1";
             this.id_buttonRightR4C4.UseVisualStyleBackColor = false;
             this.id_buttonRightR4C4.Value = "None";
+            this.id_buttonRightR4C4.Click += new System.EventHandler(this.Id_buttonRightR4C4_Click);
             // 
             // id_buttonRightR4C7
             // 
@@ -2877,6 +2891,7 @@
             this.id_buttonRightR4C7.Text = "F1";
             this.id_buttonRightR4C7.UseVisualStyleBackColor = false;
             this.id_buttonRightR4C7.Value = "None";
+            this.id_buttonRightR4C7.Click += new System.EventHandler(this.Id_buttonRightR4C7_Click);
             // 
             // id_buttonRightR4C5
             // 
@@ -2894,6 +2909,7 @@
             this.id_buttonRightR4C5.Text = "F1";
             this.id_buttonRightR4C5.UseVisualStyleBackColor = false;
             this.id_buttonRightR4C5.Value = "None";
+            this.id_buttonRightR4C5.Click += new System.EventHandler(this.Id_buttonRightR4C5_Click);
             // 
             // id_buttonRightR4C6
             // 
@@ -2911,6 +2927,7 @@
             this.id_buttonRightR4C6.Text = "F1";
             this.id_buttonRightR4C6.UseVisualStyleBackColor = false;
             this.id_buttonRightR4C6.Value = "None";
+            this.id_buttonRightR4C6.Click += new System.EventHandler(this.Id_buttonRightR4C6_Click);
             // 
             // id_buttonRightR3C2
             // 
@@ -2928,6 +2945,7 @@
             this.id_buttonRightR3C2.Text = "F1";
             this.id_buttonRightR3C2.UseVisualStyleBackColor = false;
             this.id_buttonRightR3C2.Value = "None";
+            this.id_buttonRightR3C2.Click += new System.EventHandler(this.Id_buttonRightR3C2_Click);
             // 
             // id_buttonRightR3C3
             // 
@@ -2945,6 +2963,7 @@
             this.id_buttonRightR3C3.Text = "F1";
             this.id_buttonRightR3C3.UseVisualStyleBackColor = false;
             this.id_buttonRightR3C3.Value = "None";
+            this.id_buttonRightR3C3.Click += new System.EventHandler(this.Id_buttonRightR3C3_Click);
             // 
             // id_buttonRightR3C4
             // 
@@ -2962,6 +2981,7 @@
             this.id_buttonRightR3C4.Text = "F1";
             this.id_buttonRightR3C4.UseVisualStyleBackColor = false;
             this.id_buttonRightR3C4.Value = "None";
+            this.id_buttonRightR3C4.Click += new System.EventHandler(this.Id_buttonRightR3C4_Click);
             // 
             // id_buttonRightR3C7
             // 
@@ -2979,6 +2999,7 @@
             this.id_buttonRightR3C7.Text = "F1";
             this.id_buttonRightR3C7.UseVisualStyleBackColor = false;
             this.id_buttonRightR3C7.Value = "None";
+            this.id_buttonRightR3C7.Click += new System.EventHandler(this.Id_buttonRightR3C7_Click);
             // 
             // id_buttonRightR3C5
             // 
@@ -2996,6 +3017,7 @@
             this.id_buttonRightR3C5.Text = "F1";
             this.id_buttonRightR3C5.UseVisualStyleBackColor = false;
             this.id_buttonRightR3C5.Value = "None";
+            this.id_buttonRightR3C5.Click += new System.EventHandler(this.Id_buttonRightR3C5_Click);
             // 
             // id_buttonRightR3C6
             // 
@@ -3013,6 +3035,7 @@
             this.id_buttonRightR3C6.Text = "F1";
             this.id_buttonRightR3C6.UseVisualStyleBackColor = false;
             this.id_buttonRightR3C6.Value = "None";
+            this.id_buttonRightR3C6.Click += new System.EventHandler(this.Id_buttonRightR3C6_Click);
             // 
             // id_buttonRightR2C2
             // 
@@ -3030,6 +3053,7 @@
             this.id_buttonRightR2C2.Text = "F1";
             this.id_buttonRightR2C2.UseVisualStyleBackColor = false;
             this.id_buttonRightR2C2.Value = "None";
+            this.id_buttonRightR2C2.Click += new System.EventHandler(this.Id_buttonRightR2C2_Click);
             // 
             // id_buttonRightR2C3
             // 
@@ -3047,6 +3071,7 @@
             this.id_buttonRightR2C3.Text = "F1";
             this.id_buttonRightR2C3.UseVisualStyleBackColor = false;
             this.id_buttonRightR2C3.Value = "None";
+            this.id_buttonRightR2C3.Click += new System.EventHandler(this.Id_buttonRightR2C3_Click);
             // 
             // id_buttonRightR2C4
             // 
@@ -3064,6 +3089,7 @@
             this.id_buttonRightR2C4.Text = "F1";
             this.id_buttonRightR2C4.UseVisualStyleBackColor = false;
             this.id_buttonRightR2C4.Value = "None";
+            this.id_buttonRightR2C4.Click += new System.EventHandler(this.Id_buttonRightR2C4_Click);
             // 
             // id_buttonRightR2C7
             // 
@@ -3081,6 +3107,7 @@
             this.id_buttonRightR2C7.Text = "F1";
             this.id_buttonRightR2C7.UseVisualStyleBackColor = false;
             this.id_buttonRightR2C7.Value = "None";
+            this.id_buttonRightR2C7.Click += new System.EventHandler(this.Id_buttonRightR2C7_Click);
             // 
             // id_buttonRightR2C5
             // 
@@ -3098,6 +3125,7 @@
             this.id_buttonRightR2C5.Text = "F1";
             this.id_buttonRightR2C5.UseVisualStyleBackColor = false;
             this.id_buttonRightR2C5.Value = "None";
+            this.id_buttonRightR2C5.Click += new System.EventHandler(this.Id_buttonRightR2C5_Click);
             // 
             // id_buttonRightR2C6
             // 
@@ -3115,6 +3143,7 @@
             this.id_buttonRightR2C6.Text = "F1";
             this.id_buttonRightR2C6.UseVisualStyleBackColor = false;
             this.id_buttonRightR2C6.Value = "None";
+            this.id_buttonRightR2C6.Click += new System.EventHandler(this.Id_buttonRightR2C6_Click);
             // 
             // id_buttonRightR4C1
             // 
@@ -3132,6 +3161,7 @@
             this.id_buttonRightR4C1.Text = "ESC";
             this.id_buttonRightR4C1.UseVisualStyleBackColor = false;
             this.id_buttonRightR4C1.Value = "None";
+            this.id_buttonRightR4C1.Click += new System.EventHandler(this.Id_buttonRightR4C1_Click);
             // 
             // id_buttonRightR3C1
             // 
@@ -3149,6 +3179,7 @@
             this.id_buttonRightR3C1.Text = "ESC";
             this.id_buttonRightR3C1.UseVisualStyleBackColor = false;
             this.id_buttonRightR3C1.Value = "None";
+            this.id_buttonRightR3C1.Click += new System.EventHandler(this.Id_buttonRightR3C1_Click);
             // 
             // id_buttonRightR2C1
             // 
@@ -3166,6 +3197,7 @@
             this.id_buttonRightR2C1.Text = "ESC";
             this.id_buttonRightR2C1.UseVisualStyleBackColor = false;
             this.id_buttonRightR2C1.Value = "None";
+            this.id_buttonRightR2C1.Click += new System.EventHandler(this.Id_buttonRightR2C1_Click);
             // 
             // id_buttonRightR1C2
             // 
@@ -3309,6 +3341,7 @@
             this.id_buttonRightR6C8.Text = "F1";
             this.id_buttonRightR6C8.UseVisualStyleBackColor = false;
             this.id_buttonRightR6C8.Value = "None";
+            this.id_buttonRightR6C8.Click += new System.EventHandler(this.Id_buttonRightR6C8_Click);
             // 
             // id_buttonRightR5C8
             // 
@@ -3326,6 +3359,7 @@
             this.id_buttonRightR5C8.Text = "F1";
             this.id_buttonRightR5C8.UseVisualStyleBackColor = false;
             this.id_buttonRightR5C8.Value = "None";
+            this.id_buttonRightR5C8.Click += new System.EventHandler(this.Id_buttonRightR5C8_Click);
             // 
             // id_buttonRightR5C7
             // 
@@ -3343,6 +3377,7 @@
             this.id_buttonRightR5C7.Text = "F1";
             this.id_buttonRightR5C7.UseVisualStyleBackColor = false;
             this.id_buttonRightR5C7.Value = "None";
+            this.id_buttonRightR5C7.Click += new System.EventHandler(this.Id_buttonRightR5C7_Click);
             // 
             // id_buttonRightR3C8
             // 
@@ -3360,6 +3395,7 @@
             this.id_buttonRightR3C8.Text = "F1";
             this.id_buttonRightR3C8.UseVisualStyleBackColor = false;
             this.id_buttonRightR3C8.Value = "None";
+            this.id_buttonRightR3C8.Click += new System.EventHandler(this.Id_buttonRightR3C8_Click);
             // 
             // id_buttonRightR4C8
             // 
@@ -3377,6 +3413,7 @@
             this.id_buttonRightR4C8.Text = "F1";
             this.id_buttonRightR4C8.UseVisualStyleBackColor = false;
             this.id_buttonRightR4C8.Value = "None";
+            this.id_buttonRightR4C8.Click += new System.EventHandler(this.Id_buttonRightR4C8_Click);
             // 
             // id_buttonRightR6C7
             // 
@@ -3394,6 +3431,7 @@
             this.id_buttonRightR6C7.Text = "F1";
             this.id_buttonRightR6C7.UseVisualStyleBackColor = false;
             this.id_buttonRightR6C7.Value = "None";
+            this.id_buttonRightR6C7.Click += new System.EventHandler(this.Id_buttonRightR6C7_Click);
             // 
             // id_buttonRightR6C6
             // 
@@ -3411,6 +3449,7 @@
             this.id_buttonRightR6C6.Text = "F1";
             this.id_buttonRightR6C6.UseVisualStyleBackColor = false;
             this.id_buttonRightR6C6.Value = "None";
+            this.id_buttonRightR6C6.Click += new System.EventHandler(this.Id_buttonRightR6C6_Click);
             // 
             // id_buttonLeftR6C8
             // 

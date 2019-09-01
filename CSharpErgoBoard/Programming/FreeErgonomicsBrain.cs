@@ -352,8 +352,10 @@ namespace CSharpErgoBoard.Programming
 
             message = "Set";  // The update character
             message += key.KeyName;
+            message += "-";
             Conversion.TryGetValue((String)value.SelectedItem, out UInt32 uintValue);
             message += uintValue.ToString();
+            Logging.Instance.Log(message);
 
             connectingPort.WriteLine(message);
 
