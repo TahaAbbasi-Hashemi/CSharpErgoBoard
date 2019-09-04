@@ -8,6 +8,9 @@ namespace CSharpErgoBoard
     /// This is the main program class. 
     /// This is the main entry point for the entire application.
     /// </summary>
+    /// <remarks>
+    /// This is intentionally made to be the only class that can initalize settings. 
+    /// </remarks>
     static class Program
     {
         /// <summary>

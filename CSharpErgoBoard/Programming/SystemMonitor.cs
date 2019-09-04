@@ -239,7 +239,7 @@ namespace CSharpErgoBoard.Programming
         /// </summary>
         public static void UpdateValues()
         {
-            Programming.Logging.Instance.Log("A update was run");
+            Logging.Instance.Log("A update was run");
 
             try
             {

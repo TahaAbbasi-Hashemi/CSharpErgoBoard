@@ -33,27 +33,27 @@ namespace CSharpErgoBoard.Design
         /// <param name="text"> The message intended to appear</param>
         /// <param name="caption"> The name of the popup</param>
         /// <param name="darkMode"> If darkmode is selected at the time of the popups creation. <value>true</value> for darkmode.</param>
-        public Popup(String text, String caption, Boolean darkMode)
+        public Popup(String text, String caption = "", Boolean darkMode = false)
         {
-            SystemSounds.Exclamation.Play();
+            SystemSounds.Hand.Play();
             Programming.Logging.Instance.Log("A popup window was made with the caption : " + caption, "Debug");
-            InitializeComponent();
+            this.InitializeComponent();
             id_labelText.Text = text;
-            Text = caption;
+            this.Text = caption;
 
             // Dark mode 
             if (darkMode)
             {
                 Color kindofBlack = Color.FromArgb(255, 50, 50, 50);
                 Color backgroundBlack = Color.FromArgb(255, 20, 20, 20);
-                BackColor = kindofBlack;
-                ForeColor = Color.WhiteSmoke;
+                this.BackColor = kindofBlack;
+                this.ForeColor = Color.WhiteSmoke;
                 id_buttonOkay.BackColor = backgroundBlack;
-                id_buttonOkay.ForeColor = System.Drawing.Color.WhiteSmoke;
+                id_buttonOkay.ForeColor = Color.WhiteSmoke;
             }
 
             // Resizing
-            Width = id_labelText.Size.Width + 100;
+            this.Width = id_labelText.Size.Width + 100;
 
             Point labelLocation = id_labelText.Location;
             labelLocation.X = (Width / 2) - (id_labelText.Size.Width / 2);
@@ -65,7 +65,7 @@ namespace CSharpErgoBoard.Design
             id_buttonOkay.Location = buttonLocation;
 
 
-            Height = buttonLocation.Y + id_buttonOkay.Size.Height + 50;
+            this.Height = buttonLocation.Y + id_buttonOkay.Size.Height + 50;
 
             this.Show();
             this.Update();

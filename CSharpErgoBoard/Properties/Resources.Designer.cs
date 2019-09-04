@@ -8,11 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CSharpErgoBoard.Properties
-{
+namespace CSharpErgoBoard.Properties {
     using System;
-
-
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -20,266 +19,282 @@ namespace CSharpErgoBoard.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if (object.ReferenceEquals(resourceMan, null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("CSharpErgoBoard.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SingleKeyDark
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap SingleKeyDark {
+            get {
                 object obj = ResourceManager.GetObject("SingleKeyDark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SingleKeyDarkLED
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap SingleKeyDarkLED {
+            get {
                 object obj = ResourceManager.GetObject("SingleKeyDarkLED", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SingleKeyDarkSelected
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap SingleKeyDarkLEDSelected {
+            get {
+                object obj = ResourceManager.GetObject("SingleKeyDarkLEDSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SingleKeyDarkSelected {
+            get {
                 object obj = ResourceManager.GetObject("SingleKeyDarkSelected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SingleKeyLight
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap SingleKeyLight {
+            get {
                 object obj = ResourceManager.GetObject("SingleKeyLight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SingleKeyLightLED
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap SingleKeyLightLED {
+            get {
                 object obj = ResourceManager.GetObject("SingleKeyLightLED", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap SingleKeyLightSelected
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap SingleKeyLightLEDSelected {
+            get {
+                object obj = ResourceManager.GetObject("SingleKeyLightLEDSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SingleKeyLightSelected {
+            get {
                 object obj = ResourceManager.GetObject("SingleKeyLightSelected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TallKeyDark
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TallKeyDark {
+            get {
                 object obj = ResourceManager.GetObject("TallKeyDark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TallKeyDarkLED
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TallKeyDarkLED {
+            get {
                 object obj = ResourceManager.GetObject("TallKeyDarkLED", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TallKeyDarkSelected
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TallKeyDarkLEDSelected {
+            get {
+                object obj = ResourceManager.GetObject("TallKeyDarkLEDSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TallKeyDarkSelected {
+            get {
                 object obj = ResourceManager.GetObject("TallKeyDarkSelected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TallKeyLight
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TallKeyLight {
+            get {
                 object obj = ResourceManager.GetObject("TallKeyLight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TallKeyLightLED
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TallKeyLightLED {
+            get {
                 object obj = ResourceManager.GetObject("TallKeyLightLED", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap TallKeyLightSelected
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap TallKeyLightLEDSelected {
+            get {
+                object obj = ResourceManager.GetObject("TallKeyLightLEDSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TallKeyLightSelected {
+            get {
                 object obj = ResourceManager.GetObject("TallKeyLightSelected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WideKeyDark
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap WideKeyDark {
+            get {
                 object obj = ResourceManager.GetObject("WideKeyDark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WideKeyDarkLED
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap WideKeyDarkLED {
+            get {
                 object obj = ResourceManager.GetObject("WideKeyDarkLED", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WideKeyDarkSelected
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap WideKeyDarkLEDSelected {
+            get {
+                object obj = ResourceManager.GetObject("WideKeyDarkLEDSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WideKeyDarkSelected {
+            get {
                 object obj = ResourceManager.GetObject("WideKeyDarkSelected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WideKeyLight
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap WideKeyLight {
+            get {
                 object obj = ResourceManager.GetObject("WideKeyLight", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WideKeyLightLED
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap WideKeyLightLED {
+            get {
                 object obj = ResourceManager.GetObject("WideKeyLightLED", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap WideKeyLightSelected
-        {
-            get
-            {
+        internal static System.Drawing.Bitmap WideKeyLightLEDSelected {
+            get {
+                object obj = ResourceManager.GetObject("WideKeyLightLEDSelected", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap WideKeyLightSelected {
+            get {
                 object obj = ResourceManager.GetObject("WideKeyLightSelected", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }

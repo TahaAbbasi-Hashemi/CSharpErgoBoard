@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Specialized;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Xml;
+using System.Configuration;
 
 namespace CSharpErgoBoard.Design
 {
@@ -14,6 +17,9 @@ namespace CSharpErgoBoard.Design
     /// In order to unselect a function a selection must first be made.
     /// This is because you can only select a button knowing what the button is, but you do not have to know what the button is to unselect it to select something else.
     /// If you were to select another button you must first unselect the currently selected button.
+    /// 
+    /// Very often the changeMode functions act as secondary constructors. This is because while they do not construct anything they are always called immedatly when the program starts. 
+    /// This allows for any GUI hard changes to go through and allow for soft modifications to happen after. This is not a good method but it does the job as expected.;
     /// </remarks>
     class MyButton : Button
     {
@@ -23,7 +29,7 @@ namespace CSharpErgoBoard.Design
         /// </summary>
         public String Purpose { get; } = "To allow for ease of when buttons are converted to and from dark mode along side with entering selection mode for keyboard buttons.";
         /// <summary>
-        /// To convert the class to a string.
+        /// To convert the class to a String.
         /// </summary>
         public new String ToString { get; } = "Design.MyButton child of Button";
 
@@ -42,25 +48,28 @@ namespace CSharpErgoBoard.Design
             /// Constructor with a message.
             /// </summary>
             /// <param name="message"> The message being reported to the user.</param>
-            public MyButtonError(string message) : base(message) { }
+            public MyButtonError(String message) : base(message) { }
             /// <summary>
             /// A Constructor with a inner error
             /// </summary>
             /// <param name="message"> The message being reported.</param>
             /// <param name="inner"> The error that progogated this error.</param>
-            public MyButtonError(string message, System.Exception inner) : base(message, inner) { }
+            public MyButtonError(String message, Exception inner) : base(message, inner) { }
         }
 
         // Private Encapsulated Members
+        /// <summary>
+        /// True if darkmode is selected, false if light mode is selected
+        /// </summary>
         private Boolean m_selectDarkMode = false;
-        private Boolean m_selected = false;
-        private String m_type = null;
 
         // Private Readonly Members
         /// <summary>
         /// This is a dark black that has less strain on the average persons eye. This is is more of a very dark gray.
         /// </summary>
         private readonly Color m_kindofBlack = Color.FromArgb(255, 50, 50, 50);
+
+
 
         // Encapsulation Functions
         /// <summary>
@@ -73,47 +82,16 @@ namespace CSharpErgoBoard.Design
         /// <item>false</item> <description>\n If the button is on light mode.</description>
         /// </list>
         /// </remarks>
-        public bool DarkMode { get => m_selectDarkMode; }
-        /// <summary>
-        /// Used to indicate if we are currently selected or not.
-        /// </summary>
-        /// <remarks>
-        /// This is intended to only be used by the image buttons. 
-        /// By default this is false.
-        /// 
-        /// <list type="bullet">
-        /// <item>true</item> <description>\n If the user has currently selected this button.</description>
-        /// <item>false</item> <description>\n If the user has not currently selected this button</description>
-        /// </list>
-        /// </remarks>
-        public bool IsSelected { get => m_selected; }
-        /// <summary>
-        /// A string indicating the type of button is being used.  
-        /// </summary>
-        /// <remarks>
-        /// Only keyboard buttons use this feature.
-        /// By default this is null.
-        /// 
-        /// <list type="bullet">
-        /// <item>Tall</item> <description>\n This is intended for vertical 2U key caps.</description>
-        /// <item>TallLED</item> <description>\n This is for the led version of Tall.</description>
-        /// <item>Wide</item> <description>\n This is intended for horizontal 1.5U key caps.</description>
-        /// <item>WideLED</item> <description>\n This is for the LED version of Wide.</description>
-        /// <item>Single</item> <description>\n This is intended for 1U key caps. </description>
-        /// <item>SingleLED</item> <description>\n This is for the LED version of Single.</description>
-        /// </list>
-        /// </remarks>
-        public string ButtonType { get => m_type; }
-        /// <summary>
-        /// The row that the Image button is on relative to the keyboard. This can only be used by image buttons.
-        /// </summary>
-        public int Row { get; set; } = 0;
-        /// <summary>
-        /// The colum that the image button is on relative to the keyboard. This can only be used by image buttons.
-        /// </summary>
-        public int Col { get; set; } = 0;
+        public Boolean DarkMode { get => m_selectDarkMode; }
 
         // Functions
+        /// <summary>
+        /// Default constructor sets up the internal values by finding out the contents of the name. 
+        /// </summary>
+        public MyButton()
+        {
+
+        }
         /// <summary>
         /// This is used for mode conversion between light and dark mode for basic button types.
         /// </summary>
@@ -138,179 +116,6 @@ namespace CSharpErgoBoard.Design
                 BackColor = Color.WhiteSmoke;
                 ForeColor = Color.Black;
             }
-        }
-        /// <summary>
-        /// This is for mode conversion between light and dark for image type buttons.
-        /// </summary>
-        /// <param name="darkModeTrue"> true if darkmode is selected. See <see cref="DarkMode"/> for more information.</param>
-        /// <param name="type">The type of button that is undergoing the mode change. See <see cref="ButtonType"/> for button types.</param>
-        /// <exception cref="MyButtonError"> When a unusable type is selected.</exception>
-        public void ModeChange(in Boolean darkModeTrue, in String type)
-        {
-            m_selectDarkMode = darkModeTrue;
-
-            if (!type.Contains("LED"))
-            {
-                ModeChange(darkModeTrue);
-            }
-            else
-            {
-                Text = "";
-                BackColor = BackColor;
-            }
-            // Dark Mode
-            if (darkModeTrue)
-            {
-                // If not selected
-                if (!m_selected)
-                {
-                    if (type == "Tall")
-                    {
-                        Image = Properties.Resources.TallKeyDark;
-                    }
-                    else if (type == "TallLED")
-                    {
-                        Image = Properties.Resources.TallKeyDarkLED;
-                    }
-                    else if (type == "Wide")
-                    {
-                        Image = Properties.Resources.WideKeyDark;
-                    }
-                    else if (type == "WideLED")
-                    {
-                        Image = Properties.Resources.WideKeyDarkLED;
-                    }
-                    else if (type == "Single")
-                    {
-                        Image = Properties.Resources.SingleKeyDark;
-                    }
-                    else if (type == "SingleLED")
-                    {
-                        Image = Properties.Resources.SingleKeyDarkLED;
-                    }
-                    else
-                    {
-                        throw new MyButtonError("The wrong type of button was selected on button with name :" + Name);
-                    }
-                }
-                // If selected
-                else
-                {
-                    if (type == "Tall")
-                    {
-                        Image = Properties.Resources.TallKeyDarkSelected;
-                    }
-                    else if (type == "Wide")
-                    {
-                        Image = Properties.Resources.WideKeyDarkSelected;
-                    }
-                    else if (type == "Single")
-                    {
-                        Image = Properties.Resources.SingleKeyDarkSelected;
-                    }
-                    else
-                    {
-                        throw new MyButtonError("The wrong type of button was selected on button with name :" + Name);
-                    }
-                }
-            }
-
-            // Light Mode
-            else
-            {
-                // Keyboard Buttons
-                if (!m_selected)
-                {
-                    if (type == "Tall")
-                    {
-                        Image = Properties.Resources.TallKeyLight;
-                    }
-                    else if (type == "TallLED")
-                    {
-                        Image = Properties.Resources.TallKeyLightLED;
-                    }
-                    else if (type == "Wide")
-                    {
-                        Image = Properties.Resources.WideKeyLight;
-                    }
-                    else if (type == "WideLED")
-                    {
-                        Image = Properties.Resources.WideKeyLightLED;
-                    }
-                    else if (type == "Single")
-                    {
-                        Image = Properties.Resources.SingleKeyLight;
-                    }
-                    else if (type == "SingleLED")
-                    {
-                        Image = Properties.Resources.SingleKeyLightLED;
-                    }
-                    else
-                    {
-                        throw new MyButtonError("The wrong type of button was selected on button with name :" + Name);
-                    }
-                }
-                else
-                {
-                    if (type == "Tall")
-                    {
-                        Image = Properties.Resources.TallKeyLightSelected;
-                    }
-                    else if (type == "Wide")
-                    {
-                        Image = Properties.Resources.WideKeyLightSelected;
-                    }
-                    else if (type == "Single")
-                    {
-                        Image = Properties.Resources.SingleKeyLightSelected;
-                    }
-                    else
-                    {
-                        throw new MyButtonError("The wrong type of button was selected on button with name :" + Name);
-                    }
-                }
-            }
-        }
-        /// <summary>
-        /// If one of the image buttons is selected.
-        /// </summary>
-        /// <remarks>
-        /// See <see cref="IsSelected"/> for more information on what selection means.\n
-        /// See <see cref="UnSelected"/> for more information in regards to unselecting a button.
-        /// </remarks>
-        /// <param name="type">The type of button that is selected. See <see cref="ButtonType"/> for button types.</param>
-        /// <exception cref="MyButtonError"> When a unusable type is selected.</exception>
-        public void Selected(in String type)
-        {
-            m_selected = true;
-            m_type = type;
-            ModeChange(m_selectDarkMode, type);
-        }
-        /// <summary>
-        /// If one of the image buttons is unselected.
-        /// </summary>
-        /// <remarks>
-        /// See <see cref="IsSelected"/> for more information on what selection means.\n
-        /// See <see cref="Selected"/> for more information in regards to selecting a button.
-        /// </remarks>
-        /// <exception cref="MyButtonError"> When Unselected occurs before selection a selection was made.</exception>
-        public void UnSelected()
-        {
-            if (m_type == null)
-            {
-                throw new MyButtonError("Unselected function occured before selection function on button with name :" + Name);
-            }
-            m_selected = false;
-            ModeChange(m_selectDarkMode, m_type);
-        }
-
-        public String MakeKeyName()
-        {
-            return "R" + Row.ToString() + "C" + Col.ToString();
-        }
-        public String MakeKeyNameValue()
-        {
-            return "Row " + Row.ToString() + ", Column " + Col.ToString();
         }
     }
 }
